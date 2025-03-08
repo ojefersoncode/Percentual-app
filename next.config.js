@@ -1,4 +1,5 @@
-// next.config.js
+const path = require('path');  // Adicione esta linha no topo do seu next.config.js
+
 module.exports = {
   webpack(config) {
     config.resolve.alias = {
