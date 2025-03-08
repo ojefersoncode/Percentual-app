@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   rewrites: async () => {
     return [
@@ -6,12 +8,7 @@ module.exports = {
         destination: '/auth/signin'
       }
     ];
-  }
-};
-
-
-// next.config.js
-module.exports = {
+  },
   webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,
