@@ -43,7 +43,7 @@ export function AuthForm({ state }: { state: AuthState }) {
         } catch (e) {
           if (e instanceof Error) {
             toast({
-              title: 'Auth Error',
+              title: 'Auth Erro',
               description: e.message,
               variant: 'destructive'
             });
