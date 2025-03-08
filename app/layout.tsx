@@ -10,8 +10,8 @@ import PostHogPageViewWrapper from '@/components/misc/PostHogPageViewWrapper';
 
 
 const meta = {
-  title: 'Next.js Subscription Starter',
-  description: 'Brought to you by Vercel, Stripe, and Supabase.',
+  title: 'Percentual',
+  description: 'Fazer trade sem complicações.',
   cardImage: '/og.png',
   robots: 'follow, index',
   favicon: '/favicon.ico',

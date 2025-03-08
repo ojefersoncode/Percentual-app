@@ -19,6 +19,7 @@ yarn-error.log
 Thumbs.db
 
 # Arquivos de ambiente
+# Não ignore os arquivos de ambiente de produção para permitir o uso no Vercel
 .env.local
 .env.development.local
 .env.test.local
