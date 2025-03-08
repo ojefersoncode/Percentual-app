@@ -1,4 +1,4 @@
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '../../../utils/supabase/server';
 import { redirect } from 'next/navigation';
 import { Navbar } from '../../../components/landing/Navbar';
 import { AuthForm } from '../../../components/misc/AuthForm';

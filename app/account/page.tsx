@@ -1,7 +1,7 @@
 import AccountPage from '../../components/misc/AccountPage';
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '../../utils/supabase/server';
 import { redirect } from 'next/navigation';
-import { getSubscription, getUser } from '@/utils/supabase/queries';
+import { getSubscription, getUser } from '../../utils/supabase/queries';
 
 export default async function Account() {
   const supabase = await createClient();

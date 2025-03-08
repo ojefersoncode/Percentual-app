@@ -1,5 +1,5 @@
-import { getURL } from '@/utils/helpers';
-import { createClient } from '@/utils/supabase/server';
+import { getURL } from '../../../utils/helpers';
+import { createClient } from '../../../utils/supabase/server';
 import { NextResponse } from 'next/server';
 import { NextRequest } from 'next/server';
 

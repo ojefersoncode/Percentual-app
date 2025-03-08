@@ -12,13 +12,13 @@ import {
 import { Input } from '../../components/ui/input';
 import { Navbar } from '../../components/landing/Navbar';
 import { User } from '@supabase/supabase-js';
-import { createClient } from '@/utils/supabase/client';
+import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
 import { getURL } from '@/utils/helpers';
 import { useToast } from '../../components/ui/use-toast';
 import { useRouter } from 'next/navigation';
-import { createApiClient } from '@/utils/supabase/api';
-import { SubscriptionWithPriceAndProduct } from '@/utils/types';
+import { createApiClient } from '../../utils/supabase/api';
+import { SubscriptionWithPriceAndProduct } from '../../utils/types';
 
 export default function AccountPage({
   user,
