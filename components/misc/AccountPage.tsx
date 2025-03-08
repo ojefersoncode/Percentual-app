@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Button } from '../../components/ui/button';
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Navbar } from '@/components/landing/Navbar';
+} from '../../components/ui/card';
+import { Input } from '../../components/ui/input';
+import { Navbar } from '../../components/landing/Navbar';
 import { User } from '@supabase/supabase-js';
 import { createClient } from '@/utils/supabase/client';
 import { useState } from 'react';
