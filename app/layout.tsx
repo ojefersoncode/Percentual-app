@@ -10,7 +10,7 @@ import PostHogPageViewWrapper from '../components/misc/PostHogPageViewWrapper';
 
 
 const meta = {
-  title: 'Percentual',
+  title: 'Percentual-app',
   description: 'Fazer trade sem complicações.',
   cardImage: '/og.png',
   robots: 'follow, index',
