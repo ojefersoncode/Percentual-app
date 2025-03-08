@@ -51,7 +51,7 @@ export default function AccountPage({
     if (!redirectUrl) {
       setLoading(false);
       return toast({
-        title: 'An unknown error ocorreu.',
+        title: 'An unknown erro ocorreu.',
         description:
           'Please try again later or contact a system administrator.',
         variant: 'destructive'
