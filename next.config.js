@@ -19,7 +19,6 @@ module.exports = {
       return config;
     }
 
-    // Caso contrário, mantemos a configuração do Webpack como você já tem
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname),
