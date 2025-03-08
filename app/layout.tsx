@@ -11,7 +11,7 @@ import PostHogPageViewWrapper from '../components/misc/PostHogPageViewWrapper';
 
 const meta = {
   title: 'Percentual',
-  description: 'Fazer trade sem complicações',
+  description: 'Fazer trade sem complicações.',
   cardImage: '/og.png',
   robots: 'follow, index',
   favicon: '/favicon.ico',
