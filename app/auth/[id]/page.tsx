@@ -1,8 +1,8 @@
 import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
-import { Navbar } from '@/components/landing/Navbar';
-import { AuthForm } from '@/components/misc/AuthForm';
-import { AuthState } from '@/utils/types';
+import { Navbar } from '../../../components/landing/Navbar';
+import { AuthForm } from '../../../components/misc/AuthForm';
+import { AuthState } from '../../../utils/types';
 
 export default async function SignIn(
   props: {

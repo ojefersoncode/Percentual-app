@@ -1,7 +1,5 @@
 'use client';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { buttonVariants } from '../../components/ui/button';
 import {
   Card,
   CardContent,
@@ -9,9 +7,8 @@ import {
   CardHeader,
   CardTitle,
   CardFooter
-} from '@/components/ui/card';
-import { Check, Linkedin } from 'lucide-react';
-import { LightBulbIcon } from '@/components/landing/Icons';
+} from '../../components/ui/card';
+import { Linkedin } from 'lucide-react';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
 
 export const HeroCards = () => {

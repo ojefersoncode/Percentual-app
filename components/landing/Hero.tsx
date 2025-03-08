@@ -1,6 +1,6 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import { buttonVariants } from '@/components/ui/button';
+import { Button } from '../../components/ui/button';
+import { buttonVariants } from '../../components/ui/button';
 import { HeroCards } from './HeroCards';
 
 export const Hero = () => {

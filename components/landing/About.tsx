@@ -1,6 +1,6 @@
 'use client';
 
-import { Statistics } from '@/components/landing/Statistics';
+import { Statistics } from '../../components/landing/Statistics';
 
 export const About = () => {
   return (

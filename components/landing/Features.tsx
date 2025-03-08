@@ -1,12 +1,12 @@
 'use client';
-import { Badge } from '@/components/ui/badge';
+import { Badge } from '../../components/ui/badge';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle
-} from '@/components/ui/card';
+} from '../../components/ui/card';
 
 interface FeatureProps {
   title: string;

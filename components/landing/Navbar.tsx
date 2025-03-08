@@ -14,14 +14,14 @@ import {
   SheetTrigger
 } from '@/components/ui/sheet';
 
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button, buttonVariants } from '../../components/ui/button';
 import { Menu } from 'lucide-react';
 import { ModeToggle } from './mode-toggle';
 import { User } from '@supabase/supabase-js';
 import { createApiClient } from '@/utils/supabase/api';
 import { createClient } from '@/utils/supabase/client';
 import { useRouter } from 'next/navigation';
-import { useToast } from '@/components/ui/use-toast';
+import { useToast } from '../../components/ui/use-toast';
 
 interface RouteProps {
   href: string;

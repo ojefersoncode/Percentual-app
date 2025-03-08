@@ -1,22 +1,22 @@
 'use client';
 import Link from 'next/link';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '../..//components/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+} from '../..//components/ui/card';
+import { Input } from '../../components/ui/input';
+import { Label } from '../..//components/ui/label';
 import { useEffect, useState } from 'react';
 import { createApiClient } from '@/utils/supabase/api';
 import { createClient } from '@/utils/supabase/client';
 import { useToast } from '../ui/use-toast';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { AuthState, StateInfo } from '@/utils/types';
+import { AuthState, StateInfo } from '../..//utils/types';
 
 export function AuthForm({ state }: { state: AuthState }) {
   const { toast } = useToast();
