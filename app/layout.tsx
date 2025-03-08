@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
 import { getURL } from '../utils/helpers';
-import './styles/main.css';
+import '@/styles/main.css';
 import { PHProvider } from './providers';
 import { ThemeProvider } from '../components/landing/theme-provider';
 import dynamic from 'next/dynamic';
