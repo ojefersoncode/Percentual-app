@@ -42,7 +42,7 @@ export default function AccountPage({
     if (error) {
       setLoading(false);
       return toast({
-        title: 'Error Occured',
+        title: 'Ocorreu um erro',
         description: error.message,
         variant: 'destructive'
       });
