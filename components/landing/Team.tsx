@@ -97,7 +97,7 @@ export const Team = () => {
   };
 
   return (
-    <section id="team" className="container py-14 sm:py-20">
+    <section id="team" className="container py-14 ">
       <h2 className="text-3xl md:text-4xl font-bold">
         <span className="bg-gradient-to-b text-red-600">
           Our Dedicated{' '}

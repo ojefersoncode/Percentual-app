@@ -48,10 +48,10 @@ const FAQList: FAQProps[] = [
 
 export const FAQ = () => {
   return (
-    <section id="faq" className="container py-24 sm:py-32">
+    <section id="faq" className="container py-20">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
         Frequently Asked{' '}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+        <span className="bg-gradient-to-b text-red-600 bg-clip-text">
           Questions
         </span>
       </h2>
@@ -73,7 +73,7 @@ export const FAQ = () => {
         <a
           rel="noreferrer noopener"
           href="#"
-          className="text-primary transition-all border-primary hover:border-b-2"
+          className="text-red-600 transition-all border-primary hover:text-red-400"
         >
           Contact us
         </a>

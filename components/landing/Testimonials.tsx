@@ -65,7 +65,7 @@ export const Testimonials = () => {
     <section id="testimonials" className="container py-14 sm:py-20">
       <h2 className="text-3xl md:text-4xl font-bold">
         Discover Why
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+        <span className="text-red-600 bg-clip-text">
           {' '}
           People Love{' '}
         </span>

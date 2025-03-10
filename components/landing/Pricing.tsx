@@ -131,7 +131,7 @@ export const Pricing = ({ user }: { user: User | null }) => {
     <section id="pricing" className="container py-10 sm:py-20">
       <h2 className="text-3xl md:text-4xl font-bold text-center">
         Get
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+        <span className="bg-gradient-to-b text-red-600 bg-clip-text">
           {' '}
           Unlimited{' '}
         </span>
@@ -184,7 +184,7 @@ export const Pricing = ({ user }: { user: User | null }) => {
               <div className="space-y-4">
                 {pricing.benefitList.map((benefit: string) => (
                   <span key={benefit} className="flex">
-                    <Check className="text-green-500" />{' '}
+                    <Check className="text-red-600" />{' '}
                     <h3 className="ml-2">{benefit}</h3>
                   </span>
                 ))}

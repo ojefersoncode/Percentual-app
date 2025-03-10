@@ -233,7 +233,7 @@ export const GiftIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
-      className="w-14 fill-primary"
+      className="w-14 text-red-600"
     >
       <title>Free Icons</title>
       <g id="Layer_14" data-name="Layer 14">
