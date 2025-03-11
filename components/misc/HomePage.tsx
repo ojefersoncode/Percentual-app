@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle
 } from '../../components/ui/card';
-import { Input } from '../../components/ui/input';
 import { Navbar } from '../../components/landing/Navbar';
 import { User } from '@supabase/supabase-js';
 import { createClient } from '../../utils/supabase/client';
@@ -53,7 +52,7 @@ export default function HomePage({
       return toast({
         title: 'Aconteceu um erro.',
         description:
-          'Please try again later or contact a system administrator.',
+          'Por favor, tente novamente ou contate p suporte.',
         variant: 'destructive'
       });
     }
@@ -90,34 +89,6 @@ export default function HomePage({
             <Link href="mailto:">Support</Link>
           </nav>
           <div className="grid gap-6">
-            <Card x-chunk="dashboard-04-chunk-1">
-              <CardHeader>
-                <CardTitle>Email</CardTitle>
-                <CardDescription>
-                  The email associated with your account
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form>
-                  <Input placeholder="Email" value={user.email} disabled />
-                </form>
-              </CardContent>
-            </Card>
-            <Card x-chunk="dashboard-04-chunk-2">
-              <CardHeader>
-                <CardTitle>Your Plan</CardTitle>
-                <CardDescription>
-                  {subscription
-                    ? `You are currently on the ${subscription?.prices?.products?.name} plan.`
-                    : 'You are not currently subscribed to any plan.'}
-                </CardDescription>
-              </CardHeader>
-              <CardFooter className="border-t px-6 py-4 flex space-between">
-                <Button onClick={handleBillingPortal} disabled={loading}>
-                  Manage subscription
-                </Button>
-              </CardFooter>
-            </Card>
             <Card x-chunk="dashboard-04-chunk-3">
               <CardHeader>
                 <CardTitle>Sign out</CardTitle>

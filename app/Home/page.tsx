@@ -1,9 +1,9 @@
-import HomePage from '../../../components/misc/HomePage';
-import { createClient } from '../../../utils/supabase/server';
+import HomePage from '../../components/misc/HomePage';
+import { createClient } from '../../utils/supabase/server';
 import { redirect } from 'next/navigation';
-import { getSubscription, getUser } from '../../../utils/supabase/queries';
+import { getSubscription, getUser } from '../../utils/supabase/queries';
 
-export default async function Account() {
+export default async function Home() {
   const supabase = await createClient();
   const [user, subscription] = await Promise.all([
     getUser(supabase),

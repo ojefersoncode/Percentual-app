@@ -27,5 +27,5 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  return NextResponse.redirect(getURL('/'));
+  return NextResponse.redirect(getURL('/home'));
 }
