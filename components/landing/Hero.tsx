@@ -5,25 +5,25 @@ import { HeroCards } from './HeroCards';
 
 export const Hero = () => {
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center py-14 md:py-22 gap-10">
+    <section className="container grid lg:grid-cols-2 place-items-center px-12 py-14 md:py-22 gap-10">
       <div className="text-center lg:text-start mx-7 max-md:mx-4 space-y-6">
         <main className="text-4xl md:text-6xl font-bold">
           <h1 className="inline">
             <span className="inline bg-gradient-to-r text-slate-900 dark:text-gray-100  ">
-              Aprender trading crypto,
+              Aprender desenvolver seus SaaS,
             </span>{' '}
           </h1>{' '}
           <h2 className="inline">
             <span className="inline bg-gradient-to-r text-red-600 bg-clip-text">
-              sem por em risco seus investimentos
+              de forma rapida e simples.
             </span>{' '}
           </h2>
         </main>
 
         <p className="text-base text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Com a Leptrum, você cria seu catálogo online, gerencia tudo com
-          facilidade e utiliza o poder da AI para levar seu negócio a um novo
-          nível.
+          Com a Codersaas, você cria seu SaaS de forma rápida, fácil e segura.
+          Gerencie tudo com facilidade através de uma dashboard incrível e tenha
+          total controle do seu negócio.
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">

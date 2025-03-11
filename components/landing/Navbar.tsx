@@ -66,7 +66,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
           <div className="flex gap-2 text-xl font-bold items-center">
           <img className="size-7" src="/Leptrum.png" alt="logo" />
             <div className="flex">
-              <h1 className="text-slate-50">Percentual</h1>
+              <h1 className="text-slate-50">Codersaas</h1>
             </div>
           </div>
           </NavigationMenuItem>

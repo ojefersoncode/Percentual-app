@@ -11,7 +11,7 @@ export const Footer = () => {
           <div className="flex items-center select-none">
           <img className="size-7" src="/Leptrum.png" alt="logo" />
             <a rel="noreferrer noopener" href="/" className="font-bold text-xl">
-              Percentual
+            Codersaas
             </a>
           </div>
         </div>
@@ -158,7 +158,7 @@ export const Footer = () => {
             href="https://github.com/Ojefersoncode"
             className="text-red-600 transition-all"
           >
-            OjefersonCode.
+            Codersaas
           </a>
         </h3>
       </section>

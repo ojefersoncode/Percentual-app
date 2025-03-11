@@ -10,8 +10,8 @@ import PostHogPageViewWrapper from '../components/misc/PostHogPageViewWrapper';
 
 
 const meta = {
-  title: 'Percentual-app',
-  description: 'Fazer trade sem complicações.',
+  title: 'Codersaas',
+  description: 'Crie seus SaaS ou plataforma ultra rapido.',
   cardImage: '/og.png',
   robots: 'follow, index',
   favicon: '/favicon.ico',
@@ -23,10 +23,10 @@ export async function generateMetadata(): Promise<Metadata> {
     title: meta.title,
     description: meta.description,
     referrer: 'origin-when-cross-origin',
-    keywords: ['Vercel', 'Supabase', 'Next.js', 'Stripe', 'Subscription'],
-    authors: [{ name: 'Vercel', url: 'https://vercel.com/' }],
-    creator: 'Vercel',
-    publisher: 'Vercel',
+    keywords: ['Vercel', 'Supabase', 'Next.js', 'Stripe', 'Subscription', 'Codersaas', 'SaaS', 'boilerplate', 'template', 'templates'],
+    authors: [{ name: 'Codersaas', url: 'https://vercel.com/' }],
+    creator: 'OjersonCode',
+    publisher: 'OjefersonCode',
     robots: meta.robots,
     icons: { icon: meta.favicon },
     metadataBase: new URL(meta.url),
@@ -51,7 +51,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <ThemeProvider>
         <PHProvider>
           <body>
