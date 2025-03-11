@@ -1,68 +1,28 @@
 'use client';
-import Link from 'next/link';
+
 import { Button } from '../../components/ui/button';
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from '../../components/ui/card';
-import { Navbar } from '../../components/landing/Navbar';
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '../../components/ui/card';
 import { User } from '@supabase/supabase-js';
 import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
-import { getURL } from '@/utils/helpers';
 import { useToast } from '../../components/ui/use-toast';
 import { useRouter } from 'next/navigation';
 import { createApiClient } from '../../utils/supabase/api';
-import { SubscriptionWithPriceAndProduct } from '../../utils/types';
+import { Navbar } from '../HomeComponents/NavBar';
+import Link from 'next/link';
 
-export default function HomePage({
-  user,
-}: {
-  user: User;
-}) {
+export default function HomePage({ user }: { user: User }) {
   const supabase = createClient();
   const { toast } = useToast();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-
-  const handleBillingPortal = async () => {
-    setLoading(true);
-    const { data, error } = await supabase.functions.invoke('get_stripe_url', {
-      body: {
-        return_url: getURL('/home')
-      }
-    });
-    if (error) {
-      setLoading(false);
-      return toast({
-        title: 'Ocorreu um erro',
-        description: error.message,
-        variant: 'destructive'
-      });
-    }
-    const redirectUrl = data?.redirect_url;
-    if (!redirectUrl) {
-      setLoading(false);
-      return toast({
-        title: 'Aconteceu um erro.',
-        description:
-          'Por favor, tente novamente ou contate p suporte.',
-        variant: 'destructive'
-      });
-    }
-    router.push(redirectUrl);
-    setLoading(false);
-  };
 
   const handleSignOut = async () => {
     setLoading(true);
     const api = createApiClient(supabase);
     await api.signOut();
     toast({
-      title: 'Signed out successfully!'
+      title: 'Desconectado com sucesso!'
     });
     router.push('/');
     router.refresh();
@@ -76,24 +36,24 @@ export default function HomePage({
           <h1 className="text-3xl font-semibold">Home</h1>
         </div>
         <div className="mx-auto grid w-full max-w-6xl items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
-          <nav
-            className="grid gap-4 text-sm text-muted-foreground"
-            x-chunk="dashboard-04-chunk-0"
-          >
-            <Link href="#" className="font-semibold text-primary">
-              General
+          <nav className="grid gap-4 text-sm text-muted-foreground">
+            <Link href="#" className="font-semibold text-red-600">
+              Projetos web
             </Link>
-            <Link href="mailto:">Support</Link>
+            <Link href="mailto:">Projeto mobile</Link>
+            <Link href="mailto:">LadingPages</Link>
+            <Link href="mailto:">Componentes</Link>
+            <Link href="mailto:">Suporte</Link>
           </nav>
           <div className="grid gap-6">
-            <Card x-chunk="dashboard-04-chunk-3">
+            <Card>
               <CardHeader>
-                <CardTitle>Sign out</CardTitle>
-                <CardDescription>Sign out of your account</CardDescription>
+                <CardTitle>Sair da conta</CardTitle>
+                <CardDescription>Faça logout da sua conta</CardDescription>
               </CardHeader>
               <CardFooter className="border-t px-6 py-4">
                 <Button onClick={handleSignOut} disabled={loading}>
-                  Sign out
+                  Sair
                 </Button>
               </CardFooter>
             </Card>
