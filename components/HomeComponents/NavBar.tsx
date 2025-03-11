@@ -77,6 +77,12 @@ export function Navbar() {
           <DropdownMenuItem>Configurações</DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>Discord</DropdownMenuItem>
+        <DropdownMenuItem>Suporte</DropdownMenuItem>
+        <DropdownMenuItem disabled>API</DropdownMenuItem>
+        <DropdownMenuSeparator />
+
         <DropdownMenuGroup>
           <DropdownMenuItem>Team</DropdownMenuItem>
           <DropdownMenuSub>
@@ -91,11 +97,6 @@ export function Navbar() {
             </DropdownMenuPortal>
           </DropdownMenuSub>
         </DropdownMenuGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>GitHub</DropdownMenuItem>
-        <DropdownMenuItem>Support</DropdownMenuItem>
-        <DropdownMenuItem disabled>API</DropdownMenuItem>
-        <DropdownMenuSeparator />
         {/* Ação de logout */}
         <DropdownMenuItem onClick={handleSignOut} disabled={loading}>
           Sair
