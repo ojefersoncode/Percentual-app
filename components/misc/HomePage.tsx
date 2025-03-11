@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { Button } from '../../components/ui/button';
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -21,10 +20,8 @@ import { SubscriptionWithPriceAndProduct } from '../../utils/types';
 
 export default function HomePage({
   user,
-  subscription
 }: {
   user: User;
-  subscription: SubscriptionWithPriceAndProduct;
 }) {
   const supabase = createClient();
   const { toast } = useToast();
