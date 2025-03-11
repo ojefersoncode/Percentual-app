@@ -31,8 +31,7 @@ export const Hero = () => {
 
           <a
             rel="noreferrer noopener"
-            href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-            target="_blank"
+            href="http://localhost:3000/Home"
             className={`w-full bg-none md:w-1/3 ${buttonVariants({
               variant: 'outline'
             })}`}

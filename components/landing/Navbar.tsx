@@ -63,12 +63,12 @@ export const Navbar = ({ user }: { user: User | null }) => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container py-2 px-6 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-          <div className="flex gap-2 text-xl font-bold items-center">
-          <img className="size-7" src="/Leptrum.png" alt="logo" />
-            <div className="flex">
-              <h1 className="text-slate-50">Codersaas</h1>
+            <div className="flex gap-2 text-xl font-bold items-center">
+              <img className="size-7" src="/Leptrum.png" alt="logo" />
+              <div className="flex">
+                <h1 className="text-slate-50">Codersaas</h1>
+              </div>
             </div>
-          </div>
           </NavigationMenuItem>
 
           {/* mobile */}
@@ -85,7 +85,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
               <SheetContent side={'left'}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl select-none">
-                   Percentual
+                    Percentual
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">

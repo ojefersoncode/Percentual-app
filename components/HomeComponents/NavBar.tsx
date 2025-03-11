@@ -1,24 +1,56 @@
-'use client';
+import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu';
+import { Menu } from 'lucide-react';
 
-import Link from 'next/link';
-import { User } from '@supabase/supabase-js';
-
-export function Navbar({ user }: { user: User }) {
+export function Navbar() {
   return (
-    <div className="bg-white shadow-md p-4 flex items-center justify-between">
-      <div className="text-xl font-semibold text-primary">Meu SaaS</div>
-      <div className="flex items-center space-x-6">
-        <Link href="/home" className="text-lg text-muted-foreground hover:text-primary">
-          Dashboard
-        </Link>
-        <Link href="/projects" className="text-lg text-muted-foreground hover:text-primary">
-          Projetos
-        </Link>
-        <Link href="/profile" className="text-lg text-muted-foreground hover:text-primary">
-          Perfil
-        </Link>
-        <span className="text-lg text-muted-foreground">{user?.email}</span>
-      </div>
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">
+          <Menu />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56 mr-7">
+        <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem>Perfil</DropdownMenuItem>
+          <DropdownMenuItem>Configurações</DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem>Team</DropdownMenuItem>
+          <DropdownMenuSub>
+            <DropdownMenuSubTrigger>Compartilhar</DropdownMenuSubTrigger>
+            <DropdownMenuPortal>
+              <DropdownMenuSubContent>
+                <DropdownMenuItem>Whatsapp</DropdownMenuItem>
+                <DropdownMenuItem>Telegram</DropdownMenuItem>
+                <DropdownMenuItem>Facebook</DropdownMenuItem>
+                <DropdownMenuItem>Menssagem</DropdownMenuItem>
+              </DropdownMenuSubContent>
+            </DropdownMenuPortal>
+          </DropdownMenuSub>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>GitHub</DropdownMenuItem>
+        <DropdownMenuItem>Support</DropdownMenuItem>
+        <DropdownMenuItem disabled>API</DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>Sair</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

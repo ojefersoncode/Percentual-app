@@ -6,6 +6,10 @@ module.exports = {
       {
         source: '/auth',
         destination: '/auth/signin'
+      },
+      {
+        source: '/Home',
+        destination: '/home'
       }
     ];
   },
