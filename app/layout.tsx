@@ -14,7 +14,7 @@ const meta = {
   description: 'Crie seus SaaS ou plataforma ultra rapido.',
   cardImage: '/public/codersaas.png',
   robots: 'follow, index',
-  favicon: '/favicon.ico',
+  favicon: '/leptrum.png',
   url: getURL()
 };
 
