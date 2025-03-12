@@ -45,9 +45,9 @@ export const HowItWorks = () => {
   return (
     <section id="howItWorks" className="container text-center py-14">
       <h2 className="w-full px-4 text-4xl font-bold">
-        Por que escolher{' '}
+        Por que escolher a{' '}
         <span className="bg-gradient-to-b from-red-500 to-red-700 text-white px-2 rounded-lg">
-          Codersaas?
+          CoderSaaS?
         </span>
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-lg text-muted-foreground">
