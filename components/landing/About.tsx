@@ -15,17 +15,22 @@ export const About = () => {
           <div className="flex flex-col justify-between">
             <div className="pb-6">
               <h2 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-b text-red-600">
-                  About{' '}
-                </span>
-                Company
+                <span className="bg-gradient-to-b text-red-600">Sobre </span>
+                Os templates
               </h2>
               <p className="max-w-4xl text-base md:text-xl text-muted-foreground mt-4 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+                Nossos templates SaaS, desenvolvidos com{' '}
+                <strong>Next.js</strong> e <strong>Supabase </strong> , oferecem
+                uma solução moderna, eficiente e escalável para startups e
+                negócios digitais. Com <strong>Next.js</strong>, garantimos
+                carregamento rápido, renderização otimizada e uma experiência de
+                usuário fluida. Já o <strong>Supabase </strong> fornece
+                autenticação segura, banco de dados escalável e APIs poderosas,
+                eliminando a complexidade do backend. Além disso, nosso código é
+                <strong>limpo </strong> e <strong>modular </strong>, facilitando
+                personalizações e manutenção. Ao utilizar nossos templates, você
+                reduz drasticamente o tempo de desenvolvimento e pode focar no
+                crescimento do seu negócio com tecnologia de ponta.
               </p>
             </div>
 

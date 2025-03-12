@@ -15,33 +15,31 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: 'Is this template free?',
-    answer: 'Yes. It is a free ChadcnUI template.',
+    question: 'o acesso e Permanente?',
+    answer: 'Sim. seu acesso sera para sempre.',
     value: 'item-1'
   },
   {
-    question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit?',
-    answer:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.',
+    question: 'Vai ter mais templates?',
+    answer: 'Sim, teremos muitos templates tanto para web e para mobile',
     value: 'item-2'
   },
   {
-    question:
-      'Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?',
+    question: 'Ensinam a configurar o projeto?',
     answer:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?',
+      'Sim, temos video aulas gravadas e atualizadas para ajudar configurar o seu projeto, tambem temos a nossa comunidade privada onde poderar tirar duvidas e além disso pode contar com o nosso suporte p2p',
     value: 'item-3'
   },
   {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit?',
-    answer: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+    question: 'Posso monetizar meu SaaS?',
+    answer:
+      'Sim, você poderá usar o template à vontade para criar quantos SaaS quiser, mas não poderá revender o template. No entanto, você pode fornecer serviços de criação para terceiros.',
     value: 'item-4'
   },
   {
-    question:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?',
+    question: 'Qual linguagem usada?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.',
+      'Nossos templates utilizam tecnologias como Next.js, TypeScript, Supabase, Vercel, Google Cloud e Lucide React, podendo integrar ainda mais tecnologias conforme sua necessidade.',
     value: 'item-5'
   }
 ];
@@ -50,9 +48,9 @@ export const FAQ = () => {
   return (
     <section id="faq" className="container py-20">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
-        Frequently Asked{' '}
+        Perguntas{' '}
         <span className="bg-gradient-to-b text-red-600 bg-clip-text">
-          Perguntas
+          Frequentes
         </span>
       </h2>
 
@@ -69,13 +67,13 @@ export const FAQ = () => {
       </Accordion>
 
       <h3 className="font-medium mt-4">
-        Still have questions?{' '}
+        Ainda tem mais perguntas?{' '}
         <a
           rel="noreferrer noopener"
           href="#"
           className="text-red-600 transition-all border-primary hover:text-red-400"
         >
-          Contact us
+          Entre em contato
         </a>
       </h3>
     </section>

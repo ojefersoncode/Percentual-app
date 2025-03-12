@@ -30,11 +30,9 @@ export default async function LandingPage() {
         <Sponsors />
         <About />
         <HowItWorks />
-        <Features />
         <Services />
         <Cta />
         <Testimonials />
-        <Team />
         <Pricing user={user} />
         <Newsletter />
         <FAQ />

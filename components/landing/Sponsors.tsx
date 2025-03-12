@@ -1,7 +1,6 @@
 'use client';
-import { Radar } from 'lucide-react';
 
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
 interface SponsorProps {
   icon: JSX.Element;
@@ -10,46 +9,44 @@ interface SponsorProps {
 
 const sponsors: SponsorProps[] = [
   {
-    icon: <Radar size={34} />,
-    name: 'Sponsor 1'
+    name: 'Next.js',
+    icon: <img src="/nextjs.svg" alt="Next js logo" className="size-14 md:size-20" />
   },
   {
-    icon: <Radar size={34} />,
-    name: 'Sponsor 2'
+    name: 'Supabase',
+    icon: <img src="/supabase.svg" alt="Supabase logo" className="size-20 md:size-32" />
   },
   {
-    icon: <Radar size={34} />,
-    name: 'Sponsor 3'
+    name: 'Vercel',
+    icon: <img src="/vercel.svg" alt="Vercel logo" className="size-16 md:size-24" />
   },
   {
-    icon: <Radar size={34} />,
-    name: 'Sponsor 4'
+    name: 'Stripe',
+    icon: <img src="/stripe.svg" alt="Stripe logo" className="size-14 md:size-20" />
   },
   {
-    icon: <Radar size={34} />,
-    name: 'Sponsor 5'
-  },
-  {
-    icon: <Radar size={34} />,
-    name: 'Sponsor 6'
+    name: 'Google Cloud',
+    icon: (
+      <img
+        src="/googlecloud.png"
+        alt="Google Cloud logo"
+        className="size-10 md:size-12 mix-blend-luminosity"
+      />
+    )
   }
 ];
 
 export const Sponsors = () => {
   return (
-    <section id="sponsors" className="container">
-      <h2 className="text-center text-3xl lg:text-4xl font-bold mb-8 text-red-600">
-        Investors and founders
+    <section id="sponsors" className="container text-center py-2">
+      <h2 className="text-2xl md:text-4xl font-bold text-red-600">
+        Stack que usamos nos projetos
       </h2>
 
-      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
-        {sponsors.map(({ icon, name }: SponsorProps) => (
-          <div
-            key={name}
-            className="flex items-center gap-1 text-muted-foreground/60"
-          >
-            <span>{icon}</span>
-            <h3 className="text-xl  font-bold">{name}</h3>
+      <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 mt-1">
+        {sponsors.map(({ icon, name }) => (
+          <div key={name} className="flex justify-center">
+            {icon}
           </div>
         ))}
       </div>

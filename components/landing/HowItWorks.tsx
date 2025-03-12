@@ -1,7 +1,11 @@
 'use client';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Medal, MapPin, Airplay, Gift } from 'lucide-react';  // Importe os ícones corretos de lucide-react
-
+import {
+  ShieldCheck,
+  ChartNoAxesCombined,
+  MessagesSquare,
+  PaintBucket
+} from 'lucide-react';
 import type { JSX } from 'react';
 
 interface FeatureProps {
@@ -12,40 +16,43 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    icon: <Medal className="text-red-600 size-10" />,  // Aplique a classe de cor aqui
-    title: 'Accessibility',
+    icon: <PaintBucket className="text-red-600 size-10" />,
+    title: 'Acessibilidade',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum'
+      'Templates fáceis de editar e configurar de acordo com o seu SaaS.'
   },
   {
-    icon: <MapPin className="text-red-600 size-10" />,
-    title: 'Community',
+    icon: <MessagesSquare className="text-red-600 size-10" />,
+    title: 'Comunidade',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum'
+      'Além dos templates, você ainda poderá acessar nossa comunidade privada para networking e tirar dúvidas.'
   },
   {
-    icon: <Airplay className="text-red-600 size-10" />,
-    title: 'Scalability',
+    icon: <ChartNoAxesCombined className="text-red-600 size-10" />,
+    title: 'Escalabilidade',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum'
+      'Nossos templates são desenvolvidos para que seu produto possa ser facilmente escalado.'
   },
   {
-    icon: <Gift className="text-red-600 size-10" />,
-    title: 'Gamification',
+    icon: <ShieldCheck className="text-red-600 size-10" />,
+    title: 'Segurança',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum'
+      'Levamos a segurança muito a sério. Nossos templates seguem as melhores práticas para garantir a proteção dos usuários.'
   }
 ];
 
 export const HowItWorks = () => {
   return (
-    <section id="howItWorks" className="container text-center py-14 sm:py-20">
-      <h2 className="text-3xl md:text-4xl font-bold">
-        How It <span className="bg-gradient-to-b text-red-600">Works </span>
-        Step-by-Step Guide
+    <section id="howItWorks" className="container text-center py-14">
+      <h2 className="text-2xl md:text-4xl font-bold">
+        Por que escolher{' '}
+        <span className="bg-gradient-to-b from-red-500 to-red-700 text-white px-2 rounded-lg">
+          a Codersaas?
+        </span>
       </h2>
-      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis dolor pariatur sit!
+      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-lg text-muted-foreground">
+        Veja abaixo algumas das vantagens de escolher a Codersaas para seus
+        projetos!
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

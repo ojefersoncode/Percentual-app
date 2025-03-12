@@ -12,7 +12,7 @@ export const HeroCards = () => {
           <img
             src="https://i.pravatar.cc/150?img=58"
             alt="user avatar"
-            className="absolute grayscale-[0%] -top-36 left-52 rounded-lg w-full h-auto aspect-square object-cover"
+            className="absolute grayscale-[0%] -top-36 rounded-lg w-full h-auto aspect-square object-cover"
           />
         </div>
 
