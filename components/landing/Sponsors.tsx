@@ -14,7 +14,7 @@ const sponsors: SponsorProps[] = [
   },
   {
     name: 'Supabase',
-    icon: <img src="/supabase.svg" alt="Supabase logo" className="size-20 md:size-32" />
+    icon: <img src="/supabase.svg" alt="Supabase logo" className="size-24 md:size-32" />
   },
   {
     name: 'Vercel',
