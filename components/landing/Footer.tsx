@@ -9,15 +9,15 @@ export const Footer = () => {
       <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
           <div className="flex items-center select-none">
-          <img className="size-7" src="/Leptrum.png" alt="logo" />
+            <img className="size-7" src="/Leptrum.png" alt="logo" />
             <a rel="noreferrer noopener" href="/" className="font-bold text-xl">
-            Codersaas
+              Codersaas
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Follow US</h3>
+          <h3 className="font-bold text-lg">Redes Sociais</h3>
           <div>
             <a
               rel="noreferrer noopener"
@@ -50,7 +50,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Platforms</h3>
+          <h3 className="font-bold text-lg">Platformas</h3>
           <div>
             <a
               rel="noreferrer noopener"
@@ -70,27 +70,17 @@ export const Footer = () => {
               Mobile
             </a>
           </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Desktop
-            </a>
-          </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">About</h3>
+          <h3 className="font-bold text-lg">Sobre</h3>
           <div>
             <a
               rel="noreferrer noopener"
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Features
+              Tecnologias
             </a>
           </div>
 
@@ -100,7 +90,7 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Pricing
+              Preços
             </a>
           </div>
 
@@ -116,7 +106,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Community</h3>
+          <h3 className="font-bold text-lg">Comunidade</h3>
           <div>
             <a
               rel="noreferrer noopener"
@@ -143,7 +133,7 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Twitch
+              Whatsapp
             </a>
           </div>
         </div>
