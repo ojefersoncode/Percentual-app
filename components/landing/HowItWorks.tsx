@@ -44,7 +44,7 @@ const features: FeatureProps[] = [
 export const HowItWorks = () => {
   return (
     <section id="howItWorks" className="container text-center py-14">
-      <h2 className="text-2xl md:text-4xl font-bold">
+      <h2 className="w-full px-4 text-2xl md:text-4xl font-bold">
         Por que escolher{' '}
         <span className="bg-gradient-to-b from-red-500 to-red-700 text-white px-2 rounded-lg">
           a Codersaas?
