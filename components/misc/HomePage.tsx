@@ -18,7 +18,7 @@ export default function HomePage({ user }: { user: User }) {
   ];
 
   return (
-    <div className="relative flex min-h-screen w-full bg-black bg-muted/30">
+    <div className="relative flex min-h-screen w-full bg-black bg-muted/40">
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4">
         <nav className="flex w-full justify-between py-4 max-md:px-4 md:px-8 bg-black">
           <div className="flex gap-2 text-xl font-bold items-center">
