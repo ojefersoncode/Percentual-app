@@ -71,20 +71,27 @@ export function Navbar() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>Inicio</DropdownMenuItem>
-          <DropdownMenuItem>Templates e projetos</DropdownMenuItem>
+          <DropdownMenuItem>Templates & Projetos</DropdownMenuItem>
           <DropdownMenuItem>Componentes</DropdownMenuItem>
-          <DropdownMenuItem>Perfil</DropdownMenuItem>
-          <DropdownMenuItem>Configurações</DropdownMenuItem>
+          <DropdownMenuItem>Aréa de aulas</DropdownMenuItem>
+          <DropdownMenuSub>
+            <DropdownMenuSubTrigger>Configurações</DropdownMenuSubTrigger>
+            <DropdownMenuPortal>
+              <DropdownMenuSubContent>
+                <DropdownMenuItem>Perfil</DropdownMenuItem>
+                <DropdownMenuItem>Meu plano</DropdownMenuItem>
+              </DropdownMenuSubContent>
+            </DropdownMenuPortal>
+          </DropdownMenuSub>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuSeparator />
         <DropdownMenuItem>Discord</DropdownMenuItem>
         <DropdownMenuItem>Suporte</DropdownMenuItem>
-        <DropdownMenuItem disabled>API</DropdownMenuItem>
+        <DropdownMenuItem disabled>WhatsApp</DropdownMenuItem>
         <DropdownMenuSeparator />
 
         <DropdownMenuGroup>
-          <DropdownMenuItem>Team</DropdownMenuItem>
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>Compartilhar</DropdownMenuSubTrigger>
             <DropdownMenuPortal>
