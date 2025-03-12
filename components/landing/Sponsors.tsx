@@ -23,16 +23,6 @@ const sponsors: SponsorProps[] = [
   {
     name: 'Stripe',
     icon: <img src="/stripe.svg" alt="Stripe logo" className="size-14 md:size-20" />
-  },
-  {
-    name: 'Google Cloud',
-    icon: (
-      <img
-        src="/googlecloud.png"
-        alt="Google Cloud logo"
-        className="size-10 md:size-12 mix-blend-luminosity"
-      />
-    )
   }
 ];
 
