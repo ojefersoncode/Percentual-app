@@ -12,7 +12,7 @@ import PostHogPageViewWrapper from '../components/misc/PostHogPageViewWrapper';
 const meta = {
   title: 'Codersaas',
   description: 'Crie seus SaaS ou plataforma ultra rapido.',
-  cardImage: '/public/codersaas.png',
+  cardImage: '/codersaas.png',
   robots: 'follow, index',
   favicon: '/leptrum.png',
   url: getURL()
