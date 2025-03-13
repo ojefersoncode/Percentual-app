@@ -30,7 +30,10 @@ export default async function LandingPage() {
         <Sponsors />
         <About />
         <HowItWorks />
+<<<<<<< HEAD
         <Services />
+=======
+>>>>>>> 1b18d35 (update)
         <Cta />
         <Testimonials />
         <Pricing user={user} />
