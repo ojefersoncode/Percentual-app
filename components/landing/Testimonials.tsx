@@ -20,7 +20,7 @@ const testimonials: TestimonialProps[] = [
     image: 'https://github.com/shadcn.png',
     name: 'John Doe React',
     userName: '@john_Doe',
-    comment: 'This landing page is awesome! labore et dolore magna aliqua.'
+    comment: 'This landing page is awesome! labore et dolore magna aliqua nascusa.'
   },
   {
     image: 'https://github.com/shadcn.png',
@@ -42,21 +42,21 @@ const testimonials: TestimonialProps[] = [
     name: 'John Doe React',
     userName: '@john_Doe3',
     comment:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
   },
   {
     image: 'https://github.com/shadcn.png',
     name: 'John Doe React',
     userName: '@john_Doe4',
     comment:
-      'Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud.'
+      'Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam.'
   },
   {
     image: 'https://github.com/shadcn.png',
     name: 'John Doe React',
     userName: '@john_Doe5',
     comment:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .'
   }
 ];
 
