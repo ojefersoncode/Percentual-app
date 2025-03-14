@@ -1,4 +1,4 @@
-'use client'; // Torna o componente um Client Component
+'use client';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -18,12 +18,12 @@ import { Menu } from 'lucide-react';
 import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
 import { useToast } from '../ui/use-toast';
-import { useRouter } from 'next/navigation'; // CORRETO PARA APP ROUTER
+import { useRouter } from 'next/navigation';
 
 export function Navbar() {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
-  const router = useRouter(); // Garante que está dentro de um componente do cliente
+  const router = useRouter();
   const supabase = createClient();
 
   const handleSignOut = async () => {
@@ -36,10 +36,10 @@ export function Navbar() {
         title: 'Desconectado com sucesso!'
       });
 
-      router.push('/'); // Redireciona para a página inicial
+      router.push('/');
       setTimeout(() => {
         window.location.reload();
-      }, 500); // Aguarda meio segundo antes de recarregar a página
+      }, 500);
     } catch (error: unknown) {
       if (error instanceof Error) {
         toast({
@@ -62,7 +62,7 @@ export function Navbar() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">
+        <Button variant="outline" className='border-none focus:outline-none'>
           <Menu />
         </Button>
       </DropdownMenuTrigger>
@@ -70,15 +70,17 @@ export function Navbar() {
         <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>Inicio</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => router.push('/Home')}>Inicio</DropdownMenuItem>
           <DropdownMenuItem>Templates & Projetos</DropdownMenuItem>
-          <DropdownMenuItem>Componentes</DropdownMenuItem>
-          <DropdownMenuItem>Aréa de aulas</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => router.push('/components')}>Componentes</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => router.push('/video-aula')}>Aréa de aulas</DropdownMenuItem>
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>Configurações</DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
-                <DropdownMenuItem>Perfil</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => router.push('/profile')}>
+                  Perfil
+                </DropdownMenuItem>
                 <DropdownMenuItem>Meu plano</DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
