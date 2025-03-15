@@ -74,7 +74,7 @@ export default function VideoAulas({ user }: { user: User }) {
           <Button
             variant="outline"
             onClick={() => alert('Redirecionando para a Aula 2...')}
-            className="p-2 text-sm text-gray-700 dark:text-gray-300 rounded-lg"
+            className="p-2 text-sm text-gray-700 dark:text-gray-400 rounded-lg"
           >
             Pular para próxima aula
           </Button>
