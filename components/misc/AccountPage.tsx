@@ -1,24 +1,15 @@
 'use client';
-import Link from 'next/link';
 import { Button } from '../../components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from '../../components/ui/card';
 import { Input } from '../../components/ui/input';
-import { Navbar } from '../../components/landing/Navbar';
+import { Navbar } from '../HomeComponents/NavBar';
 import { User } from '@supabase/supabase-js';
 import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
 import { getURL } from '@/utils/helpers';
 import { useToast } from '../../components/ui/use-toast';
 import { useRouter } from 'next/navigation';
-import { createApiClient } from '../../utils/supabase/api';
 import { SubscriptionWithPriceAndProduct } from '../../utils/types';
+import { ModeToggle } from '../landing/mode-toggle';
 
 export default function AccountPage({
   user,
@@ -36,7 +27,7 @@ export default function AccountPage({
     setLoading(true);
     const { data, error } = await supabase.functions.invoke('get_stripe_url', {
       body: {
-        return_url: getURL('/account')
+        return_url: getURL('//planos-e-compras')
       }
     });
     if (error) {
@@ -51,9 +42,9 @@ export default function AccountPage({
     if (!redirectUrl) {
       setLoading(false);
       return toast({
-        title: 'An unknown erro ocorreu.',
+        title: 'Um erro ocorreu.',
         description:
-          'Please try again later or contact a system administrator.',
+          'Por favor, tente novamente ou entre em contato com o suporte.',
         variant: 'destructive'
       });
     }
@@ -61,74 +52,56 @@ export default function AccountPage({
     setLoading(false);
   };
 
-  const handleSignOut = async () => {
-    setLoading(true);
-    const api = createApiClient(supabase);
-    await api.signOut();
-    toast({
-      title: 'Signed out successfully!'
-    });
-    router.push('/');
-    router.refresh();
-  };
-
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <Navbar user={user} />
-      <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4 bg-muted/40 p-4 md:gap-8 md:p-10">
-        <div className="mx-auto grid w-full max-w-6xl gap-2">
-          <h1 className="text-3xl font-semibold">Account</h1>
+      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-black">
+        <div className="flex gap-2 text-xl font-bold items-center">
+          <img className="size-7" src="/Leptrum.png" alt="logo" />
+          <div className="flex">
+            <h1 className="text-gray-900 dark:text-gray-100">Codersaas</h1>
+          </div>
         </div>
-        <div className="mx-auto grid w-full max-w-6xl items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
-          <nav
-            className="grid gap-4 text-sm text-muted-foreground"
-            x-chunk="dashboard-04-chunk-0"
-          >
-            <Link href="#" className="font-semibold text-primary">
-              General
-            </Link>
-            <Link href="mailto:">Support</Link>
-          </nav>
-          <div className="grid gap-6">
-            <Card x-chunk="dashboard-04-chunk-1">
-              <CardHeader>
-                <CardTitle>Email</CardTitle>
-                <CardDescription>
-                  The email associated with your account
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form>
+
+        <div className="flex gap-2">
+          <ModeToggle />
+          <Navbar />
+        </div>
+      </nav>
+      <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10">
+        <div className="mx-auto grid w-full max-w-6xl gap-2">
+          <h1 className="text-3xl font-semibold">Assinatura e compras</h1>
+        </div>
+        <div className="mx-auto grid w-full max-w-6xl items-start gap-6 ">
+          <div className=" grid gap-6">
+            <div x-chunk="dashboard-04-chunk-1">
+              <div>
+                <h2 className='py-2'>Email</h2>
+                <div>
+                  Seu usuario esta vinculado a este email
+                </div>
+                <form className='py-2'>
                   <Input placeholder="Email" value={user.email} disabled />
                 </form>
-              </CardContent>
-            </Card>
-            <Card x-chunk="dashboard-04-chunk-2">
-              <CardHeader>
-                <CardTitle>Your Plan</CardTitle>
-                <CardDescription>
-                  {subscription
-                    ? `You are currently on the ${subscription?.prices?.products?.name} plan.`
-                    : 'You are not currently subscribed to any plan.'}
-                </CardDescription>
-              </CardHeader>
-              <CardFooter className="border-t px-6 py-4 flex space-between">
-                <Button onClick={handleBillingPortal} disabled={loading}>
-                  Manage subscription
-                </Button>
-              </CardFooter>
-            </Card>
-            <Card x-chunk="dashboard-04-chunk-3">
-              <CardHeader>
-                <CardTitle>Sign out</CardTitle>
-                <CardDescription>Sign out of your account</CardDescription>
-              </CardHeader>
-              <CardFooter className="border-t px-6 py-4">
-                <Button onClick={handleSignOut} disabled={loading}>
-                  Sign out
-                </Button>
-              </CardFooter>
-            </Card>
+              </div>
+              <div className='py-2 bg-black'>
+
+                <div x-chunk="dashboard-04-chunk-2">
+                  <div className="p-2 bg-black">
+                    <h2 className="text-xl font-bold">Plano e compras</h2>
+                    <p>
+                      {subscription
+                        ? `Voçe assinou o plano ${subscription?.prices?.products?.name}.`
+                        : 'Voçe ainda nao assinou nenhum plano.'}
+                    </p>
+                  </div>
+                  <div className="border-t px-2 py-4 flex space-between">
+                    <Button onClick={handleBillingPortal} disabled={loading}>
+                      Gerenciar meu plano
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>

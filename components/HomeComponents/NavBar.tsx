@@ -81,7 +81,7 @@ export function Navbar() {
                 <DropdownMenuItem onClick={() => router.push('/profile')}>
                   Perfil
                 </DropdownMenuItem>
-                <DropdownMenuItem>Meu plano</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => router.push('/planos-e-compras')}>Meu plano</DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>
