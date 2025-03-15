@@ -22,7 +22,7 @@ export function SelectAula() {
 
   return (
     <Select>
-      <SelectTrigger className="w-[200px]">
+      <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Selecionar aula" />
       </SelectTrigger>
       <SelectContent>
