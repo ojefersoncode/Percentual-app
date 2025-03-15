@@ -3,10 +3,10 @@ import { LogoIcon } from './Icons';
 
 export const Footer = () => {
   return (
-    <footer id="footer">
+    <footer id="footer" className='bg-black'>
       <hr className="w-11/12 mx-auto" />
 
-      <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
+      <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8 text-gray-100 bg-black">
         <div className="col-span-full xl:col-span-2">
           <div className="flex items-center select-none">
             <img className="size-7" src="/Leptrum.png" alt="logo" />
@@ -50,7 +50,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Platformas</h3>
+          <h3 className="font-bold text-lg">Plataformas</h3>
           <div>
             <a
               rel="noreferrer noopener"
@@ -139,7 +139,7 @@ export const Footer = () => {
         </div>
       </section>
 
-      <section className="container pb-7 text-center">
+      <section className="container pb-1 text-center text-gray-100">
         <h3>
           &copy; 2024 Todos os direitos reservados{' '}
           <a

@@ -5,9 +5,13 @@ import { Button } from '../../components/ui/button';
 import { User } from '@supabase/supabase-js';
 import { Navbar } from '../HomeComponents/NavBar';
 import { SelectAula } from '../VideoAulaComponents/SelectAula';
+import { ModeToggle } from '../landing/mode-toggle';
+import { ArrowBigLeftDashIcon, ArrowLeft, ArrowLeftIcon } from 'lucide-react';
+import Link from 'next/link';
+import { Footer } from '../landing/Footer';
+import Comentarios from '../AulasComponents/Comentarios';
 
 export default function VideoAulas({ user }: { user: User }) {
-  // Estado para armazenar o comentário
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState<string[]>([]);
 
@@ -20,71 +24,67 @@ export default function VideoAulas({ user }: { user: User }) {
   };
 
   return (
-    <div className="flex w-full flex-col items-center bg-gray-100 dark:bg-black dark:bg-muted/40 min-h-screen">
-      <nav className="flex w-full justify-between py-4 max-md:px-4 md:px-8 bg-black ">
-        <div className="flex gap-2 text-xl font-bold items-center">
+    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-gray-100 dark:bg-black">
+      {/* Navbar */}
+      <nav className="flex w-full justify-between px-3 md:px-4 text-gray-50 bg-black">
+        <div className="flex gap-2 py-2 text-xl font-bold items-center">
           <img className="size-7" src="/Leptrum.png" alt="logo" />
-          <div className="flex">
-            <h1 className="text-slate-50">Codersaas</h1>
-          </div>
+          <h1>Codersaas</h1>
         </div>
-
-        <Navbar />
+        <div className="flex gap-2 py-2">
+          <ModeToggle />
+          <Navbar />
+        </div>
       </nav>
 
-      <div className="w-full max-w-4xl my-7 bg-muted/40 px-2">
-        <video
-          controls
-          className="w-full h-auto rounded-lg shadow-lg"
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
-        />
-      </div>
+      <hr className='flex w-full bg-gray-50' />
 
-      <div className='flex w-full justify-between max-w-4xl px-2'>
-        <SelectAula />
-
+      <div className="flex w-full p-4">
         <Button
-        variant={'outline'}
-          onClick={() => alert('Redirecionando para a Aula 2...')}
-          className="mb-6 px-4 py-2 text-lg text-white rounded-lg"
+          variant={'outline'}
+          className="flex items-center p-3 space-x-1 cursor-pointer"
         >
-          Pular para Aula 2
+          <ArrowLeftIcon className="size-4" />
+          <span className="text-sm">Voltar</span>
         </Button>
       </div>
 
-      {/* Comentários */}
-      <div className="w-full max-w-4xl px-2">
-        <h2 className="text-xl font-medium text-black dark:text-white mb-4 ">
-          Comentários
-        </h2>
-
-        {/* Formulário de comentário */}
-        <form onSubmit={handleCommentSubmit} className="mb-4">
-          <textarea
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-            placeholder="Escreva seu comentário..."
-            className="w-full p-4 border border-gray-300 rounded-lg dark:bg-black dark:bg-muted/40 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900"
-            rows={4}
-          />
-          <Button
-            type="submit"
-            className="mt-2 px-6 py-2 text-lg bg-green-500 text-white rounded-full hover:bg-green-600"
-          >
-            Enviar Comentário
-          </Button>
-        </form>
-
-        <div className="space-y-4">
-          {comments.map((comment, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md"
-            >
-              <p className="text-gray-800 dark:text-gray-200">{comment}</p>
-            </div>
-          ))}
+      <div className="flex flex-col items-center justify-center w-full max-w-4xl px-4">
+        {/* Título da aula */}
+        <div className="flex items-center w-full gap-2 mt-2 mb-4">
+          <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
+            Aula 1:
+          </h1>
+          <h2 className="text-lg md:text-2xl font-semibold text-gray-900 dark:text-gray-200">
+            Introdução ao Supabase
+          </h2>
         </div>
+
+        <div className="flex flex-col items-center justify-center w-full bg-muted/40 rounded-lg shadow-lg">
+          <video
+            controls
+            className="w-full h-auto rounded-lg"
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+          />
+        </div>
+
+        {/* Controle de aulas */}
+        <div className="flex flex-row justify-between items-center w-full max-w-4xl px-2 mt-4 space-y-3 md:space-y-0">
+          <SelectAula />
+          <Button
+            variant="outline"
+            onClick={() => alert('Redirecionando para a Aula 2...')}
+            className="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-lg"
+          >
+            Pular para próxima aula
+          </Button>
+        </div>
+
+        <Comentarios />
+      </div>
+
+      <div className="w-full">
+        <Footer />
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ import { Navbar } from '../HomeComponents/NavBar';
 import { User } from '@supabase/supabase-js';
 import { Pencil } from 'lucide-react';
 import { Footer } from '../landing/Footer';
+import { ModeToggle } from '../landing/mode-toggle';
 
 export default function ProfilePage({ user }: { user: User }) {
   const [name, setName] = useState('Jeferson code');
@@ -35,14 +36,18 @@ export default function ProfilePage({ user }: { user: User }) {
             <h1 className="text-slate-50">Codersaas</h1>
           </div>
         </div>
-        <Navbar />
+        <div className="flex text-white gap-2">
+          <ModeToggle />
+          <Navbar />
+        </div>
       </nav>
 
-      {/* Card Container */}
-      <div className="flex justify-center my-10">
-        <Card className="w-full max-w-4xl p-6 md:p-8 bg-white dark:bg-black shadow-lg rounded-lg">
+      <hr />
+
+      <div className="flex justify-center py-4 dark:bg-black ">
+        <div className="w-full max-w-4xl max-md:max-w-full p-1 md:p-8 bg-gray-100 dark:bg-black rounded-lg">
           <CardHeader>
-            <h2 className="text-xl font-medium">Meu perfil</h2>
+            <h2 className="text-2xl font-medium text-red-600">Editar perfil</h2>
           </CardHeader>
 
           <CardContent>
@@ -54,7 +59,7 @@ export default function ProfilePage({ user }: { user: User }) {
               <div className="flex items-center space-x-3">
                 <span className="text-gray-600 dark:text-gray-300">{name}</span>
                 <Button
-                variant={'outline'}
+                  variant={'outline'}
                   onClick={() =>
                     handleEdit('name', prompt('Enter new name:', name) || name)
                   }
@@ -75,7 +80,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   {phone}
                 </span>
                 <Button
-                variant={'outline'}
+                  variant={'outline'}
                   onClick={() =>
                     handleEdit(
                       'phone',
@@ -107,11 +112,11 @@ export default function ProfilePage({ user }: { user: User }) {
           </CardContent>
 
           <CardFooter>
-            <Button variant="outline" className="w-full md:w-auto mt-4">
-              Savar Alterações
+            <Button variant={'outline'} className="w-full md:w-auto mt-4 bg-red-600 hover:bg-red-400 text-gray-50 hover:text-gray-100 ">
+              Salvar Alterações
             </Button>
           </CardFooter>
-        </Card>
+        </div>
       </div>
 
       <div className="bg-black">

@@ -64,12 +64,12 @@ export const Navbar = ({ user }: { user: User | null }) => {
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container py-2 px-6 w-screen flex justify-between ">
+        <NavigationMenuList className="container py-2 px-3 md:px-6 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <div className="flex gap-2 text-xl font-bold items-center">
               <img className="size-7" src="/Leptrum.png" alt="logo" />
               <div className="flex">
-                <h1 className="text-slate-50">Codersaas</h1>
+                <h1 className="text-gray-900 dark:text-gray-100">Codersaas</h1>
               </div>
             </div>
           </NavigationMenuItem>
