@@ -76,7 +76,7 @@ export default function VideoAulas({ user }: { user: User }) {
             onClick={() => alert('Redirecionando para a Aula 2...')}
             className="p-2 text-sm text-gray-700 dark:text-gray-300 rounded-lg"
           >
-            Pular para próxima aula
+            Próxima aula
           </Button>
         </div>
 
