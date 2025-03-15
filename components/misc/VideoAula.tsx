@@ -69,12 +69,12 @@ export default function VideoAulas({ user }: { user: User }) {
         </div>
 
         {/* Controle de aulas */}
-        <div className="flex justify-between items-center w-full max-w-4xl px-2 mt-4 space-y-3 md:space-y-0">
+        <div className="flex justify-between items-center w-full max-w-4xl px-2 mt-4">
           <SelectAula />
           <Button
             variant="outline"
             onClick={() => alert('Redirecionando para a Aula 2...')}
-            className="p-2 text-sm text-gray-700 dark:text-gray-400 rounded-lg"
+            className="p-2 text-sm text-gray-700 dark:text-gray-400 rounded-md"
           >
             Pular para próxima aula
           </Button>
