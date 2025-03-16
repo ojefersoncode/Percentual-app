@@ -7,7 +7,7 @@ export const HeroCards = () => {
         <img
           src="/codersaas.png"
           alt="Coder SaaS"
-          className="absolute w-1/2 pr-20 max-md:w-full max-md:px-6 rounded-lg  object-cover"
+          className="absolute w-1/2 pr-20 max-md:w-full max-md:px-6 rounded-lg drop-shadow-lg object-cover"
         />
       </div>
     </div>

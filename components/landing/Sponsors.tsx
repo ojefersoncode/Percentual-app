@@ -4,43 +4,51 @@ import type { JSX } from 'react';
 
 interface SponsorProps {
   icon: JSX.Element;
-  name: string;
+  description: string; // Mantendo apenas a descrição
 }
 
 const sponsors: SponsorProps[] = [
   {
-    name: 'Next.js',
-    icon: <img src="/nextjs.svg" alt="Next js logo" className="size-16 md:size-32" />
+    icon: <img src="/nextjs.svg" alt="Next js logo" className="w-32 h-44" />,
+    description:
+      'Next.js é um framework de React para a criação de aplicações web de alta performance, com renderização do lado do servidor e otimizações automáticas.',
   },
   {
-    name: 'Supabase',
-    icon: <img src="/supabase.svg" alt="Supabase logo" className="size-28 md:size-52" />
+    icon: <img src="/supabase.svg" alt="Supabase logo" className="w-48 h-44" />,
+    description:
+      'Supabase é uma plataforma de código aberto que fornece backend como serviço, permitindo criar aplicativos com banco de dados e autenticação prontos para usar.',
   },
   {
-    name: 'Vercel',
-    icon: <img src="/vercel.svg" alt="Vercel logo" className="size-20 md:size-36" />
+    icon: <img src="/vercel.svg" alt="Vercel logo" className="w-32 h-44" />,
+    description:
+      'Vercel é uma plataforma para deployment de front-end, otimizada para aplicações React e Next.js, oferecendo uma entrega global de alta performance.',
   },
   {
-    name: 'Stripe',
-    icon: <img src="/stripe.svg" alt="Stripe logo" className="size-16 md:size-40" />
-  }
+    icon: <img src="/stripe.svg" alt="Stripe logo" className="w-32 h-44 " />,
+    description:
+      'Stripe é uma plataforma de pagamento online que facilita a integração de pagamentos de forma simples e segura em qualquer tipo de aplicação web.',
+  },
 ];
 
 export const Sponsors = () => {
   return (
-    <section id="sponsors" className="container text-center">
-      <h2 className="text-2xl md:text-6xl font-bold text-red-600">
+    <section id="sponsors" className="container text-center pb-12 max-md:pt-12">
+      <hr className='w-full' />
+      <h2 className="text-2xl md:text-6xl font-bold text-red-50 mt-8 mb-8 md:mb-12">
         Stack que usamos nos projetos
       </h2>
 
-      <div className="relative flex items-center overflow-hidden w-full gap-12">
-        <div className="flex w-full justify-center gap-7 md:gap-12 animate-pulse items-center">
-          {[...sponsors].map(({ icon, name }) => (
-            <div key={name} className="inline-flex justify-center">
-              {icon}
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 justify-center">
+        {/* Mapeando e criando os cards */}
+        {sponsors.map(({ icon, description }, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-between bg-red-600 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 min-h-[300px]" // Definindo uma altura mínima
+          >
+            <div className="flex w-full  justify-center items-center">{icon}</div>
+            <p className="text-sm text-center text-gray-200 pb-10">{description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

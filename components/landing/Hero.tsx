@@ -1,12 +1,11 @@
 'use client';
 import Link from 'next/link';
 import { Button } from '../../components/ui/button';
-import { buttonVariants } from '../../components/ui/button';
 import { HeroCards } from './HeroCards';
 
 export const Hero = () => {
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center px-2 py-14 md:py-28 gap-8">
+    <section className="container grid lg:grid-cols-2 place-items-center px-2 py-14 md:pt-28 gap-8">
       <div className="text-center lg:text-start mx-7 max-md:mx-4 space-y-4">
         <main className="text-4xl md:text-6xl font-bold">
           <h1 className="inline">
@@ -38,13 +37,10 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Hero cards sections */}
       <div className="z-10 mt-16">
         <HeroCards />
       </div>
 
-      {/* Shadow effect */}
-      <div className="shadow"></div>
     </section>
   );
 };
