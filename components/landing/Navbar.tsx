@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -48,9 +49,6 @@ const routeList: RouteProps[] = [
 ];
 
 export const Navbar = ({ user }: { user: User | null }) => {
-
-
-  
   const router = useRouter();
   const { toast } = useToast();
   const api = createApiClient(createClient());
@@ -103,13 +101,11 @@ export const Navbar = ({ user }: { user: User | null }) => {
                       {label}
                     </a>
                   ))}
-                  <Button
-                    variant="secondary"
-                    onClick={handleAuth}
-                    className={`w-[110px] border`}
-                  >
-                    {user ? 'Account' : 'Sign In'}
-                  </Button>
+                  <Link href="/Home" passHref>
+                    <Button className={`border`} variant="secondary">
+                      Entrar
+                    </Button>
+                  </Link>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -132,13 +128,11 @@ export const Navbar = ({ user }: { user: User | null }) => {
           </nav>
 
           <div className="hidden md:flex gap-2">
-            <Button
-              onClick={handleAuth}
-              className={`border`}
-              variant="secondary"
-            >
-              {user ? 'Account' : 'Entrar'}
-            </Button>
+            <Link href="/Home" passHref>
+              <Button className={`border`} variant="secondary">
+                Entrar
+              </Button>
+            </Link>
             <ModeToggle />
           </div>
         </NavigationMenuList>

@@ -1,11 +1,12 @@
 'use client';
+import Link from 'next/link';
 import { Button } from '../../components/ui/button';
 import { buttonVariants } from '../../components/ui/button';
 import { HeroCards } from './HeroCards';
 
 export const Hero = () => {
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center px-12 py-14 md:py-28 gap-8">
+    <section className="container grid lg:grid-cols-2 place-items-center px-2 py-14 md:py-28 gap-8">
       <div className="text-center lg:text-start mx-7 max-md:mx-4 space-y-4">
         <main className="text-4xl md:text-6xl font-bold">
           <h1 className="inline">
@@ -26,18 +27,14 @@ export const Hero = () => {
           total controle do seu negócio.
         </p>
 
-        <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3">Começar agora</Button>
-
-          <a
-            rel="noreferrer noopener"
-            href="http://localhost:3000/Home"
-            className={`w-full bg-none md:w-1/3 ${buttonVariants({
-              variant: 'outline'
-            })}`}
-          >
-            Acessar conta
-          </a>
+        <div className="flex w-full max-sm:justify-center items-center pt-5 pb-4">
+          <Link href="/Home" passHref className='bg-red-600 rounded-lg'>
+            <Button className="border bg-red-600 animate-bounce mb-1">
+              <span className='text-lg font-semibold text-gray-700 px-16'>
+                 Acessar agora
+                </span>
+            </Button>
+          </Link>
         </div>
       </div>
 
