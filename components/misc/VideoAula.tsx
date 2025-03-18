@@ -6,8 +6,7 @@ import { User } from '@supabase/supabase-js';
 import { Navbar } from '../HomeComponents/NavBar';
 import { SelectAula } from '../VideoAulaComponents/SelectAula';
 import { ModeToggle } from '../landing/mode-toggle';
-import { ArrowBigLeftDashIcon, ArrowLeft, ArrowLeftIcon } from 'lucide-react';
-import Link from 'next/link';
+import { ArrowLeftIcon } from 'lucide-react';
 import { Footer } from '../landing/Footer';
 import Comentarios from '../AulasComponents/Comentarios';
 
@@ -25,7 +24,7 @@ export default function VideoAulas({ user }: { user: User }) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen w-full bg-gray-100 dark:bg-black">
-      {/* Navbar */}
+
       <nav className="flex w-full justify-between px-3 md:px-4 text-gray-50 bg-black">
         <div className="flex gap-2 py-2 text-xl font-bold items-center">
           <img className="size-7" src="/Leptrum.png" alt="logo" />
@@ -50,15 +49,6 @@ export default function VideoAulas({ user }: { user: User }) {
       </div>
 
       <div className="flex flex-col items-center justify-center w-full max-w-4xl px-4">
-        {/* Título da aula */}
-        <div className="flex items-center w-full gap-2 mt-2 mb-4">
-          <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
-            Aula 1:
-          </h1>
-          <h2 className="text-lg md:text-2xl font-semibold text-gray-900 dark:text-gray-200">
-            Introdução ao Supabase
-          </h2>
-        </div>
 
         <div className="flex flex-col items-center justify-center w-full bg-muted/40 rounded-lg shadow-lg">
           <video
@@ -68,13 +58,21 @@ export default function VideoAulas({ user }: { user: User }) {
           />
         </div>
 
-        {/* Controle de aulas */}
-        <div className="flex flex-row justify-between items-center w-full max-w-4xl px-2 mt-4 space-y-3 md:space-y-0">
+        <div className="flex items-center w-full gap-2 my-3 px-2">
+          <h1 className="text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100">
+            Aula 1:
+          </h1>
+          <h2 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-200">
+            Introdução ao Supabase
+          </h2>
+        </div>
+
+        <div className="flex justify-between items-center w-full mt-4 px-2">
           <SelectAula />
           <Button
             variant="outline"
             onClick={() => alert('Redirecionando para a Aula 2...')}
-            className="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-lg"
+            className="px-3 py-2 text-sm text-gray-700 dark:text-gray-400 rounded-lg"
           >
             Pular para próxima aula
           </Button>

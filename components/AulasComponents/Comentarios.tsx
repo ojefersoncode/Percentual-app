@@ -17,7 +17,6 @@ export default function Comentarios() {
 
   return (
     <div className="w-full max-w-4xl px-2 mt-6">
-
       <form onSubmit={handleCommentSubmit} className="w-full">
         <textarea
           value={comment}
@@ -29,7 +28,7 @@ export default function Comentarios() {
         <Button
           variant="outline"
           type="submit"
-          className="mt-2 px-4 py-2 text-sm bg-red-600 text-gray-100 dark:text-gray-300 rounded-lg hover:bg-red-400 hover:text-gray-50 max-w-xl"
+          className="px-4 py-2 mt-3 text-sm bg-red-600 text-gray-100 dark:text-gray-300 rounded-lg hover:bg-red-400 hover:text-gray-50 max-w-xl"
         >
           Enviar Comentário
         </Button>
@@ -37,16 +36,15 @@ export default function Comentarios() {
 
       <br />
 
-      <div className='py-2 border p-2'>
- 
-        <h2 className="text-xl font-medium text-gray-900 dark:text-gray-200 mb-2">
+      <div className="py-2 border p-2">
+        <h2 className="flex items-center w-full text-xl max-md:text-lg font-medium text-gray-900 dark:text-gray-200">
           Comentários
         </h2>
       </div>
 
       <div className=" mb-4 border">
         {comments.length === 0 ? (
-          <p className="text-gray-600 dark:text-gray-400 text-center">
+          <p className="text-gray-600 dark:text-gray-400 text-center p-2">
             Nenhum comentário ainda. Seja o primeiro!
           </p>
         ) : (
@@ -55,7 +53,7 @@ export default function Comentarios() {
               key={index}
               className=" bg-white dark:bg-black rounded-lg shadow-md"
             >
-              <div className="flex w-full items-center justify-between p-3 bg-muted/40">
+              <div className="flex w-full items-center gap-2 p-3 bg-muted/40">
                 <span className="text-sm">Jeferson</span>
                 <span className="text-xs">15min</span>
               </div>
