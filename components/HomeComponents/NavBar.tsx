@@ -77,7 +77,7 @@ export function Navbar() {
             Inicio
           </DropdownMenuItem>
           <DropdownMenuItem>Templates & Projetos</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => router.push('/components')}>
+          <DropdownMenuItem onClick={() => router.push('/componentes')}>
             Componentes
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => router.push('/cursos')}>
@@ -101,9 +101,9 @@ export function Navbar() {
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Discord</DropdownMenuItem>
         <DropdownMenuItem>Suporte</DropdownMenuItem>
         <DropdownMenuItem disabled>WhatsApp</DropdownMenuItem>
+        <DropdownMenuItem disabled>Telegram</DropdownMenuItem>
         <DropdownMenuSeparator />
 
         <DropdownMenuGroup>
