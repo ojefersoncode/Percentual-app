@@ -62,18 +62,27 @@ export function Navbar() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className='border-none hover:bg-none focus:none bg-none py-1 px-2'>
-          <Menu className='text-black  dark:text-white' />
+        <Button
+          variant="outline"
+          className="border-none hover:bg-none focus:none bg-none py-1 px-2"
+        >
+          <Menu className="text-black  dark:text-white" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 mr-7">
         <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem onClick={() => router.push('/Home')}>Inicio</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => router.push('/Home')}>
+            Inicio
+          </DropdownMenuItem>
           <DropdownMenuItem>Templates & Projetos</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => router.push('/components')}>Componentes</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => router.push('/video-aula')}>Aréa de aulas</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => router.push('/components')}>
+            Componentes
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => router.push('/cursos')}>
+            Cursos
+          </DropdownMenuItem>
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>Configurações</DropdownMenuSubTrigger>
             <DropdownMenuPortal>
@@ -81,7 +90,11 @@ export function Navbar() {
                 <DropdownMenuItem onClick={() => router.push('/profile')}>
                   Perfil
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => router.push('/planos-e-compras')}>Meu plano</DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => router.push('/planos-e-compras')}
+                >
+                  Meu plano
+                </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>

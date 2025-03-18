@@ -7,14 +7,14 @@ import Link from 'next/link';
 import { Footer } from '../landing/Footer';
 import { ModeToggle } from '../landing/mode-toggle';
 
-export default function HomePage({ user }: { user: User }) {
-  const projects = [
-    { id: 1, name: 'SaaS web', imageUrl: '/codersaas.png' },
-    { id: 2, name: 'Ecommerc web', imageUrl: '/codersaas.png' },
-    { id: 3, name: 'Ecommerc Mobile', imageUrl: '/codersaas.png' },
-    { id: 4, name: 'Landing Page dentista', imageUrl: '/codersaas.png' },
-    { id: 5, name: 'Landing Page oficina', imageUrl: '/codersaas.png' },
-    { id: 6, name: 'Landing Page evento', imageUrl: '/codersaas.png' }
+export default function Cursos({ user }: { user: User }) {
+  const curso = [
+    { id: 1, name: 'Supabase', imageUrl: '/codersaas.png' },
+    { id: 2, name: 'Vercel deploy', imageUrl: '/codersaas.png' },
+    { id: 3, name: 'Market para dev', imageUrl: '/codersaas.png' },
+    { id: 4, name: 'Dominios e SEO', imageUrl: '/codersaas.png' },
+    { id: 5, name: 'Trafego pago para SaaS', imageUrl: '/codersaas.png' },
+    { id: 6, name: 'Programar com Ai', imageUrl: '/codersaas.png' }
   ];
 
   return (
@@ -38,25 +38,26 @@ export default function HomePage({ user }: { user: User }) {
           className="mx-auto grid w-full max-w-7xl gap-10 py-4 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3
           bg-gray-100 dark:bg-black dark:bg-muted/40"
         >
-          {projects.map((project) => (
+          {curso.map((curso) => (
             <div
-              key={project.id}
+              key={curso.id}
               className="border bg-black rounded-lg shadow-md hover:shadow-lg"
             >
               <div className="relative">
                 <img
-                  src={project.imageUrl}
-                  alt={project.name}
+                  src={curso.imageUrl}
+                  alt={curso.name}
                   className="w-full h-48 object-cover rounded-t-lg rounded-b-sm"
                 />
               </div>
               <div className="flex w-full justify-between items-center border-t px-3 py-2 bg-white dark:bg-black">
                 <h1 className="text-base font-semibold text-gray-900 dark:text-gray-200 bg-white dark:bg-black">
-                  {project.name}
+                  {curso.name}
                 </h1>
-                <Link href={`/projects/${project.id}`}>
+                <Link href={`/video-aula`}>
+                  {/*<Link href={`/video-aula${curso.id}`}></Link>*/}
                   <Button variant={'outline'} className="w-full mt-2 px-3 py-1">
-                    Ver detalhes
+                    Assistir
                   </Button>
                 </Link>
               </div>
