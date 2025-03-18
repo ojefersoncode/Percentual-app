@@ -62,6 +62,25 @@
     overflow-x: hidden;
   }
   .flex {
-    flex-shrink: 0; /* Evita o encolhimento dos itens */
+    flex-shrink: 0;
   }
+  /* Barra de rolagem personalizada WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 7px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #5c5c5c; /* Cor do fundo */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff4747; /* Cor da barra de rolagem */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d43d3d; /* Cor ao passar o mouse */
+}
+
 }
