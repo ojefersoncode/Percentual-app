@@ -6,9 +6,9 @@ export const About = () => {
   return (
     <section id="about" className="w-full py-14 sm:py-20">
       <div className="bg-muted/50 border rounded-lg py-12">
-        <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
+        <div className="px-6 flex flex-col-reverse max-md:items-center max-md:justify-center md:flex-row gap-8 md:gap-12">
           <img
-            src="/landing/pilot.png"
+            src="/landing/rocket.svg"
             alt=""
             className="w-[300px] object-contain rounded-lg"
           />
