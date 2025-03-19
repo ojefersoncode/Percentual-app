@@ -1,20 +1,18 @@
 'use client';
 
-import { Button } from '../../components/ui/button';
 import { User } from '@supabase/supabase-js';
 import { Navbar } from '../HomeComponents/NavBar';
-import Link from 'next/link';
 import { Footer } from '../landing/Footer';
 import { ModeToggle } from '../landing/mode-toggle';
 
 export default function HomePage({ user }: { user: User }) {
   const projects = [
-    { id: 1, name: 'SaaS web', imageUrl: '/codersaas.png' },
-    { id: 2, name: 'Ecommerc web', imageUrl: '/codersaas.png' },
-    { id: 3, name: 'Ecommerc Mobile', imageUrl: '/codersaas.png' },
-    { id: 4, name: 'Landing Page dentista', imageUrl: '/codersaas.png' },
-    { id: 5, name: 'Landing Page oficina', imageUrl: '/codersaas.png' },
-    { id: 6, name: 'Landing Page evento', imageUrl: '/codersaas.png' }
+    { id: 1, name: 'Template SaaS web', imageUrl: '/codersaas.png' },
+    { id: 2, name: 'Template Ecommerc web', imageUrl: '/codersaas.png' },
+    { id: 3, name: 'Template Ecommerc Mobile', imageUrl: '/codersaas.png' },
+    { id: 4, name: 'Template Landing Page dentista', imageUrl: '/codersaas.png' },
+    { id: 5, name: 'Template Landing Page oficina', imageUrl: '/codersaas.png' },
+    { id: 6, name: 'Template Landing Page evento', imageUrl: '/codersaas.png' }
   ];
 
   return (
@@ -24,7 +22,7 @@ export default function HomePage({ user }: { user: User }) {
           <div className="flex gap-2 text-xl font-bold items-center">
             <img className="size-7" src="/Leptrum.png" alt="logo" />
             <div className="flex">
-              <h1 className="text-gray-900 dark:text-gray-100">Coderfy</h1>
+              <h1 className="text-gray-900 dark:text-gray-100">Cooderfy</h1>
             </div>
           </div>
 
@@ -51,14 +49,9 @@ export default function HomePage({ user }: { user: User }) {
                 />
               </div>
               <div className="flex w-full justify-between items-center border-t px-3 py-2 bg-white dark:bg-black">
-                <h1 className="text-base font-semibold text-gray-900 dark:text-gray-200 bg-white dark:bg-black">
+                <h1 className="text-base font-semibold text-gray-900 dark:text-gray-200 bg-white dark:bg-black p-2">
                   {project.name}
                 </h1>
-                <Link href={`/projects/${project.id}`}>
-                  <Button variant={'outline'} className="w-full mt-2 px-3 py-1">
-                    Ver detalhes
-                  </Button>
-                </Link>
               </div>
             </div>
           ))}

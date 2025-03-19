@@ -86,7 +86,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
               <SheetContent side={'left'}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl select-none">
-                    Percentual
+                    Cooderfy
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
@@ -102,8 +102,8 @@ export const Navbar = ({ user }: { user: User | null }) => {
                     </a>
                   ))}
                   <Link href="/Home" passHref>
-                    <Button className={`border`} variant="secondary">
-                      Entrar
+                    <Button className="px-4 py-0.5 text-sm" variant="outline">
+                      Vamos começar
                     </Button>
                   </Link>
                 </nav>
@@ -127,10 +127,10 @@ export const Navbar = ({ user }: { user: User | null }) => {
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-2">
+          <div className="hidden md:flex gap-2 p-2">
             <Link href="/Home" passHref>
-              <Button className={`border`} variant="secondary">
-                Entrar
+              <Button className="px-4 py-0.5 text-sm bg-white" variant="outline">
+                Vamos começar
               </Button>
             </Link>
             <ModeToggle />

@@ -28,7 +28,7 @@ export default function Componentes({ user }: { user: User }) {
       <nav className="flex w-full justify-between py-2 px-4 md:px-8 bg-white dark:bg-black">
         <div className="flex items-center gap-2 text-xl font-bold">
           <img className="h-7 w-7" src="/Leptrum.png" alt="logo" />
-          <h1 className="text-gray-900 dark:text-gray-100">Coderfy</h1>
+          <h1 className="text-gray-900 dark:text-gray-100">Cooderfy</h1>
         </div>
 
         <div className="flex gap-2">
