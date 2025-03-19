@@ -24,7 +24,7 @@ export default function HomePage({ user }: { user: User }) {
           <div className="flex gap-2 text-xl font-bold items-center">
             <img className="size-7" src="/Leptrum.png" alt="logo" />
             <div className="flex">
-              <h1 className="text-gray-900 dark:text-gray-100">Codersaas</h1>
+              <h1 className="text-gray-900 dark:text-gray-100">Coderfy</h1>
             </div>
           </div>
 

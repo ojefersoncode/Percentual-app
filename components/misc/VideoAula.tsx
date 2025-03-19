@@ -28,7 +28,7 @@ export default function VideoAulas({ user }: { user: User }) {
       <nav className="flex w-full justify-between px-3 md:px-4 text-gray-50 bg-black">
         <div className="flex gap-2 py-2 text-xl font-bold items-center">
           <img className="size-7" src="/Leptrum.png" alt="logo" />
-          <h1>Codersaas</h1>
+          <h1>Cooderfy</h1>
         </div>
         <div className="flex gap-2 py-2">
           <ModeToggle />

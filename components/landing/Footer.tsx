@@ -11,7 +11,7 @@ export const Footer = () => {
           <div className="flex items-center select-none">
             <img className="size-7" src="/Leptrum.png" alt="logo" />
             <a rel="noreferrer noopener" href="/" className="font-bold text-xl">
-              Codersaas
+            Cooderfy
             </a>
           </div>
         </div>
@@ -139,7 +139,7 @@ export const Footer = () => {
         </div>
       </section>
 
-      <section className="container pb-1 text-center text-gray-100">
+      <section className="container text-center text-gray-100">
         <h3>
           &copy; 2024 Todos os direitos reservados{' '}
           <a
@@ -148,7 +148,7 @@ export const Footer = () => {
             href="https://github.com/Ojefersoncode"
             className="text-red-600 transition-all"
           >
-            Codersaas
+            Cooderfy
           </a>
         </h3>
       </section>

@@ -47,11 +47,11 @@ export const HowItWorks = () => {
       <h2 className="w-full px-4 text-4xl font-bold">
         Por que escolher a{' '}
         <span className="bg-gradient-to-b from-red-500 to-red-700 text-white px-2 rounded-lg">
-          CoderSaaS?
+        Cooderfy?
         </span>
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-lg text-muted-foreground">
-        Veja abaixo algumas das vantagens de escolher a Codersaas para seus
+        Veja abaixo algumas das vantagens de escolher a Cooderfy para seus
         projetos!
       </p>
 

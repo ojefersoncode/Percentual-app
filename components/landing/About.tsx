@@ -19,7 +19,7 @@ export const About = () => {
                 Os templates
               </h2>
               <p className="max-w-4xl text-base md:text-xl text-muted-foreground mt-4 leading-relaxed">
-                Nossos templates SaaS, desenvolvidos com{' '}
+                Nossos templates são, desenvolvidos com{' '}
                 <strong>Next.js</strong> e <strong>Supabase </strong> , oferecem
                 uma solução moderna, eficiente e escalável para startups e
                 negócios digitais. Com <strong>Next.js</strong>, garantimos

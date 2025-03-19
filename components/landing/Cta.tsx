@@ -16,9 +16,9 @@ export const Cta = () => {
             Ganham vida.
           </h2>
           <p className="text-muted-foreground text-xl mt-4 mb-8 lg:mb-0">
-            Comece hoje mesmo a transformar suas ideias em um SaaS de sucesso e
+            Comece hoje mesmo a transformar suas ideias em projetos de sucesso e
             aproveite os melhores templates do mercado para acelerar o seu
-            projeto com qualidade e eficiência.
+            produto com qualidade e eficiência.
           </p>
         </div>
 

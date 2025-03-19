@@ -33,7 +33,7 @@ export default function ProfilePage({ user }: { user: User }) {
         <div className="flex gap-2 text-xl font-bold items-center select-none">
           <img className="h-8 w-8" src="/Leptrum.png" alt="logo" />
           <div className="flex">
-            <h1 className="text-slate-50">Codersaas</h1>
+            <h1 className="text-slate-50">Cooderfy</h1>
           </div>
         </div>
         <div className="flex text-white gap-2">

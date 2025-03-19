@@ -71,7 +71,7 @@ export const Testimonials = () => {
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
-        Confira agora algumas avaliações de nossos usuarios, estão achando da nossa plataforma.
+        Confira agora algumas avaliações de nossos usuarios, e o que estão achando da nossa plataforma.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">

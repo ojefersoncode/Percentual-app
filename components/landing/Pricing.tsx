@@ -35,51 +35,49 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: 'Free',
+    title: 'Grátis',
     popular: 0,
     price: 0,
     description:
-      'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
-    buttonText: 'Get Started',
+      'Conheça agora a nossa plataforma para DEV acelerar a sua produtividade.',
+    buttonText: 'Vamos começar',
     benefitList: [
-      '1 Team member',
-      '2 GB Storage',
-      'Up to 4 pages',
-      'Community support',
-      'lorem ipsum dolor'
+      'Mini cursos',
+      'Lives gratuitas',
+      'Templates grátis',
+      'Componentes grátis'
     ],
     redirectURL: '/account'
   },
   {
     id: 'price_1Pdy8yFttF99a1NCLpDa83xf',
-    title: 'Hobby',
+    title: 'Pro',
     popular: 1,
-    price: 10,
-    description:
-      'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
-    buttonText: 'Subscribe Now',
+    price: 57,
+    description: 'Plano ideal para quem está começando a trabalhar com SaaS.',
+    buttonText: 'Quero me inscrever',
     benefitList: [
-      '4 Team member',
-      '4 GB Storage',
-      'Upto 6 pages',
-      'Priority support',
-      'lorem ipsum dolor'
+      'Cursos Pro',
+      'Templates Pro',
+      'Lives gratuitas',
+      'Componentes Pro',
+      'Acesso à comunidade'
     ]
   },
   {
     id: 'price_1Pdy8zFttF99a1NCGQJc5ZTZ',
-    title: 'Freelancer',
+    title: 'Empreendedor',
     popular: 0,
-    price: 20,
+    price: 297,
     description:
-      'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
-    buttonText: 'Subscribe Now',
+      'Plano premium para quem quer acelerar o crescimento do seu negócio digital.',
+    buttonText: 'Quero me inscrever',
     benefitList: [
-      '10 Team member',
-      '8 GB Storage',
-      'Upto 10 pages',
-      'Priority support',
-      'lorem ipsum dolor'
+      'Grupo exclusivo',
+      'Suporte exclusivo',
+      'Mentoria personalizada',
+      'Templates exclusivos',
+      'Curso completo de produtos digitais'
     ]
   }
 ];
@@ -102,7 +100,7 @@ export const Pricing = ({ user }: { user: User | null }) => {
 
     const { data, error } = await supabase.functions.invoke('get_stripe_url', {
       body: {
-        return_url: getURL('/#pricing'),
+        return_url: getURL('/#Pricing'),
         price: price.id
       }
     });
@@ -130,16 +128,14 @@ export const Pricing = ({ user }: { user: User | null }) => {
   return (
     <section id="pricing" className="container py-10 sm:py-20">
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
+        Planos e
         <span className="bg-gradient-to-b text-red-600 bg-clip-text">
           {' '}
-          Unlimited{' '}
+          preços{' '}
         </span>
-        Access
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+        Garanta agora sua assinatura e tenha acesso a conteúdos exclusivos que preparamos para voçe!.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (
@@ -156,7 +152,7 @@ export const Pricing = ({ user }: { user: User | null }) => {
                 {pricing.title}
                 {pricing.popular === PopularPlanType.YES ? (
                   <Badge variant="secondary" className="text-sm text-primary">
-                    Most popular
+                    Mais escolhido
                   </Badge>
                 ) : null}
               </CardTitle>
