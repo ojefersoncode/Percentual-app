@@ -9,12 +9,12 @@ import { ModeToggle } from '../landing/mode-toggle';
 
 export default function Cursos({ user }: { user: User }) {
   const curso = [
-    { id: 1, name: 'Supabase', imageUrl: '/codersaas.png' },
-    { id: 2, name: 'Vercel deploy', imageUrl: '/codersaas.png' },
-    { id: 3, name: 'Market para dev', imageUrl: '/codersaas.png' },
-    { id: 4, name: 'Dominios e SEO', imageUrl: '/codersaas.png' },
-    { id: 5, name: 'Trafego pago para SaaS', imageUrl: '/codersaas.png' },
-    { id: 6, name: 'Programar com Ai', imageUrl: '/codersaas.png' }
+    { id: 1, name: 'Supabase', imageUrl: '/cooderfy.png' },
+    { id: 2, name: 'Vercel deploy', imageUrl: '/cooderfy.png' },
+    { id: 3, name: 'Market para dev', imageUrl: '/cooderfy.png' },
+    { id: 4, name: 'Dominios e SEO', imageUrl: '/cooderfy.png' },
+    { id: 5, name: 'Trafego pago para SaaS', imageUrl: '/cooderfy.png' },
+    { id: 6, name: 'Programar com Ai', imageUrl: '/cooderfy.png' }
   ];
 
   return (
