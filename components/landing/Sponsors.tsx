@@ -34,7 +34,7 @@ export const Sponsors = () => {
   return (
     <section id="sponsors" className="container text-center pb-12 max-md:pt-12">
       <hr className='w-full' />
-      <h2 className="text-3xl md:text-5xl font-bold text-red-50 pt-4 mt-8 mb-8 md:mb-12">
+      <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-gray-50 pt-4 mt-8 mb-8 md:mb-12">
         Aqui usamos as melhores tecnologias do mercado!
       </h2>
 
