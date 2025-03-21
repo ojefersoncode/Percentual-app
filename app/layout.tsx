@@ -14,7 +14,7 @@ const meta = {
   description: 'Crie seus Projetos até 10x mais rapido.',
   cardImage: '/COODERFY.png',
   robots: 'follow, index',
-  favicon: '/leptrum.png',
+  favicon: '/IMG_20250320_014555_278.webp',
   url: getURL()
 };
 
