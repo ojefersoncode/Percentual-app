@@ -12,9 +12,15 @@ import PostHogPageViewWrapper from '../components/misc/PostHogPageViewWrapper';
 const meta = {
   title: 'Cooderfy',
   description: 'Crie seus Projetos até 10x mais rapido.',
+<<<<<<< HEAD
   cardImage: '/cooderfy.png',
   robots: 'follow, index',
   favicon: '/logo.webp',
+=======
+  cardImage: '/COODERFY.png',
+  robots: 'follow, index',
+  favicon: '/IMG_20250320_014555_278.webp',
+>>>>>>> dfe7f4fda7ea86340eaab4269067643dc992e2df
   url: getURL()
 };
 
