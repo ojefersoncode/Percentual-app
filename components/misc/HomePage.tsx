@@ -37,9 +37,9 @@ export default function HomePage({ user }: { user: User }) {
           </div>
         </nav>
 
-<div>
-  <Search />
-</div>
+        <div>
+          <Search />
+        </div>
 
         <div
           className="mx-auto grid w-full max-w-7xl gap-10 py-4 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3
