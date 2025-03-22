@@ -8,7 +8,6 @@ import dynamic from 'next/dynamic';
 import { Toaster } from '../components/ui/toaster';
 import PostHogPageViewWrapper from '../components/misc/PostHogPageViewWrapper';
 
-
 const meta = {
   title: 'Cooderfy',
   description: 'Crie seus Projetos até 10x mais rapido.',
@@ -23,8 +22,24 @@ export async function generateMetadata(): Promise<Metadata> {
     title: meta.title,
     description: meta.description,
     referrer: 'origin-when-cross-origin',
-    keywords: ['Vercel', 'Supabase', 'Next.js', 'Stripe', 'Subscription', 'Codersaas', 'SaaS', 'boilerplate', 'template', 'templates'],
-    authors: [{ name: 'Codersaas', url: 'https://vercel.com/' }],
+    keywords: [
+      'Vercel',
+      'Supabase',
+      'Next.js',
+      'Stripe',
+      'assets',
+      '3d',
+      'Assets 3d',
+      'blender',
+      'curso',
+      'game dev',
+      'Cooderfy',
+      'SaaS',
+      'boilerplate',
+      'template',
+      'templates'
+    ],
+    authors: [{ name: 'cooderfy', url: 'https://cooderfy.com/' }],
     creator: 'OjersonCode',
     publisher: 'OjefersonCode',
     robots: meta.robots,
@@ -40,8 +55,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@Vercel',
-      creator: '@Vercel',
+      site: '@cooderfy',
+      creator: 'ojefersoncode',
       title: meta.title,
       description: meta.description,
       images: [meta.cardImage]
