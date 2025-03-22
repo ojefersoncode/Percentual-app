@@ -29,14 +29,14 @@ export default function ProfilePage({ user }: { user: User }) {
   return (
     <div className="flex flex-col w-full mx-auto bg-gray-100 dark:bg-black dark:bg-muted/40 min-h-screen">
       {/* Navbar */}
-      <nav className="flex w-full justify-between py-4 px-4 md:px-8 bg-black">
-        <div className="flex gap-2 text-xl font-bold items-center select-none">
-          <img className="h-8 w-8" src="/Leptrum.png" alt="logo" />
+      <nav className="flex w-full justify-between py-4 px-4 md:px-4 bg-white dark:bg-black">
+        <div className="flex gap-1 text-xl font-bold items-center select-none">
+          <img className="size-8" src="/logo.webp" alt="logo" />
           <div className="flex">
-            <h1 className="text-slate-50">Cooderfy</h1>
+            <h1 className="dark:text-gray-50">Cooderfy</h1>
           </div>
         </div>
-        <div className="flex text-white gap-2">
+        <div className="flex gap-2">
           <ModeToggle />
           <Navbar />
         </div>
@@ -112,7 +112,10 @@ export default function ProfilePage({ user }: { user: User }) {
           </CardContent>
 
           <CardFooter>
-            <Button variant={'outline'} className="w-full md:w-auto mt-4 bg-red-600 hover:bg-red-400 text-gray-50 hover:text-gray-100 ">
+            <Button
+              variant={'outline'}
+              className="w-full md:w-auto mt-4 bg-red-600 hover:bg-red-400 text-gray-50 hover:text-gray-100 "
+            >
               Salvar Alterações
             </Button>
           </CardFooter>

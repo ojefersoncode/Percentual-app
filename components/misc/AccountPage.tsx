@@ -10,6 +10,7 @@ import { useToast } from '../../components/ui/use-toast';
 import { useRouter } from 'next/navigation';
 import { SubscriptionWithPriceAndProduct } from '../../utils/types';
 import { ModeToggle } from '../landing/mode-toggle';
+import { Footer } from '../landing/Footer';
 
 export default function AccountPage({
   user,
@@ -55,10 +56,10 @@ export default function AccountPage({
   return (
     <div className="flex min-h-screen w-full flex-col">
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-black">
-        <div className="flex gap-2 text-xl font-bold items-center">
-          <img className="size-7" src="/Leptrum.png" alt="logo" />
+        <div className="flex gap-1 text-xl font-bold items-center">
+          <img className="size-8" src="/logo.webp" alt="logo" />
           <div className="flex">
-            <h1 className="text-gray-900 dark:text-gray-100">Cooderfy</h1>
+            <h1 className="dark:text-gray-100 text-base">Cooderfy</h1>
           </div>
         </div>
 
@@ -75,18 +76,15 @@ export default function AccountPage({
           <div className=" grid gap-6">
             <div x-chunk="dashboard-04-chunk-1">
               <div>
-                <h2 className='py-2'>Email</h2>
-                <div>
-                  Seu usuario esta vinculado a este email
-                </div>
-                <form className='py-2'>
+                <h2 className="py-2">Email</h2>
+                <div>Seu usuario esta vinculado a este email</div>
+                <form className="py-2">
                   <Input placeholder="Email" value={user.email} disabled />
                 </form>
               </div>
-              <div className='py-2 bg-black'>
-
+              <div className="py-2 bg-white dark:bg-black">
                 <div x-chunk="dashboard-04-chunk-2">
-                  <div className="p-2 bg-black">
+                  <div className="py-2 px-4 bg-white dark:bg-black text-black dark:text-white">
                     <h2 className="text-xl font-bold">Plano e compras</h2>
                     <p>
                       {subscription
@@ -94,7 +92,7 @@ export default function AccountPage({
                         : 'Voçe ainda nao assinou nenhum plano.'}
                     </p>
                   </div>
-                  <div className="border-t px-2 py-4 flex space-between">
+                  <div className="border-t p-4 flex space-between">
                     <Button onClick={handleBillingPortal} disabled={loading}>
                       Gerenciar meu plano
                     </Button>
@@ -104,7 +102,8 @@ export default function AccountPage({
             </div>
           </div>
         </div>
-      </main>
+      </main>{' '}
+      <Footer />
     </div>
   );
 }

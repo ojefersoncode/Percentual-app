@@ -24,11 +24,10 @@ export default function VideoAulas({ user }: { user: User }) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen w-full bg-gray-100 dark:bg-black">
-
       <nav className="flex w-full justify-between px-3 md:px-4 text-gray-50 bg-black">
-        <div className="flex gap-2 py-2 text-xl font-bold items-center">
-          <img className="size-7" src="/Leptrum.png" alt="logo" />
-          <h1>Cooderfy</h1>
+        <div className="flex gap-1 py-2 text-xl font-bold items-center">
+          <img className="size-8" src="/logo.webp" alt="logo" />
+          <h1 className="text-base text-gray-50">Cooderfy</h1>
         </div>
         <div className="flex gap-2 py-2">
           <ModeToggle />
@@ -36,7 +35,7 @@ export default function VideoAulas({ user }: { user: User }) {
         </div>
       </nav>
 
-      <hr className='flex w-full bg-gray-50' />
+      <hr className="flex w-full bg-gray-50" />
 
       <div className="flex w-full p-4">
         <Button
@@ -49,7 +48,6 @@ export default function VideoAulas({ user }: { user: User }) {
       </div>
 
       <div className="flex flex-col items-center justify-center w-full max-w-4xl px-4">
-
         <div className="flex flex-col items-center justify-center w-full bg-muted/40 rounded-lg shadow-lg">
           <video
             controls

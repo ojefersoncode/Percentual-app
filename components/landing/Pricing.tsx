@@ -131,11 +131,12 @@ export const Pricing = ({ user }: { user: User | null }) => {
         Planos e
         <span className="bg-gradient-to-b text-red-600 bg-clip-text">
           {' '}
-          preços{' '}
+          Preços{' '}
         </span>
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Garanta agora sua assinatura e tenha acesso a conteúdos exclusivos que preparamos para voçe!.
+        Garanta agora sua assinatura e tenha acesso a conteúdos exclusivos que
+        preparamos para voçe!.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (

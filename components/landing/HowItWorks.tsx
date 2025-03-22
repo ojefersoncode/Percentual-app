@@ -43,11 +43,11 @@ const features: FeatureProps[] = [
 
 export const HowItWorks = () => {
   return (
-    <section id="howItWorks" className="container text-center py-14">
+    <section id="howItWorks" className="container text-center pb-10">
       <h2 className="w-full px-4 text-4xl font-bold">
         Por que escolher a{' '}
         <span className="bg-gradient-to-b from-red-500 to-red-700 text-white px-2 rounded-lg">
-        Cooderfy?
+          Cooderfy?
         </span>
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-lg text-muted-foreground">

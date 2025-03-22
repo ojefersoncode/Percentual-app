@@ -3,15 +3,15 @@ import { LogoIcon } from './Icons';
 
 export const Footer = () => {
   return (
-    <footer id="footer" className='bg-black'>
+    <footer id="footer" className="bg-black">
       <hr className="w-11/12 mx-auto" />
 
       <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8 text-gray-100 bg-black">
         <div className="col-span-full xl:col-span-2">
           <div className="flex items-center select-none">
-            <img className="size-7" src="/Leptrum.png" alt="logo" />
+            <img className="size-10" src="/logo.webp" alt="logo" />
             <a rel="noreferrer noopener" href="/" className="font-bold text-xl">
-            Cooderfy
+              Cooderfy
             </a>
           </div>
         </div>

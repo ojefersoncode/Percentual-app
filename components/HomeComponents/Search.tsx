@@ -68,16 +68,16 @@ const Search = () => {
 
         <div className="flex gap-4 items-center">
           <Select value={filter} onValueChange={handleFilterChange}>
-            <SelectTrigger className="w-32 bg-gray-100 dark:bg-black border border-gray-300 dark:border-gray-700">
+            <SelectTrigger className="w-24 bg-gray-100 dark:bg-black border border-gray-300 dark:border-gray-700">
               {filter === 'all'
                 ? 'Filtro'
                 : filter.charAt(0).toUpperCase() + filter.slice(1)}
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">Todos</SelectItem>
+              <SelectItem value="3d">3D</SelectItem>
               <SelectItem value="web">Web</SelectItem>
               <SelectItem value="mobile">Mobile</SelectItem>
-              <SelectItem value="3d">3D</SelectItem>
             </SelectContent>
           </Select>
 

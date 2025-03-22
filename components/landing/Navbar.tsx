@@ -31,11 +31,11 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: '/#features',
+    href: '/',
     label: 'Inicio'
   },
   {
-    href: '/#testimonials',
+    href: '/#about',
     label: 'Sobre'
   },
   {
@@ -65,7 +65,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
         <NavigationMenuList className="container py-2 px-3 md:px-6 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <div className="flex gap-2 text-xl font-bold items-center">
-              <img className="size-7" src="/Leptrum.png" alt="logo" />
+              <img className="size-10" src="/logo.webp" alt="logo" />
               <div className="flex">
                 <h1 className="text-gray-900 dark:text-gray-100">Cooderfy</h1>
               </div>
@@ -103,7 +103,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
                   ))}
                   <Link href="/Home" passHref>
                     <Button className="px-4 py-0.5 text-sm" variant="outline">
-                      Vamos começar
+                      Entrar
                     </Button>
                   </Link>
                 </nav>
@@ -127,13 +127,16 @@ export const Navbar = ({ user }: { user: User | null }) => {
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-2 p-2">
+          <div className="hidden md:flex gap-4 p-2">
+            <ModeToggle />
             <Link href="/Home" passHref>
-              <Button className="px-4 py-0.5 text-sm bg-white" variant="outline">
-                Vamos começar
+              <Button
+                className="px-4 py-0.5 text-sm bg-white"
+                variant="outline"
+              >
+                Entrar
               </Button>
             </Link>
-            <ModeToggle />
           </div>
         </NavigationMenuList>
       </NavigationMenu>

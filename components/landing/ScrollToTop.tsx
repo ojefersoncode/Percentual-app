@@ -42,7 +42,7 @@ export const ScrollToTop = () => {
       {showTopBtn && (
         <Button
           onClick={goToTop}
-          className="fixed bottom-4 right-4 opacity-90 shadow-md transition-opacity duration-300 hover:opacity-100"
+          className="fixed bottom-7 right-4 opacity-90 shadow-md transition-opacity duration-300 hover:opacity-100"
           size="icon"
         >
           <ArrowUpToLine className="h-4 w-4" />
