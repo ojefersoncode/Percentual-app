@@ -16,12 +16,10 @@ interface ConfigPageProps {
   user: User;
 }
 
-export default function ConfigPage({
-  template,
-  favicon,
-  onClose,
-  user
-}: ConfigPageProps) {
+const template = 'Template de exemplo';
+const favicon = '/favicon.ico';
+
+export default function ConfigPage({ user }: { user: User }) {
   const [config, setConfig] = useState({
     favicon: favicon || '',
     textPrimary: '#ffffff',
