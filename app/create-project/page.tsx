@@ -11,5 +11,14 @@ export default async function createProject() {
     return redirect('/auth/signin');
   }
 
-  return <ConfigPage user={user} />;
+  return (
+    <ConfigPage
+      user={user}
+      template={''}
+      favicon={''}
+      onClose={function (): void {
+        throw new Error('Function not implemented.');
+      }}
+    />
+  );
 }
