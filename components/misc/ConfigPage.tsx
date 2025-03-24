@@ -19,7 +19,7 @@ interface ConfigPageProps {
 const template = 'Template de exemplo';
 const favicon = '/favicon.ico';
 
-export default function ConfigPage({ user }: { user: User }) {
+export default function ConfigPage({ user, onClose }: ConfigPageProps) {
   const [config, setConfig] = useState({
     favicon: favicon || '',
     textPrimary: '#ffffff',
@@ -47,7 +47,7 @@ export default function ConfigPage({ user }: { user: User }) {
 
   const handleCreateProject = () => {
     console.log('Criando projeto com:', config);
-    onClose();
+    onClose(); // Now the onClose function is correctly passed in
   };
 
   const nextStep = () => setStep(step + 1);
