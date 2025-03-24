@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { User } from '@supabase/supabase-js';
 import { ModeToggle } from '../landing/mode-toggle';
 import { Navbar } from '../HomeComponents/NavBar';
@@ -11,6 +11,7 @@ import { Step4 } from '../ConfigPage/Step4';
 
 interface ConfigPageProps {
   template: string;
+  favicon: string;
   onClose: () => void;
   user: User;
 }
@@ -34,6 +35,16 @@ export default function ConfigPage({
   });
 
   const [step, setStep] = useState(1);
+
+  useEffect(() => {
+    const savedFavicon = localStorage.getItem('favicon');
+    if (savedFavicon) {
+      setConfig((prevConfig) => ({
+        ...prevConfig,
+        favicon: savedFavicon
+      }));
+    }
+  }, []);
 
   const handleCreateProject = () => {
     console.log('Criando projeto com:', config);
@@ -69,18 +80,17 @@ export default function ConfigPage({
           {step === 1 && (
             <Step1
               favicon={config.favicon}
-              onChangeFavicon={(favicon: any) =>
-                setConfig({ ...config, favicon })
-              }
+              onChangeFavicon={(favicon: string) => {
+                localStorage.setItem('favicon', favicon);
+                setConfig({ ...config, favicon });
+              }}
             />
           )}
 
           {step === 2 && (
             <Step2
               config={config}
-              onChangeConfig={(key: any, value: any) =>
-                setConfig({ ...config, [key]: value })
-              }
+              setConfig={setConfig} // Passando setConfig diretamente
             />
           )}
 
