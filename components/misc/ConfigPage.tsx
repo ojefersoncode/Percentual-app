@@ -69,14 +69,16 @@ export default function ConfigPage({
           {step === 1 && (
             <Step1
               favicon={config.favicon}
-              onChangeFavicon={(favicon) => setConfig({ ...config, favicon })}
+              onChangeFavicon={(favicon: any) =>
+                setConfig({ ...config, favicon })
+              }
             />
           )}
 
           {step === 2 && (
             <Step2
               config={config}
-              onChangeConfig={(key, value) =>
+              onChangeConfig={(key: any, value: any) =>
                 setConfig({ ...config, [key]: value })
               }
             />
