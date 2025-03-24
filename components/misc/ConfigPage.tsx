@@ -18,11 +18,12 @@ interface ConfigPageProps {
 
 export default function ConfigPage({
   template,
+  favicon,
   onClose,
   user
 }: ConfigPageProps) {
   const [config, setConfig] = useState({
-    favicon: '',
+    favicon: favicon || '',
     textPrimary: '#ffffff',
     textSecondary: '#cbd5e1',
     textNeutral: '#94a3b8',
