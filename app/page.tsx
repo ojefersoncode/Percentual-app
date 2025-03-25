@@ -1,3 +1,4 @@
+import { HeroLeads } from '@/components/landing/HeroLeads';
 import { About } from '../components/landing/About';
 import { Cta } from '../components/landing/Cta';
 import { FAQ } from '../components/landing/FAQ';
@@ -21,17 +22,18 @@ export default async function LandingPage() {
 
   return (
     <>
-      <div className='w-full overflow-hidden'>
+      <div className="w-full overflow-hidden">
         <Navbar user={user} />
-        <Hero />
+        <HeroLeads />
+        {/* <Hero />
         <Sponsors />
         <About />
         <HowItWorks />
         <Cta />
         <Testimonials />
-        <Pricing user={user} />
+        <Pricing user={user} /> 
         <Newsletter />
-        <FAQ />
+        <FAQ />*/}
         <Footer />
         <ScrollToTop />
       </div>
