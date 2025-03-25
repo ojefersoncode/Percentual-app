@@ -5,15 +5,15 @@ import { useState, useEffect } from 'react';
 import { createClient } from '@/utils/supabase/client';
 import { useToast } from '@/components/ui/use-toast';
 
-// Define o tipo correto
 type Lead = {
-  id?: string; // Se você tiver um campo de ID (gerado automaticamente)
+  id?: string;
   email: string;
 };
 
 export const CaptureLeads = () => {
   const [email, setEmail] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -38,7 +38,6 @@ export const CaptureLeads = () => {
       return;
     }
 
-    // Verifica se o email já foi cadastrado
     const savedEmail = localStorage.getItem('lead_email');
     if (savedEmail === email) {
       toast({
@@ -50,9 +49,14 @@ export const CaptureLeads = () => {
     }
 
     setLoading(true);
+    setIsButtonDisabled(true);
+
+    setTimeout(() => {
+      setIsButtonDisabled(false);
+    }, 30000);
 
     const supabase = createClient();
-    const lead: Lead = { email }; // Criando o objeto corretamente
+    const lead: Lead = { email };
 
     const { data, error } = await supabase.from('leads' as any).insert([lead]);
 
@@ -82,14 +86,18 @@ export const CaptureLeads = () => {
     >
       <Input
         type="email"
-        placeholder="Digite-seu-email@email.com"
+        placeholder="Digite seu e-mail"
         className="bg-muted/50 dark:bg-muted/80 w-72"
         aria-label="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
-      <Button className="px-4 py-2" type="submit" disabled={loading}>
+      <Button
+        className="px-4 py-2"
+        type="submit"
+        disabled={loading || isButtonDisabled}
+      >
         {loading ? 'Enviando...' : 'Inscrever'}
       </Button>
     </form>
