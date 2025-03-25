@@ -87,7 +87,7 @@ export const CaptureLeads = () => {
       <Input
         type="email"
         placeholder="Digite seu e-mail"
-        className="bg-muted/50 dark:bg-muted/80 w-72"
+        className="bg-muted/50 dark:bg-muted/80 w-72 max-md:64"
         aria-label="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
