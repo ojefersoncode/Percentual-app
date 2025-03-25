@@ -39,3 +39,14 @@ export const getUserDetails = cache(async (supabase: SupabaseClient) => {
     .single();
   return userDetails;
 });
+
+export const getLeads = cache(async (supabase: SupabaseClient) => {
+  const { data: leads, error } = await supabase.from('leads').select('*'); // Aqui você pode definir os campos que quer selecionar
+
+  if (error) {
+    console.error('Erro ao buscar leads:', error);
+    return null;
+  }
+
+  return leads;
+});

@@ -54,7 +54,7 @@ export const CaptureLeads = () => {
     const supabase = createClient();
     const lead: Lead = { email }; // Criando o objeto corretamente
 
-    const { error } = await supabase.from('leads').insert([lead]);
+    const { data, error } = await supabase.from('leads' as any).insert([lead]);
 
     if (error) {
       toast({
