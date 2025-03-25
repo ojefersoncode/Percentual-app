@@ -8,6 +8,7 @@ import { Step1 } from '../ConfigPage/Step1';
 import { Step2 } from '../ConfigPage/Step2';
 import { Step3 } from '../ConfigPage/Step3';
 import { Step4 } from '../ConfigPage/Step4';
+import { Button } from '../ui/button';
 
 interface ConfigPageProps {
   template: string;
@@ -54,7 +55,7 @@ export default function ConfigPage({ user, onClose }: ConfigPageProps) {
   const prevStep = () => setStep(step - 1);
 
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white items-center">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-black text-white items-center">
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-black">
         <div className="flex gap-1 text-xl font-bold items-center">
           <img className="size-8" src="/logo.webp" alt="logo" />
@@ -71,7 +72,7 @@ export default function ConfigPage({ user, onClose }: ConfigPageProps) {
         </div>
       </nav>
 
-      <div className="bg-black p-8 rounded-lg md:w-2/3 shadow-lg flex flex-col space-y-8">
+      <div className="dark:bg-black p-8 rounded-lg md:w-2/3 shadow-lg flex flex-col space-y-8">
         <h2 className="text-2xl font-semibold">{`Configurar ${template}`}</h2>
 
         {/* Conteúdo das etapas */}
@@ -112,24 +113,25 @@ export default function ConfigPage({ user, onClose }: ConfigPageProps) {
           )}
         </div>
 
-        {/* Navegação entre etapas */}
         <div className="flex justify-between mt-6">
           {step > 1 && (
-            <button
-              className="bg-gray-600 px-4 py-2 rounded text-white hover:bg-gray-700 transition"
+            <Button
+              variant={'outline'}
+              className="px-4 py-2 transition"
               onClick={prevStep}
             >
               Voltar
-            </button>
+            </Button>
           )}
 
           {step < 4 ? (
-            <button
+            <Button
+              variant={'ghost'}
               className="bg-red-600 px-4 py-2 rounded text-white hover:bg-red-700 transition"
               onClick={nextStep}
             >
               Próximo
-            </button>
+            </Button>
           ) : (
             <button
               className="bg-green-600 px-4 py-2 rounded text-white hover:bg-green-700 transition"

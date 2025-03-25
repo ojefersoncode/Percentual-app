@@ -16,7 +16,7 @@ export function Step2({ config, setConfig }: Step2Props) {
 
   return (
     <>
-      <label className="block mt-4 mb-2 text-gray-300 font-medium">
+      <label className="block mt-4 mb-2 text-black dark:text-gray-300 font-medium">
         Paleta de Cores
       </label>
 
@@ -25,12 +25,12 @@ export function Step2({ config, setConfig }: Step2Props) {
         <div className="space-y-4">
           {textColors.map((key) => (
             <div key={key}>
-              <label className="block text-gray-300 py-2 text-sm font-medium">
+              <label className="block text-black dark:text-gray-300 py-2 text-sm font-medium">
                 {key}
               </label>
               <div className="flex items-center gap-3">
                 <Input
-                  className="text-sm w-80 max-w-xs sm:max-w-md"
+                  className="text-sm w-80 max-w-xs sm:max-w-md text-black dark:text-white"
                   placeholder="Cole seu hex aqui"
                   type="text"
                   id=""
@@ -47,15 +47,14 @@ export function Step2({ config, setConfig }: Step2Props) {
         <div className="space-y-4">
           {bgColors.map((key) => (
             <div key={key}>
-              <label className="block text-gray-300 py-2 text-sm font-medium">
+              <label className="block text-black dark:text-gray-300 py-2 text-sm font-medium">
                 {key}
               </label>
               <div className="flex items-center gap-3">
                 <Input
-                  className="text-sm w-80 max-w-xs sm:max-w-md"
+                  className="text-sm w-80 max-w-xs sm:max-w-md text-black dark:text-white"
                   placeholder="Cole seu hex aqui"
                   type="text"
-                  id=""
                 />
                 <Button className="px-2 py-1">
                   <Check />
