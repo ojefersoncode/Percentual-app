@@ -15,31 +15,33 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: 'o acesso e Permanente?',
-    answer: 'Sim. seu acesso sera para sempre.',
+    question: 'Vai ser gratuito?',
+    answer:
+      'Sim. tera recursos gratuitos e recursos premiun, mas isso não afetará seu uso.',
     value: 'item-1'
   },
   {
-    question: 'Vai ter mais templates?',
-    answer: 'Sim, teremos muitos templates tanto para web e para mobile',
+    question: 'Vai ter quais templates?',
+    answer:
+      'Teremos muitos templates, de SaaS, ecommerc, landing page e entre outros',
     value: 'item-2'
   },
   {
     question: 'Ensinam a configurar o projeto?',
     answer:
-      'Sim, temos video aulas gravadas e atualizadas para ajudar configurar o seu projeto, tambem temos a nossa comunidade privada onde poderar tirar duvidas e além disso pode contar com o nosso suporte p2p',
+      'Sim, temos video aulas gravadas e atualizadas para ajudar configurar o seu projeto, tambem temos a nossa comunidade onde poderar tirar suas duvidas.',
     value: 'item-3'
   },
   {
     question: 'Posso monetizar meu SaaS?',
     answer:
-      'Sim, você poderá usar o template à vontade para criar quantos SaaS quiser, mas não poderá revender o template. No entanto, você pode fornecer serviços de criação para terceiros.',
+      'Sim, você poderá usar o template à vontade para criar quantos SaaS quiser.',
     value: 'item-4'
   },
   {
     question: 'Qual linguagem usada?',
     answer:
-      'Nossos templates utilizam tecnologias como Next.js, TypeScript, Supabase, Vercel, Google Cloud e Lucide React, podendo integrar ainda mais tecnologias conforme sua necessidade.',
+      'Nossos templates utilizam tecnologias como Next.js, TypeScript, Supabase, Vercel e Lucide React, podendo integrar ainda mais tecnologias conforme sua necessidade.',
     value: 'item-5'
   }
 ];

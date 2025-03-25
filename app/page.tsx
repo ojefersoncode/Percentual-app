@@ -25,6 +25,7 @@ export default async function LandingPage() {
       <div className="w-full overflow-hidden">
         <Navbar user={user} />
         <HeroLeads />
+        <FAQ />
         {/* <Hero />
         <Sponsors />
         <About />
@@ -32,8 +33,7 @@ export default async function LandingPage() {
         <Cta />
         <Testimonials />
         <Pricing user={user} /> 
-        <Newsletter />
-        <FAQ />*/}
+        <Newsletter />*/}
         <Footer />
         <ScrollToTop />
       </div>
