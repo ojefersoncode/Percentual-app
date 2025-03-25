@@ -87,14 +87,14 @@ export const CaptureLeads = () => {
       <Input
         type="email"
         placeholder="Digite seu e-mail"
-        className="bg-muted/50 dark:bg-muted/80 w-72 max-md:64"
+        className="bg-muted/50 dark:bg-muted/80 w-72 max-md:w-60"
         aria-label="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
       <Button
-        className="px-4 py-2"
+        className="px-3 max-md:text-sm py-2"
         type="submit"
         disabled={loading || isButtonDisabled}
       >
