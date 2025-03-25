@@ -71,7 +71,7 @@ export default function ConfigPage({ user, onClose }: ConfigPageProps) {
         </div>
       </nav>
 
-      <div className="bg-black p-8 rounded-lg w-[800px] shadow-lg flex flex-col space-y-8">
+      <div className="bg-black p-8 rounded-lg md:w-2/3 shadow-lg flex flex-col space-y-8">
         <h2 className="text-2xl font-semibold">{`Configurar ${template}`}</h2>
 
         {/* Conteúdo das etapas */}

@@ -20,7 +20,7 @@ export function Step2({ config, setConfig }: Step2Props) {
         Paleta de Cores
       </label>
 
-      <div className="grid grid-cols-2 items-center justify-center gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-20">
         {/* Coluna 1: Cores de Texto */}
         <div className="space-y-4">
           {textColors.map((key) => (
@@ -28,14 +28,14 @@ export function Step2({ config, setConfig }: Step2Props) {
               <label className="block text-gray-300 py-2 text-sm font-medium">
                 {key}
               </label>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 <Input
-                  className="text-sm w-64"
+                  className="text-sm w-80 max-w-xs sm:max-w-md"
                   placeholder="Cole seu hex aqui"
                   type="text"
                   id=""
                 />
-                <Button>
+                <Button className="px-2 py-1">
                   <Check />
                 </Button>
               </div>
@@ -50,14 +50,14 @@ export function Step2({ config, setConfig }: Step2Props) {
               <label className="block text-gray-300 py-2 text-sm font-medium">
                 {key}
               </label>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 <Input
-                  className="text-sm w-64"
+                  className="text-sm w-80 max-w-xs sm:max-w-md"
                   placeholder="Cole seu hex aqui"
                   type="text"
                   id=""
                 />
-                <Button>
+                <Button className="px-2 py-1">
                   <Check />
                 </Button>
               </div>
