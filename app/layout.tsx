@@ -5,7 +5,7 @@ import '@/styles/main.css';
 import { PHProvider } from './providers';
 import { ThemeProvider } from '../components/landing/theme-provider';
 import { Toaster } from '../components/ui/toaster';
-import PostHogPageViewWrapper from '../components/misc/PostHogPageViewWrapper';
+import PostHogPageViewWrapper from '../components/pages/PostHogPageViewWrapper';
 
 const meta = {
   title: 'Cooderfy',

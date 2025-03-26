@@ -1,15 +1,13 @@
 import { createClient } from '../../../utils/supabase/server';
 import { redirect } from 'next/navigation';
 import { Navbar } from '../../../components/landing/Navbar';
-import { AuthForm } from '../../../components/misc/AuthForm';
+import { AuthForm } from '../../../components/pages/AuthForm';
 import { AuthState } from '../../../utils/types';
 
-export default async function SignIn(
-  props: {
-    params: Promise<{ id: string }>;
-    searchParams: Promise<{ disable_button: boolean }>;
-  }
-) {
+export default async function SignIn(props: {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ disable_button: boolean }>;
+}) {
   const params = await props.params;
   if (!Object.values(AuthState).includes(params.id as AuthState)) {
     redirect('/auth');

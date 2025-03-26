@@ -1,12 +1,12 @@
 'use client';
-import { Button } from '../../components/ui/button';
-import { Input } from '../../components/ui/input';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
 import { Navbar } from '../HomeComponents/NavBar';
 import { User } from '@supabase/supabase-js';
 import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
 import { getURL } from '@/utils/helpers';
-import { useToast } from '../../components/ui/use-toast';
+import { useToast } from '../ui/use-toast';
 import { useRouter } from 'next/navigation';
 import { SubscriptionWithPriceAndProduct } from '../../utils/types';
 import { ModeToggle } from '../landing/mode-toggle';

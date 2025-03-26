@@ -1,13 +1,8 @@
 'use client';
 import { useState } from 'react';
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardFooter
-} from '../../components/ui/card';
-import { Button } from '../../components/ui/button';
-import { Label } from '../../components/ui/label';
+import { Card, CardHeader, CardContent, CardFooter } from '../ui/card';
+import { Button } from '../ui/button';
+import { Label } from '../ui/label';
 import { Navbar } from '../HomeComponents/NavBar';
 import { User } from '@supabase/supabase-js';
 import { Pencil } from 'lucide-react';

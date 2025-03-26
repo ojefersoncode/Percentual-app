@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from '../../components/ui/button';
+import { Button } from '../ui/button';
 import { User } from '@supabase/supabase-js';
 import { Navbar } from '../HomeComponents/NavBar';
 import { SelectAula } from '../VideoAulaComponents/SelectAula';

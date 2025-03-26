@@ -1,4 +1,4 @@
-import AccountPage from '../../components/misc/AccountPage';
+import AccountPage from '../../components/pages/AccountPage';
 import { createClient } from '../../utils/supabase/server';
 import { redirect } from 'next/navigation';
 import { getSubscription, getUser } from '../../utils/supabase/queries';

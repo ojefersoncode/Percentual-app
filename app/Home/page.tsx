@@ -1,4 +1,4 @@
-import HomePage from '../../components/misc/HomePage';
+import HomePage from '../../components/pages/HomePage';
 import { createClient } from '../../utils/supabase/server';
 import { redirect } from 'next/navigation';
 import { getUser } from '../../utils/supabase/queries';

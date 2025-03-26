@@ -1,5 +1,5 @@
 'use client';
-import ConfigPage from '@/components/misc/ConfigPage';
+import ConfigPage from '@/components/pages/ConfigPage';
 import { User } from '@supabase/supabase-js';
 
 interface ConfigPageWrapperProps {

@@ -1,7 +1,7 @@
 import { createClient } from '../../utils/supabase/server';
 import { redirect } from 'next/navigation';
 import { getUser } from '../../utils/supabase/queries';
-import TemplatesWeb from '@/components/misc/Templates';
+import TemplatesWeb from '@/components/pages/Templates';
 
 export default async function Templates() {
   const supabase = await createClient();

@@ -1,7 +1,7 @@
 import { createClient } from '../../utils/supabase/server';
 import { redirect } from 'next/navigation';
 import { getUser } from '../../utils/supabase/queries';
-import VideoAulas from '@/components/misc/VideoAula';
+import VideoAulas from '@/components/pages/VideoAula';
 
 export default async function VideoAula() {
   const supabase = await createClient();
