@@ -46,7 +46,12 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
       </div>
 
       <label className="cursor-pointer flex flex-col items-center justify-center w-full h-24 border-2 border-dashed border-opacity-10 rounded-lg bg-gray-200 dark:bg-black hover:bg-muted transition px-1">
-        <input type="file" className="hidden" onChange={handleFileChange} />
+        <input
+          type="file"
+          accept="image/png, image/svg+xml, image/webp"
+          className="hidden"
+          onChange={handleFileChange}
+        />
         <div className="flex flex-col w-full items-center justify-center">
           <Upload className="w-6 h-6 text-black dark:text-gray-400" />
           <span className="text-black dark:text-gray-400 text-xs sm:text-sm text-center mt-2">
