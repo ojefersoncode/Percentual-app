@@ -72,8 +72,8 @@ export default function ConfigPage({ user, onClose }: ConfigPageProps) {
         </div>
       </nav>
 
-      <div className="dark:bg-black p-8 rounded-lg md:w-2/3 shadow-lg flex flex-col space-y-8">
-        <h2 className="text-2xl font-semibold">{`Configurar ${template}`}</h2>
+      <div className="dark:bg-black dark:bg-muted/40 p-8 rounded-lg md:w-2/3 shadow-lg flex flex-col space-y-8">
+        <h2 className="text-2xl font-semibold text-black dark:text-gray-100">{`Configurar ${template}`}</h2>
 
         {/* Conteúdo das etapas */}
         <div className="space-y-6">
@@ -117,7 +117,7 @@ export default function ConfigPage({ user, onClose }: ConfigPageProps) {
           {step > 1 && (
             <Button
               variant={'outline'}
-              className="px-4 py-2 transition"
+              className="px-4 py-2 transition text-black dark:text-white"
               onClick={prevStep}
             >
               Voltar

@@ -3,22 +3,28 @@ import { LogoIcon } from './Icons';
 
 export const Footer = () => {
   return (
-    <footer id="footer" className="bg-black">
-      <hr className="w-11/12 mx-auto" />
+    <footer id="footer" className="">
+      <hr className=" mx-auto bg-gray-700 dark:bg-gray-400" />
 
-      <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8 text-gray-100 bg-black">
+      <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8 text-gray-100 bg-white dark:bg-black">
         <div className="col-span-full xl:col-span-2">
           <div className="flex items-center select-none">
             <img className="size-10" src="/logo.webp" alt="logo" />
-            <a rel="noreferrer noopener" href="/" className="font-bold text-xl">
+            <a
+              rel="noreferrer noopener"
+              href="/"
+              className="font-bold text-xl text-black dark:text-gray-100"
+            >
               Cooderfy
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Redes Sociais</h3>
-          <div>
+          <h3 className="font-bold text-lg text-black dark:text-gray-100">
+            Redes Sociais
+          </h3>
+          <div className="text-black dark:text-gray-100">
             <a
               rel="noreferrer noopener"
               href="#"
@@ -28,7 +34,7 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div>
+          <div className="text-black dark:text-gray-100">
             <a
               rel="noreferrer noopener"
               href="#"
@@ -38,20 +44,22 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div>
+          <div className="text-black dark:text-gray-100">
             <a
               rel="noreferrer noopener"
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Dribbble
+              Linkedin
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Plataformas</h3>
-          <div>
+          <h3 className="font-bold text-lg text-black dark:text-white">
+            Plataformas
+          </h3>
+          <div className="text-black dark:text-gray-100">
             <a
               rel="noreferrer noopener"
               href="#"
@@ -61,7 +69,7 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div>
+          <div className="text-black dark:text-gray-100">
             <a
               rel="noreferrer noopener"
               href="#"
@@ -72,7 +80,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="text-black dark:text-gray-100">
           <h3 className="font-bold text-lg">Sobre</h3>
           <div>
             <a
@@ -84,7 +92,7 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div>
+          <div className="text-black dark:text-gray-100">
             <a
               rel="noreferrer noopener"
               href="#"
@@ -94,7 +102,7 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div>
+          <div className="text-black dark:text-gray-100">
             <a
               rel="noreferrer noopener"
               href="#"
@@ -106,8 +114,10 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Comunidade</h3>
-          <div>
+          <h3 className="font-bold text-lg text-black dark:text-white">
+            Comunidade
+          </h3>
+          <div className="text-black dark:text-gray-100">
             <a
               rel="noreferrer noopener"
               href="#"
@@ -117,7 +127,7 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div>
+          <div className="text-black dark:text-gray-100">
             <a
               rel="noreferrer noopener"
               href="#"
@@ -127,7 +137,7 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div>
+          <div className="text-black dark:text-gray-100">
             <a
               rel="noreferrer noopener"
               href="#"
@@ -139,8 +149,8 @@ export const Footer = () => {
         </div>
       </section>
 
-      <section className="container text-center text-gray-100">
-        <h3>
+      <section className="container text-center text-gray-100 pb-4 bg-white dark:bg-black">
+        <h3 className="text-black dark:text-white">
           &copy; 2024 Todos os direitos reservados{' '}
           <a
             rel="noreferrer noopener"

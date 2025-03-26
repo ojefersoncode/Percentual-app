@@ -76,7 +76,9 @@ export function Navbar() {
           <DropdownMenuItem onClick={() => router.push('/Home')}>
             Inicio
           </DropdownMenuItem>
-          <DropdownMenuItem>Templates & Projetos</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => router.push('/templates')}>
+            Templates & Projetos
+          </DropdownMenuItem>
           <DropdownMenuItem onClick={() => router.push('/componentes')}>
             Componentes
           </DropdownMenuItem>

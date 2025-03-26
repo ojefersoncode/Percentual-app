@@ -16,21 +16,21 @@ export function Step2({ config, setConfig }: Step2Props) {
 
   return (
     <>
-      <label className="block mt-4 mb-2 text-black dark:text-gray-300 font-medium">
+      <label className="block text-xl text-black dark:text-gray-300 font-medium">
         Paleta de Cores
       </label>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-20">
         {/* Coluna 1: Cores de Texto */}
-        <div className="space-y-4">
+        <div className="space-y-2">
           {textColors.map((key) => (
             <div key={key}>
-              <label className="block text-black dark:text-gray-300 py-2 text-sm font-medium">
+              <label className="block text-black dark:text-gray-200 py-2 text-sm font-medium">
                 {key}
               </label>
               <div className="flex items-center gap-3">
                 <Input
-                  className="text-sm w-80 max-w-xs sm:max-w-md text-black dark:text-white"
+                  className="text-sm w-80 max-lg:w-72 text-black dark:text-white"
                   placeholder="Cole seu hex aqui"
                   type="text"
                   id=""
@@ -44,15 +44,15 @@ export function Step2({ config, setConfig }: Step2Props) {
         </div>
 
         {/* Coluna 2: Cores de Fundo */}
-        <div className="space-y-4">
+        <div className="space-y-2 mb-4">
           {bgColors.map((key) => (
             <div key={key}>
-              <label className="block text-black dark:text-gray-300 py-2 text-sm font-medium">
+              <label className="block text-black dark:text-gray-200 py-2 text-sm font-medium">
                 {key}
               </label>
               <div className="flex items-center gap-3">
                 <Input
-                  className="text-sm w-80 max-w-xs sm:max-w-md text-black dark:text-white"
+                  className="text-sm w-80 max-lg:w-72 text-black dark:text-white"
                   placeholder="Cole seu hex aqui"
                   type="text"
                 />

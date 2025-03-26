@@ -1,9 +1,9 @@
 import { createClient } from '../../utils/supabase/server';
 import { redirect } from 'next/navigation';
 import { getUser } from '../../utils/supabase/queries';
-import VideoAulas from '@/components/misc/VideoAula';
+import TemplatesWeb from '@/components/misc/Templates';
 
-export default async function VideoAula() {
+export default async function Templates() {
   const supabase = await createClient();
 
   const user = await getUser(supabase);
@@ -11,5 +11,5 @@ export default async function VideoAula() {
     return redirect('/auth/signin');
   }
 
-  return <VideoAulas user={user} />;
+  return <TemplatesWeb user={user} />;
 }
