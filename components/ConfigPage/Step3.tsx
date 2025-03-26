@@ -28,7 +28,7 @@ const items = [
   { id: 'Arial', label: 'Arial', fontFamily: 'Arial, sans-serif' },
   { id: 'Poppins', label: 'Poppins', fontFamily: 'Poppins, sans-serif' },
   { id: 'Roboto', label: 'Roboto', fontFamily: 'Roboto, sans-serif' },
-  { id: 'Georgia', label: 'Georgia', fontFamily: 'Georgia, sans-serif' }, // Substituí "Bold" por uma fonte real
+  { id: 'Georgia', label: 'Georgia', fontFamily: 'Georgia, sans-serif' },
   { id: 'System', label: 'System', fontFamily: 'system-ui, sans-serif' },
   { id: 'Inter', label: 'Inter', fontFamily: 'Inter, sans-serif' },
   { id: 'Lato', label: 'Lato', fontFamily: 'Lato, sans-serif' },
@@ -55,7 +55,7 @@ export function Step3() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      items: ['Arial', 'Poppins', 'Roboto'], // Ajustado para 3 fontes por padrão
+      items: ['Arial', 'Poppins', 'Roboto'],
       icons: 'lucide'
     }
   });
@@ -94,7 +94,7 @@ export function Step3() {
                   render={({ field }) => (
                     <FormItem
                       key={item.id}
-                      className="flex flex-row items-center space-x-3 space-y-0"
+                      className="flex flex-row items-center space-x-3 space-y-0 py-1"
                     >
                       <FormControl>
                         <Checkbox
@@ -110,11 +110,14 @@ export function Step3() {
                           }}
                         />
                       </FormControl>
-                      <FormLabel
-                        className="font-normal text-black dark:text-white"
-                        style={{ fontFamily: item.fontFamily }}
-                      >
-                        {item.label} (Exemplo)
+                      <FormLabel className="font-normal text-black dark:text-white flex items-center space-x-2">
+                        <span>{item.label}</span>
+                        <span
+                          style={{ fontFamily: item.fontFamily }}
+                          className="text-gray-500 dark:text-gray-400"
+                        >
+                          (Exemplo)
+                        </span>
                       </FormLabel>
                     </FormItem>
                   )}
@@ -126,8 +129,24 @@ export function Step3() {
                   Fontes selecionadas:{' '}
                   {form
                     .watch('items')
-                    ?.map((id) => items.find((item) => item.id === id)?.label)
-                    .join(', ')}
+                    ?.map((id) => {
+                      const selectedItem = items.find((item) => item.id === id);
+                      return (
+                        <span
+                          key={id}
+                          style={{ fontFamily: selectedItem?.fontFamily }}
+                        >
+                          {selectedItem?.label}
+                        </span>
+                      );
+                    })
+                    .reduce((prev, curr, i) => (
+                      <>
+                        {prev}
+                        {i > 0 ? ', ' : ''}
+                        {curr}
+                      </>
+                    ))}
                   {form.watch('items')?.length !== 3 && (
                     <span className="text-red-500 ml-2">
                       (Selecione exatamente 3 fontes)
@@ -170,8 +189,6 @@ export function Step3() {
             </FormItem>
           )}
         />
-
-        <Button type="submit">Submit</Button>
       </form>
     </Form>
   );
