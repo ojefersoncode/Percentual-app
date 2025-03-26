@@ -4,7 +4,6 @@ import { getURL } from '../utils/helpers';
 import '@/styles/main.css';
 import { PHProvider } from './providers';
 import { ThemeProvider } from '../components/landing/theme-provider';
-import dynamic from 'next/dynamic';
 import { Toaster } from '../components/ui/toaster';
 import PostHogPageViewWrapper from '../components/misc/PostHogPageViewWrapper';
 

@@ -1,6 +1,16 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+/* Restante do seu CSS... */
 
 /* *=========== Green theme =========== */
 @layer base {
@@ -65,22 +75,21 @@
     flex-shrink: 0;
   }
   /* Barra de rolagem personalizada WebKit (Chrome, Edge, Safari) */
-::-webkit-scrollbar {
-  width: 7px; /* Largura da barra de rolagem */
-}
+  ::-webkit-scrollbar {
+    width: 7px; /* Largura da barra de rolagem */
+  }
 
-::-webkit-scrollbar-track {
-  background: #5c5c5c; /* Cor do fundo */
-  border-radius: 4px;
-}
+  ::-webkit-scrollbar-track {
+    background: #5c5c5c; /* Cor do fundo */
+    border-radius: 4px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #ff4747; /* Cor da barra de rolagem */
-  border-radius: 4px;
-}
+  ::-webkit-scrollbar-thumb {
+    background: #ff4747; /* Cor da barra de rolagem */
+    border-radius: 4px;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #d43d3d; /* Cor ao passar o mouse */
-}
-
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d43d3d; /* Cor ao passar o mouse */
+  }
 }
