@@ -3,7 +3,7 @@
 import { User } from '@supabase/supabase-js';
 import { Navbar } from '../HomeComponents/NavBar';
 import { Footer } from '../landing/Footer';
-import { ModeToggle } from '../landing/mode-toggle';
+import { Bell } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 export default function TemplatesWeb({ user }: { user: User }) {
@@ -25,8 +25,8 @@ export default function TemplatesWeb({ user }: { user: User }) {
             <h1 className="dark:text-gray-100 text-base">Cooderfy</h1>
           </div>
 
-          <div className="flex gap-4">
-            <ModeToggle />
+          <div className="flex items-center gap-3">
+            <Bell className="size-4" />
             <Navbar />
           </div>
         </nav>
