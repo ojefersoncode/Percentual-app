@@ -69,9 +69,9 @@ export function Navbar() {
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className="bg-white text-black dark:text-white dark:bg-black  dark:hover:bg-black border-none py-1 px-2"
+          className="bg-white text-black dark:text-white dark:bg-black  dark:hover:bg-black border-none p-1"
         >
-          <Menu />
+          <Menu className="size-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 mr-7">
