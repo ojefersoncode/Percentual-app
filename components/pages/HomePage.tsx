@@ -19,8 +19,9 @@ export default function HomePage({ user }: { user: User }) {
             </div>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex gap-2">
             <ModeToggle />
+            
             <Navbar />
           </div>
         </nav>
