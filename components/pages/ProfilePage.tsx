@@ -7,7 +7,7 @@ import { Navbar } from '../HomeComponents/NavBar';
 import { User } from '@supabase/supabase-js';
 import { Pencil } from 'lucide-react';
 import { Footer } from '../landing/Footer';
-import { ModeToggle } from '../landing/mode-toggle';
+import { Bell } from 'lucide-react';
 
 export default function ProfilePage({ user }: { user: User }) {
   const [name, setName] = useState('Jeferson code');
@@ -31,10 +31,10 @@ export default function ProfilePage({ user }: { user: User }) {
             <h1 className="dark:text-gray-50">Cooderfy</h1>
           </div>
         </div>
-        <div className="flex gap-2">
-          <ModeToggle />
-          <Navbar />
-        </div>
+        <div className="flex items-center gap-3">
+            <Bell className="size-4" />
+            <Navbar />
+          </div>
       </nav>
 
       <hr />
