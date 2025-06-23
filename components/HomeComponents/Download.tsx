@@ -14,7 +14,7 @@ export const Download = () => {
             </span>{' '}
           </h1>{' '}
           <h2 className="inline">
-            <span className="inline bg-gradient-to-r text-btn bg-clip-text">
+            <span className="inline text-green-600">
               Start app.
             </span>{' '}
           </h2>
