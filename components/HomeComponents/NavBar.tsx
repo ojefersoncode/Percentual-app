@@ -14,7 +14,25 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import { Menu } from 'lucide-react';
+
+import {
+  Menu,
+  Home,
+  Layers,
+  LayoutTemplate,
+  BookOpen,
+  Settings,
+  User,
+  CreditCard,
+  HelpCircle,
+  Share2,
+  LogOut,
+  MessageCircle,
+  Facebook,
+  Send,
+  Smartphone
+} from 'lucide-react';
+
 import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
 import { useToast } from '../ui/use-toast';
@@ -32,28 +50,15 @@ export function Navbar() {
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
 
-      toast({
-        title: 'Desconectado com sucesso!'
-      });
-
+      toast({ title: 'Desconectado com sucesso!' });
       router.push('/');
-      setTimeout(() => {
-        window.location.reload();
-      }, 500);
+      setTimeout(() => window.location.reload(), 500);
     } catch (error: unknown) {
-      if (error instanceof Error) {
-        toast({
-          title: 'Erro ao sair',
-          description: error.message,
-          variant: 'destructive'
-        });
-      } else {
-        toast({
-          title: 'Erro desconhecido',
-          description: 'Ocorreu um erro ao tentar sair.',
-          variant: 'destructive'
-        });
-      }
+      toast({
+        title: 'Erro ao sair',
+        description: error instanceof Error ? error.message : 'Erro desconhecido.',
+        variant: 'destructive'
+      });
     } finally {
       setLoading(false);
     }
@@ -74,56 +79,74 @@ export function Navbar() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem onClick={() => router.push('/Home')}>
-            Inicio
+            <Home className="w-4 h-4 mr-2" /> Início
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => router.push('/templates')}>
-            Templates & Projetos
+            <LayoutTemplate className="w-4 h-4 mr-2" /> Templates & Projetos
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => router.push('/componentes')}>
-            Componentes
+            <Layers className="w-4 h-4 mr-2" /> Componentes
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => router.push('/cursos')}>
-            Cursos
+            <BookOpen className="w-4 h-4 mr-2" /> Cursos
           </DropdownMenuItem>
           <DropdownMenuSub>
-            <DropdownMenuSubTrigger>Configurações</DropdownMenuSubTrigger>
+            <DropdownMenuSubTrigger>
+              <Settings className="w-4 h-4 mr-2" /> Configurações
+            </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
                 <DropdownMenuItem onClick={() => router.push('/profile')}>
-                  Perfil
+                  <User className="w-4 h-4 mr-2" /> Perfil
                 </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => router.push('/planos-e-compras')}
-                >
-                  Meu plano
+                <DropdownMenuItem onClick={() => router.push('/planos-e-compras')}>
+                  <CreditCard className="w-4 h-4 mr-2" /> Meu plano
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>
         </DropdownMenuGroup>
+
         <DropdownMenuSeparator />
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>Suporte</DropdownMenuItem>
-        <DropdownMenuItem disabled>WhatsApp</DropdownMenuItem>
-        <DropdownMenuItem disabled>Telegram</DropdownMenuItem>
+
+        <DropdownMenuItem>
+          <HelpCircle className="w-4 h-4 mr-2" /> Suporte
+        </DropdownMenuItem>
+        <DropdownMenuItem disabled>
+          <Smartphone className="w-4 h-4 mr-2" /> WhatsApp
+        </DropdownMenuItem>
+        <DropdownMenuItem disabled>
+          <MessageCircle className="w-4 h-4 mr-2" /> Telegram
+        </DropdownMenuItem>
+
         <DropdownMenuSeparator />
 
         <DropdownMenuGroup>
           <DropdownMenuSub>
-            <DropdownMenuSubTrigger>Compartilhar</DropdownMenuSubTrigger>
+            <DropdownMenuSubTrigger>
+              <Share2 className="w-4 h-4 mr-2" /> Compartilhar
+            </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
-                <DropdownMenuItem>Whatsapp</DropdownMenuItem>
-                <DropdownMenuItem>Telegram</DropdownMenuItem>
-                <DropdownMenuItem>Facebook</DropdownMenuItem>
-                <DropdownMenuItem>Mensagem</DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Smartphone className="w-4 h-4 mr-2" /> WhatsApp
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Send className="w-4 h-4 mr-2" /> Telegram
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Facebook className="w-4 h-4 mr-2" /> Facebook
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <MessageCircle className="w-4 h-4 mr-2" /> Mensagem
+                </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>
         </DropdownMenuGroup>
-        {/* Ação de logout */}
+
         <DropdownMenuItem onClick={handleSignOut} disabled={loading}>
-          Sair
+          <LogOut className="w-4 h-4 mr-2" /> Sair
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
