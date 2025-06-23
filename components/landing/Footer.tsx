@@ -156,7 +156,7 @@ export const Footer = () => {
             rel="noreferrer noopener"
             target="_blank"
             href="https://github.com/Ojefersoncode"
-            className="text-red-600 transition-all"
+            className="text-btn transition-all"
           >
             Cooderfy
           </a>
