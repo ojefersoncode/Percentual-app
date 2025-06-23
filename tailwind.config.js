@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        btn: '#006239',
         border: '#6ecba4',
         background: '#171717',
         subbackground: '#212121',
