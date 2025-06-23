@@ -2,11 +2,10 @@
 
 import { useState } from 'react';
 import { User } from '@supabase/supabase-js';
-import { Copy, Menu } from 'lucide-react';
+import { Copy, Menu, Bell } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { ModeToggle } from '../landing/mode-toggle';
 import { Navbar } from '../HomeComponents/NavBar';
 import { Footer } from '../landing/Footer';
 
@@ -40,10 +39,10 @@ export default function Componentes({ user }: { user: User }) {
           </div>
         </div>
 
-        <div className="flex gap-2">
-          <ModeToggle />
-          <Navbar />
-        </div>
+        <div className="flex items-center gap-3">
+            <Bell className="size-4" />
+            <Navbar />
+          </div>
       </nav>
 
       {/* Conteúdo */}
