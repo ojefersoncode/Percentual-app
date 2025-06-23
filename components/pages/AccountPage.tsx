@@ -9,7 +9,7 @@ import { getURL } from '@/utils/helpers';
 import { useToast } from '../ui/use-toast';
 import { useRouter } from 'next/navigation';
 import { SubscriptionWithPriceAndProduct } from '../../utils/types';
-import { ModeToggle } from '../landing/mode-toggle';
+import { Bell } from 'lucide-react';
 import { Footer } from '../landing/Footer';
 
 export default function AccountPage({
@@ -63,10 +63,10 @@ export default function AccountPage({
           </div>
         </div>
 
-        <div className="flex gap-2">
-          <ModeToggle />
-          <Navbar />
-        </div>
+        <div className="flex items-center gap-3">
+            <Bell className="size-4" />
+            <Navbar />
+          </div>
       </nav>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10">
         <div className="mx-auto grid w-full max-w-6xl gap-2">
