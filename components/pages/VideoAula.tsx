@@ -5,7 +5,7 @@ import { Button } from '../ui/button';
 import { User } from '@supabase/supabase-js';
 import { Navbar } from '../HomeComponents/NavBar';
 import { SelectAula } from '../VideoAulaComponents/SelectAula';
-import { ModeToggle } from '../landing/mode-toggle';
+import { Bell } from 'lucide-react';
 import { ArrowLeftIcon } from 'lucide-react';
 import { Footer } from '../landing/Footer';
 import Comentarios from '../AulasComponents/Comentarios';
@@ -29,10 +29,10 @@ export default function VideoAulas({ user }: { user: User }) {
           <img className="size-8" src="/logo.webp" alt="logo" />
           <h1 className="text-base text-gray-50">Cooderfy</h1>
         </div>
-        <div className="flex gap-2 py-2">
-          <ModeToggle />
-          <Navbar />
-        </div>
+        <div className="flex items-center gap-3">
+            <Bell className="size-4" />
+            <Navbar />
+          </div>
       </nav>
 
       <hr className="flex w-full bg-gray-50" />
