@@ -21,7 +21,6 @@ export default function HomePage({ user }: { user: User }) {
           </div>
 
           <div className="flex items-center gap-3">
-            <ModeToggle />
             <Bell className="size-4" />
             <Navbar />
           </div>
