@@ -9,6 +9,7 @@ import { Step2 } from '../ConfigPage/Step2';
 import { Step3 } from '../ConfigPage/Step3';
 import { Step4 } from '../ConfigPage/Step4';
 import { Button } from '../ui/button';
+import { Bell } from 'lucide-react';
 
 interface ConfigPageProps {
   template: string;
@@ -60,8 +61,9 @@ export default function ConfigPage({
             Cooderfy
           </h1>
         </div>
-        <div className="flex gap-4">
+        <div className="flex items-center gap-2">
           <ModeToggle />
+          <Bell className="size-4" />
           <Navbar />
         </div>
       </nav>
