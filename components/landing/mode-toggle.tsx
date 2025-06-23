@@ -16,7 +16,7 @@ export function ModeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className="px-2 py-0 rounded-lg border border-gray-200 dark:border-gray-700 bg-white text-black dark:bg-black dark:hover:bg-black dark:hover:text-white dark:text-white"
+          className="px-2 py-0 rounded-lg border border-slate-200 dark:border-slate-800 bg-white text-black dark:bg-black dark:hover:bg-black dark:hover:text-white dark:text-white"
         >
           <Sun className="size-4 p-0 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute size-4 p-0 rotate-90 scale-0 :rotate-0 dark:scale-100 transition-all" />
