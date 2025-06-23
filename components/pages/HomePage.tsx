@@ -1,5 +1,6 @@
 'use client';
 import { User } from '@supabase/supabase-js';
+import { Bell } from 'lucide-react';
 import { Navbar } from '../HomeComponents/NavBar';
 import { Footer } from '../landing/Footer';
 import { ModeToggle } from '../landing/mode-toggle';
@@ -21,7 +22,7 @@ export default function HomePage({ user }: { user: User }) {
 
           <div className="flex gap-2">
             <ModeToggle />
-            
+            <Bell className="size-4" />
             <Navbar />
           </div>
         </nav>
