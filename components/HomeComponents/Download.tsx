@@ -33,9 +33,9 @@ export const Download = () => {
           <Link
             href="/create-project"
             passHref
-            className="bg-gray-600 dark:bg-red-600 rounded-lg"
+            className="bg-gray-600 dark:bg-btn rounded-lg"
           >
-            <Button className="border bg-red-600 animate-bounce mb-1">
+            <Button className="border bg-btn animate-bounce mb-1">
               <span className="text-lg font-semibold darK:text-gray-700 px-16">
                 Criar meu app
               </span>
