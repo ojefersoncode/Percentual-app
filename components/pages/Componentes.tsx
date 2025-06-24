@@ -80,7 +80,7 @@ export default function Componentes({ user }: { user: User }) {
                 );
               }}
               variant={'ghost'}
-              className="absolute top-2 right-2 flex items-center bg-white dark:bg-black"
+              className="absolute top-0 right-2 flex items-center bg-white dark:bg-black"
             >
               <Copy className="size-4" />
               
