@@ -76,7 +76,7 @@
   }
   /* Barra de rolagem personalizada WebKit (Chrome, Edge, Safari) */
   ::-webkit-scrollbar {
-    width: 7px; /* Largura da barra de rolagem */
+    width: 4px; /* Largura da barra de rolagem */
   }
 
   ::-webkit-scrollbar-track {
@@ -85,7 +85,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #ff4747; /* Cor da barra de rolagem */
+    background: #212121; /* Cor da barra de rolagem */
     border-radius: 4px;
   }
 
