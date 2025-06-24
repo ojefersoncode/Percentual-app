@@ -24,7 +24,7 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
   };
 
   return (
-    <div className="flex flex-col w-full px-4 mt-4">
+    <div className="flex flex-col w-full px-4 mt-4 bg-background">
       <label className="block mb-3 text-black dark:text-gray-300 font-medium">
         Nome do seu projeto
       </label>
@@ -32,7 +32,7 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
         <Input
           type="text"
           placeholder="Digite o nome do seu projeto"
-          className="text-black dark:text-white border-opacity-10"
+          className="bg-white dark:bg-background text-black dark:text-white border border-gray-200 dark:border-gray-500/40"
         ></Input>
         <Button className="px-2 py-1">
           <Check />
@@ -52,7 +52,7 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
           className="hidden"
           onChange={handleFileChange}
         />
-        <div className="flex flex-col w-full items-center justify-center">
+        <div className="flex flex-col w-full items-center justify-center bg-white dark:bg-background">
           <Upload className="w-6 h-6 text-black dark:text-gray-400" />
           <span className="text-black dark:text-gray-400 text-xs sm:text-sm text-center mt-2">
             Selecione uma imagem
