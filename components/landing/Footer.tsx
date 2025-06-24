@@ -20,8 +20,8 @@ export const Footer = () => {
         <a
           href="/"
           className="flex items-center select-none col-span-2 xl:col-span-1">
-          <img className="size-10" src="/logo.webp" alt="logo" />
-          <p className="ml-2 font-bold text-xl">
+          <img className="size-7" src="/LogoC.png" alt="logo" />
+          <p className="ml-2 font-bold text-lg">
             Cooderfy
           </p>
         </a>
@@ -29,7 +29,7 @@ export const Footer = () => {
         {/* Links */}
         {sections.map((section, index) => (
           <div key={`section-${index}`} className="flex flex-col gap-2">
-            <ul className="flex flex-col gap-1 text-sm">
+            <ul className="flex flex-col gap-1 font-mono text-sm">
               {section.links.map((link) => (
                 <li key={link}>
                   <a
