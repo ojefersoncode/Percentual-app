@@ -102,9 +102,9 @@ export default function Componentes({ user }: { user: User }) {
           </span>
 
           {/* Bloco de código com posição relativa */}
-          <div className="flex w-full justify-around items-center p-4 bg-subbackground">
+          <div className="flex w-full justify-around items-center rounded-md p-3 bg-subbackground">
             <div
-              className="flex items-center gap-1 rounded-md text-sm bg-subbackground"
+              className="flex items-center gap-1 text-sm bg-subbackground"
             >
              <p className="text-yellow-400 opacity-80">npm install</p> @cooderfy/ui@latest
             </div>
@@ -117,9 +117,9 @@ export default function Componentes({ user }: { user: User }) {
                 );
               }}
               variant={'ghost'}
-              className="right-2 flex bg-white dark:bg-background"
+              className="right-2 p-2 flex bg-white dark:bg-background"
             >
-              <Copy className="size-4" />
+              <Copy className="size-2" />
               
             </Button>
           </div>
