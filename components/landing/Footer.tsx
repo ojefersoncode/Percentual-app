@@ -3,8 +3,7 @@ import { LogoIcon } from './Icons';
 
 export const Footer = () => {
   return (
-    <footer id="footer" className="">
-      <hr className=" mx-auto bg-gray-700 dark:bg-gray-400" />
+    <footer id="footer">
 
       <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8 text-gray-100 bg-white dark:bg-background">
         
@@ -151,7 +150,7 @@ export const Footer = () => {
 
       <section className="container text-center text-gray-100 pb-4 bg-white dark:bg-background">
         <h3 className="text-black dark:text-white">
-          &copy; 2024 Todos os direitos reservados{' '}
+          &copy; 2024,
           <a
             rel="noreferrer noopener"
             target="_blank"
@@ -159,7 +158,7 @@ export const Footer = () => {
             className="text-btn transition-all"
           >
             Cooderfy
-          </a>
+          </a> llc.
         </h3>
       </section>
     </footer>
