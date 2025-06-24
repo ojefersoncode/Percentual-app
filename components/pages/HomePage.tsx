@@ -10,7 +10,7 @@ export default function HomePage({ user }: { user: User }) {
   return (
     <div className="relative flex min-h-screen w-full bg-gray-200 dark:bg-black dark:bg-muted/40">
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
-        <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-black">
+        <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background">
           <div className="flex gap-1 text-xl font-bold items-center">
             <img className="size-8" src="/logo.webp" alt="logo" />
             <div className="flex">
@@ -26,7 +26,7 @@ export default function HomePage({ user }: { user: User }) {
           </div>
         </nav>
 
-        <div>
+        <div className="bg-background">
           <Download />
         </div>
 
