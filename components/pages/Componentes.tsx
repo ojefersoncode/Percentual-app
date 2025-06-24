@@ -17,6 +17,22 @@ const exampleCode2 = `export function signupButton() {
   return <button  variant={'ghost'} className='bg-gray-500 text-white p-2 rounded'>Sair</button>;
 }`;
 
+
+const customTheme = {
+  ...dracula,
+  'pre[class*="language-"]': {
+    ...dracula['pre[class*="language-"]'],
+    background: '#171717', // Cor personalizada aqui
+    padding: '1em',
+    borderRadius: '0.5em',
+    fontSize: '0.875rem',
+  },
+  'code[class*="language-"]': {
+    ...dracula['code[class*="language-"]'],
+    background: '#171717', // Garante que o código dentro também tenha a cor
+  },
+};
+
 export default function Componentes({ user }: { user: User }) {
   const [copied, setCopied] = useState(false);
 
@@ -79,7 +95,7 @@ export default function Componentes({ user }: { user: User }) {
           <div className="relative items-center">
             <SyntaxHighlighter
               language="bash"
-              style={dracula}
+              style={customTheme}
               className="rounded-md bg-subbackground text-sm py-2 px-4"
             >
               {'npm install @cooderfy/ui@latest'}
@@ -118,7 +134,7 @@ export default function Componentes({ user }: { user: User }) {
 
           <SyntaxHighlighter
             language="tsx"
-            style={dracula}
+            style={customTheme}
             className="rounded-md py-4 px-2 text-xs"
           >
             {exampleCode}
@@ -151,7 +167,7 @@ export default function Componentes({ user }: { user: User }) {
 
           <SyntaxHighlighter
             language="tsx"
-            style={dracula}
+            style={customTheme}
             className="rounded-md py-4 px-2 text-xs"
           >
             {exampleCode2}
