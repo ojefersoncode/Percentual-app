@@ -102,7 +102,7 @@ export default function Componentes({ user }: { user: User }) {
           </span>
 
           {/* Bloco de código com posição relativa */}
-          <div className="flex w-full justify-around items-center rounded-md p-3 bg-subbackground">
+          <div className="flex w-full justify-around items-center rounded-lg p-3 bg-subbackground">
             <div
               className="flex items-center gap-1 text-sm bg-subbackground"
             >
@@ -110,18 +110,17 @@ export default function Componentes({ user }: { user: User }) {
             </div>
 
             {/* Botão posicionado no canto superior direito */}
-            <Button
+            <button
               onClick={() => {
                 navigator.clipboard.writeText(
                   'npm install @cooderfy/ui@latest'
                 );
               }}
-              variant={'ghost'}
-              className="right-2 p-2 flex bg-white dark:bg-background"
+              className="right-2 rounded-md p-4 flex bg-white dark:bg-background"
             >
-              <Copy className="size-2" />
+              <Copy className="size-3" />
               
-            </Button>
+            </button>
           </div>
         </div>
         <div className="border border-gray-600/40 p-4 bg-subbackground rounded-lg w-full py-4">
