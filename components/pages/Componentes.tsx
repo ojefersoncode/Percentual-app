@@ -67,7 +67,7 @@ export default function Componentes({ user }: { user: User }) {
             <SyntaxHighlighter
               language="bash"
               style={dracula}
-              className="rounded-md py-2 px-4"
+              className="rounded-md text-sm py-2 px-4"
             >
               {'npm install @cooderfy/ui@latest'}
             </SyntaxHighlighter>
