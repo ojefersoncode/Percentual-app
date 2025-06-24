@@ -126,8 +126,8 @@ export default function Componentes({ user }: { user: User }) {
           <div className="flex w-full justify-end">
             <Button
               onClick={handleCopy}
-              variant={'ghost'}
-              className="mt-4 flex items-center bg-muted border border-gray-600/40 dark:border-white"
+              variant={'default}
+              className="mt-4 flex items-center bg-muted border border-gray-600/40 dark:border-gray-500/40"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar Código'}
@@ -159,8 +159,8 @@ export default function Componentes({ user }: { user: User }) {
           <div className="flex w-full justify-end">
             <Button
               onClick={handleCopy}
-              variant={'ghost'}
-              className="mt-4 flex items-center bg-muted border border-gray-600/40 dark:border-white"
+              variant={'default}
+              className="mt-4 flex items-center bg-muted border border-gray-600/40 dark:border-gray-500/40"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar Código'}
