@@ -21,7 +21,7 @@ export default function Cursos({ user }: { user: User }) {
   return (
     <div className="relative flex min-h-screen w-full bg-white dark:bg-background">
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
-        <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b border-gray-500/40">
+        <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b border-gray-500/40 dark:border-border">
           <div className="flex gap-1 text-xl font-bold items-center">
             <img className="size-8" src="/logo.webp" alt="logo" />
             <h1 className="dark:text-gray-100 text-base">Cooderfy</h1>
@@ -33,7 +33,7 @@ export default function Cursos({ user }: { user: User }) {
           </div>
         </nav>
 
-        <div className="bg-subbackground mx-auto grid w-full max-w-7xl gap-10 py-10 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="bg-background mx-auto grid w-full max-w-7xl gap-10 py-10 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {curso.map((curso) => (
             <div
               key={curso.id}
