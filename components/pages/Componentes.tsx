@@ -87,7 +87,7 @@ export default function Componentes({ user }: { user: User }) {
             </Button>
           </div>
         </div>
-        <div className="border p-4 bg-subbackground rounded-lg w-full py-4">
+        <div className="border border-gray-600 p-4 bg-subbackground rounded-lg w-full py-4">
           <h1 className="font-bold text-lg pb-4">Botão outiline</h1>
 
           <div className="flex w-full items-center gap-4 py-2">
@@ -118,7 +118,7 @@ export default function Componentes({ user }: { user: User }) {
             </Button>
           </div>
         </div>
-        <div className="border p-4 bg-subbackground rounded-lg w-full my-4">
+        <div className="border border-gray-600 p-4 bg-subbackground rounded-lg w-full my-4">
           <h1 className="font-bold text-lg pb-4">Botão solido</h1>
 
           <div className="flex w-full items-center gap-4 p-2">
