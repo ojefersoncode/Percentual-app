@@ -102,7 +102,7 @@ export default function Componentes({ user }: { user: User }) {
           </span>
 
           {/* Bloco de código com posição relativa */}
-          <div className="flex w-full justify-between items-center rounded-lg mt-4 px-4 bg-subbackground">
+          <div className="flex w-full justify-between items-center rounded-lg mt-4 p-4 bg-subbackground">
             <div className="flex items-center gap-1 text-sm bg-subbackground">
              <p className="text-yellow-400 opacity-80">
               npm install</p> @cooderfy/ui@latest
