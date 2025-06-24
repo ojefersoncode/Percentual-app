@@ -102,7 +102,7 @@ export default function Componentes({ user }: { user: User }) {
           </span>
 
           {/* Bloco de código com posição relativa */}
-          <div className="flex w-full justify-between items-center rounded-lg px-4 bg-subbackground">
+          <div className="flex w-full justify-between items-center rounded-lg mt-4 px-4 bg-subbackground">
             <div className="flex items-center gap-1 text-sm bg-subbackground">
              <p className="text-yellow-400 opacity-80">
               npm install</p> @cooderfy/ui@latest
@@ -115,7 +115,7 @@ export default function Componentes({ user }: { user: User }) {
                   'npm install @cooderfy/ui@latest'
                 );
               }}
-              className="right-2 rounded-md p-2 flex bg-white dark:bg-background"
+              className="rounded-md p-2 flex bg-white dark:bg-background"
             >
               <Copy className="size-3" />
               
