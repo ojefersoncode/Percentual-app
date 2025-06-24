@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { User } from '@supabase/supabase-js';
-import { Copy, Menu, Bell } from 'lucide-react';
+import { Copy, Menu, Bell, MoveRight, MoveLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -49,6 +49,14 @@ export default function Componentes({ user }: { user: User }) {
       <main className="flex flex-1 flex-col w-full items-center p-6 bg-background">
         <div className="flex flex-col gap-2 w-full justify-start pb-7 pt-8 bg-background">
           <h1 className="font-bold text-2xl">Botões</h1>
+          <div className="flex gap-2">
+          <Button className="bg-white dark:bg-background border-gray-500/40">
+          <MoveLeft />
+          </Button>
+          <Button className="bg-white dark:bg-background border-gray-500/40">
+          <MoveRight />
+          </Button>
+          </div>
           <span className="text-sm">
             Adicione este componente ao seu projeto, basta seguir a instalação e
             copiar o componente.
