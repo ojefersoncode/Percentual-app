@@ -7,7 +7,7 @@ export const Footer = () => {
       <hr className=" mx-auto bg-gray-700 dark:bg-gray-400" />
 
       <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8 text-gray-100 bg-white dark:bg-background">
-        <div className="col-span-full xl:col-span-2">
+        
           <div className="flex items-center select-none">
             <img className="size-10" src="/logo.webp" alt="logo" />
             <a
@@ -18,7 +18,7 @@ export const Footer = () => {
               Cooderfy
             </a>
           </div>
-        </div>
+      
 
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-lg text-black dark:text-gray-100">
