@@ -101,6 +101,7 @@ export function Step3({
   }
 
   return (
+    <div className="w-full p-4 rounde-md border border-gray-500/40"> 
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         {/* Campo de fontes */}
@@ -215,5 +216,6 @@ export function Step3({
         </Button>
       </form>
     </Form>
+      </div>
   );
 }
