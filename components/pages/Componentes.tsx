@@ -90,14 +90,17 @@ export default function Componentes({ user }: { user: User }) {
         <div className="border border-gray-600/40 p-4 bg-subbackground rounded-lg w-full py-4">
           <h1 className="font-bold text-lg pb-4">Botão outiline</h1>
 
-          <div className="flex w-full items-center gap-4 py-2">
+          <div className="flex flex-col w-full items-center gap-4 py-2">
             <h2>Preview</h2>
+            <div className="flex w-full justify-center items-center h-36">
             <Button
               
               className="bg-gray-50 hover:bg-gray-100 text-black p-4 rounded"
             >
               Entrar
             </Button>
+            </div>
+            
           </div>
 
           <SyntaxHighlighter
