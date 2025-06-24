@@ -11,14 +11,18 @@ import { Footer } from '../landing/Footer';
 
 const exampleCode = `export function signinButton() {
   return (
-  <Button  variant={'outline'} className='bg-gray-500 text-white p-2 rounded'>
+<Button  
+   variant={'outline'} 
+   className='bg-gray-500 text-white p-2 rounded'>
      Entrar
   </Button>;
 );}`;
 
 const exampleCode2 = `export function signupButton() {
   return (
-  <Button  variant={'ghost'} className='bg-gray-500 text-white p-2 rounded'>
+ <Button  
+   variant={'ghost'} 
+   className='bg-gray-500 text-white p-2 rounded'>
      Sair
   </Button>;
 );}`;
@@ -102,7 +106,7 @@ export default function Componentes({ user }: { user: User }) {
             <SyntaxHighlighter
               language="bash"
               style={customTheme}
-              className="rounded-md text-sm py-2 px-4"
+              className="rounded-md text-sm py-2 px-4 bg-subbackground"
             >
               {'npm install @cooderfy/ui@latest'}
             </SyntaxHighlighter>
