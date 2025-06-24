@@ -3,163 +3,70 @@ import { LogoIcon } from './Icons';
 
 export const Footer = () => {
   return (
-    <footer id="footer">
-
-      <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8 text-gray-100 bg-white dark:bg-background">
+    <footer id="footer" className="bg-white dark:bg-background text-black dark:text-gray-100">
+      {/* Seção Principal */}
+      <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         
-          <div className="flex items-center select-none">
-            <img className="size-10" src="/logo.webp" alt="logo" />
-            <a
-              rel="noreferrer noopener"
-              href="/"
-              className="font-bold text-xl text-black dark:text-gray-100"
-            >
-              Cooderfy
-            </a>
-          </div>
-      
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg text-black dark:text-gray-100">
-            Redes Sociais
-          </h3>
-          <div className="text-black dark:text-gray-100">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Github
-            </a>
-          </div>
-
-          <div className="text-black dark:text-gray-100">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Twitter
-            </a>
-          </div>
-
-          <div className="text-black dark:text-gray-100">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Linkedin
-            </a>
-          </div>
+        {/* Logo */}
+        <div className="flex items-center select-none col-span-2 xl:col-span-1">
+          <img className="size-10" src="/logo.webp" alt="logo" />
+          <a href="/" className="ml-2 font-bold text-xl">
+            Cooderfy
+          </a>
         </div>
 
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg text-black dark:text-white">
-            Plataformas
-          </h3>
-          <div className="text-black dark:text-gray-100">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Web
-            </a>
+        {/* Grupo de Links */}
+        {[
+          {
+            title: 'Redes Sociais',
+            links: ['Github', 'Twitter', 'Linkedin'],
+          },
+          {
+            title: 'Plataformas',
+            links: ['Web', 'Mobile'],
+          },
+          {
+            title: 'Sobre',
+            links: ['Tecnologias', 'Preços', 'FAQ'],
+          },
+          {
+            title: 'Comunidade',
+            links: ['Youtube', 'Discord', 'Whatsapp'],
+          },
+        ].map((section) => (
+          <div key={section.title} className="flex flex-col gap-2">
+            <h3 className="font-bold text-lg">{section.title}</h3>
+            <ul className="flex flex-col gap-1 text-sm">
+              {section.links.map((link) => (
+                <li key={link}>
+                  <a
+                    href="#"
+                    className="opacity-60 hover:opacity-100 transition-opacity"
+                    rel="noreferrer noopener"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          <div className="text-black dark:text-gray-100">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Mobile
-            </a>
-          </div>
-        </div>
-
-        <div className="text-black dark:text-gray-100">
-          <h3 className="font-bold text-lg">Sobre</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Tecnologias
-            </a>
-          </div>
-
-          <div className="text-black dark:text-gray-100">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Preços
-            </a>
-          </div>
-
-          <div className="text-black dark:text-gray-100">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              FAQ
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg text-black dark:text-white">
-            Comunidade
-          </h3>
-          <div className="text-black dark:text-gray-100">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Youtube
-            </a>
-          </div>
-
-          <div className="text-black dark:text-gray-100">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Discord
-            </a>
-          </div>
-
-          <div className="text-black dark:text-gray-100">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Whatsapp
-            </a>
-          </div>
-        </div>
+        ))}
       </section>
 
-      <section className="container text-center text-gray-100 pb-4 bg-white dark:bg-background">
-        <h3 className="text-black dark:text-white">
-          &copy; 2024,
+      {/* Rodapé Inferior */}
+      <section className="container pb-4 text-sm">
+        <p>
+          &copy; 2024,{' '}
           <a
-            rel="noreferrer noopener"
-            target="_blank"
             href="https://github.com/Ojefersoncode"
-            className="text-btn transition-all"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-btn underline hover:opacity-80"
           >
             Cooderfy
-          </a> llc.
-        </h3>
+          </a>{' '}
+          llc.
+        </p>
       </section>
     </footer>
   );
