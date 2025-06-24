@@ -75,17 +75,17 @@ export default function Componentes({ user }: { user: User }) {
       <main className="flex flex-1 flex-col w-full items-center p-6 bg-background">
         <div className="flex flex-col gap-2 w-full justify-start pb-7 pt-8 bg-background">
           <div className="flex w-full items-center justify-between pb-2">
-          <h1 className="font-bold text-3xl">Botões</h1>
-          <div className="flex gap-2">
-          <button
-          className="p-2 rounded-md bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40">
-          <MoveLeft className="size-3" />
-          </button>
-          <button
-          className="p-2 rounded-md bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40">
-          <MoveRight className="size-3" />
-          </button>
-          </div>
+            <h1 className="font-bold text-3xl">Botões</h1>
+             <div className="flex gap-2">
+               <button
+                 className="p-2 rounded-md bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40">
+                <MoveLeft className="size-3" />
+               </button>
+              <button
+                className="p-2 rounded-md bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40">
+                <MoveRight className="size-3" />
+               </button>
+             </div>
           </div>
           
           <span className="text-sm">
@@ -102,7 +102,7 @@ export default function Componentes({ user }: { user: User }) {
           </span>
 
           {/* Bloco de código com posição relativa */}
-          <div className="flex w-full justify-around items-center rounded-lg p-3 bg-subbackground">
+          <div className="flex w-full justify-between items-center rounded-lg p-2 bg-subbackground">
             <div
               className="flex items-center gap-1 text-sm bg-subbackground"
             >
