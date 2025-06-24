@@ -24,7 +24,7 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
   };
 
   return (
-    <div className="flex flex-col w-full px-4 mt-4 bg-background">
+    <div className="flex flex-col w-full px-4 mt-4 bg-white dark:bg-background">
       <label className="block mb-3 text-black dark:text-gray-300 font-medium">
         Nome do seu projeto
       </label>
@@ -45,7 +45,7 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
         </label>
       </div>
 
-      <label className="cursor-pointer flex flex-col items-center justify-center w-full h-24 border-2 border-dashed border-opacity-10 rounded-lg bg-gray-200 dark:bg-black hover:bg-muted transition px-1">
+      <label className="cursor-pointer flex flex-col items-center justify-center w-full h-24 border-2 border-dashed border-opacity-10 rounded-lg bg-gray-100 dark:bg-background transition px-1">
         <input
           type="file"
           accept="image/png, image/svg+xml, image/webp"
