@@ -44,7 +44,7 @@ export const Footer = () => {
       </section>
 
       {/* Rodapé Inferior */}
-      <section className="container pb-4 font-mono text-xs">
+      <section className="container pb-4 font-mono opacity-70 text-xs">
         <div className="flex gap-1">
           <span> 
            &copy; 2024,
