@@ -27,7 +27,7 @@ export default function Componentes({ user }: { user: User }) {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-background">
       {/* Navbar */}
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-black">
         <div className="flex gap-1 text-xl font-bold items-center">
@@ -87,7 +87,7 @@ export default function Componentes({ user }: { user: User }) {
             </Button>
           </div>
         </div>
-        <div className="border p-4 bg-muted/10 rounded-lg w-full py-4">
+        <div className="border p-4 bg-subbackground rounded-lg w-full py-4">
           <h1 className="font-bold text-lg pb-4">Botão outiline</h1>
 
           <div className="flex w-full items-center gap-4 p-6 border">
@@ -118,7 +118,7 @@ export default function Componentes({ user }: { user: User }) {
             </Button>
           </div>
         </div>
-        <div className="border p-4 bg-muted/10 rounded-lg w-full py-4">
+        <div className="border p-4 bg-subbackground rounded-lg w-full my-4">
           <h1 className="font-bold text-lg pb-4">Botão solido</h1>
 
           <div className="flex w-full items-center gap-4 p-6 border">
@@ -127,7 +127,7 @@ export default function Componentes({ user }: { user: User }) {
               variant={'ghost'}
               className="bg-gray-950 text-white p-2 rounded"
             >
-              Entrar
+              Sair
             </Button>
           </div>
 
