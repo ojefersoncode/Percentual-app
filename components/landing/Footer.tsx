@@ -54,7 +54,7 @@ export const Footer = () => {
       </section>
 
       {/* Rodapé Inferior */}
-      <section className="container pb-4 text-sm">
+      <section className="container pb-4 font-mono text-xs">
         <div className="flex gap-2">
           <span> 
            &copy; 2024,
@@ -67,7 +67,7 @@ export const Footer = () => {
           >
             Cooderfy
           </a>
-         <span>LLC.</span> 
+         <span>llc.</span> 
         </div>
       </section>
     </footer>
