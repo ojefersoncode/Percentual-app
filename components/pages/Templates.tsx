@@ -31,18 +31,18 @@ export default function TemplatesWeb({ user }: { user: User }) {
           </div>
         </nav>
 
-        <div className="mx-auto grid w-full max-w-7xl gap-10 py-10 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+        <div className="mx-auto grid w-full max-w-7xl gap-10 py-10 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 bg-subbackground">
           {templates.map((template) => (
             <div
               key={template.id}
-              className="border rounded-lg shadow-md hover:shadow-lg transition-all"
+              className="border border-gray-500/40 rounded-lg shadow-md hover:shadow-lg transition-all"
             >
               <div className="relative">
                 <img
                   onClick={() => router.push('/create-project')}
                   src={template.imageUrl}
                   alt={template.name}
-                  className="w-full h-64 object-cover rounded-t-lg rounded-b-sm transition-all cursor-pointer hover:border dark:hover:border-gray-300 hover:border-gray-900 hover:scale-105"
+                  className="w-full h-64 object-cover rounded-lg transition-all cursor-pointer hover:border dark:hover:border-gray-300 hover:border-gray-900 hover:scale-105"
                 />
               </div>
             </div>
