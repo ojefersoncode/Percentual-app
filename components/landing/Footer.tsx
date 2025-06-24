@@ -16,21 +16,16 @@ export const Footer = () => {
             Cooderfy
           </p>
         </a>
-
-        {/* Grupo de Links */}
         {[
           {
-            title: 'Redes Sociais',
             links: ['Github', 'Twitter', 'Linkedin'],
           },
           {
-            title: 'Plataformas',
             links: ['Web', 'Mobile'],
           },
           
         ].map((section) => (
           <div key={section.title} className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">{section.title}</h3>
             <ul className="flex flex-col gap-1 text-sm">
               {section.links.map((link) => (
                 <li key={link}>
