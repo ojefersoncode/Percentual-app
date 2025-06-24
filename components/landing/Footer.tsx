@@ -56,16 +56,16 @@ export const Footer = () => {
       {/* Rodapé Inferior */}
       <section className="container pb-4 text-sm">
         <p>
-          &copy; 2024,{' '}
+          &copy; 2024,
           <a
             href="https://github.com/Ojefersoncode"
             target="_blank"
             rel="noreferrer noopener"
-            className="text-btn underline hover:opacity-80"
+            className=" hover:opacity-80"
           >
             Cooderfy
-          </a>{' '}
-          llc.
+          </a>
+          LLC.
         </p>
       </section>
     </footer>
