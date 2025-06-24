@@ -149,7 +149,7 @@ export const Footer = () => {
         </div>
       </section>
 
-      <section className="container text-center text-gray-100 pb-4 bg-white dark:bg-black">
+      <section className="container text-center text-gray-100 pb-4 bg-white dark:bg-background">
         <h3 className="text-black dark:text-white">
           &copy; 2024 Todos os direitos reservados{' '}
           <a
