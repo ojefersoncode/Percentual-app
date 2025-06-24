@@ -16,6 +16,7 @@ export function Step2({ config, setConfig }: Step2Props) {
 
   return (
     <>
+      <div className="w-full p-4">
       <label className="block text-xl text-black dark:text-gray-300 font-medium">
         Paleta de Cores
       </label>
@@ -63,6 +64,7 @@ export function Step2({ config, setConfig }: Step2Props) {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </>
   );
