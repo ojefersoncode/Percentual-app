@@ -8,7 +8,9 @@ export const Footer = () => {
       <section className="container py-10 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         
         {/* Logo */}
-        <div className="flex items-center select-none col-span-2 xl:col-span-1">
+        <div
+          href="/"
+          className="flex items-center select-none col-span-2 xl:col-span-1">
           <img className="size-10" src="/logo.webp" alt="logo" />
           <a href="/" className="ml-2 font-bold text-xl">
             Cooderfy
@@ -55,7 +57,7 @@ export const Footer = () => {
 
       {/* Rodapé Inferior */}
       <section className="container pb-4 font-mono text-xs">
-        <div className="flex gap-2">
+        <div className="flex gap-1">
           <span> 
            &copy; 2024,
           </span>
