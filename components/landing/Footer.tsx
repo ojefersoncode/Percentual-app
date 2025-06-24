@@ -27,14 +27,7 @@ export const Footer = () => {
             title: 'Plataformas',
             links: ['Web', 'Mobile'],
           },
-          {
-            title: 'Sobre',
-            links: ['Tecnologias', 'Preços', 'FAQ'],
-          },
-          {
-            title: 'Comunidade',
-            links: ['Youtube', 'Discord', 'Whatsapp'],
-          },
+          
         ].map((section) => (
           <div key={section.title} className="flex flex-col gap-2">
             <h3 className="font-bold text-lg">{section.title}</h3>
