@@ -12,7 +12,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer id="footer" className="bg-white dark:bg-background text-black dark:text-gray-100">
+    <footer id="footer" className="bg-white dark:bg-background text-black dark:text-gray-100 border-t">
       {/* Seção Principal */}
       <section className="container py-4 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-4">
         
