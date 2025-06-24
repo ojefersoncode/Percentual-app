@@ -13,16 +13,16 @@ const exampleCode = `export function signinButton() {
   return (
 <Button  
    variant={'outline'} 
-   className='bg-gray-500 text-white p-2 rounded'>
+   className='bg-gray-900 text-white'>
      Entrar
   </Button>;
 );}`;
 
 const exampleCode2 = `export function signupButton() {
-  return (
- <Button  
+ return (
+  <Button  
    variant={'ghost'} 
-   className='bg-gray-500 text-white p-2 rounded'>
+   className='bg-gray-900 text-white'>
      Sair
   </Button>;
 );}`;
@@ -102,14 +102,12 @@ export default function Componentes({ user }: { user: User }) {
           </span>
 
           {/* Bloco de código com posição relativa */}
-          <div className="relative items-center rounded-md bg-subbackground">
-            <SyntaxHighlighter
-              language="bash"
-              style={customTheme}
-              className="rounded-md text-sm py-2 px-4 bg-subbackground"
+          <div className="relative items-center">
+            <div
+              className="flex items-center gap-1 rounded-md text-sm py-2 px-4 bg-subbackground"
             >
-              {'npm install @cooderfy/ui@latest'}
-            </SyntaxHighlighter>
+             <p className="text-yellow-400 opacity-80">npm install</p> @cooderfy/ui@latest
+            </div>
 
             {/* Botão posicionado no canto superior direito */}
             <Button
