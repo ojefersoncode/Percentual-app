@@ -80,7 +80,7 @@ export default function Componentes({ user }: { user: User }) {
                 );
               }}
               variant={'ghost'}
-              className="absolute top-0 right-2 flex items-center bg-white dark:bg-black"
+              className="absolute top-1 right-2 flex items-center bg-white dark:bg-black"
             >
               <Copy className="size-4" />
               
@@ -90,11 +90,11 @@ export default function Componentes({ user }: { user: User }) {
         <div className="border p-4 bg-subbackground rounded-lg w-full py-4">
           <h1 className="font-bold text-lg pb-4">Botão outiline</h1>
 
-          <div className="flex w-full items-center bg-background gap-4 p-2">
+          <div className="flex w-full items-center gap-4 py-2">
             <h2>Preview</h2>
             <Button
               variant={'outline'}
-              className="bg-white text-black p-4 rounded"
+              className="bg-gray-50 hover:bg-gray-100 text-black p-4 rounded"
             >
               Entrar
             </Button>
