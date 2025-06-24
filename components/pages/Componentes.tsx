@@ -51,10 +51,14 @@ export default function Componentes({ user }: { user: User }) {
           <div className="flex w-full items-center justify-between py-2">
           <h1 className="font-bold text-2xl">Botões</h1>
           <div className="flex gap-2">
-          <Button className="bg-white dark:bg-background border-gray-500/40">
+          <Button
+            variant={'default}
+            className="bg-white dark:bg-background border-gray-500/40">
           <MoveLeft />
           </Button>
-          <Button className="bg-white dark:bg-background border-gray-500/40">
+          <Button 
+            variant={'default}
+            className="bg-white dark:bg-background border-gray-500/40">
           <MoveRight />
           </Button>
           </div>
@@ -136,13 +140,15 @@ export default function Componentes({ user }: { user: User }) {
           <h1 className="font-bold text-lg pb-4">Botão solido</h1>
 
           <div className="flex w-full items-center gap-4 p-2">
-      
-            <Button
+             <div className="flex w-full justify-center items-center h-36">
+             <Button
               variant={'ghost'}
               className="bg-white text-black p-4 rounded"
             >
               Sair
             </Button>
+             </div>
+            
           </div>
 
           <SyntaxHighlighter
