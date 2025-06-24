@@ -125,7 +125,7 @@ export default function ConfigPage({
               className="bg-green-600 px-4 py-2 rounded text-white hover:bg-green-700 transition"
               onClick={handleCreateProject}
             >
-              Criar
+              Criar Projeto
             </button>
           )}
         </div>
