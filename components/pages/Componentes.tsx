@@ -92,11 +92,11 @@ export default function Componentes({ user }: { user: User }) {
           </span>
 
           {/* Bloco de código com posição relativa */}
-          <div className="relative items-center">
+          <div className="relative items-center rounded-md bg-subbackground">
             <SyntaxHighlighter
               language="bash"
               style={customTheme}
-              className="rounded-md bg-subbackground text-sm py-2 px-4"
+              className="rounded-md text-sm py-2 px-4"
             >
               {'npm install @cooderfy/ui@latest'}
             </SyntaxHighlighter>
