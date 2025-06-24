@@ -53,13 +53,13 @@ export default function Componentes({ user }: { user: User }) {
           <div className="flex gap-2">
           <Button
           variant={'default'}
-          className="p-2 bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40">
-          <MoveLeft className="size-4" />
+          className="px-2 py-1 bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40">
+          <MoveLeft className="size-3" />
           </Button>
           <Button 
           variant={'default'}
-          className="p-2 bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40">
-          <MoveRight className="size-4" />
+          className="px-2 py-1 bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40">
+          <MoveRight className="size-3" />
           </Button>
           </div>
           </div>
