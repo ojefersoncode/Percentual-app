@@ -48,14 +48,14 @@ export default function Componentes({ user }: { user: User }) {
       {/* Conteúdo */}
       <main className="flex flex-1 flex-col w-full items-center p-6 bg-background">
         <div className="flex flex-col gap-2 w-full justify-start pb-7 pt-8 bg-background">
-          <h1 className="font-bold text-xl">Botões</h1>
+          <h1 className="font-bold text-2xl">Botões</h1>
           <span className="text-sm">
             Adicione este componente ao seu projeto, basta seguir a instalação e
             copiar o componente.
           </span>
         </div>
 
-        <div className="p-2 rounded-lg w-full pb-10">
+        <div className="pt-2 rounded-lg w-full pb-10">
           <h1 className="font-bold text-lg">Instalação</h1>
           <span className="text-sm">
             Para adicionar este componente ao seu projeto, execute o seguinte
