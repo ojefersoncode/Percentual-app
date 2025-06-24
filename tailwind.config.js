@@ -19,7 +19,7 @@ module.exports = {
     extend: {
       colors: {
         btn: '#006239',
-        border: '#6ecba4',
+        border: '#4c4c4c',
         background: '#171717',
         subbackground: '#212121',
         high: '#FFB200',
