@@ -102,7 +102,7 @@ export default function Componentes({ user }: { user: User }) {
           <h1 className="font-bold text-lg pb-4">Botão outiline</h1>
 
           <div className="flex flex-col w-full items-center gap-4 py-2">
-            <h2>Preview</h2>
+  
             <div className="flex w-full justify-center items-center h-36">
             <Button
               
@@ -136,7 +136,7 @@ export default function Componentes({ user }: { user: User }) {
           <h1 className="font-bold text-lg pb-4">Botão solido</h1>
 
           <div className="flex w-full items-center gap-4 p-2">
-            <h2>Preview</h2>
+      
             <Button
               variant={'ghost'}
               className="bg-white text-black p-4 rounded"
