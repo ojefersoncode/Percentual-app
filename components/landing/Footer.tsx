@@ -4,7 +4,7 @@ import { LogoIcon } from './Icons';
 export const Footer = () => {
   const sections = [
     {
-      links: ['Github', 'Twitter', 'Linkedin'],
+      links: ['Suporte', 'Github', 'Documentação'],
     },
     {
       links: ['Web', 'Mobile'],
