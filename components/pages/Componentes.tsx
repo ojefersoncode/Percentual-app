@@ -10,26 +10,32 @@ import { Navbar } from '../HomeComponents/NavBar';
 import { Footer } from '../landing/Footer';
 
 const exampleCode = `export function signinButton() {
-  return <button  variant={'outline'} className='bg-gray-500 text-white p-2 rounded'>Entrar</button>;
-}`;
+  return (
+  <Button  variant={'outline'} className='bg-gray-500 text-white p-2 rounded'>
+     Entrar
+  </Button>;
+);}`;
 
 const exampleCode2 = `export function signupButton() {
-  return <button  variant={'ghost'} className='bg-gray-500 text-white p-2 rounded'>Sair</button>;
-}`;
+  return (
+  <Button  variant={'ghost'} className='bg-gray-500 text-white p-2 rounded'>
+     Sair
+  </Button>;
+);}`;
 
 
 const customTheme = {
   ...dracula,
   'pre[class*="language-"]': {
     ...dracula['pre[class*="language-"]'],
-    background: '#171717', // Cor personalizada aqui
+    background: '#171717',
     padding: '1em',
     borderRadius: '0.5em',
     fontSize: '0.875rem',
   },
   'code[class*="language-"]': {
     ...dracula['code[class*="language-"]'],
-    background: '#171717', // Garante que o código dentro também tenha a cor
+    background: '#171717',
   },
 };
 
