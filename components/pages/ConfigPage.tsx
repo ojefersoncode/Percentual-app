@@ -53,8 +53,8 @@ export default function ConfigPage({
   const prevStep = () => setStep((prev) => prev - 1);
 
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-black text-white items-center">
-      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-black">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-background text-white items-center">
+      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background">
         <div className="flex gap-1 text-xl font-bold items-center">
           <img className="size-8" src="/logo.webp" alt="logo" />
           <h1 className="text-gray-900 dark:text-gray-100 text-base">
@@ -68,8 +68,8 @@ export default function ConfigPage({
         </div>
       </nav>
 
-      <div className="dark:bg-black bg-muted/40 dark:bg-muted/40 max-md:bg-[#212121] p-8 rounded-lg md:w-2/3 shadow-lg flex flex-col space-y-8">
-        <h2 className="text-2xl font-semibold text-black dark:text-gray-100">
+      <div className="dark:bg-subbackground p-8 rounded-lg md:w-2/3 shadow-lg flex flex-col space-y-8">
+        <h2 className="text-2xl font-semibold text-black dark:text-text">
           {`Configurar ${template}`}
         </h2>
         <div className="space-y-6">
