@@ -48,7 +48,7 @@ export default function Componentes({ user }: { user: User }) {
       {/* Conteúdo */}
       <main className="flex flex-1 flex-col w-full items-center p-6 bg-background">
         <div className="flex flex-col gap-2 w-full justify-start pb-7 pt-8 bg-background">
-          <div className="flex w-full items-center justify-between py-2">
+          <div className="flex w-full items-center justify-between pb-4">
           <h1 className="font-bold text-2xl">Botões</h1>
           <div className="flex gap-2">
           <button
