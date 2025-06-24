@@ -52,13 +52,13 @@ export default function Componentes({ user }: { user: User }) {
           <h1 className="font-bold text-2xl">Botões</h1>
           <div className="flex gap-2">
           <Button
-            variant={'default'}
-            className="bg-white dark:bg-background border-gray-500/40">
+          variant={'default'}
+          className="bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40 p-1">
           <MoveLeft />
           </Button>
           <Button 
-            variant={'default'}
-            className="bg-white dark:bg-background border-gray-500/40">
+          variant={'default'}
+          className="bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40 p-1">
           <MoveRight />
           </Button>
           </div>
