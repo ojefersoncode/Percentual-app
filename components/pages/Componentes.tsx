@@ -63,7 +63,7 @@ export default function Componentes({ user }: { user: User }) {
           </span>
 
           {/* Bloco de código com posição relativa */}
-          <div className="relative">
+          <div className="relative flex items-center">
             <SyntaxHighlighter
               language="bash"
               style={dracula}
