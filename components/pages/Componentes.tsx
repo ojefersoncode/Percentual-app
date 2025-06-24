@@ -115,7 +115,7 @@ export default function Componentes({ user }: { user: User }) {
                   'npm install @cooderfy/ui@latest'
                 );
               }}
-              className="right-2 rounded-md p-4 flex bg-white dark:bg-background"
+              className="right-2 rounded-md p-2 flex bg-white dark:bg-background"
             >
               <Copy className="size-3" />
               
