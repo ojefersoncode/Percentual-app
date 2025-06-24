@@ -10,12 +10,12 @@ import { Navbar } from '../HomeComponents/NavBar';
 import { Footer } from '../landing/Footer';
 
 const exampleCode = `export function signinButton() {
-  return (
-<Button  
+ return (
+  <Button  
    variant={'outline'} 
    className='bg-gray-900 text-white'>
-     Entrar
-  </Button>;
+    Entrar
+ </Button>;
 );}`;
 
 const exampleCode2 = `export function signupButton() {
@@ -104,7 +104,7 @@ export default function Componentes({ user }: { user: User }) {
           {/* Bloco de código com posição relativa */}
           <div className="relative items-center">
             <div
-              className="flex items-center gap-1 rounded-md text-sm py-2 px-4 bg-subbackground"
+              className="flex items-center gap-1 rounded-md text-sm p-4 bg-subbackground"
             >
              <p className="text-yellow-400 opacity-80">npm install</p> @cooderfy/ui@latest
             </div>
