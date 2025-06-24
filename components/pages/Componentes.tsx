@@ -46,7 +46,7 @@ export default function Componentes({ user }: { user: User }) {
       </nav>
 
       {/* Conteúdo */}
-      <main className="flex flex-1 flex-col w-full items-center p-6 bg-subbackground">
+      <main className="flex flex-1 flex-col w-full items-center p-6 bg-background">
         <div className="flex flex-col gap-2 w-full justify-start pb-7 pt-8">
           <h1 className="font-bold text-xl">Botões</h1>
           <span className="text-sm">
