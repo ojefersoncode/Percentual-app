@@ -82,8 +82,8 @@ export default function Componentes({ user }: { user: User }) {
               variant={'ghost'}
               className="absolute top-2 right-2 flex items-center bg-white dark:bg-black"
             >
-              <Copy className="w-4 h-4 mr-2" />
-              Copiar
+              <Copy className="size-4" />
+              
             </Button>
           </div>
         </div>
