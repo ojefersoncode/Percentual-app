@@ -87,7 +87,7 @@ export default function Componentes({ user }: { user: User }) {
             </Button>
           </div>
         </div>
-        <div className="border border-gray-600 p-4 bg-subbackground rounded-lg w-full py-4">
+        <div className="border border-gray-600/40 p-4 bg-subbackground rounded-lg w-full py-4">
           <h1 className="font-bold text-lg pb-4">Botão outiline</h1>
 
           <div className="flex w-full items-center gap-4 py-2">
@@ -111,14 +111,14 @@ export default function Componentes({ user }: { user: User }) {
             <Button
               onClick={handleCopy}
               variant={'ghost'}
-              className="mt-4 flex items-center bg-muted border border-dashed border-black dark:border-white"
+              className="mt-4 flex items-center bg-muted border border-gray-600/40 dark:border-white"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar Código'}
             </Button>
           </div>
         </div>
-        <div className="border border-gray-600 p-4 bg-subbackground rounded-lg w-full my-4">
+        <div className="border border-gray-600/40 p-4 bg-subbackground rounded-lg w-full my-4">
           <h1 className="font-bold text-lg pb-4">Botão solido</h1>
 
           <div className="flex w-full items-center gap-4 p-2">
@@ -142,7 +142,7 @@ export default function Componentes({ user }: { user: User }) {
             <Button
               onClick={handleCopy}
               variant={'ghost'}
-              className="mt-4 flex items-center bg-muted border border-dashed border-black dark:border-white"
+              className="mt-4 flex items-center bg-muted border border-gray-600/40 dark:border-white"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar Código'}
