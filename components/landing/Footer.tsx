@@ -2,6 +2,15 @@
 import { LogoIcon } from './Icons';
 
 export const Footer = () => {
+  const sections = [
+    {
+      links: ['Github', 'Twitter', 'Linkedin'],
+    },
+    {
+      links: ['Web', 'Mobile'],
+    },
+  ];
+
   return (
     <footer id="footer" className="bg-white dark:bg-background text-black dark:text-gray-100">
       {/* Seção Principal */}
@@ -16,16 +25,10 @@ export const Footer = () => {
             Cooderfy
           </p>
         </a>
-        {[
-          {
-            links: ['Github', 'Twitter', 'Linkedin'],
-          },
-          {
-            links: ['Web', 'Mobile'],
-          },
-          
-        ].map((section) => (
-          <div key={section.title} className="flex flex-col gap-2">
+
+        {/* Links */}
+        {sections.map((section, index) => (
+          <div key={`section-${index}`} className="flex flex-col gap-2">
             <ul className="flex flex-col gap-1 text-sm">
               {section.links.map((link) => (
                 <li key={link}>
@@ -46,18 +49,16 @@ export const Footer = () => {
       {/* Rodapé Inferior */}
       <section className="container pb-4 font-mono opacity-70 text-xs">
         <div className="flex gap-1">
-          <span> 
-           &copy; 2024,
-          </span>
+          <span>&copy; 2024,</span>
           <a
             href="https://github.com/Ojefersoncode"
             target="_blank"
             rel="noreferrer noopener"
-            className=" hover:opacity-80"
+            className="hover:opacity-80"
           >
             Cooderfy
           </a>
-         <span>llc.</span> 
+          <span>LLC.</span>
         </div>
       </section>
     </footer>
