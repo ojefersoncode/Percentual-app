@@ -31,9 +31,9 @@ export default function Componentes({ user }: { user: User }) {
       {/* Navbar */}
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b border-gray-600/40">
         <div className="flex gap-1 text-xl font-bold items-center">
-          <img className="size-8" src="/logo.webp" alt="logo" />
+          <img className="size-8" src="/LogoC.png" alt="logo" />
           <div className="flex">
-            <h1 className="text-gray-900 dark:text-gray-100 text-base">
+            <h1 className="text-gray-900 dark:text-gray-100 font-sans text-base">
               Cooderfy
             </h1>
           </div>
