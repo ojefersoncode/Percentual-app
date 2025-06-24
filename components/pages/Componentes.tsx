@@ -130,7 +130,7 @@ export default function Componentes({ user }: { user: User }) {
             <div className="flex w-full justify-center items-center h-36">
             <Button
               
-              className="bg-white hover:bg-gray-100 darl:bg-background dark:hover:bg-background/80 text-black p-4 rounded"
+              className="bg-white hover:bg-gray-100 dark:bg-background dark:hover:bg-background/80 text-black dark:text-text border p-4 rounded"
             >
               Entrar
             </Button>
@@ -163,7 +163,7 @@ export default function Componentes({ user }: { user: User }) {
              <div className="flex w-full justify-center items-center h-36">
              <Button
               variant={'ghost'}
-              className="bg-white dark:bg-background text-black p-4 rounded"
+              className="bg-white dark:bg-background text-black dark:text-text p-4 rounded"
             >
               Sair
             </Button>
