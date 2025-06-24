@@ -55,8 +55,10 @@ export const Footer = () => {
 
       {/* Rodapé Inferior */}
       <section className="container pb-4 text-sm">
-        <p>
-          &copy; 2024,
+        <div className="flex gap-2">
+          <span> 
+           &copy; 2024,
+          </span>
           <a
             href="https://github.com/Ojefersoncode"
             target="_blank"
@@ -65,8 +67,8 @@ export const Footer = () => {
           >
             Cooderfy
           </a>
-          LLC.
-        </p>
+         <span>LLC.</span> 
+        </div>
       </section>
     </footer>
   );
