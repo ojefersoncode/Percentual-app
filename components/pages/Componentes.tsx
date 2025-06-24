@@ -102,7 +102,7 @@ export default function Componentes({ user }: { user: User }) {
           </span>
 
           {/* Bloco de código com posição relativa */}
-          <div className="relative items-center">
+          <div className="flex w-full justify-around items-center px-2">
             <div
               className="flex items-center gap-1 rounded-md text-sm p-4 bg-subbackground"
             >
@@ -117,7 +117,7 @@ export default function Componentes({ user }: { user: User }) {
                 );
               }}
               variant={'ghost'}
-              className="absolute top-1 right-2 flex items-center bg-white dark:bg-background"
+              className="absolute right-2 flex items-center bg-white dark:bg-background"
             >
               <Copy className="size-4" />
               
