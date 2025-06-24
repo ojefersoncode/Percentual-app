@@ -119,7 +119,7 @@ export default function Componentes({ user }: { user: User }) {
           <SyntaxHighlighter
             language="tsx"
             style={dracula}
-            className="rounded-md py-10 px-4"
+            className="rounded-md py-10 px-4 text-sm"
           >
             {exampleCode}
           </SyntaxHighlighter>
@@ -152,7 +152,7 @@ export default function Componentes({ user }: { user: User }) {
           <SyntaxHighlighter
             language="tsx"
             style={dracula}
-            className="rounded-md py-10 px-4"
+            className="rounded-md py-10 px-4 text-sm"
           >
             {exampleCode2}
           </SyntaxHighlighter>
