@@ -119,7 +119,7 @@ export default function Componentes({ user }: { user: User }) {
           <SyntaxHighlighter
             language="tsx"
             style={dracula}
-            className="rounded-md py-10 px-4 text-sm"
+            className="rounded-md py-4 px-2 text-xs"
           >
             {exampleCode}
           </SyntaxHighlighter>
@@ -127,7 +127,7 @@ export default function Componentes({ user }: { user: User }) {
             <Button
               onClick={handleCopy}
               variant={'default'}
-              className="bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-200 dark:border-gray-500/40"
+              className="bg-white dark:bg-subbackground text-black dark:text-white  hover:bg-transparent border border-gray-200 dark:border-gray-500/40"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar Código'}
@@ -152,7 +152,7 @@ export default function Componentes({ user }: { user: User }) {
           <SyntaxHighlighter
             language="tsx"
             style={dracula}
-            className="rounded-md py-10 px-4 text-sm"
+            className="rounded-md py-4 px-2 text-xs"
           >
             {exampleCode2}
           </SyntaxHighlighter>
@@ -160,7 +160,7 @@ export default function Componentes({ user }: { user: User }) {
             <Button
               onClick={handleCopy}
               variant={'default'}
-              className="bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-200 dark:border-gray-500/40"
+              className="bg-white dark:bg-subbackground text-black dark:text-white  hover:bg-transparent border border-gray-200 dark:border-gray-500/40"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar Código'}
