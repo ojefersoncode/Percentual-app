@@ -68,7 +68,7 @@ export function Navbar() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="outline"
+
           className="bg-transparent text-black dark:text-white  hover:bg-transparent border-none p-1"
         >
           <Menu className="size-4" />
