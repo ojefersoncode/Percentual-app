@@ -47,7 +47,7 @@ export default function Componentes({ user }: { user: User }) {
 
       {/* Conteúdo */}
       <main className="flex flex-1 flex-col w-full items-center p-6 bg-background">
-        <div className="flex flex-col gap-2 w-full justify-start pb-7 pt-8">
+        <div className="flex flex-col gap-2 w-full justify-start pb-7 pt-8 bg-background">
           <h1 className="font-bold text-xl">Botões</h1>
           <span className="text-sm">
             Adicione este componente ao seu projeto, basta seguir a instalação e
@@ -93,7 +93,7 @@ export default function Componentes({ user }: { user: User }) {
           <div className="flex w-full items-center gap-4 py-2">
             <h2>Preview</h2>
             <Button
-              variant={'outline'}
+              
               className="bg-gray-50 hover:bg-gray-100 text-black p-4 rounded"
             >
               Entrar
@@ -121,7 +121,7 @@ export default function Componentes({ user }: { user: User }) {
         <div className="border p-4 bg-subbackground rounded-lg w-full my-4">
           <h1 className="font-bold text-lg pb-4">Botão solido</h1>
 
-          <div className="flex w-full items-center gap-4 bg-background p-2">
+          <div className="flex w-full items-center gap-4 p-2">
             <h2>Preview</h2>
             <Button
               variant={'ghost'}
