@@ -17,7 +17,7 @@ export default function TemplatesWeb({ user }: { user: User }) {
   ];
 
   return (
-    <div className="relative flex min-h-screen w-full bg-gray-200 dark:bg-background">
+    <div className="relative flex min-h-screen w-full bg-white dark:bg-background">
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
         <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b border-gray-500/40">
           <div className="flex gap-1 text-xl font-bold items-center">
@@ -31,7 +31,7 @@ export default function TemplatesWeb({ user }: { user: User }) {
           </div>
         </nav>
 
-        <div className="mx-auto grid w-full max-w-7xl gap-10 py-10 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 bg-subbackground">
+        <div className="mx-auto grid w-full max-w-7xl gap-10 py-10 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 bg-background">
           {templates.map((template) => (
             <div
               key={template.id}
