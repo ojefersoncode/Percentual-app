@@ -1,10 +1,4 @@
-# Next.js Production Boilerplate
-
-This repository is an adapted version of https://github.com/vercel/nextjs-subscription-payments 
-
-## Demo
-
-- https://nextjs.devtodollars.com/
+# Cooderfy app
 
 ## Getting Started
 
@@ -31,3 +25,7 @@ npm run dev
 - Next.JS (App Router)
 - Typescript
 - Tailwind
+- Shadcn ui
+- Supabase
+- Zustand
+- Zod
