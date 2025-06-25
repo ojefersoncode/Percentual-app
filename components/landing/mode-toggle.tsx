@@ -30,9 +30,9 @@ export function ModeToggle() {
             onClick={() => setTheme(option.value)}
             type="button"
             aria-label={option.label}
-            className={`flex items-center justify-center w-8 h-7 transition-colors duration-200 ${
+            className={`flex items-center justify-center w-7 h-7 transition-colors duration-200 ${
               isActive
-                ? 'bg-white text-black dark:bg-gray-700 dark:text-white border border-gray-500'
+                ? 'bg-gray-300 text-black dark:bg-subbackground dark:text-white border border-gray-200 dark:border-border'
                 : 'text-gray-400'
             }`}
           >
