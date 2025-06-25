@@ -1,5 +1,6 @@
 'use client';
 import { LogoIcon } from './Icons';
+import { ModeToggle } from './mode-toggle';
 
 export const Footer = () => {
   const sections = [
@@ -15,8 +16,8 @@ export const Footer = () => {
     <footer id="footer" className="bg-white dark:bg-background text-black dark:text-gray-100 border-t">
     
       <section className="container py-4 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-4">
-      
-        <a
+      <div className="flex w-full justify-between items-center">
+      <a
           href="/"
           className="flex items-center select-none col-span-2 xl:col-span-1">
           <img className="size-7" src="/LogoC.png" alt="logo" />
@@ -24,6 +25,9 @@ export const Footer = () => {
             Cooderfy
           </p>
         </a>
+      <ModeToggle />
+      </div>
+        
 
         {sections.map((section, index) => (
           <div key={`section-${index}`} className="flex flex-col gap-2">
