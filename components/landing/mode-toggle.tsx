@@ -9,12 +9,12 @@ export function ModeToggle() {
   const options: { value: 'light' | 'dark'; icon: React.ReactNode; label: string }[] = [
     {
       value: 'light',
-      icon: <Sun className="w-4 h-4" />,
+      icon: <Sun className="w-5 h-5" />,
       label: 'Claro',
     },
     {
       value: 'dark',
-      icon: <Moon className="w-4 h-4" />,
+      icon: <Moon className="w-5 h-5" />,
       label: 'Escuro',
     },
   ];
@@ -30,7 +30,7 @@ export function ModeToggle() {
             onClick={() => setTheme(option.value)}
             type="button"
             aria-label={option.label}
-            className={`flex items-center justify-center w-7 h-7 transition-colors duration-200 ${
+            className={`flex items-center justify-center w-10 h-7 transition-colors duration-200 ${
               isActive
                 ? 'bg-gray-300 text-black dark:bg-subbackground dark:text-white border border-gray-200 dark:border-border'
                 : 'text-gray-400'
