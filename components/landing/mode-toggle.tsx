@@ -12,12 +12,12 @@ export function ModeToggle() {
   ];
 
   return (
-    <div className="flex items-center bg-muted text-muted-foreground border rounded-full px-2 py-0 gap-1">
+    <div className="flex items-center bg-muted text-muted-foreground border rounded-full px-2 py-0 gap-2">
       {options.map((option) => (
         <button
           key={option.value}
           onClick={() => setTheme(option.value)}
-          className={`p-1 rounded-full transition-colors ${
+          className={`rounded-full transition-colors ${
             theme === option.value ? 'bg-gray-200 dark:bg-background text-text dark:text-text' : 'hover:bg-accent'
           }`}
           aria-label={option.label}
