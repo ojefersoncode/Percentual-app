@@ -38,7 +38,7 @@ export default function VideoAulas({ user }: { user: User }) {
       <div className="flex w-full p-4">
         <Button
           variant={'ghost'}
-          className="flex items-center p-3 space-x-1 cursor-pointer text-background dark-text-text bg-white dark:bg-background"
+          className="flex items-center p-3 space-x-1 cursor-pointer border border-gray-200 dark:border-border text-background dark:text-text bg-white dark:bg-background"
         >
           <ArrowLeftIcon className="size-4" />
           <span className="text-sm">Voltar</span>
