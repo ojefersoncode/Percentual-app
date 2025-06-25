@@ -52,7 +52,7 @@ export default function ConfigPage({
   const prevStep = () => setStep((prev) => prev - 1);
 
   return (
-    <div className="flex flex-col h-screen bg-white dark:bg-background text-white items-center">
+    <div className="flex flex-col h-screen bg-white dark:bg-background text-white">
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background">
         <div className="flex gap-1 text-xl font-bold items-center">
           <img className="size-8" src="/LogoC.png" alt="logo" />
@@ -66,7 +66,7 @@ export default function ConfigPage({
         </div>
       </nav>
 
-      <div className="w-full justify-center items-center  bg-gray-200 dark:bg-subbackground p-4 rounded-lg w-full shadow-lg flex flex-col space-y-8">
+      <div className="w-full justify-center bg-gray-200 dark:bg-background p-4 rounded-lg w-full shadow-lg flex flex-col space-y-8">
         <h2 className="text-xl font-semibold text-black dark:text-text">
           {`Configurar ${template}`}
         </h2>
