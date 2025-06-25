@@ -40,15 +40,15 @@ export const Step4 = ({ github, onChangeGithub }: Step4Props) => {
 
       <div className="py-4">
         <div
-          className="flex flex-col w-full gap-2 justify-center items-center rounded-lg border border-gray-500 dark:border-gray-800 py-6 cursor-pointer"
+          className="flex flex-col w-full gap-2 justify-center items-center rounded-lg border border-gray-200 dark:border-border py-6 cursor-pointer"
           onClick={handleOpenFolder}
         >
-          <Folder className="w-10 h-10 text-gray-700 dark:text-gray-400" />
-          <span className="text-base font-semibold text-gray-700 dark:text-gray-400">
+          <Folder className="w-10 h-10 text-zinc-700 dark:text-zinc-400" />
+          <span className="text-base font-semibold text-zinc-700 dark:text-zinc-400">
             Selecione um local para salvar
           </span>
           {folderPath && (
-            <span className="text-sm text-gray-500 dark:text-gray-400">
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">
               {folderPath}
             </span>
           )}
