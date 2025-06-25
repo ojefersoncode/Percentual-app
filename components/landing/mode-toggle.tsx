@@ -1,36 +1,35 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu';
+
 import { useTheme } from '@/components/landing/theme-provider';
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun, Laptop2 } from 'lucide-react';
+import clsx from 'clsx';
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
+
+  const options = [
+    { value: 'system', icon: <Laptop2 className="w-4 h-4" />, label: 'Sistema' },
+    { value: 'light', icon: <Sun className="w-4 h-4" />, label: 'Claro' },
+    { value: 'dark', icon: <Moon className="w-4 h-4" />, label: 'Escuro' },
+  ];
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          className="px-0 py-0 bg-white text-black dark:bg-black dark:hover:bg-black dark:hover:text-white dark:text-white"
+    <div className="flex items-center bg-muted text-muted-foreground border rounded-full px-2 py-1 gap-1">
+      {options.map((option) => (
+        <button
+          key={option.value}
+          onClick={() => setTheme(option.value)}
+          className={clsx(
+            'p-2 rounded-full transition-colors',
+            theme === option.value
+              ? 'bg-background text-foreground'
+              : 'hover:bg-accent'
+          )}
+          aria-label={option.label}
         >
-          <Sun className="size-4 p-0 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute size-4 p-0 rotate-90 scale-0 :rotate-0 dark:scale-100 transition-all" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>
-          Claro
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>
-          Escuro
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+          {option.icon}
+        </button>
+      ))}
+    </div>
   );
 }
