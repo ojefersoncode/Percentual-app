@@ -7,17 +7,17 @@ export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
   const options: { value: 'light' | 'dark'; icon: React.ReactNode; label: string }[] = [
-    { value: 'light', icon: <Sun className="w-2 h-2" />, label: 'Claro' },
-    { value: 'dark', icon: <Moon className="w-2 h-2" />, label: 'Escuro' },
+    { value: 'light', icon: <Sun className="size-3" />, label: 'Claro' },
+    { value: 'dark', icon: <Moon className="size-3" />, label: 'Escuro' },
   ];
 
   return (
-    <div className="flex items-center bg-muted text-muted-foreground border rounded-full px-2 py-1 gap-1">
+    <div className="flex items-center bg-muted text-muted-foreground border rounded-full gap-1">
       {options.map((option) => (
         <button
           key={option.value}
           onClick={() => setTheme(option.value)} // ✅ Sem `as Theme`
-          className={`p-2 rounded-full transition-colors ${
+          className={`p-1 rounded-full transition-colors ${
             theme === option.value ? 'bg-gray-200 dark:bg-background text-text dark:text-background' : 'hover:bg-accent'
           }`}
           aria-label={option.label}
