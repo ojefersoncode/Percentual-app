@@ -49,10 +49,13 @@ export default function Cursos({ user }: { user: User }) {
                       : 'blur-none opacity-100'
                   }`}
                 />
-                <div className="p-2">
-                <h1 className="text-base">
+                <div className="flex w-full justify-between items-center px-2 py-4">
+                <h1 className="font-sans text-base">
                   {curso.name}
                 </h1>
+                  <h2 className="font-mono text-sm">
+                  Duração 36h
+                  </h2>
                 </div>
               </div>
             </div>
