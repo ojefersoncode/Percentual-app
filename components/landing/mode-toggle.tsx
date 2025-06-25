@@ -1,12 +1,12 @@
 'use client';
-import React from 'react';
+import React from 'react'; // <- IMPORT NECESSÁRIO
 import { useTheme } from '@/components/landing/theme-provider';
 import { Moon, Sun, Laptop2 } from 'lucide-react';
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
-  const options: { value: 'light' | 'dark' | 'system'; icon: JSX.Element; label: string }[] = [
+  const options: { value: 'light' | 'dark' | 'system'; icon: React.ReactNode; label: string }[] = [
     { value: 'system', icon: <Laptop2 className="w-4 h-4" />, label: 'Sistema' },
     { value: 'light', icon: <Sun className="w-4 h-4" />, label: 'Claro' },
     { value: 'dark', icon: <Moon className="w-4 h-4" />, label: 'Escuro' },
