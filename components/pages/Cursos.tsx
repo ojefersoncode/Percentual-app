@@ -21,7 +21,7 @@ export default function Cursos({ user }: { user: User }) {
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
         <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b border-gray-500/40 dark:border-border">
           <div className="flex gap-1 text-xl font-bold items-center">
-            <img className="size-8" src="/logo.webp" alt="logo" />
+            <img className="size-7" src="/LogoC.png" alt="logo" />
             <h1 className="dark:text-gray-100 text-base">Cooderfy</h1>
           </div>
 
