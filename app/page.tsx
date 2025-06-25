@@ -22,7 +22,7 @@ export default async function LandingPage() {
 
   return (
     <>
-      <div className="w-full overflow-hidden">
+      <div className="w-full bg-white dark:bg-background overflow-hidden">
         <Navbar user={user} />
         <HeroLeads />
         <FAQ />
