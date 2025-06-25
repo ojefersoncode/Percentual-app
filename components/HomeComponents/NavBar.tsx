@@ -14,7 +14,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-
+import { ModeToggle } from './mode-toggle';
 import {
   Menu,
   Home,
@@ -105,6 +105,9 @@ export function Navbar() {
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => router.push('/planos-e-compras')}>
                   <CreditCard className="w-4 h-4 mr-2" /> Meu plano
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                 <ModeToggle />
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
