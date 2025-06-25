@@ -67,7 +67,7 @@ export default function ConfigPage({
       </nav>
 
       <div className="w-full justify-center bg-gray-200 dark:bg-background p-4 rounded-lg w-full shadow-lg flex flex-col space-y-8">
-        <h2 className="text-xl font-semibold text-black dark:text-text">
+        <h2 className="text-md px-4 font-sans text-black dark:text-text">
           {`Configurar ${template}`}
         </h2>
         <div className="space-y-6">
@@ -102,7 +102,7 @@ export default function ConfigPage({
             />
           )}
         </div>
-        <div className="flex justify-between mt-6">
+        <div className="flex justify-between my-6">
           {step > 1 && (
             <Button
               variant="outline"
@@ -131,7 +131,7 @@ export default function ConfigPage({
         </div>
       </div>
 
-      <div className="w-full pt-7">
+      <div className="w-full mt-7">
         <Footer />
       </div>
     </div>
