@@ -35,7 +35,7 @@ export default function Cursos({ user }: { user: User }) {
           {curso.map((curso) => (
             <div
               key={curso.id}
-              className="border border-gray-500/40 bg-gray-100 dark:bg-subbackground rounded-lg shadow-md hover:shadow-lg transition-all"
+              className="border border-gray-200 dark:border-border bg-white dark:bg-subbackground rounded-lg shadow-md hover:shadow-lg transition-all"
               onMouseEnter={() => setHoveredId(curso.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
@@ -49,6 +49,11 @@ export default function Cursos({ user }: { user: User }) {
                       : 'blur-none opacity-100'
                   }`}
                 />
+                <div className="p-2">
+                <h1 className="text-base">
+                  {curso.name}
+                </h1>
+                </div>
               </div>
             </div>
           ))}
