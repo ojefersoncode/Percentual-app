@@ -14,7 +14,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import { ModeToggle } from './mode-toggle';
+import { ModeToggle } from '@components/landing/mode-toggle';
 import {
   Menu,
   Home,
