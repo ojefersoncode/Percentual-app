@@ -20,7 +20,7 @@ export function ModeToggle() {
   ];
 
   return (
-    <div className="flex h-6 items-center border border-gray-200 dark:border-border rounded-full overflow-hidden bg-gray-200 dark:bg-background">
+    <div className="flex h-6 items-center border border-gray-200 dark:border-border rounded-full overflow-hidden bg-white dark:bg-background">
       {options.map((option) => {
         const isActive = theme === option.value;
 
@@ -32,7 +32,7 @@ export function ModeToggle() {
             aria-label={option.label}
             className={`flex items-center justify-center w-10 h-6 rounded-full transition-colors duration-200 ${
               isActive
-                ? 'bg-gray-300 text-black dark:bg-subbackground dark:text-white'
+                ? 'bg-gray-200 text-black dark:bg-subbackground dark:text-white'
                 : 'text-gray-400'
             }`}
           >
