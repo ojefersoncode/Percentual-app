@@ -73,7 +73,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
           </NavigationMenuItem>
 
           {/* mobile */}
-          <span className="flex md:hidden">
+          <span className="flex items-center md:hidden">
             <ModeToggle />
 
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
