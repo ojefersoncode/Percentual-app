@@ -75,7 +75,7 @@ export default function Componentes({ user }: { user: User }) {
       <main className="flex flex-1 flex-col w-full items-center p-6 bg-background">
         <div className="flex flex-col gap-2 w-full justify-start pb-7 pt-8 bg-background">
           <div className="flex w-full items-center justify-between pb-2">
-            <h1 className="font-bold text-3xl">Botões</h1>
+            <h1 className="font-bold text-xl">Botões</h1>
              <div className="flex gap-2">
                <button
                  className="p-2 rounded-md bg-white dark:bg-background text-black dark:text-white  hover:bg-transparent border border-gray-500/40">
@@ -95,7 +95,7 @@ export default function Componentes({ user }: { user: User }) {
         </div>
 
         <div className="pt-2 rounded-lg w-full pb-10">
-          <h1 className="font-bold text-xl">Instalação</h1>
+          <h1 className="font-bold text-md">Instalação</h1>
           <span className="text-sm">
             Para adicionar este componente ao seu projeto, execute o seguinte
             comando:
@@ -123,7 +123,7 @@ export default function Componentes({ user }: { user: User }) {
           </div>
         </div>
         <div className="border border-gray-200 dark:border-border p-4 bg-subbackground rounded-lg w-full py-4">
-          <h1 className="font-bold text-lg pb-4">Botão outiline</h1>
+          <h1 className="font-sans text-base p-4">Botão outiline</h1>
 
           <div className="flex flex-col w-full items-center gap-4 py-2">
   
@@ -157,7 +157,7 @@ export default function Componentes({ user }: { user: User }) {
           </div>
         </div>
         <div className="border border-gray-200 dark:border-border p-4 bg-subbackground rounded-lg w-full my-4">
-          <h1 className="font-bold text-lg pb-4">Botão solido</h1>
+          <h1 className="font-sans text-base p-4">Botão solido</h1>
 
           <div className="flex w-full items-center gap-4 p-2">
              <div className="flex w-full justify-center items-center h-36">
