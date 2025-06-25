@@ -2,12 +2,11 @@
 
 import { useTheme } from '@/components/landing/theme-provider';
 import { Moon, Sun, Laptop2 } from 'lucide-react';
-import clsx from 'clsx';
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
-  const options = [
+  const options: { value: 'light' | 'dark' | 'system'; icon: JSX.Element; label: string }[] = [
     { value: 'system', icon: <Laptop2 className="w-4 h-4" />, label: 'Sistema' },
     { value: 'light', icon: <Sun className="w-4 h-4" />, label: 'Claro' },
     { value: 'dark', icon: <Moon className="w-4 h-4" />, label: 'Escuro' },
@@ -19,12 +18,9 @@ export function ModeToggle() {
         <button
           key={option.value}
           onClick={() => setTheme(option.value)}
-          className={clsx(
-            'p-2 rounded-full transition-colors',
-            theme === option.value
-              ? 'bg-background text-foreground'
-              : 'hover:bg-accent'
-          )}
+          className={`p-2 rounded-full transition-colors ${
+            theme === option.value ? 'bg-background text-foreground' : 'hover:bg-accent'
+          }`}
           aria-label={option.label}
         >
           {option.icon}
