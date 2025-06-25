@@ -53,7 +53,7 @@ export default function ConfigPage({
 
   return (
     <div className="flex flex-col h-screen bg-white dark:bg-background text-white">
-      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background">
+      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border border-gray-200 dark:border-border">
         <div className="flex gap-1 text-xl font-bold items-center">
           <img className="size-8" src="/LogoC.png" alt="logo" />
           <h1 className="text-gray-900 dark:text-gray-100 text-base">
