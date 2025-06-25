@@ -24,7 +24,7 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
   };
 
   return (
-    <div className="flex flex-col w-full min-h-screen justify-center px-4 mt-4 bg-white dark:bg-background">
+    <div className="flex flex-col w-full py-10 justify-center px-4 mt-4 bg-white dark:bg-background">
       <label className="block mb-3 text-black dark:text-gray-300 font-medium">
         Nome do seu projeto
       </label>
