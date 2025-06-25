@@ -2,7 +2,6 @@
 import React from 'react';
 import { useTheme } from '@/components/landing/theme-provider';
 import { Moon, Sun } from 'lucide-react';
-import type { Theme } from 'next-themes';
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
@@ -17,7 +16,7 @@ export function ModeToggle() {
       {options.map((option) => (
         <button
           key={option.value}
-          onClick={() => setTheme(option.value as Theme)}
+          onClick={() => setTheme(option.value)} // ✅ Sem `as Theme`
           className={`p-2 rounded-full transition-colors ${
             theme === option.value ? 'bg-background text-foreground' : 'hover:bg-accent'
           }`}
