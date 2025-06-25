@@ -12,7 +12,7 @@ const meta = {
   description: 'Crie seus Projetos até 10x mais rapido.',
   cardImage: '/cooderfy.png',
   robots: 'follow, index',
-  favicon: '/logo.webp',
+  favicon: '/LogoC.png',
   url: getURL()
 };
 
@@ -25,13 +25,14 @@ export async function generateMetadata(): Promise<Metadata> {
       'Vercel',
       'Supabase',
       'Next.js',
+      'React js,
+      'cooderfy',
       'Stripe',
       'assets',
+      'animações',
       '3d',
-      'Assets 3d',
-      'blender',
       'curso',
-      'game dev',
+      'Dev',
       'Cooderfy',
       'SaaS',
       'boilerplate',
