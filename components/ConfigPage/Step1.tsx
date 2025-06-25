@@ -23,7 +23,7 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
   };
 
   return (
-    <div className="flex flex-col w-full py-10 justify-center px-4 mt-4 bg-white dark:bg-background rounded-lg border border-gray-200 dark:border-border">
+    <div className="flex flex-col w-full py-4 justify-center px-4 mt-4 bg-white dark:bg-background rounded-lg border border-gray-200 dark:border-border">
 
       
       <label className="block mb-2 text-black dark:text-gray-300 font-medium">
@@ -38,7 +38,7 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
       </div>
 
 
-      <label className="block mb-2 text-black dark:text-gray-300 font-medium">
+      <label className="block mt-4 mb-2 text-black dark:text-gray-300 font-medium">
          Versão do seu projeto
       </label>
       <div className="flex w-full">
