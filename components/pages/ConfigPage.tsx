@@ -66,7 +66,7 @@ export default function ConfigPage({
         </div>
       </nav>
 
-      <div className="dark:bg-subbackground p-4 rounded-lg w-full shadow-lg flex flex-col space-y-8">
+      <div className="w-full justify-center items-center  bg-gray-200 dark:bg-subbackground p-4 rounded-lg w-full shadow-lg flex flex-col space-y-8">
         <h2 className="text-xl font-semibold text-black dark:text-text">
           {`Configurar ${template}`}
         </h2>
