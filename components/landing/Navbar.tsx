@@ -85,7 +85,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
 
               <SheetContent 
                 side={'right'}
-                className="bg-background"
+                className="bg-white dark:bg-background"
                 >
                 <SheetHeader>
                   <SheetTitle className="font-sans text-lg select-none">
