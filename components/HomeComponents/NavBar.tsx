@@ -28,6 +28,7 @@ import {
   Share2,
   LogOut,
   MessageCircle,
+  FileText,
   Facebook,
   Send,
   Smartphone
@@ -86,6 +87,9 @@ export function Navbar() {
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => router.push('/componentes')}>
             <Layers className="w-4 h-4 mr-2" /> Componentes
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => router.push('/componentes')}>
+            <FileText className="w-4 h-4 mr-2" /> Documentação 
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => router.push('/cursos')}>
             <BookOpen className="w-4 h-4 mr-2" /> Cursos
