@@ -60,14 +60,14 @@ export const Navbar = ({ user }: { user: User | null }) => {
     return router.push('/auth');
   };
   return (
-    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+    <header className="sticky border-b-[1px] border-gray-200 top-0 z-40 w-full bg-white dark:border-b-bordef dark:bg-background">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container py-2 px-3 md:px-6 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <div className="flex gap-2 text-xl font-bold items-center">
-              <img className="size-10" src="/logo.webp" alt="logo" />
+              <img className="size-7" src="/LogoC.png" alt="logo" />
               <div className="flex">
-                <h1 className="text-gray-900 dark:text-gray-100">Cooderfy</h1>
+                <h1 className="text-gray-900 font-sans dark:text-text">Cooderfy</h1>
               </div>
             </div>
           </NavigationMenuItem>
@@ -83,9 +83,12 @@ export const Navbar = ({ user }: { user: User | null }) => {
                 </Button>
               </SheetTrigger>
 
-              <SheetContent side={'left'}>
+              <SheetContent 
+                side={'right'}
+                className="bg-background"
+                >
                 <SheetHeader>
-                  <SheetTitle className="font-bold text-xl select-none">
+                  <SheetTitle className="font-sans text-lg select-none">
                     Cooderfy
                   </SheetTitle>
                 </SheetHeader>
