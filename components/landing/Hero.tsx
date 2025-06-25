@@ -9,18 +9,18 @@ export const Hero = () => {
       <div className="text-center lg:text-start mx-7 max-md:mx-4 space-y-4">
         <main className="text-4xl md:text-6xl font-bold">
           <h1 className="inline">
-            <span className="inline bg-gradient-to-r text-slate-900 dark:text-gray-100  ">
+            <span className="inline text-slate-900 dark:text-text">
               Desenvola seus projetos
             </span>{' '}
           </h1>{' '}
           <h2 className="inline">
-            <span className="inline bg-gradient-to-r text-red-600 bg-clip-text">
+            <span className="inline text-red-600">
               ate 10x mais rapido.
             </span>{' '}
           </h2>
         </main>
 
-        <p className="text-base text-gray-900 dark:text-gray-100 md:w-10/12 mx-auto lg:mx-0">
+        <p className="text-base text-gray-900 dark:text-text md:w-10/12 mx-auto lg:mx-0">
           Com a Cooderfy, você cria seu SaaS de forma rápida, fácil e segura.
           Gerencie tudo com facilidade através de uma dashboard incrível e tenha
           total controle do seu negócio.
