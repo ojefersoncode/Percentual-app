@@ -31,7 +31,7 @@ export default function Cursos({ user }: { user: User }) {
           </div>
         </nav>
 
-        <div className="bg-background mx-auto grid w-full max-w-7xl gap-10 py-10 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="bg-background mx-auto grid w-full max-w-7xl gap-4 py-10 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
           {curso.map((curso) => (
             <div
               key={curso.id}
@@ -49,7 +49,7 @@ export default function Cursos({ user }: { user: User }) {
                       : 'blur-none opacity-100'
                   }`}
                 />
-                <div className="flex w-full justify-between items-center px-2 py-4">
+                <div className="flex w-full justify-between items-center p-4">
                 <h1 className="font-sans text-base">
                   {curso.name}
                 </h1>
