@@ -38,7 +38,7 @@ export default function VideoAulas({ user }: { user: User }) {
       <div className="flex w-full p-4">
         <Button
           variant={'ghost'}
-          className="flex items-center p-3 space-x-1 cursor-pointer border border-gray-200 dark:border-border text-background dark:text-text bg-white dark:bg-background"
+          className="flex items-center p-3 space-x-1 cursor-pointer border border-gray-200 dark:border-border text-background dark:text-text bg-white dark:bg-subbackground"
         >
           <ArrowLeftIcon className="size-4" />
           <span className="text-sm">Voltar</span>
@@ -66,9 +66,9 @@ export default function VideoAulas({ user }: { user: User }) {
         <div className="flex justify-between items-center w-full mt-4 px-2">
           <SelectAula />
           <Button
-            variant="outline"
+            variant="ghost"
             onClick={() => alert('Redirecionando para a Aula 2...')}
-            className="bg-white dark:bg-background px-3 py-2 text-sm text-background/80 dark:text-text/80 rounded-lg"
+            className="bg-white dark:bg-background border border-gray-200 dark:border-border px-3 py-2 text-sm text-background/80 dark:text-text/80 rounded-lg"
           >
             Pular para próxima aula
           </Button>
