@@ -7,24 +7,39 @@ export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
   const options: { value: 'light' | 'dark'; icon: React.ReactNode; label: string }[] = [
-    { value: 'light', icon: <Sun className="size-4 text-background dark:text-text" />, label: 'Claro' },
-    { value: 'dark', icon: <Moon className="size-4 text-background dark:text-text" />, label: 'Escuro' },
+    {
+      value: 'light',
+      icon: <Sun className="w-5 h-5" />,
+      label: 'Claro',
+    },
+    {
+      value: 'dark',
+      icon: <Moon className="w-5 h-5" />,
+      label: 'Escuro',
+    },
   ];
 
   return (
-    <div className="flex items-center bg-muted text-muted-foreground border rounded-full px-3 py-0 gap-2">
-      {options.map((option) => (
-        <button
-          key={option.value}
-          onClick={() => setTheme(option.value)}
-          className={`p-1 rounded-full transition-colors ${
-            theme === option.value ? 'bg-gray-200 dark:bg-subbackground text-text dark:text-text border border-gray-400 dark:border-border' : 'hover:bg-accent'
-          }`}
-          aria-label={option.label}
-        >
-          {option.icon}
-        </button>
-      ))}
+    <div className="flex items-center border border-gray-500 rounded-full overflow-hidden bg-muted">
+      {options.map((option) => {
+        const isActive = theme === option.value;
+
+        return (
+          <button
+            key={option.value}
+            onClick={() => setTheme(option.value)}
+            type="button"
+            aria-label={option.label}
+            className={`flex items-center justify-center w-12 h-12 transition-colors duration-200 ${
+              isActive
+                ? 'bg-white text-black dark:bg-gray-700 dark:text-white border border-gray-500'
+                : 'text-gray-400'
+            }`}
+          >
+            {option.icon}
+          </button>
+        );
+      })}
     </div>
   );
 }
