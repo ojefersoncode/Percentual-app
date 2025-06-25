@@ -76,7 +76,10 @@ export function Navbar() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 mr-7">
-        <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
+        <DropdownMenuLabel className="flex w-full items-center justify-between"> 
+          <h1> Menu</h1> 
+          <ModeToggle />
+        </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem onClick={() => router.push('/Home')}>
@@ -105,9 +108,6 @@ export function Navbar() {
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => router.push('/planos-e-compras')}>
                   <CreditCard className="w-4 h-4 mr-2" /> Meu plano
-                </DropdownMenuItem>
-                <DropdownMenuItem className="flex w-full justify-center items-center">
-                 <ModeToggle />
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
