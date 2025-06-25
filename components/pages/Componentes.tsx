@@ -53,13 +53,13 @@ export default function Componentes({ user }: { user: User }) {
   };
 
   return (
-    <div className="flex flex-col bg-background">
+    <div className="flex flex-col bg-white dark:bg-background">
       {/* Navbar */}
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-background border-b">
         <div className="flex gap-1 text-lg font-sans items-center">
           <img className="size-7" src="/LogoC.png" alt="logo" />
           <div className="flex">
-            <h1 className="text-text font-sans text-base">
+            <h1 className="text-black dark:text-text font-sans text-base">
               Cooderfy
             </h1>
           </div>
@@ -75,14 +75,14 @@ export default function Componentes({ user }: { user: User }) {
       <main className="flex flex-1 flex-col w-full items-center p-6">
         <div className="flex flex-col gap-2 w-full justify-start py-4">
           <div className="flex w-full items-center justify-between pb-2">
-            <h1 className="font-bold text-xl text-text">Botões</h1>
+            <h1 className="font-bold text-xl text-black dark:text-text">Botões</h1>
              <div className="flex gap-4 pb-4">
                <button
-                 className="p-2 rounded-md bg-background text-text  hover:bg-transparent border">
+                 className="p-2 rounded-md bg-white dark:bg-background text-black dark:text-text hover:bg-transparent border">
                 <MoveLeft className="size-3" />
                </button>
               <button
-                className="p-2 rounded-md bg-background text-white  hover:bg-transparent border">
+                className="p-2 rounded-md bg-white dark:bg-background text-black dark:text-text  hover:bg-transparent border">
                 <MoveRight className="size-3" />
                </button>
              </div>
@@ -93,8 +93,8 @@ export default function Componentes({ user }: { user: User }) {
           </span>
         </div>
 
-        <div className="border p-4 bg-subbackground rounded-lg w-full py-4">
-          <h1 className="font-sans text-base p-4">Botão outiline</h1>
+        <div className="border p-4 bg-gray-200 dark:bg-subbackground rounded-lg w-full py-4">
+          <h1 className="font-sans text-base text-text p-4">Botão outiline</h1>
 
           <div className="flex flex-col w-full items-center gap-4 py-2">
   
@@ -120,15 +120,15 @@ export default function Componentes({ user }: { user: User }) {
             <Button
               onClick={handleCopy}
               variant={'default'}
-              className="bg-subbackground text-white  hover:bg-transparent border"
+              className="bg-gray-200 dark:bg-subbackground text-black dark:text-text hover:bg-transparent border"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar'}
             </Button>
           </div>
         </div>
-        <div className="border p-4 bg-subbackground rounded-lg w-full my-4">
-          <h1 className="font-sans text-base p-4">Botão solido</h1>
+        <div className="border p-4 bg-white dark:bg-subbackground rounded-lg w-full my-4">
+          <h1 className="font-sans text-base text-black dark:text-text p-4">Botão solido</h1>
 
           <div className="flex w-full items-center gap-4 p-2">
              <div className="flex w-full justify-center items-center h-36">
@@ -153,7 +153,7 @@ export default function Componentes({ user }: { user: User }) {
             <Button
               onClick={handleCopy}
               variant={'default'}
-              className="bg-subbackground text-text hover:bg-transparent border"
+              className="bg-gray-200 dark:bg-subbackground text-black dark:text-text hover:bg-transparent border"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar'}
