@@ -2,7 +2,6 @@
 
 import { Check, Upload } from 'lucide-react';
 import { Input } from '../ui/input';
-import { Button } from '../ui/button';
 
 interface Step1Props {
   favicon: string;
@@ -24,37 +23,46 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
   };
 
   return (
-    <div className="flex flex-col w-full py-10 justify-center px-4 mt-4 bg-white dark:bg-background">
-      <label className="block mb-3 text-black dark:text-gray-300 font-medium">
+    <div className="flex flex-col w-full py-10 justify-center px-4 mt-4 bg-white dark:bg-background border border-gray-200 dark:border-border">
+
+      
+      <label className="block mb-2 text-black dark:text-gray-300 font-medium">
         Nome do seu projeto
       </label>
-      <div className="flex w-full gap-4 px-7 justify-center items-center">
+      <div className="flex w-full px-7">
         <Input
           type="text"
-          placeholder="Digite o nome do seu projeto"
+          placeholder="Nome do seu projeto"
           className="bg-gray-200 dark:bg-subbackground text-black dark:text-white border border-gray-200 dark:border-border"
         ></Input>
-        <Button className="px-2 py-1">
-          <Check />
-        </Button>
       </div>
 
-      <label className="block mt-4 mb-3 text-black dark:text-gray-300 font-medium">
+
+      <label className="block mb-2 text-black dark:text-gray-300 font-medium">
+         Versão do seu projeto
+      </label>
+      <div className="flex w-full px-7">
+        <Input
+          type="number"
+          placeholder="Versão do seu projeto"
+          className="bg-gray-200 dark:bg-subbackground text-black dark:text-white border border-gray-200 dark:border-border"
+        ></Input>
+      </div>
+      
+      
+      <label className="block mt-4 mb-2 text-black dark:text-gray-300 font-medium">
         Seu nome
       </label>
-      <div className="flex w-full gap-4 px-7 justify-center items-center">
+      <div className="flex w-full px-7">
         <Input
           type="text"
-          placeholder="Digite o nome do seu projeto"
+          placeholder="Seu nome ou apelido"
           className="bg-gray-200 dark:bg-subbackground text-black dark:text-white border border-gray-200 dark:border-border"
         ></Input>
-        <Button className="px-2 py-1">
-          <Check />
-        </Button>
       </div>
 
-      <div className="flex flex-col w-full mt-4">
-        <label className="block mt-2 mb-3 text-black dark:text-gray-300 font-medium">
+      <div className="flex flex-col w-full mt-7">
+        <label className="block mt-2 mb-1 text-black dark:text-gray-300 font-medium">
           Favicon
         </label>
       </div>
