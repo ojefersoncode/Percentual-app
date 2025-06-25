@@ -131,7 +131,7 @@ export default function ConfigPage({
         </div>
       </div>
 
-      <div className="w-full pt-4">
+      <div className="w-full pt-7">
         <Footer />
       </div>
     </div>
