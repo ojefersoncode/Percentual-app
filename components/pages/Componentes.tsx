@@ -89,39 +89,10 @@ export default function Componentes({ user }: { user: User }) {
           </div>
           
           <span className="text-sm">
-            Adicione este componente ao seu projeto, basta seguir a instalação e
-            copiar o componente.
+            Para adicionar esse componente ao seu projeto, basta copiar o código abaixo.
           </span>
         </div>
 
-        <div className="pt-2 rounded-lg w-full pb-10">
-          <h1 className="font-bold text-md">Instalação</h1>
-          <span className="text-sm">
-            Para adicionar este componente ao seu projeto, execute o seguinte
-            comando:
-          </span>
-
-          {/* Bloco de código com posição relativa */}
-          <div className="flex w-full justify-between items-center border border-gray-200 dark:border-border rounded-lg mt-4 p-2 bg-subbackground">
-            <div className="flex items-center gap-1 text-sm bg-subbackground">
-             <p className="text-yellow-400 opacity-80">
-              npm install</p> @cooderfy/ui@latest
-            </div>
-
-            {/* Botão posicionado no canto superior direito */}
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText(
-                  'npm install @cooderfy/ui@latest'
-                );
-              }}
-              className="rounded-md p-2 flex bg-white dark:bg-background border border-gray-200 dark:border-border"
-            >
-              <Copy className="size-3" />
-              
-            </button>
-          </div>
-        </div>
         <div className="border border-gray-200 dark:border-border p-4 bg-subbackground rounded-lg w-full py-4">
           <h1 className="font-sans text-base p-4">Botão outiline</h1>
 
