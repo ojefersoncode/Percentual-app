@@ -22,13 +22,13 @@ export default function Comentarios() {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           placeholder="Escreva seu comentário..."
-          className="w-full p-4 border border-gray-500 resize-none rounded-lg dark:bg-black dark:bg-muted/10 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900"
+          className="w-full p-4 border border-gray-200 dark:border-border resize-none rounded-lg dark:bg-black dark:bg-muted/10 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900"
           rows={4}
         />
         <Button
           variant="outline"
           type="submit"
-          className="px-4 py-2 mt-3 text-sm bg-red-600 text-gray-100 dark:text-gray-300 rounded-lg hover:bg-red-400 hover:text-gray-50 max-w-xl"
+          className="px-4 py-2 mt-3 text-sm bg-btn text-text dark:text-sm text-subbackground rounded-lg hover:bg-btn/80 max-w-xl"
         >
           Enviar Comentário
         </Button>
@@ -36,13 +36,13 @@ export default function Comentarios() {
 
       <br />
 
-      <div className="py-2 border p-2">
+      <div className="py-2 border border-gray-200 dark:border-border p-2">
         <h2 className="flex items-center w-full text-xl max-md:text-lg font-medium text-gray-900 dark:text-gray-200">
           Comentários
         </h2>
       </div>
 
-      <div className=" mb-4 border">
+      <div className=" mb-4 border border-gray-200 dark:border-border">
         {comments.length === 0 ? (
           <p className="text-gray-600 dark:text-gray-400 text-center p-2">
             Nenhum comentário ainda. Seja o primeiro!
@@ -51,7 +51,7 @@ export default function Comentarios() {
           comments.map((comment, index) => (
             <div
               key={index}
-              className=" bg-white dark:bg-black rounded-lg shadow-md"
+              className=" bg-white dark:bg-subbackground rounded-lg shadow-md"
             >
               <div className="flex w-full items-center gap-2 p-3 bg-muted/40">
                 <span className="text-sm">Jeferson</span>
