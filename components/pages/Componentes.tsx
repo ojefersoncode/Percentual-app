@@ -152,7 +152,7 @@ export default function Componentes({ user }: { user: User }) {
               className="bg-white dark:bg-subbackground text-black dark:text-white  hover:bg-transparent border border-gray-200 dark:border-gray-500/40"
             >
               <Copy className="w-4 h-4 mr-2" />
-              {copied ? 'Copiado!' : 'Copiar Código'}
+              {copied ? 'Copiado!' : 'Copiar'}
             </Button>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function Componentes({ user }: { user: User }) {
               className="bg-white dark:bg-subbackground text-black dark:text-white  hover:bg-transparent border border-gray-200 dark:border-gray-500/40"
             >
               <Copy className="w-4 h-4 mr-2" />
-              {copied ? 'Copiado!' : 'Copiar Código'}
+              {copied ? 'Copiado!' : 'Copiar'}
             </Button>
           </div>
         </div>
