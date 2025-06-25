@@ -15,7 +15,7 @@ export const Footer = () => {
   return (
     <footer id="footer" className="bg-white dark:bg-background text-black dark:text-gray-100 border-t">
 
-     <div className="flex w-full justify-between items-center px-4 py-2">
+     <div className="flex w-full justify-between items-center px-6 py-4">
        <a
           href="/"
           className="flex items-center select-none col-span-2 xl:col-span-1">
