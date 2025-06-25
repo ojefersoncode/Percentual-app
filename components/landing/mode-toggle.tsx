@@ -20,7 +20,7 @@ export function ModeToggle() {
   ];
 
   return (
-    <div className="flex h-6 items-center border border-gray-500 rounded-full overflow-hidden bg-muted">
+    <div className="flex h-6 items-center border border-gray-200 dark:border-border rounded-full overflow-hidden bg-gray-200 dark:bg-background">
       {options.map((option) => {
         const isActive = theme === option.value;
 
