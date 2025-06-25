@@ -20,7 +20,7 @@ export const Footer = () => {
           href="/"
           className="flex items-center select-none col-span-2 xl:col-span-1">
           <img className="size-7" src="/LogoC.png" alt="logo" />
-          <p className="ml-2 font-bold text-lg">
+          <p className="ml-1 font-sans text-lg">
             Cooderfy
           </p>
         </a>
