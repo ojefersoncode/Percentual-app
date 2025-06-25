@@ -35,7 +35,7 @@ export default function Cursos({ user }: { user: User }) {
           {curso.map((curso) => (
             <div
               key={curso.id}
-              className="border border-gray-200 dark:border-border bg-white dark:bg-subbackground rounded-lg shadow-md hover:shadow-lg transition-all"
+              className="border border-gray-200 dark:border-border bg-gray-200 dark:bg-subbackground rounded-lg shadow-md hover:shadow-lg transition-all"
               onMouseEnter={() => setHoveredId(curso.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
