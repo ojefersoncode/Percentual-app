@@ -63,11 +63,11 @@ export const Navbar = ({ user }: { user: User | null }) => {
     <header className="sticky border-b-[1px] border-gray-200 top-0 z-40 w-full bg-white dark:border-b-border dark:bg-background">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container py-2 px-3 md:px-6 w-screen flex justify-between ">
-          <NavigationMenuItem className="font-bold flex">
+          <NavigationMenuItem className="flex">
             <div className="flex gap-2 text-xl font-bold items-center">
               <img className="size-7" src="/LogoC.png" alt="logo" />
               <div className="flex">
-                <h1 className="text-gray-900 font-sans dark:text-text">Cooderfy</h1>
+                <h1 className="text-gray-900 dark:text-text font-sans dark:text-text">Cooderfy</h1>
               </div>
             </div>
           </NavigationMenuItem>
@@ -115,7 +115,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
           </span>
 
           {/* desktop */}
-          <nav className="hidden md:flex gap-2 bg-none hover:text-red-600">
+          <nav className="hidden md:flex gap-2 bg-none hover:text-green-600">
             {routeList.map((route: RouteProps, i) => (
               <a
                 rel="noreferrer noopener"
@@ -134,7 +134,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
             <ModeToggle />
             <Link href="/Home" passHref>
               <Button
-                className="px-4 py-0.5 text-sm bg-white"
+                className="px-4 py-0.5 text-sm bg-white dark:bg-subbackground"
                 variant="outline"
               >
                 Entrar
