@@ -51,7 +51,7 @@ export const Step4 = ({ github, onChangeGithub }: Step4Props) => {
             </span>
           )}
         </div>
-        {/* Input oculto para mobile */}
+        
         <input
           type="file"
           id="fileInput"
@@ -68,6 +68,27 @@ export const Step4 = ({ github, onChangeGithub }: Step4Props) => {
         />
         Criar repositório no GitHub
       </label>
+
+
+      <label className="flex border p-4 rounded-lg items-center text-black dark:text-white mt-2">
+        <Checkbox
+          checked={github}
+          onCheckedChange={(checked: boolean) => onChangeGithub(checked)}
+          className="mr-2 text-black dark:text-white"
+        />
+        Deploy na vercel 
+      </label>
+
+
+     <label className="flex border p-4 rounded-lg items-center text-black dark:text-white mt-2">
+        <Checkbox
+          checked={github}
+          onCheckedChange={(checked: boolean) => onChangeGithub(checked)}
+          className="mr-2 text-black dark:text-white"
+        />
+        Configurar supabase 
+      </label>
+      
 
       <label className="flex border p-4 mt-4 rounded-lg items-center text-black dark:text-white">
         <Checkbox
