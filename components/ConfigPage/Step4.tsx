@@ -12,6 +12,8 @@ interface Step4Props {
 export const Step4 = ({ github, onChangeGithub }: Step4Props) => {
   const [vscode, setVscode] = useState(false);
   const [folderPath, setFolderPath] = useState<string | null>(null);
+  const [vercel, setVercel] = useState(false);
+  const [supabase, setSupabase] = useState(false);
 
   const handleOpenFolder = async () => {
     if ('showDirectoryPicker' in window) {
@@ -34,7 +36,7 @@ export const Step4 = ({ github, onChangeGithub }: Step4Props) => {
 
   return (
     <div className="text-black dark:text-white">
-      <h1 className="text-black dark:text-white">Configurações extras</h1>
+      <h1 className="text-xl font-bold mb-4">Configurações extras</h1>
 
       <div className="py-4">
         <div
@@ -43,7 +45,7 @@ export const Step4 = ({ github, onChangeGithub }: Step4Props) => {
         >
           <Folder className="w-10 h-10 text-gray-700 dark:text-gray-400" />
           <span className="text-base font-semibold text-gray-700 dark:text-gray-400">
-            Seleciona um local para salvar
+            Selecione um local para salvar
           </span>
           {folderPath && (
             <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -51,7 +53,7 @@ export const Step4 = ({ github, onChangeGithub }: Step4Props) => {
             </span>
           )}
         </div>
-        
+
         <input
           type="file"
           id="fileInput"
@@ -60,44 +62,56 @@ export const Step4 = ({ github, onChangeGithub }: Step4Props) => {
         />
       </div>
 
-      <label className="flex border p-4 rounded-lg items-center text-black dark:text-white mt-2">
-        <Checkbox
-          checked={github}
-          onCheckedChange={(checked: boolean) => onChangeGithub(checked)}
-          className="mr-2 text-black dark:text-white"
-        />
-        Criar repositório no GitHub
-      </label>
+      <div className="space-y-2">
+        <label className="flex border p-4 rounded-lg items-center">
+          <Checkbox
+            checked={github && vercel && supabase}
+            onCheckedChange={(checked: boolean) => {
+              onChangeGithub(checked);
+              setVercel(checked);
+              setSupabase(checked);
+            }}
+            className="mr-2"
+          />
+          Selecionar tudo
+        </label>
 
+        <label className="flex border p-4 rounded-lg items-center">
+          <Checkbox
+            checked={github}
+            onCheckedChange={(checked: boolean) => onChangeGithub(checked)}
+            className="mr-2"
+          />
+          Criar repositório no GitHub
+        </label>
 
-      <label className="flex border p-4 rounded-lg items-center text-black dark:text-white mt-2">
-        <Checkbox
-          checked={github}
-          onCheckedChange={(checked: boolean) => onChangeGithub(checked)}
-          className="mr-2 text-black dark:text-white"
-        />
-        Deploy na vercel 
-      </label>
+        <label className="flex border p-4 rounded-lg items-center">
+          <Checkbox
+            checked={vercel}
+            onCheckedChange={(checked: boolean) => setVercel(checked)}
+            className="mr-2"
+          />
+          Deploy na Vercel
+        </label>
 
+        <label className="flex border p-4 rounded-lg items-center">
+          <Checkbox
+            checked={supabase}
+            onCheckedChange={(checked: boolean) => setSupabase(checked)}
+            className="mr-2"
+          />
+          Configurar Supabase
+        </label>
 
-     <label className="flex border p-4 rounded-lg items-center text-black dark:text-white mt-2">
-        <Checkbox
-          checked={github}
-          onCheckedChange={(checked: boolean) => onChangeGithub(checked)}
-          className="mr-2 text-black dark:text-white"
-        />
-        Configurar supabase 
-      </label>
-      
-
-      <label className="flex border p-4 mt-4 rounded-lg items-center text-black dark:text-white">
-        <Checkbox
-          checked={vscode}
-          onCheckedChange={(checked: boolean) => setVscode(checked)}
-          className="mr-2 text-black dark:text-white"
-        />
-        Abrir com VS Code
-      </label>
+        <label className="flex border p-4 rounded-lg items-center mt-4">
+          <Checkbox
+            checked={vscode}
+            onCheckedChange={(checked: boolean) => setVscode(checked)}
+            className="mr-2"
+          />
+          Abrir com VS Code
+        </label>
+      </div>
     </div>
   );
 };
