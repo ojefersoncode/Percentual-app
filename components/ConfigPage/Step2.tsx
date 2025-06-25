@@ -16,7 +16,7 @@ export function Step2({ config, setConfig }: Step2Props) {
 
   return (
     <>
-      <div className="w-full p-4">
+      <div className="w-full p-4 rounded-lg border border-gray-200 dark:border-border">
       <label className="block text-xl text-black dark:text-gray-300 font-medium">
         Paleta de Cores
       </label>
@@ -29,16 +29,13 @@ export function Step2({ config, setConfig }: Step2Props) {
               <label className="block text-black dark:text-gray-200 py-2 text-sm font-medium">
                 {key}
               </label>
-              <div className="flex items-center gap-3">
+              <div className="flex w-full">
                 <Input
-                  className="text-sm w-80 max-lg:w-72 text-black dark:text-white"
+                  className="text-sm text-black dark:text-white"
                   placeholder="Cole seu hex aqui"
                   type="text"
                   id=""
                 />
-                <Button className="px-2 py-1">
-                  <Check />
-                </Button>
               </div>
             </div>
           ))}
@@ -51,15 +48,12 @@ export function Step2({ config, setConfig }: Step2Props) {
               <label className="block text-black dark:text-gray-200 py-2 text-sm font-medium">
                 {key}
               </label>
-              <div className="flex items-center gap-3">
+              <div className="flex w-full">
                 <Input
-                  className="text-sm w-80 max-lg:w-72 text-black dark:text-white"
+                  className="text-sm text-black dark:text-white"
                   placeholder="Cole seu hex aqui"
                   type="text"
                 />
-                <Button className="px-2 py-1">
-                  <Check />
-                </Button>
               </div>
             </div>
           ))}
