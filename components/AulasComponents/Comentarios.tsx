@@ -26,7 +26,7 @@ export default function Comentarios() {
           rows={4}
         />
         <Button
-          variant="outline"
+          variant="default"
           type="submit"
           className="px-4 py-2 mt-3 text-sm bg-btn text-text dark:text-sm text-subbackground rounded-lg hover:bg-btn/80 max-w-xl"
         >
