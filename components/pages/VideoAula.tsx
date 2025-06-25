@@ -23,19 +23,17 @@ export default function VideoAulas({ user }: { user: User }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-gray-100 dark:bg-black">
-      <nav className="flex w-full justify-between px-3 md:px-4 text-gray-50 bg-black">
+    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-white dark:bg-background">
+      <nav className="flex w-full justify-between px-3 md:px-4 text-text bg-background border-b border-gray-200 dark:border-border">
         <div className="flex gap-1 py-2 text-xl font-bold items-center">
-          <img className="size-8" src="/logo.webp" alt="logo" />
-          <h1 className="text-base text-gray-50">Cooderfy</h1>
+          <img className="size-7" src="/LogoC.png" alt="logo" />
+          <h1 className="text-base font-sans text-text">Cooderfy</h1>
         </div>
         <div className="flex items-center gap-3">
             <Bell className="size-4" />
             <Navbar />
           </div>
       </nav>
-
-      <hr className="flex w-full bg-gray-50" />
 
       <div className="flex w-full p-4">
         <Button
@@ -48,7 +46,7 @@ export default function VideoAulas({ user }: { user: User }) {
       </div>
 
       <div className="flex flex-col items-center justify-center w-full max-w-4xl px-4">
-        <div className="flex flex-col items-center justify-center w-full bg-muted/40 rounded-lg shadow-lg">
+        <div className="flex flex-col items-center justify-center w-full bg-background rounded-lg shadow-lg">
           <video
             controls
             className="w-full h-auto rounded-lg"
@@ -70,7 +68,7 @@ export default function VideoAulas({ user }: { user: User }) {
           <Button
             variant="outline"
             onClick={() => alert('Redirecionando para a Aula 2...')}
-            className="px-3 py-2 text-sm text-gray-700 dark:text-gray-400 rounded-lg"
+            className="bg-white dark:bg-background px-3 py-2 text-sm text-background/80 dark:text-text/80 rounded-lg"
           >
             Pular para próxima aula
           </Button>
