@@ -7,16 +7,15 @@ export const Footer = () => {
       links: ['Suporte', 'Github', 'Documentação'],
     },
     {
-      links: ['Web', 'Mobile'],
+      links: ['React js', 'Next js', 'Supabase'],
     },
   ];
 
   return (
     <footer id="footer" className="bg-white dark:bg-background text-black dark:text-gray-100 border-t">
-      {/* Seção Principal */}
+    
       <section className="container py-4 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-4">
-        
-        {/* Logo */}
+      
         <a
           href="/"
           className="flex items-center select-none col-span-2 xl:col-span-1">
@@ -26,7 +25,6 @@ export const Footer = () => {
           </p>
         </a>
 
-        {/* Links */}
         {sections.map((section, index) => (
           <div key={`section-${index}`} className="flex flex-col gap-2">
             <ul className="flex flex-col gap-1 font-mono text-sm">
@@ -46,7 +44,6 @@ export const Footer = () => {
         ))}
       </section>
 
-      {/* Rodapé Inferior */}
       <section className="container pb-4 font-mono opacity-70 text-xs">
         <div className="flex gap-1">
           <span>&copy; 2024,</span>
