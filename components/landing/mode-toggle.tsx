@@ -1,5 +1,5 @@
 'use client';
-
+import React from 'react';
 import { useTheme } from '@/components/landing/theme-provider';
 import { Moon, Sun, Laptop2 } from 'lucide-react';
 
