@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
       'Vercel',
       'Supabase',
       'Next.js',
-      'React js,
+      'React js',
       'cooderfy',
       'Stripe',
       'assets',
