@@ -31,7 +31,7 @@ export default function Cursos({ user }: { user: User }) {
           </div>
         </nav>
 
-        <div className="bg-background mx-auto grid w-full max-w-7xl gap-4 py-10 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
+        <div className="mx-auto grid w-full max-w-7xl gap-4 py-10 lg:gap-14 max-md:p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
           {curso.map((curso) => (
             <div
               key={curso.id}
