@@ -53,9 +53,9 @@ export default function Componentes({ user }: { user: User }) {
   };
 
   return (
-    <div className="flex flex-col bg-white dark:bg-background">
+    <div className="flex flex-col bg-white  dark:bg-background">
       {/* Navbar */}
-      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-background border-b">
+      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b">
         <div className="flex gap-1 text-lg font-sans items-center">
           <img className="size-7" src="/LogoC.png" alt="logo" />
           <div className="flex">
@@ -88,13 +88,13 @@ export default function Componentes({ user }: { user: User }) {
              </div>
           </div>
           
-          <span className="text-sm text-text">
+          <span className="text-sm text-black dark-text-text">
             Para adicionar esse componente ao seu projeto, basta copiar o código abaixo.
           </span>
         </div>
 
-        <div className="border p-4 bg-gray-200 dark:bg-subbackground rounded-lg w-full py-4">
-          <h1 className="font-sans text-base text-text p-4">Botão outiline</h1>
+        <div className="border p-4 bg-gray-100 dark:bg-subbackground rounded-lg w-full py-4">
+          <h1 className="font-sans text-base text-black dark:text-text p-4">Botão outiline</h1>
 
           <div className="flex flex-col w-full items-center gap-4 py-2">
   
@@ -127,7 +127,7 @@ export default function Componentes({ user }: { user: User }) {
             </Button>
           </div>
         </div>
-        <div className="border p-4 bg-white dark:bg-subbackground rounded-lg w-full my-4">
+        <div className="border p-4 bg-gray-100 dark:bg-subbackground rounded-lg w-full my-4">
           <h1 className="font-sans text-base text-black dark:text-text p-4">Botão solido</h1>
 
           <div className="flex w-full items-center gap-4 p-2">
@@ -153,7 +153,7 @@ export default function Componentes({ user }: { user: User }) {
             <Button
               onClick={handleCopy}
               variant={'default'}
-              className="bg-gray-200 dark:bg-subbackground text-black dark:text-text hover:bg-transparent border"
+              className="bg-gray-100 dark:bg-subbackground text-black dark:text-text hover:bg-transparent border"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar'}
