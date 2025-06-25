@@ -18,7 +18,7 @@ export function ModeToggle() {
           key={option.value}
           onClick={() => setTheme(option.value)}
           className={`p-1 rounded-full transition-colors ${
-            theme === option.value ? 'bg-gray-200 dark:bg-background text-text dark:text-text border border-gray-200 dark:border-border' : 'hover:bg-accent'
+            theme === option.value ? 'bg-gray-200 dark:bg-subbackground text-text dark:text-text border border-gray-400 dark:border-border' : 'hover:bg-accent'
           }`}
           aria-label={option.label}
         >
