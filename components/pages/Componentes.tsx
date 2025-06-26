@@ -88,7 +88,7 @@ export default function Componentes({ user }: { user: User }) {
              </div>
           </div>
           
-          <span className="text-sm text-black dark-text-text">
+          <span className="text-sm text-black dark:text-text">
             Para adicionar esse componente ao seu projeto, basta copiar o código abaixo.
           </span>
         </div>
