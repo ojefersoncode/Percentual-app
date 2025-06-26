@@ -152,7 +152,7 @@ export function AuthForm({ state }: { state: AuthState }) {
 
   const currState = stateInfo[authState];
   return (
-    <Card className="mx-auto w-96 px-4">
+    <Card className="mx-auto w-96 px-4 bg-gray-100 dark:bg-subbackground">
       <CardHeader>
         <CardTitle className="text-2xl">{currState.title}</CardTitle>
         {currState.description && (
@@ -251,7 +251,7 @@ export function AuthForm({ state }: { state: AuthState }) {
                   <span className="w-full border-t"></span>
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-background px-2 text-muted-foreground">
+                  <span className="bg-gray-100 dark:bg-subbackground px-2 text-muted-foreground">
                     Ou continue com
                   </span>
                 </div>
