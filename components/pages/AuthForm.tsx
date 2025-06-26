@@ -152,7 +152,7 @@ export function AuthForm({ state }: { state: AuthState }) {
 
   const currState = stateInfo[authState];
   return (
-    <Card className="mx-auto w-96 px-4 bg-gray-100 dark:bg-subbackground">
+    <Card className="mx-auto w-96 px-4 border border-gray-200 dark:border-border bg-gray-100 dark:bg-subbackground">
       <CardHeader>
         <CardTitle className="text-2xl">{currState.title}</CardTitle>
         {currState.description && (
@@ -167,6 +167,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               <Input
                 id="email"
                 type="email"
+                className="bg-subbackground border border-gray-200 dark:border-border"
                 placeholder="email@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -192,6 +193,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               <Input
                 id="password"
                 placeholder="Digite sua senha"
+                className="bg-subbackground border border-gray-200 dark:border-border"
                 type="password"
                 disabled={loading}
                 value={password}
@@ -202,7 +204,7 @@ export function AuthForm({ state }: { state: AuthState }) {
           )}
           <Button
             type="submit"
-            className="w-full"
+            className="w-full bg-subbackground border border-gray-200 dark:border-border"
             onClick={currState.onSubmit}
             disabled={loading}
           >
@@ -258,7 +260,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               </div>
               <Button
                 variant="outline"
-                className="w-full gap-2"
+                className="w-full gap-2 bg-subbackground border border-gray-200 dark:border-border"
                 onClick={() => api.oauthSignin('google')}
               >
                 <svg
@@ -290,7 +292,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               </Button>
               <Button
                 variant="outline"
-                className="w-full gap-2"
+                className="w-full gap-2 bg-subbackground border border-gray-200 dark:border-border"
                 onClick={() => api.oauthSignin('github')}
               >
                 <svg
