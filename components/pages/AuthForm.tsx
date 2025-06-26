@@ -304,7 +304,7 @@ export function AuthForm({ state }: { state: AuthState }) {
                   viewBox="0,0,256,256"
                 >
                   <g
-                    fill="#ffffff"
+                    fill="#171717"
                     fill-rule="nonzero"
                     stroke="none"
                     stroke-width="1"
