@@ -94,11 +94,13 @@ export default function Componentes({ user }: { user: User }) {
         </div>
 
         <div className="border p-4 bg-gray-100 dark:bg-subbackground rounded-lg w-full py-4">
-          <h1 className="font-sans text-base text-black dark:text-text p-4">Botão outiline</h1>
+          <h1 className="font-sans text-base text-black dark:text-text p-2">
+           Botão outiline
+          </h1>
 
           <div className="flex flex-col w-full items-center gap-4 py-2">
   
-            <div className="flex w-full justify-center items-center h-36">
+            <div className="flex w-full justify-center items-center h-32">
             <Button
               
               className="bg-white hover:bg-gray-100 dark:bg-background dark:hover:bg-background/80 text-black dark:text-text border p-4 rounded"
@@ -128,10 +130,12 @@ export default function Componentes({ user }: { user: User }) {
           </div>
         </div>
         <div className="border p-4 bg-gray-100 dark:bg-subbackground rounded-lg w-full my-4">
-          <h1 className="font-sans text-base text-black dark:text-text p-4">Botão solido</h1>
+          <h1 className="font-sans text-base text-black dark:text-text p-2">
+           Botão solido
+          </h1>
 
           <div className="flex w-full items-center gap-4 p-2">
-             <div className="flex w-full justify-center items-center h-36">
+             <div className="flex w-full justify-center items-center h-32">
              <Button
               variant={'ghost'}
               className="bg-white dark:bg-background text-black dark:text-text p-4 rounded"
