@@ -22,7 +22,7 @@ const exampleCode2 = `export function signupButton() {
  return (
   <Button  
    variant={'ghost'} 
-   className='bg-gray-900 text-white'>
+   className='bg-red-600 text-white'>
      Sair
   </Button>;
 );}`;
@@ -138,7 +138,7 @@ export default function Componentes({ user }: { user: User }) {
              <div className="flex w-full justify-center items-center h-32">
              <Button
               variant={'ghost'}
-              className="bg-white dark:bg-background text-black dark:text-text p-4 rounded"
+              className="bg-red-600 text-text p-4 rounded"
             >
               Sair
             </Button>
