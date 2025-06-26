@@ -74,9 +74,9 @@ export default function Componentes({ user }: { user: User }) {
       {/* Conteúdo */}
       <main className="flex flex-1 flex-col w-full items-center p-6">
         <div className="flex flex-col gap-2 w-full justify-start pt-4 pb-3">
-          <div className="flex w-full items-center justify-between">
+          <div className="flex w-full items-center justify-between pb-2">
             <h1 className="font-bold text-xl text-black dark:text-text">Botões</h1>
-             <div className="flex gap-4 pb-4">
+             <div className="flex gap-4">
                <button
                  className="p-2 rounded-md bg-white dark:bg-background text-black dark:text-text hover:bg-transparent border">
                 <MoveLeft className="size-3" />
