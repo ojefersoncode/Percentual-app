@@ -35,7 +35,7 @@ export default function ProfilePage({ user }: { user: User }) {
       <main className="flex justify-center p-4">
         <div className="w-full max-w-3xl space-y-6">
           <Card className="border rounded-md shadow-sm bg-white dark:bg-background border border-gray-500 dark:border-border">
-            <CardHeader className="flex w-full items-center gap-4 mt-4 mb-2">
+            <CardHeader className="flex w-full items-center gap-4 mt-4">
               <div className="flex w-full items-center justify-between">
               <Image
                 height={80}
@@ -51,8 +51,8 @@ export default function ProfilePage({ user }: { user: User }) {
                   className="hidden"
                 />
                 <div className="flex items-center justify-center bg-white dark:bg-subbackground gap-2">
-                  <Upload className="size-4 text-black dark:text-zinc-600" />
-                  <span className="text-xs text-black dark:text-zinc-600">Atualizar imagem</span>
+                  <Upload className="size-4 text-black dark:text-zinc-400" />
+                  <span className="text-xs text-black dark:text-zinc-400">Atualizar imagem</span>
                 </div>
               </label>
                 </div>
