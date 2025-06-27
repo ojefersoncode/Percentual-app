@@ -24,7 +24,7 @@ export default function ProfilePage({ user }: { user: User }) {
   return (
     <div className="flex flex-col w-full mx-auto bg-white dark:background min-h-screen touch-pan-x touch-pan-y">
       {/* Navbar */}
-      <nav className="flex w-full justify-between py-4 px-4 md:px-4 bg-white dark:bg-background>
+      <nav className="flex w-full justify-between py-4 px-4 md:px-4 bg-white dark:bg-background">
         <div className="flex gap-1 text-base items-center select-none">
           <img className="size-5" src="/LogoC.png" alt="logo" />
           <div className="flex">
