@@ -18,7 +18,7 @@ export default function ProfilePage({ user }: { user: User }) {
   const [id] = useState('123456');
 
   return (
-    <div className="flex flex-col w-full h-screen bg-white dark:bg-background">
+    <div className="flex flex-col w-full h-screen bg-white dark:bg-background touch-pan-x touch-pan-y">
       {/* Navbar */}
       <nav className="flex w-full justify-between py-1 px-4 border-b bg-white dark:bg-background">
         <div className="flex gap-1 text-base items-center select-none">
@@ -32,10 +32,10 @@ export default function ProfilePage({ user }: { user: User }) {
       </nav>
 
       {/* Main */}
-      <main className="flex justify-center px-4 py-8">
+      <main className="flex justify-center p-4">
         <div className="w-full max-w-3xl space-y-6">
           <Card className="border rounded-md shadow-sm bg-white dark:bg-background border border-gray-500 dark:border-border">
-            <CardHeader className="flex w-full items-center gap-4 my-4">
+            <CardHeader className="flex w-full items-center gap-4 mt-4 mb-2">
               <div className="flex w-full items-center justify-between">
               <Image
                 height={80}
