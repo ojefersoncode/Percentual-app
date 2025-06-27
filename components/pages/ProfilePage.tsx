@@ -4,23 +4,19 @@ import { Card, CardHeader, CardContent, CardFooter } from '../ui/card';
 import { Button } from '../ui/button';
 import { Label } from '../ui/label';
 import { Navbar } from '../HomeComponents/NavBar';
-import { Input } from "@/components/ui/input"
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { User } from '@supabase/supabase-js';
-import { Pencil } from 'lucide-react';
 import { Footer } from '../landing/Footer';
 import { Bell, Upload } from 'lucide-react';
 import Image from 'next/image';
 
 export default function ProfilePage({ user }: { user: User }) {
-  const [name, setName] = useState('Jeferson code');
+  const [name, setName] = useState('Cooderfy');
   const [phone, setPhone] = useState('+55 31 91234-5678');
   const [email, setEmail] = useState('ojefersoncode@email.com');
-  const [id, setId] = useState('123456');
-
-  const handleEdit = (field: string, value: string) => {
-    if (field === 'name') setName(value);
-    if (field === 'phone') setPhone(value);
-  };
+  const [bio, setBio] = useState('Programador Fullstack');
+  const [id] = useState('123456');
 
   return (
     <div className="flex flex-col w-full max-md:h-dvh min-h-screen bg-white dark:bg-background">
@@ -36,6 +32,7 @@ export default function ProfilePage({ user }: { user: User }) {
         </div>
       </nav>
 
+      {/* Main */}
       <main className="flex justify-center px-4 py-8">
         <div className="w-full max-w-3xl space-y-6">
           <Card className="border rounded-md shadow-sm bg-white dark:bg-background border border-gray-500 dark:border-border">
@@ -50,89 +47,76 @@ export default function ProfilePage({ user }: { user: User }) {
               <label className="cursor-pointer flex flex-col items-center justify-center w-full h-12 border-2 rounded-lg bg-gray-100 dark:bg-subbackground transition px-1">
                 <input
                   type="file"
-                   accept="image/png, image/svg+xml, image/webp, image/jpeg"
-                   className="hidden"
-                 />
+                  accept="image/png, image/svg+xml, image/webp, image/jpeg"
+                  className="hidden"
+                />
                 <div className="flex flex-col w-full items-center justify-center bg-white dark:bg-subbackground">
                   <Upload className="w-5 h-5 text-black dark:text-gray-400" />
                 </div>
               </label>
             </CardHeader>
 
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-4">
+              {/* Focando */}
+              <div className="space-y-1">
+                <Label htmlFor="foco">🎯 Focando</Label>
+                <Input id="foco" value="Focando" disabled />
+              </div>
+
               {/* Name */}
-              <div className="flex justify-between items-center">
-                <Label htmlFor="name" className="text-sm font-medium">
-                  Nome:
-                </Label>
-                <div className="flex items-center gap-2">
-                  <span className="text-gray-700 dark:text-gray-300 text-sm">{name}</span>
-                  <Button
-                    variant="outline"
-                    className="text-black dark:text-text bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
-                    size="sm"
-                    onClick={() =>
-                      handleEdit('name', prompt('Enter new name:', name) || name)
-                    }
-                  >
-                    <Pencil className="size-4" />
-                  </Button>
-                </div>
+              <div className="space-y-1">
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
               </div>
 
               {/* Phone */}
-              <div className="flex justify-between items-center">
-                <Label htmlFor="phone" className="text-sm font-medium">
-                  Telefone:
-                </Label>
-                <div className="flex items-center gap-2">
-                  <span className="text-gray-700 dark:text-gray-300 text-sm">{phone}</span>
-                  <Button
-                    variant="outline"
-                    className="text-black dark:text-text bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
-                    size="sm"
-                    onClick={() =>
-                      handleEdit('phone', prompt('Enter new phone number:', phone) || phone)
-                    }
-                  >
-                    <Pencil className="size-4" />
-                  </Button>
-                </div>
+              <div className="space-y-1">
+                <Label htmlFor="phone">Telefone</Label>
+                <Input
+                  id="phone"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
               </div>
 
               {/* Email */}
-              <div className="flex justify-between items-center">
-                <Label htmlFor="email" className="text-sm font-medium">
-                  Email:
-                </Label>
-                <span className="text-gray-700 dark:text-gray-300 text-sm">{email}</span>
+              <div className="space-y-1">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
 
-              {/* ID */}
-              <div className="flex justify-between items-center">
-                <Label htmlFor="id" className="text-sm font-medium">
-                  ID:
-                </Label>
-                <span className="text-gray-700 dark:text-gray-300 text-sm">{id}</span>
+              {/* Bio */}
+              <div className="space-y-1">
+                <Label htmlFor="bio">Bio</Label>
+                <Textarea
+                  id="bio"
+                  value={bio}
+                  onChange={(e) => setBio(e.target.value)}
+                />
               </div>
             </CardContent>
 
-            <CardFooter>
-              <div className="flex w-full items-center justify-between"
-                >
+            <CardFooter className="flex justify-between">
               <Button
                 variant="ghost"
-                className="text-black dark:text-text bg-red-600 dark:bg-red-600 hover:bg-red-600/80 dark:hover:bg-red-600/80"
+                className="text-white bg-red-600 hover:bg-red-700"
               >
                 Cancelar
               </Button>
               <Button
                 variant="outline"
-                className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
+                className="text-black dark:text-white border border-gray-500 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
               >
                 Salvar Alterações
               </Button>
-                </div>
             </CardFooter>
           </Card>
         </div>
@@ -141,4 +125,4 @@ export default function ProfilePage({ user }: { user: User }) {
       <Footer />
     </div>
   );
- }
+}
