@@ -83,7 +83,7 @@ export function Navbar() {
               height={32}
               width={32}
               src="/User.jpeg"
-              className="rounded-full border-2 border-zinc-600 dark:border-border"
+              className="rounded-full border-2 border-btn dark:border-btn"
               alt="User"
              />
             <ModeToggle />
