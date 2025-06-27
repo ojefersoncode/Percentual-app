@@ -39,7 +39,7 @@ export default function ProfilePage({ user }: { user: User }) {
       <main className="flex justify-center px-4 py-8">
         <div className="w-full max-w-3xl space-y-6">
           <Card className="border rounded-md shadow-sm bg-white dark:bg-background border border-gray-500 dark:border-border">
-            <CardHeader className="flex flex-col items-center mb-4 gap-4">
+            <CardHeader className="flex flex-col items-center my-4 gap-4">
               <Image
                 height={80}
                 width={80}
@@ -64,7 +64,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   <span className="text-gray-700 dark:text-gray-300 text-sm">{name}</span>
                   <Button
                     variant="outline"
-                    className="text-black dark:text-text bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
+                    className="text-black dark:text-text bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
                     size="sm"
                     onClick={() =>
                       handleEdit('name', prompt('Enter new name:', name) || name)
@@ -84,7 +84,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   <span className="text-gray-700 dark:text-gray-300 text-sm">{phone}</span>
                   <Button
                     variant="outline"
-                    className="text-black dark:text-text bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
+                    className="text-black dark:text-text bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
                     size="sm"
                     onClick={() =>
                       handleEdit('phone', prompt('Enter new phone number:', phone) || phone)
@@ -113,12 +113,21 @@ export default function ProfilePage({ user }: { user: User }) {
             </CardContent>
 
             <CardFooter>
+              <div className="flex w-full items-center justify-between"
+                >
               <Button
                 variant="outline"
-                className="text-black dark:text-text bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
+                className="text-black dark:text-text bg-red-600 dark:bg-red-600 hover:bg-red-600/80 dark:hover:bg-red-600/80"
+              >
+                Cancelar
+              </Button>
+              <Button
+                variant="outline"
+                className="text-black dark:text-text bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
               >
                 Salvar Alterações
               </Button>
+                </div>
             </CardFooter>
           </Card>
         </div>
