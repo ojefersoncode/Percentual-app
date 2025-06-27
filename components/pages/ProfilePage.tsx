@@ -23,7 +23,7 @@ export default function ProfilePage({ user }: { user: User }) {
   };
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-white dark:bg-background">
+    <div className="flex flex-col w-full max-md:h-dvh min-h-screen bg-white dark:bg-background">
       {/* Navbar */}
       <nav className="flex w-full justify-between px-4 border-b bg-white dark:bg-background">
         <div className="flex gap-1 text-base items-center select-none">
