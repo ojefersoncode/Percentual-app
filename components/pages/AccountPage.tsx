@@ -55,7 +55,7 @@ export default function AccountPage({
 
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-black">
+      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-background">
         <div className="flex gap-1 text-xl font-bold items-center">
           <img className="size-8" src="/logo.webp" alt="logo" />
           <div className="flex">
@@ -79,10 +79,15 @@ export default function AccountPage({
                 <h2 className="py-2">Email</h2>
                 <div>Seu usuario esta vinculado a este email</div>
                 <form className="py-2">
-                  <Input placeholder="Email" value={user.email} disabled />
+                  <Input 
+                    className="text-black dark:text-text bg-white dark:bg-subbackground border border-zinc-500 dark:border-border"
+                    placeholder="Email" 
+                    value={user.email} 
+                    disabled 
+                  />
                 </form>
               </div>
-              <div className="py-2 bg-white dark:bg-black">
+              <div className="py-2 bg-white dark:bg-background">
                 <div x-chunk="dashboard-04-chunk-2">
                   <div className="py-2 px-4 bg-white dark:bg-black text-black dark:text-white">
                     <h2 className="text-xl font-bold">Plano e compras</h2>
