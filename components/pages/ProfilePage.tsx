@@ -36,7 +36,7 @@ export default function ProfilePage({ user }: { user: User }) {
         <div className="w-full max-w-3xl space-y-6">
           <Card className="border rounded-md shadow-sm bg-white dark:bg-background border border-gray-500 dark:border-border">
             <CardHeader className="flex w-full items-center gap-4 my-4">
-              <div className="flex w-full items-center gap-4">
+              <div className="flex w-full items-center justify-between gap-4">
               <Image
                 height={80}
                 width={80}
@@ -44,14 +44,14 @@ export default function ProfilePage({ user }: { user: User }) {
                 className="rounded-full border"
                 alt="User"
               />
-              <label className="cursor-pointer flex flex-col items-center justify-center px-6 py-4 border-2 rounded-lg bg-gray-100 dark:bg-subbackground transition px-1">
+              <label className="cursor-pointer flex flex-col items-center justify-center px-12 py-4 border-2 rounded-lg bg-gray-100 dark:bg-subbackground transition px-1">
                 <input
                   type="file"
                   accept="image/png, image/svg+xml, image/webp, image/jpeg"
                   className="hidden"
                 />
                 <div className="flex items-center justify-center bg-white dark:bg-subbackground">
-                  <Upload className="w-5 h-5 text-black dark:text-gray-400" />
+                  <Upload className="size-3 text-black dark:text-gray-400" />
                 </div>
               </label>
                 </div>
