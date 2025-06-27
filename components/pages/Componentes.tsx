@@ -53,7 +53,7 @@ export default function Componentes({ user }: { user: User }) {
   };
 
   return (
-    <div className="flex flex-col bg-white  dark:bg-background">
+    <div className="flex flex-col bg-white  dark:bg-background touch-pan-x touch-pan-y">
       {/* Navbar */}
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b">
         <div className="flex gap-1 text-lg font-sans items-center">
