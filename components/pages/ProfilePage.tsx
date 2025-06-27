@@ -11,7 +11,7 @@ import { Bell, Upload } from 'lucide-react';
 import Image from 'next/image';
 
 export default function ProfilePage({ user }: { user: User }) {
-  const [name, setName] = useState('Jeferson);
+  const [name, setName] = useState('Jeferson');
   const [phone, setPhone] = useState('+55 31 91234-5678');
   const [email, setEmail] = useState('ojefersoncode@email.com');
   const [bio, setBio] = useState('Programador Fullstack');
