@@ -52,7 +52,7 @@ export default function ProfilePage({ user }: { user: User }) {
                 />
                 <div className="flex items-center justify-center bg-white dark:bg-subbackground gap-4">
                   <Upload className="size-4 text-black dark:text-gray-400" />
-                  <span className="text-xs text-black dark:text-text">atualizar imagem</span>
+                  <span className="text-xs text-black dark:text-text">Atualizar imagem</span>
                 </div>
               </label>
                 </div>
