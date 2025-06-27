@@ -25,7 +25,7 @@ export default function ProfilePage({ user }: { user: User }) {
   return (
     <div className="flex flex-col w-full min-h-screen bg-white dark:bg-background">
       {/* Navbar */}
-      <nav className="flex w-full justify-between py-4 px-4 border-b bg-white dark:bg-background">
+      <nav className="flex w-full justify-between py-2 px-4 border-b bg-white dark:bg-background">
         <div className="flex gap-1 text-base items-center select-none">
           <img className="size-5" src="/LogoC.png" alt="logo" />
           <h1 className="text-black dark:text-text font-medium">Cooderfy</h1>
