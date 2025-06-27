@@ -51,8 +51,8 @@ export default function ProfilePage({ user }: { user: User }) {
                   className="hidden"
                 />
                 <div className="flex items-center justify-center bg-white dark:bg-subbackground gap-2">
-                  <Upload className="size-4 text-black dark:text-zinc-400" />
-                  <span className="text-xs text-black dark:text-zinc-400">Atualizar imagem</span>
+                  <Upload className="size-4 text-black dark:text-zinc-500" />
+                  <span className="text-xs text-black dark:text-zinc-500">Atualizar imagem</span>
                 </div>
               </label>
                 </div>
@@ -113,8 +113,8 @@ export default function ProfilePage({ user }: { user: User }) {
                 Cancelar
               </Button>
               <Button
-                variant="outline"
-                className="text-text dark:text-text border border-gray-500 dark:border-border bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn"
+                variant="ghost"
+                className="text-text dark:text-text bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn"
               >
                 Salvar Alterações
               </Button>
