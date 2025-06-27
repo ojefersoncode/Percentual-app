@@ -8,6 +8,7 @@ import { User } from '@supabase/supabase-js';
 import { Pencil } from 'lucide-react';
 import { Footer } from '../landing/Footer';
 import { Bell } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ProfilePage({ user }: { user: User }) {
   const [name, setName] = useState('Jeferson code');
