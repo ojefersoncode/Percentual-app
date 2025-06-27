@@ -52,7 +52,7 @@ export default function ConfigPage({
   const prevStep = () => setStep((prev) => prev - 1);
 
   return (
-    <div className="flex flex-col h-screen bg-white dark:bg-background text-white">
+    <div className="flex flex-col h-screen bg-white dark:bg-background text-white touch-pan-x touch-pan-y">
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b border-gray-200 dark:border-border">
         <div className="flex gap-1 text-xl font-bold items-center">
           <img className="size-8" src="/LogoC.png" alt="logo" />
