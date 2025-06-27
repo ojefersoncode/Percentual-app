@@ -36,6 +36,7 @@ export default function ProfilePage({ user }: { user: User }) {
         <div className="w-full max-w-3xl space-y-6">
           <Card className="border rounded-md shadow-sm bg-white dark:bg-background border border-gray-500 dark:border-border">
             <CardHeader className="flex w-full items-center gap-4 my-4">
+              <div className="flex w-full items-center gap-4">
               <Image
                 height={80}
                 width={80}
@@ -53,6 +54,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   <Upload className="w-5 h-5 text-black dark:text-gray-400" />
                 </div>
               </label>
+                </div>
             </CardHeader>
 
             <CardContent className="space-y-4">
@@ -64,6 +66,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  className="text-black dark:text-text bg-white dark:bg-background hover:bg-white dark:hover:subbg-background"
                 />
               </div>
 
@@ -74,6 +77,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
+                  className="text-black dark:text-text bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
                 />
               </div>
 
@@ -84,6 +88,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  className="text-black dark:text-text bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
                 />
               </div>
 
@@ -94,7 +99,7 @@ export default function ProfilePage({ user }: { user: User }) {
                     id="bio"
                     value={bio}
                     onChange={(e) => setBio(e.target.value)}
-                    className="w-full min-h-[80px] rounded-md border border-input bg-background px-3 py-2 text-sm text-black dark:text-white dark:bg-subbackground"
+                    className="w-full min-h-[80px] rounded-md border border-gray-500 dark:border-border bg-subbackground px-3 py-2 text-sm text-black dark:text-text dark:bg-subbackground"
                   />
               </div>
             </CardContent>
