@@ -50,7 +50,7 @@ export default function ProfilePage({ user }: { user: User }) {
               <Input
                 type="file"
                 placeholder="Atualizar imagem"
-                className="w-full max-w-xs border dark:border-border bg-white dark:bg-subbackground"
+                className="w-full max-w-xs text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-subbackground"
               />
             </CardHeader>
 
