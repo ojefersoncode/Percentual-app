@@ -167,7 +167,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               <Input
                 id="email"
                 type="email"
-                className="bg-gray-100 dark:bg-subbackground border border-border"
+                className="bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
                 placeholder="email@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -193,7 +193,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               <Input
                 id="password"
                 placeholder="Digite sua senha"
-                className="bg-gray-100 dark:bg-subbackground border border-border"
+                className="bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
                 type="password"
                 disabled={loading}
                 value={password}
@@ -292,7 +292,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               </Button>
               <Button
                 variant="outline"
-                className="w-full gap-2 bg-gray-100 border border-border"
+                className="w-full gap-2 text-black bg-gray-100 dark:bg-gray-100 border border-border"
                 onClick={() => api.oauthSignin('github')}
               >
                 <svg
