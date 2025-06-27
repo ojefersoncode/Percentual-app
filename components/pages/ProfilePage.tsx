@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { User } from '@supabase/supabase-js';
 import { Pencil } from 'lucide-react';
 import { Footer } from '../landing/Footer';
-import { Bell } from 'lucide-react';
+import { Bell, Upload } from 'lucide-react';
 import Image from 'next/image';
 
 export default function ProfilePage({ user }: { user: User }) {
@@ -47,11 +47,19 @@ export default function ProfilePage({ user }: { user: User }) {
                 className="rounded-full border"
                 alt="User"
               />
-              <Input
-                type="file"
-                placeholder="Atualizar imagem"
-                className="w-full max-w-xs text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-subbackground"
-              />
+              <label className="cursor-pointer flex flex-col items-center justify-center w-full h-24 border-2 rounded-lg bg-gray-100 dark:bg-subbackground transition px-1">
+                <input
+                  type="file"
+                   accept="image/png, image/svg+xml, image/webp"
+                   className="hidden"
+                 />
+                <div className="flex flex-col w-full items-center justify-center bg-white dark:bg-subbackground">
+                  <Upload className="w-6 h-6 text-black dark:text-gray-400" />
+                    <span className="text-black dark:text-gray-400 text-xs sm:text-sm text-center mt-2">
+                      Selecione uma imagem
+                    </span>
+                </div>
+              </label>
             </CardHeader>
 
             <CardContent className="space-y-6">
