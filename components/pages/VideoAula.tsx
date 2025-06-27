@@ -23,7 +23,7 @@ export default function VideoAulas({ user }: { user: User }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-white dark:bg-background">
+    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-white dark:bg-background touch-pan-x touch-pan-y">
       <nav className="flex w-full justify-between px-3 md:px-4 text-text bg-background border-b border-gray-200 dark:border-border">
         <div className="flex gap-1 py-2 items-center">
           <img className="size-7" src="/LogoC.png" alt="logo" />
