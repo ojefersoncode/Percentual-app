@@ -70,7 +70,7 @@ export default function AccountPage({
       </nav>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10">
         <div className="mx-auto grid w-full max-w-6xl gap-2">
-          <h1 className="text-3xl font-semibold">Assinatura e compras</h1>
+          <h1 className="text-lg font-semibold">Assinatura e compras</h1>
         </div>
         <div className="mx-auto grid w-full max-w-6xl items-start gap-6 ">
           <div className=" grid gap-6">
@@ -89,7 +89,7 @@ export default function AccountPage({
               </div>
               <div className="py-2 bg-white dark:bg-background">
                 <div x-chunk="dashboard-04-chunk-2">
-                  <div className="py-2 px-4 bg-white dark:bg-black text-black dark:text-white">
+                  <div className="py-2 px-4 text-black dark:text-text">
                     <h2 className="text-xl font-bold">Plano e compras</h2>
                     <p>
                       {subscription
