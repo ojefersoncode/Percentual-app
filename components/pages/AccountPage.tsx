@@ -68,7 +68,8 @@ export default function AccountPage({
             <Navbar />
           </div>
       </nav>
-      <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10 border border-gray-500 dark:border-border">
+      <main className="p-4 md:gap-8 md:p-10 border">
+        <div className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10 border border-gray-500 dark:border-border rounded-lg">
         <div className="mx-auto grid w-full max-w-6xl gap-2">
           <h1 className="text-lg font-semibold">Assinatura e compras</h1>
         </div>
@@ -106,8 +107,9 @@ export default function AccountPage({
               </div>
             </div>
           </div>
-        </div>
-      </main>{' '}
+         </div>
+       </div>
+      </main>
       <Footer />
     </div>
   );
