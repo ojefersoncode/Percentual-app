@@ -76,7 +76,7 @@ export function Navbar() {
           <Menu className="size-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-48 mr-7">
+      <DropdownMenuContent className="w-48 mr-7 touch-pan-x touch-pan-y">
         <DropdownMenuLabel className="flex flex-col"> 
           <div className="flex items-center justify-between pt-1">
             <Image 
@@ -88,8 +88,8 @@ export function Navbar() {
              />
             <ModeToggle />
           </div>
-          <div className="pt-1 pb-4">
-             <span className="text-sm">Jeferson</span>
+          <div className="pt-1 pb-1">
+             <span className="text-xs">Jeferson</span>
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
