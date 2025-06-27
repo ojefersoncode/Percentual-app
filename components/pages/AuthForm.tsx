@@ -260,7 +260,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               </div>
               <Button
                 variant="outline"
-                className="w-full gap-2 text-black dark:text-black bg-gray-100 border border-border dark:border-border"
+                className="w-full gap-2 text-black dark:text-black bg-gray-100 dark:bg-gray-100 border border-border dark:border-border"
                 onClick={() => api.oauthSignin('google')}
               >
                 <svg
