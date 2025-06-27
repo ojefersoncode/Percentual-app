@@ -152,7 +152,7 @@ export function AuthForm({ state }: { state: AuthState }) {
 
   const currState = stateInfo[authState];
   return (
-    <Card className="mx-auto w-96 px-4 border border-border/70 dark:border-border bg-gray-100 dark:bg-subbackground">
+    <Card className="mx-auto w-96 px-4 border border-border/70 dark:border-border bg-gray-100 dark:bg-subbackground touch-pan-x touch-pan-y">
       <CardHeader>
         <CardTitle className="text-2xl">{currState.title}</CardTitle>
         {currState.description && (
