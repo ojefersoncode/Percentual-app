@@ -64,10 +64,10 @@ export const Navbar = ({ user }: { user: User | null }) => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container py-2 px-3 md:px-6 w-screen flex justify-between ">
           <NavigationMenuItem className="flex">
-            <div className="flex gap-2 text-xl font-bold items-center">
-              <img className="size-7" src="/LogoC.png" alt="logo" />
+            <div className="flex gap-2 text-lg items-center">
+              <img className="size-5" src="/LogoC.png" alt="logo" />
               <div className="flex">
-                <h1 className="text-gray-900 dark:text-text font-sans dark:text-text">Cooderfy</h1>
+                <h1 className="text-gray-900 dark:text-text font-semibold dark:text-text">Cooderfy</h1>
               </div>
             </div>
           </NavigationMenuItem>
