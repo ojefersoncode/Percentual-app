@@ -114,7 +114,7 @@ export default function ProfilePage({ user }: { user: User }) {
               </Button>
               <Button
                 variant="outline"
-                className="text-black dark:text-white border border-gray-500 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
+                className="text-text dark:text-text border border-gray-500 dark:border-border bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn"
               >
                 Salvar Alterações
               </Button>
