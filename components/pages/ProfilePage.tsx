@@ -42,7 +42,16 @@ export default function ProfilePage({ user }: { user: User }) {
       <div className="flex justify-center py-4 bg-white dark:bg-background touch-pan-x touch-pan-y">
         <div className="w-full max-w-4xl max-md:max-w-full p-1 md:p-8 rounded-lg">
           <CardHeader>
-            <h2 className="text-2xl font-medium text-green-600">Editar perfil</h2>
+        <div>
+        <Image 
+           height={36}
+           width={36}
+           src="/User.jpeg"
+           className="rouded-full"
+           alt="User"
+        />
+        
+        </div>
           </CardHeader>
 
           <CardContent>
