@@ -5,7 +5,6 @@ import { Button } from '../ui/button';
 import { Label } from '../ui/label';
 import { Navbar } from '../HomeComponents/NavBar';
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { User } from '@supabase/supabase-js';
 import { Footer } from '../landing/Footer';
 import { Bell, Upload } from 'lucide-react';
@@ -96,11 +95,12 @@ export default function ProfilePage({ user }: { user: User }) {
               {/* Bio */}
               <div className="space-y-1">
                 <Label htmlFor="bio">Bio</Label>
-                <Textarea
-                  id="bio"
-                  value={bio}
-                  onChange={(e) => setBio(e.target.value)}
-                />
+                  <textarea
+                    id="bio"
+                    value={bio}
+                    onChange={(e) => setBio(e.target.value)}
+                    className="w-full min-h-[80px] rounded-md border border-input bg-background px-3 py-2 text-sm text-black dark:text-white dark:bg-subbackground"
+                  />
               </div>
             </CardContent>
 
