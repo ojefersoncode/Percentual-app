@@ -11,8 +11,8 @@ import { Bell, Upload } from 'lucide-react';
 import Image from 'next/image';
 
 export default function ProfilePage({ user }: { user: User }) {
-  const [name, setName] = useState('Cooderfy');
-  const [phone, setPhone] = useState('+55 31 91234-5678');
+  const [name, setName] = useState('Jeferson);
+  const [phone, setPhone] = useState('+55 31 98765-4321');
   const [email, setEmail] = useState('ojefersoncode@email.com');
   const [bio, setBio] = useState('Programador Fullstack');
   const [id] = useState('123456');
@@ -100,7 +100,7 @@ export default function ProfilePage({ user }: { user: User }) {
                     id="bio"
                     value={bio}
                     onChange={(e) => setBio(e.target.value)}
-                    className="w-full min-h-[80px] rounded-md border border-gray-500 dark:border-border px-3 py-2 text-sm text-black dark:text-text bg-white dark:bg-subbackground"
+                    className="w-full min-h-[80px] rounded-md resize-none border border-gray-500 dark:border-border px-3 py-2 text-sm text-black dark:text-text bg-white dark:bg-subbackground"
                   />
               </div>
             </CardContent>
