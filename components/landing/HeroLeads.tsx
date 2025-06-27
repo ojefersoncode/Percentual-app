@@ -13,7 +13,7 @@ export const HeroLeads = () => {
             </span>{' '}
           </h1>{' '}
           <h2 className="inline">
-            <span className="inline bg-gradient-to-r text-red-600 bg-clip-text">
+            <span className="inline bg-gradient-to-r text-green-600 bg-clip-text">
               ate 10x mais rapido.
             </span>{' '}
           </h2>
