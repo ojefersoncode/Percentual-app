@@ -166,7 +166,6 @@ export function AuthForm({ state }: { state: AuthState }) {
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
-                variant="outline"
                 type="email"
                 className="bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
                 placeholder="email@example.com"
@@ -193,7 +192,6 @@ export function AuthForm({ state }: { state: AuthState }) {
               </div>
               <Input
                 id="password"
-                variant="outline"
                 placeholder="Digite sua senha"
                 className="bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
                 type="password"
