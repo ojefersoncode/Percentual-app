@@ -44,13 +44,13 @@ export default function ProfilePage({ user }: { user: User }) {
                 className="rounded-full border"
                 alt="User"
               />
-              <label className="cursor-pointer flex flex-col items-center justify-center w-full h-12 border-2 rounded-lg bg-gray-100 dark:bg-subbackground transition px-1">
+              <label className="cursor-pointer flex flex-col items-center justify-center px-6 py-4 border-2 rounded-lg bg-gray-100 dark:bg-subbackground transition px-1">
                 <input
                   type="file"
                   accept="image/png, image/svg+xml, image/webp, image/jpeg"
                   className="hidden"
                 />
-                <div className="flex flex-col w-full items-center justify-center bg-white dark:bg-subbackground">
+                <div className="flex items-center justify-center bg-white dark:bg-subbackground">
                   <Upload className="w-5 h-5 text-black dark:text-gray-400" />
                 </div>
               </label>
@@ -66,7 +66,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="text-black dark:text-text bg-white dark:bg-background hover:bg-white dark:hover:subbg-background"
+                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-background hover:bg-white dark:hover:subbg-background"
                 />
               </div>
 
@@ -77,7 +77,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="text-black dark:text-text bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
+                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
                 />
               </div>
 
@@ -88,7 +88,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="text-black dark:text-text bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
+                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
                 />
               </div>
 
