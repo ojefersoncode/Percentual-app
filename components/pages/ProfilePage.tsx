@@ -47,17 +47,14 @@ export default function ProfilePage({ user }: { user: User }) {
                 className="rounded-full border"
                 alt="User"
               />
-              <label className="cursor-pointer flex flex-col items-center justify-center w-full h-24 border-2 rounded-lg bg-gray-100 dark:bg-subbackground transition px-1">
+              <label className="cursor-pointer flex flex-col items-center justify-center w-full h-12 border-2 rounded-lg bg-gray-100 dark:bg-subbackground transition px-1">
                 <input
                   type="file"
-                   accept="image/png, image/svg+xml, image/webp"
+                   accept="image/png, image/svg+xml, image/webp, image/jpeg"
                    className="hidden"
                  />
                 <div className="flex flex-col w-full items-center justify-center bg-white dark:bg-subbackground">
-                  <Upload className="w-6 h-6 text-black dark:text-gray-400" />
-                    <span className="text-black dark:text-gray-400 text-xs sm:text-sm text-center mt-2">
-                      Selecione uma imagem
-                    </span>
+                  <Upload className="w-5 h-5 text-black dark:text-gray-400" />
                 </div>
               </label>
             </CardHeader>
