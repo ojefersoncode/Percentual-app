@@ -78,18 +78,20 @@ export function Navbar() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 mr-7">
         <DropdownMenuLabel className="flex flex-col"> 
-          <div className="flex items-center gap-2 pt-1 pb-2">
+          <div className="flex items-center gap-2 pt-1 pb-4 border-b border-zinc-600 dark:border-border">
             <Image 
-              height={24}
-              width={24}
+              height={32}
+              width={32}
               src="/User.jpeg"
               className="rounded-full"
               alt="User"
              />
-            <span className="text-xs">Jeferson</span>
+            <span className="text-sm">Jeferson</span>
           </div>
           <div className="flex w-full justify-between items-center">
-          <h1> Menu</h1> 
+          <h1 className="text-xs"> 
+            Tema
+          </h1> 
           <ModeToggle />
           </div>
         </DropdownMenuLabel>
