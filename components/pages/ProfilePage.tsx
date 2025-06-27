@@ -25,7 +25,7 @@ export default function ProfilePage({ user }: { user: User }) {
   return (
     <div className="flex flex-col w-full max-md:h-dvh min-h-screen bg-white dark:bg-background">
       {/* Navbar */}
-      <nav className="flex w-full justify-between px-4 border-b bg-white dark:bg-background">
+      <nav className="flex w-full justify-between py-1 px-4 border-b bg-white dark:bg-background">
         <div className="flex gap-1 text-base items-center select-none">
           <img className="size-5" src="/LogoC.png" alt="logo" />
           <h1 className="text-black dark:text-text font-medium">Cooderfy</h1>
@@ -121,14 +121,14 @@ export default function ProfilePage({ user }: { user: User }) {
               <div className="flex w-full items-center justify-between"
                 >
               <Button
-                variant="outline"
+                variant="ghost"
                 className="text-black dark:text-text bg-red-600 dark:bg-red-600 hover:bg-red-600/80 dark:hover:bg-red-600/80"
               >
                 Cancelar
               </Button>
               <Button
                 variant="outline"
-                className="text-black dark:text-text bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
+                className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
               >
                 Salvar Alterações
               </Button>
