@@ -57,7 +57,7 @@ export default function AccountPage({
     <div className="flex min-h-screen w-full flex-col">
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-background">
         <div className="flex gap-1 items-center">
-          <img className="size-5" src="/LogoC.png  alt="logo" />
+          <img className="size-5" src="/LogoC.png"  alt="logo" />
           <div className="flex">
             <h1 className="dark:text-gray-100 font-arial text-base">Cooderfy</h1>
           </div>
@@ -69,7 +69,7 @@ export default function AccountPage({
           </div>
       </nav>
       <main className=" flex flex-1 flex-col p-4 md:gap-8 md:p-10">
-        <div className="flex flex-1 flex-col gap-4 border border-gray-500 dark:border-border rounded-lg">
+        <div className="flex flex-col gap-4 border border-gray-500 dark:border-border rounded-lg">
         <div className="mx-auto grid w-full max-w-6xl gap-2">
           <h1 className="text-md font-semibold">Assinatura e compras</h1>
         </div>
