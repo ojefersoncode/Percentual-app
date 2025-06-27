@@ -152,7 +152,7 @@ export function AuthForm({ state }: { state: AuthState }) {
 
   const currState = stateInfo[authState];
   return (
-    <Card className="mx-auto w-96 px-4 border border-border bg-gray-100 dark:bg-subbackground">
+    <Card className="mx-auto w-96 px-4 border/60 dark:border-border bg-gray-100 dark:bg-subbackground">
       <CardHeader>
         <CardTitle className="text-2xl">{currState.title}</CardTitle>
         {currState.description && (
@@ -166,6 +166,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
+                variant="outline"
                 type="email"
                 className="bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
                 placeholder="email@example.com"
@@ -192,6 +193,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               </div>
               <Input
                 id="password"
+                variant="outline"
                 placeholder="Digite sua senha"
                 className="bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
                 type="password"
@@ -204,7 +206,7 @@ export function AuthForm({ state }: { state: AuthState }) {
           )}
           <Button
             type="submit"
-            className="w-full text-text bg-btn"
+            className="w-full text-text bg-btn dark:bg-btn"
             onClick={currState.onSubmit}
             disabled={loading}
           >
@@ -260,7 +262,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               </div>
               <Button
                 variant="outline"
-                className="w-full gap-2 bg-gray-100 dark:bg-subbackground border border-border dark:border-border"
+                className="w-full gap-2 text-black dark:text-black bg-gray-100 border border-border dark:border-border"
                 onClick={() => api.oauthSignin('google')}
               >
                 <svg
