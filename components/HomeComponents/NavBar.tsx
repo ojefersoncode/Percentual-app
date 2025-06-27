@@ -78,7 +78,7 @@ export function Navbar() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 mr-7">
         <DropdownMenuLabel className="flex flex-col"> 
-          <div className="flex items-center gap-2 pt-1 pb-4">
+          <div className="flex items-center justify-between pt-1">
             <Image 
               height={32}
               width={32}
@@ -86,13 +86,10 @@ export function Navbar() {
               className="rounded-full border-2 border-zinc-600 dark:border-border"
               alt="User"
              />
-            <span className="text-sm">Jeferson</span>
+            <ModeToggle />
           </div>
-          <div className="flex w-full justify-between items-center">
-          <h1 className="text-xs"> 
-            Mudar tema
-          </h1> 
-          <ModeToggle />
+          <div className="pt-1 pb-4">
+             <span className="text-sm">Jeferson</span>
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
