@@ -167,7 +167,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               <Input
                 id="email"
                 type="email"
-                className="bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
+                className="text-black dark:text-text bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
                 placeholder="email@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -193,7 +193,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               <Input
                 id="password"
                 placeholder="Digite sua senha"
-                className="bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
+                className="text-black dark:text-text bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
                 type="password"
                 disabled={loading}
                 value={password}
@@ -204,7 +204,7 @@ export function AuthForm({ state }: { state: AuthState }) {
           )}
           <Button
             type="submit"
-            className="w-full text-text bg-btn dark:text-text dark:bg-btn"
+            className="w-full text-text bg-btn hover:bg-btn/80 dark:text-text dark:bg-btn"
             onClick={currState.onSubmit}
             disabled={loading}
           >
@@ -260,7 +260,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               </div>
               <Button
                 variant="outline"
-                className="w-full gap-2 text-black dark:text-black bg-gray-100 dark:bg-gray-100 border border-border dark:border-border"
+                className="w-full gap-2 text-black dark:text-black hover:bg-gray-200 dark:hover:bg-gray-200 bg-gray-100 dark:bg-gray-100 border border-border dark:border-border"
                 onClick={() => api.oauthSignin('google')}
               >
                 <svg
@@ -292,7 +292,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               </Button>
               <Button
                 variant="outline"
-                className="w-full gap-2 text-black bg-gray-100 dark:bg-gray-100 border border-border"
+                className="w-full gap-2 text-black bg-gray-100 dark:bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-200 border border-border"
                 onClick={() => api.oauthSignin('github')}
               >
                 <svg
