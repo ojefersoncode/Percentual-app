@@ -89,7 +89,7 @@ export default function AccountPage({
               </div>
               <div className="py-2 bg-white dark:bg-background">
                 <div x-chunk="dashboard-04-chunk-2">
-                  <div className="py-2 px-4 text-black dark:text-text">
+                  <div className="py-2 text-black dark:text-text">
                     <h2 className="text-xl font-bold">Plano e compras</h2>
                     <p>
                       {subscription
@@ -97,7 +97,7 @@ export default function AccountPage({
                         : 'Voçe ainda nao assinou nenhum plano.'}
                     </p>
                   </div>
-                  <div className="border-t p-4 flex space-between">
+                  <div className="border-t py-4 flex space-between">
                     <Button onClick={handleBillingPortal} disabled={loading}>
                       Gerenciar meu plano
                     </Button>
