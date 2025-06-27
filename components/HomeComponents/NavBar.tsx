@@ -34,6 +34,7 @@ import {
   Smartphone
 } from 'lucide-react';
 
+import Image from 'next/image';
 import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
 import { useToast } from '../ui/use-toast';
@@ -76,9 +77,21 @@ export function Navbar() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 mr-7">
-        <DropdownMenuLabel className="flex w-full items-center justify-between"> 
+        <DropdownMenuLabel className="flex flex-col"> 
+          <div className="flex items-center gap-2 pt-1 pb-2">
+            <Image 
+              height={24}
+              width={24}
+              src="/User.jpeg"
+              className="rounded-full"
+              alt="User"
+             />
+            <span className="text-xs">Jeferson</span>
+          </div>
+          <div className="flex w-full justify-between items-center">
           <h1> Menu</h1> 
           <ModeToggle />
+          </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
