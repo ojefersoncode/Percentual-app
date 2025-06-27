@@ -86,13 +86,13 @@ export function AuthForm({ state }: { state: AuthState }) {
         try {
           await api.passwordReset(email);
           toast({
-            title: 'Email Sent!',
-            description: 'Check your email to reset your password'
+            title: 'Email enviado!',
+            description: 'Verifique seu email para resetar sua senha'
           });
         } catch (e) {
           if (e instanceof Error) {
             toast({
-              title: 'Auth Error',
+              title: 'Autenticação falhou',
               description: e.message,
               variant: 'destructive'
             });
@@ -102,7 +102,7 @@ export function AuthForm({ state }: { state: AuthState }) {
       }
     },
     update_password: {
-      title: 'Update Password',
+      title: 'Atualizar senha',
       submitText: 'Update Password',
       hasEmailField: false,
       hasPasswordField: true,
@@ -112,15 +112,15 @@ export function AuthForm({ state }: { state: AuthState }) {
         try {
           await api.passwordUpdate(password);
           toast({
-            title: 'Password Updated',
-            description: 'Redirecting to the home page...'
+            title: 'Sua senha foi atualizada',
+            description: 'Redirecionando para pagina inicial...'
           });
           setTimeout(() => router.replace('/'), 3000);
           router.replace('/');
         } catch (e) {
           if (e instanceof Error) {
             toast({
-              title: 'Auth Error',
+              title: 'Falha na autenticação',
               description: e.message,
               variant: 'destructive'
             });
@@ -168,7 +168,7 @@ export function AuthForm({ state }: { state: AuthState }) {
                 id="email"
                 type="email"
                 className="text-black dark:text-text bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
-                placeholder="email@example.com"
+                placeholder="email@examplo.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={loading}
@@ -224,25 +224,25 @@ export function AuthForm({ state }: { state: AuthState }) {
           )}
           {authState === 'signup' && (
             <div className="text-center text-sm">
-              Already have an account?{' '}
+              Ja tem uma conta?{' '}
               <Link
                 href="#"
                 className="underline"
                 onClick={() => setAuthState(AuthState.Signin)}
               >
-                Sign in
+                Entrar
               </Link>
             </div>
           )}
           {authState === 'forgot_password' && (
             <div className="text-center text-sm">
-              Know your password?{' '}
+              Lembrou sua senha?{' '}
               <Link
                 href="#"
                 className="underline"
                 onClick={() => setAuthState(AuthState.Signin)}
               >
-                Sign in
+                Entrar
               </Link>
             </div>
           )}
