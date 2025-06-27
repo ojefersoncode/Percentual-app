@@ -18,7 +18,7 @@ export default function ProfilePage({ user }: { user: User }) {
   const [id] = useState('123456');
 
   return (
-    <div className="flex flex-col w-full max-md:h-dvh min-h-screen bg-white dark:bg-background">
+    <div className="flex flex-col w-full h-screen bg-white dark:bg-background">
       {/* Navbar */}
       <nav className="flex w-full justify-between py-1 px-4 border-b bg-white dark:bg-background">
         <div className="flex gap-1 text-base items-center select-none">
