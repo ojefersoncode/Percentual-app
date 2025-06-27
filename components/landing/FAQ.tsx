@@ -51,7 +51,7 @@ export const FAQ = () => {
     <section id="faq" className="container py-20">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
         Perguntas{' '}
-        <span className="bg-gradient-to-b text-red-600 bg-clip-text">
+        <span className="bg-gradient-to-b text-green-600 bg-clip-text">
           Frequentes
         </span>
       </h2>
@@ -73,7 +73,7 @@ export const FAQ = () => {
         <a
           rel="noreferrer noopener"
           href="#"
-          className="text-red-600 transition-all border-primary hover:text-red-400"
+          className="text-green-600 transition-all border-primary hover:text-red-400"
         >
           Entre em contato
         </a>
