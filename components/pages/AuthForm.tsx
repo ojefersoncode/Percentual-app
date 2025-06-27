@@ -204,7 +204,7 @@ export function AuthForm({ state }: { state: AuthState }) {
           )}
           <Button
             type="submit"
-            className="w-full text-text bg-btn dark:bg-btn"
+            className="w-full text-text bg-btn dark:text-text dark:bg-btn"
             onClick={currState.onSubmit}
             disabled={loading}
           >
