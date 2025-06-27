@@ -4,6 +4,7 @@ import { Card, CardHeader, CardContent, CardFooter } from '../ui/card';
 import { Button } from '../ui/button';
 import { Label } from '../ui/label';
 import { Navbar } from '../HomeComponents/NavBar';
+import { Input } from "@/components/ui/input"
 import { User } from '@supabase/supabase-js';
 import { Pencil } from 'lucide-react';
 import { Footer } from '../landing/Footer';
@@ -45,13 +46,16 @@ export default function ProfilePage({ user }: { user: User }) {
           <CardHeader>
         <div>
         <Image 
-           height={36}
-           width={36}
+           height={52}
+           width={52}
            src="/User.jpeg"
-           className="rouded-full"
+           className="rounded-full"
            alt="User"
         />
-        
+        <Input
+          type="file"
+          placeholder=""
+          />
         </div>
           </CardHeader>
 
