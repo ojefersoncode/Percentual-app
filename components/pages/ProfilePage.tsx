@@ -17,126 +17,112 @@ export default function ProfilePage({ user }: { user: User }) {
   const [email, setEmail] = useState('ojefersoncode@email.com');
   const [id, setId] = useState('123456');
 
-  // Função para editar os dados
   const handleEdit = (field: string, value: string) => {
     if (field === 'name') setName(value);
     if (field === 'phone') setPhone(value);
   };
 
   return (
-    <div className="flex flex-col w-full mx-auto bg-white dark:background min-h-screen touch-pan-x touch-pan-y">
+    <div className="flex flex-col w-full min-h-screen bg-white dark:bg-background">
       {/* Navbar */}
-      <nav className="flex w-full justify-between py-4 px-4 md:px-4 bg-white dark:bg-background">
+      <nav className="flex w-full justify-between py-4 px-4 border-b bg-white dark:bg-background">
         <div className="flex gap-1 text-base items-center select-none">
           <img className="size-5" src="/LogoC.png" alt="logo" />
-          <div className="flex">
-            <h1 className="text-black dark:text-text font-sans">Cooderfy</h1>
-          </div>
+          <h1 className="text-black dark:text-text font-medium">Cooderfy</h1>
         </div>
         <div className="flex items-center gap-3">
-            <Bell className="size-4" />
-            <Navbar />
-          </div>
+          <Bell className="size-4" />
+          <Navbar />
+        </div>
       </nav>
 
-      <hr />
+      <main className="flex justify-center px-4 py-8">
+        <div className="w-full max-w-3xl space-y-6">
+          <Card className="border rounded-md shadow-sm">
+            <CardHeader className="flex flex-col items-center gap-4">
+              <Image
+                height={80}
+                width={80}
+                src="/User.jpeg"
+                className="rounded-full border"
+                alt="User"
+              />
+              <Input
+                type="file"
+                placeholder="Atualizar imagem"
+                className="w-full max-w-xs border dark:border-border bg-white dark:bg-subbackground"
+              />
+            </CardHeader>
 
-      <div className="flex justify-center py-4 bg-white dark:bg-background touch-pan-x touch-pan-y">
-        <div className="w-full max-w-4xl max-md:max-w-full p-1 md:p-8 rounded-lg">
-          <CardHeader>
-        <div>
-        <Image 
-           height={52}
-           width={52}
-           src="/User.jpeg"
-           className="rounded-full"
-           alt="User"
-        />
-        <Input
-          type="file"
-          placeholder="Atualizar imagem"
-          className="border border-gray-500 dark:border-border bg-white dark:bg-subbackground"
-          >
-        
-        </Input>
-        </div>
-          </CardHeader>
-
-          <CardContent>
-            {/* Name */}
-            <div className="flex justify-between items-center space-x-4 mb-4">
-              <Label htmlFor="name" className="text-lg">
-                Nome:
-              </Label>
-              <div className="flex items-center space-x-3">
-                <span className="text-gray-600 dark:text-gray-300">{name}</span>
-                <Button
-                  variant={'outline'}
-                  onClick={() =>
-                    handleEdit('name', prompt('Enter new name:', name) || name)
-                  }
-                  className="text-sm"
-                >
-                  <Pencil className="size-4" />
-                </Button>
+            <CardContent className="space-y-6">
+              {/* Name */}
+              <div className="flex justify-between items-center">
+                <Label htmlFor="name" className="text-sm font-medium">
+                  Nome:
+                </Label>
+                <div className="flex items-center gap-2">
+                  <span className="text-gray-700 dark:text-gray-300 text-sm">{name}</span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() =>
+                      handleEdit('name', prompt('Enter new name:', name) || name)
+                    }
+                  >
+                    <Pencil className="size-4" />
+                  </Button>
+                </div>
               </div>
-            </div>
 
-            {/* Phone */}
-            <div className="flex justify-between items-center space-x-4 mb-4">
-              <Label htmlFor="phone" className="text-lg">
-                Telefone:
-              </Label>
-              <div className="flex items-center space-x-3">
-                <span className="text-gray-600 dark:text-gray-300">
-                  {phone}
-                </span>
-                <Button
-                  variant={'outline'}
-                  onClick={() =>
-                    handleEdit(
-                      'phone',
-                      prompt('Enter new phone number:', phone) || phone
-                    )
-                  }
-                  className="text-sm"
-                >
-                  <Pencil className="size-4" />
-                </Button>
+              {/* Phone */}
+              <div className="flex justify-between items-center">
+                <Label htmlFor="phone" className="text-sm font-medium">
+                  Telefone:
+                </Label>
+                <div className="flex items-center gap-2">
+                  <span className="text-gray-700 dark:text-gray-300 text-sm">{phone}</span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() =>
+                      handleEdit('phone', prompt('Enter new phone number:', phone) || phone)
+                    }
+                  >
+                    <Pencil className="size-4" />
+                  </Button>
+                </div>
               </div>
-            </div>
 
-            {/* Email */}
-            <div className="flex justify-between items-center space-x-4 mb-4">
-              <Label htmlFor="email" className="text-lg">
-                Email:
-              </Label>
-              <span className="text-gray-600 dark:text-gray-300">{email}</span>
-            </div>
+              {/* Email */}
+              <div className="flex justify-between items-center">
+                <Label htmlFor="email" className="text-sm font-medium">
+                  Email:
+                </Label>
+                <span className="text-gray-700 dark:text-gray-300 text-sm">{email}</span>
+              </div>
 
-            {/* ID */}
-            <div className="flex justify-between items-center space-x-4 mb-4">
-              <Label htmlFor="id" className="text-lg">
-                ID:
-              </Label>
-              <span className="text-gray-600 dark:text-gray-300">{id}</span>
-            </div>
-          </CardContent>
+              {/* ID */}
+              <div className="flex justify-between items-center">
+                <Label htmlFor="id" className="text-sm font-medium">
+                  ID:
+                </Label>
+                <span className="text-gray-700 dark:text-gray-300 text-sm">{id}</span>
+              </div>
+            </CardContent>
 
-          <CardFooter>
-            <Button
-              variant={'outline'}
-              className="w-full md:w-auto mt-4 bg-red-600 hover:bg-red-400 text-gray-50 hover:text-gray-100 "
-            >
-              Salvar Alterações
-            </Button>
-          </CardFooter>
+            <CardFooter>
+              <Button
+                variant="outline"
+                className="w-full mt-4 bg-red-600 hover:bg-red-500 text-white hover:text-gray-100"
+              >
+                Salvar Alterações
+              </Button>
+            </CardFooter>
+          </Card>
         </div>
-      </div>
+      </main>
 
-      <div className="bg-black">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
-}
+ }
