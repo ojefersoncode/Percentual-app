@@ -62,7 +62,7 @@ export default function ProfilePage({ user }: { user: User }) {
 
               {/* Name */}
               <div className="space-y-1">
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name">Nome</Label>
                 <Input
                   id="name"
                   value={name}
