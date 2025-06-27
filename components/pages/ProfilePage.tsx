@@ -35,7 +35,7 @@ export default function ProfilePage({ user }: { user: User }) {
       <main className="flex justify-center px-4 py-8">
         <div className="w-full max-w-3xl space-y-6">
           <Card className="border rounded-md shadow-sm bg-white dark:bg-background border border-gray-500 dark:border-border">
-            <CardHeader className="flex flex-col items-center my-4 gap-4">
+            <CardHeader className="flex w-full items-center gap-4 my-4">
               <Image
                 height={80}
                 width={80}
@@ -56,11 +56,6 @@ export default function ProfilePage({ user }: { user: User }) {
             </CardHeader>
 
             <CardContent className="space-y-4">
-              {/* Focando */}
-              <div className="space-y-1">
-                <Label htmlFor="foco">🎯 Focando</Label>
-                <Input id="foco" value="Focando" disabled />
-              </div>
 
               {/* Name */}
               <div className="space-y-1">
