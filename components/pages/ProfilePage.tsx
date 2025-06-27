@@ -67,7 +67,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-background hover:bg-white dark:hover:subbg-background"
+                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:subbg-background"
                 />
               </div>
 
@@ -78,7 +78,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
+                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
                 />
               </div>
 
@@ -89,7 +89,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
+                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
                 />
               </div>
 
@@ -108,13 +108,13 @@ export default function ProfilePage({ user }: { user: User }) {
             <CardFooter className="flex justify-between">
               <Button
                 variant="ghost"
-                className="text-white bg-red-600 hover:bg-red-700"
+                className="text-white bg-red-600 hover:bg-red-700 dark:hover:bg-red-700"
               >
                 Cancelar
               </Button>
               <Button
                 variant="ghost"
-                className="text-text dark:text-text bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn"
+                className="text-text dark:text-text bg-btn dark:bg-btn hover:bg-btn/80 dark:hover:bg-btn/80"
               >
                 Salvar Alterações
               </Button>
