@@ -54,8 +54,11 @@ export default function ProfilePage({ user }: { user: User }) {
         />
         <Input
           type="file"
-          placeholder=""
-          />
+          placeholder="Atualizar imagem"
+          className="border border-gray-500 dark:border-border bg-white dark:bg-subbackground"
+          >
+        
+        </Input>
         </div>
           </CardHeader>
 
