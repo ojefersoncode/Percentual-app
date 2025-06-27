@@ -24,8 +24,8 @@ export default function ProfilePage({ user }: { user: User }) {
   return (
     <div className="flex flex-col w-full mx-auto bg-white dark:background min-h-screen touch-pan-x touch-pan-y">
       {/* Navbar */}
-      <nav className="flex w-full justify-between py-4 px-4 md:px-4 bg-white dark:bg-black">
-        <div className="flex gap-1 text-xl items-center select-none">
+      <nav className="flex w-full justify-between py-4 px-4 md:px-4 bg-white dark:bg-background>
+        <div className="flex gap-1 text-base items-center select-none">
           <img className="size-5" src="/LogoC.png" alt="logo" />
           <div className="flex">
             <h1 className="text-black dark:text-text font-sans">Cooderfy</h1>
@@ -40,9 +40,9 @@ export default function ProfilePage({ user }: { user: User }) {
       <hr />
 
       <div className="flex justify-center py-4 bg-white dark:bg-background touch-pan-x touch-pan-y">
-        <div className="w-full max-w-4xl max-md:max-w-full p-1 md:p-8 bg-gray-100 dark:bg-black rounded-lg">
+        <div className="w-full max-w-4xl max-md:max-w-full p-1 md:p-8 rounded-lg">
           <CardHeader>
-            <h2 className="text-2xl font-medium text-red-600">Editar perfil</h2>
+            <h2 className="text-2xl font-medium text-green-600">Editar perfil</h2>
           </CardHeader>
 
           <CardContent>
