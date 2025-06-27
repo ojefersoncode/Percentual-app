@@ -41,10 +41,10 @@ export default function ProfilePage({ user }: { user: User }) {
                 height={80}
                 width={80}
                 src="/User.jpeg"
-                className="rounded-full border"
+                className="rounded-full border-2 border-zinc-600 dark:border-border"
                 alt="User"
               />
-              <label className="cursor-pointer flex flex-col items-center justify-center px-12 py-3 border-2 rounded-lg bg-gray-100 dark:bg-subbackground transition px-1">
+              <label className="cursor-pointer flex flex-col items-center justify-center px-12 py-3 border-2 rounded-lg bg-white dark:bg-subbackground transition px-1">
                 <input
                   type="file"
                   accept="image/png, image/svg+xml, image/webp, image/jpeg"
@@ -100,7 +100,7 @@ export default function ProfilePage({ user }: { user: User }) {
                     id="bio"
                     value={bio}
                     onChange={(e) => setBio(e.target.value)}
-                    className="w-full min-h-[80px] rounded-md border border-gray-500 dark:border-border bg-subbackground px-3 py-2 text-sm text-black dark:text-text dark:bg-subbackground"
+                    className="w-full min-h-[80px] rounded-md border border-gray-500 dark:border-border px-3 py-2 text-sm text-black dark:text-text bg-white dark:bg-subbackground"
                   />
               </div>
             </CardContent>
