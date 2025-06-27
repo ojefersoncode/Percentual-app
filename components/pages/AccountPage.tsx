@@ -5,6 +5,7 @@ import { Navbar } from '../HomeComponents/NavBar';
 import { User } from '@supabase/supabase-js';
 import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
+import Image from 'next/image';
 import { getURL } from '@/utils/helpers';
 import { useToast } from '../ui/use-toast';
 import { useRouter } from 'next/navigation';
