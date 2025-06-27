@@ -22,7 +22,7 @@ export default function Comentarios() {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           placeholder="Escreva seu comentário..."
-          className="w-full p-4 border border-gray-200 dark:border-border resize-none rounded-lg dark:bg-black dark:bg-muted/10 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900"
+          className="w-full p-4 border border-zinc-400 dark:border-border resize-none rounded-lg dark:bg-black dark:bg-muted/10 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900"
           rows={4}
         />
         <Button
