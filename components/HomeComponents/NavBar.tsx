@@ -117,8 +117,10 @@ export function Navbar() {
                 <DropdownMenuItem onClick={() => router.push('/planos-e-compras')}>
                   <CreditCard className="w-4 h-4 mr-2" /> Meu plano
                 </DropdownMenuItem>
-                <DropdownMenuItem className="flex w-full p-0.5 justify-center border-t border-zinc-300 dark:border-border">
-                  <ModeToggle />
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="flex w-full justify-between">
+                   <p className="text-sm text-black dark:text-text">Tema</p>  
+                   <ModeToggle />
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
