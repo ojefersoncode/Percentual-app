@@ -77,7 +77,7 @@ export function Navbar() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 mr-4 touch-pan-x touch-pan-y">
-        <DropdownMenuLabel className="flex items-center gap-1"> 
+        <DropdownMenuLabel className="flex items-center gap-2"> 
             <Image 
               height={32}
               width={32}
@@ -85,7 +85,7 @@ export function Navbar() {
               className="rounded-full border-2 border-btn dark:border-btn"
               alt="User"
              />
-             <span className="text-xs font-ariel">Jeferson</span>
+             <span className="text-sm font-ariel">Jeferson</span>
         </DropdownMenuLabel>
         
         <DropdownMenuSeparator />
