@@ -59,7 +59,7 @@ export default function AccountPage({
     
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-background">
         <div className="flex gap-1 items-center">
-          <img className="size-5" src="/User.jpeg"  alt="logo" />
+          <img className="size-5" src="/LogoC.png"  alt="logo" />
           <div className="flex">
             <h1 className="dark:text-gray-100 font-arial text-base">Cooderfy</h1>
           </div>
@@ -75,15 +75,15 @@ export default function AccountPage({
         <div className="flex flex-col gap-4 p-4 border border-gray-500 dark:border-border rounded-lg">
         <div className="mx-auto grid w-full max-w-6xl gap-2">
           <div className="flex gap-2 items-center pb-2">
-            <Image 
-              className="rounded-full border-2 border-btn dark:border-btn">
-              height={36}
-              width={36}
-              src="/User.jpeg"
-              alt="User"
-            />
-              <h1 className="text-sm font-semibold">Jeferson</h1>
-          </div>
+  <Image 
+    className="rounded-full border-2 border-btn dark:border-btn"
+    height={36}
+    width={36}
+    src="/User.jpeg"
+    alt="User"
+  />
+  <h1 className="text-sm font-semibold">Jeferson</h1>
+</div>
           <h1 className="text-md font-semibold">
             Assinatura e compras
           </h1>
