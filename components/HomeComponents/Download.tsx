@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 import { Card, CardContent } from '../../components/ui/card';
-import { Clock, GitBranch, Search, Plus, EllipsisVertical,  } from 'lucide-react';
+import { Clock, GitBranch, Search, Plus, EllipsisVertical, ListFilter } from 'lucide-react';
 
 const projects = [
   {
@@ -51,9 +51,9 @@ export const Download = () => {
         <Link href="/create-project">
           <Button
             size="icon"
-            className="rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text"
+            className="rounded-lg bg-white dark:bbg-subbackground over:bg-white dark:hover:bg-bg-subbackground  text-text dark:text-text"
           >
-            <Plus className="w-5 h-5" />
+            <ListFilter className="w-5 h-5" />
           </Button>
         </Link>
       </div>
@@ -64,7 +64,7 @@ export const Download = () => {
                 size="icon"
                 className="rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text"
                >
-            <ListFilter className="w-5 h-5" />
+            <Plus className="w-5 h-5" />
           </Button>
       </div>
 
