@@ -43,8 +43,9 @@ export function Step1({ favicon, onChangeFavicon }: Step1Props) {
       </label>
       <div className="flex w-full">
         <Input
+          disabled
           type="number"
-          placeholder="Versão do seu projeto"
+          placeholder="1.0"
           className="bg-gray-200 dark:bg-subbackground text-black dark:text-white border border-gray-200 dark:border-border"
         ></Input>
       </div>
