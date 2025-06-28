@@ -65,16 +65,16 @@ export const Download = () => {
           <Card key={i} className="bg-white dark:bg-subbackground border border-zinc-300 dark:border-border shadow-md">
             <CardContent className="p-4 space-y-1">
               <div className="flex w-full justify-between items-center">
-                <h3 className="text-lg font-semibold text-foreground">{project.name}</h3>
+                <h3 className="text-lg font-semibold text-btn">{project.name}</h3>
                 <Ellipsis className="w-4 h-4 text-black dark:text-text" />
               </div>
 
-              <div className="flex text-sm items-center gap-2 text-muted-foreground">
+              <div className="flex text-sm items-center gap-1 text-muted-foreground">
                 <span>Versão: </span>
                 <p>{project.version}</p>
                </div>
 
-              <div className="text-sm text-muted-foreground flex items-center gap-2">
+              <div className="text-sm text-muted-foreground flex items-center gap-1">
                 <Clock size={14} />
                 <span>{project.update} on <strong>main</strong></span>
               </div>
