@@ -74,7 +74,7 @@ export default function AccountPage({
       <main className=" flex flex-1 flex-col bg-white dark:bg-background p-4 md:gap-8 md:p-10">
         <div className="flex flex-col gap-4 p-4 bg-white dark:bg-background border border-gray-500 dark:border-border rounded-lg">
          <div className="mx-auto grid w-full max-w-6xl gap-2">
-          <div className="flex flex-col gap-1 items-center border-b border-gray-400 dark:border-border pb-2">
+          <div className="flex items-center justify-start gap-2 border-b border-gray-400 dark:border-border pb-2">
              <Image 
                className="rounded-full border-2 border-btn dark:border-btn"
                height={36}
@@ -89,11 +89,11 @@ export default function AccountPage({
           </h1>
         </div>
         <div className="mx-auto grid w-full max-w-6xl items-start gap-6 bg-white dark:bg-background">
-          <div className=" grid gap-6">
+          <div className="grid gap-6">
             <div data-chunk="dashboard-04-chunk-1">
               <div>
-                <h2 className="py-2">Email</h2>
-                <div>Seu usuario esta vinculado a este email</div>
+                <h2 className="pb-2 text-sm font-semibold">Email</h2>
+                <div className="text-sm">Seu usuario esta vinculado a este email</div>
                 <form className="py-2">
                   <Input 
                     className="text-black dark:text-text bg-white dark:bg-subbackground border border-zinc-500 dark:border-border"
