@@ -24,7 +24,7 @@ export const Footer = () => {
       <ModeToggle />
       </div>
 
-      <section className="container py-4 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 justify-between gap-y-4">
+      <section className="flex items-center py-4 grid grid-cols-2 justify-between gap-y-4">
         {sections.map((section, index) => (
           <div key={`section-${index}`} className="flex flex-col gap-2">
             <ul className="flex flex-col gap-1 font-mono text-sm">
@@ -44,7 +44,7 @@ export const Footer = () => {
         ))}
       </section>
 
-      <section className="container pb-4 font-mono opacity-70 text-xs">
+      <section className="container pb-1 font-mono opacity-70 text-xs">
         <div className="flex gap-1">
           <span>&copy; 2024,</span>
           <a
