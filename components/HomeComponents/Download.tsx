@@ -56,8 +56,10 @@ export const Download = () => {
           </Button>
       </div>
 
-      <div className="flex flex-1 w-full items-center justify-between pb-2">
-        <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
+      <div className="flex flex-1 w-full items-center justify-between py-2">
+        <h1 className="text-2xl font-medium text-black dark:text-text">
+          Projetos
+        </h1>
           <Link href="/create-project">
              <Button className="rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text">
                <div className="flex w-full items-center gap-2">
@@ -70,7 +72,7 @@ export const Download = () => {
           </Link>
       </div>
 
-      <div className="flex flex-col gap-4 w-full grid md:grid-cols-2">
+      <div className="flex flex-col gap-4 pt-1 w-full grid md:grid-cols-2">
         {projects.map((project, i) => (
           <Card key={i} className="bg-white dark:bg-subbackground border border-zinc-300 dark:border-border shadow-md">
             <CardContent className="p-4 space-y-1">
