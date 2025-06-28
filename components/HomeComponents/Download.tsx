@@ -75,8 +75,9 @@ export const Download = () => {
                </div>
 
               <div className="text-sm text-muted-foreground flex items-center gap-1">
-                <Clock size={14} />
-                <span>{project.update} on <strong>main</strong></span>
+                 <Clock size={14} />
+                 <span>Criado dia</span>
+                <span> {project.update}</span>
               </div>
             </CardContent>
           </Card>
