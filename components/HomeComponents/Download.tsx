@@ -51,14 +51,14 @@ export const Download = () => {
         <Link href="/create-project">
           <Button
             size="icon"
-            className="rounded-lg bg-white dark:bbg-subbackground over:bg-white dark:hover:bg-bg-subbackground  text-text dark:text-text"
+            className="rounded-lg bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground  text-black dark:text-text"
           >
             <ListFilter className="w-5 h-5" />
           </Button>
         </Link>
       </div>
 
-      <div className="fkex w-full items-center justify-between pb-2">
+      <div className="flex w-full items-center justify-between pb-2">
         <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
              <Button
                 size="icon"
