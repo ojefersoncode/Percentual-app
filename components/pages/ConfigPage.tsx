@@ -66,7 +66,7 @@ export default function ConfigPage({
         </div>
       </nav>
 
-      <div className="w-full justify-center bg-gray-200 dark:bg-background p-4 rounded-lg w-full shadow-lg flex flex-col space-y-8">
+      <div className="w-full justify-center bg-gray-200 dark:bg-background p-4 rounded-lg w-full shadow-lg flex flex-col space-y-6">
         <h2 className="text-md px-4 font-sans text-black dark:text-text">
           {`Configurar ${template}`}
         </h2>
@@ -102,7 +102,7 @@ export default function ConfigPage({
             />
           )}
         </div>
-        <div className="flex justify-between my-6">
+        <div className="flex justify-between my-4">
           {step > 1 && (
             <Button
               variant="outline"
