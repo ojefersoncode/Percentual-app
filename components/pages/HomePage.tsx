@@ -10,7 +10,7 @@ export default function HomePage({ user }: { user: User }) {
   return (
     <div className="flex min-h-screen w-full white dark:bg-background touch-pan-x touch-pan-y">
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
-        <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b border-gray-200 dark:border-border">
+        <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-background border-b border-gray-200 dark:border-border">
           <div className="flex gap-1 text-lg font-sans items-center">
             <img className="size-7" src="/LogoC.png" alt="logo" />
             <div className="flex">
