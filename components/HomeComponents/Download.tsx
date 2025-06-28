@@ -17,12 +17,12 @@ const projects = [
     update: '18 de junho'
   },
   {
-    name: 'Teste',
+    name: 'Fatech',
     version: '1.1',
     update: '28 de junho'
   },
   {
-    name: 'Teste2',
+    name: 'Nordom',
     version: '1.2',
     update: '29 de junho'
   },
