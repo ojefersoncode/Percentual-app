@@ -12,7 +12,7 @@ import { useRouter } from 'next/navigation';
 import { SubscriptionWithPriceAndProduct } from '../../utils/types';
 import { Bell } from 'lucide-react';
 import { Footer } from '../landing/Footer';
-import { Pricing } from '../landing/Pricing;
+import { Pricing } from '../landing/Pricing';
 
 export default function AccountPage({
   user,
