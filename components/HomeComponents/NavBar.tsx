@@ -77,8 +77,7 @@ export function Navbar() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 mr-4 touch-pan-x touch-pan-y">
-        <DropdownMenuLabel className="flex flex-col"> 
-          <div className="flex items-center justify-between pt-1">
+        <DropdownMenuLabel className="flex items-center gap-1"> 
             <Image 
               height={32}
               width={32}
@@ -86,12 +85,9 @@ export function Navbar() {
               className="rounded-full border-2 border-btn dark:border-btn"
               alt="User"
              />
-            <ModeToggle />
-          </div>
-          <div className="pt-0.5">
              <span className="text-xs font-ariel">Jeferson</span>
-          </div>
         </DropdownMenuLabel>
+        
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem onClick={() => router.push('/Home')}>
@@ -120,6 +116,9 @@ export function Navbar() {
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => router.push('/planos-e-compras')}>
                   <CreditCard className="w-4 h-4 mr-2" /> Meu plano
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <ModeToggle />
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
