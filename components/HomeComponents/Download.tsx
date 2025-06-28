@@ -33,19 +33,21 @@ export const Download = () => {
     <section className="flex flex-col h-full bg-white dark:bg-background p-4">
 
       <div className="flex flex-wrap md:flex-nowrap w-full gap-2 items-center justify-between pb-4">
-        <Input
-          type="search"
-          placeholder="Pesquisar..."
-          className="flex-1 min-w-[160px] border border-zinc-300 dark:border-border bg-white dark:bg-subbackground"
-        />
-
-        <Button
-          size="icon"
-          className="rounded-lg bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground text-black dark:text-text border border-zinc-300 dark:border-border"
-        >
-          <Search className="w-5 h-5" />
-        </Button>
-
+        
+        <div className="flex items-center border border-zinc-300 dark:border-border">
+           <Input
+              type="search"
+              placeholder="Pesquisar..."
+              className="flex-1 min-w-[160px] border-none bg-white dark:bg-subbackground"
+          />
+           <Button
+             size="icon"
+             className="rounded-lg bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground text-black dark:text-text border border-zinc-300 dark:border-border"
+            >
+             <Search className="w-5 h-5" />
+           </Button>
+        </div>
+          
         <Link href="/create-project">
           <Button
             size="icon"
