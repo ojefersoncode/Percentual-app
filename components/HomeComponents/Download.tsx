@@ -1,51 +1,50 @@
 'use client';
 import Link from 'next/link';
 import { Button } from '../../components/ui/button';
-import { HeroCards } from '../landing/HeroCards';
+import { Card, CardContent } from '../../components/ui/card'; // Se você tiver um componente Card, use ele.
+import { Clock, GitBranch } from 'lucide-react'; // Ícones parecidos com os da Vercel
 
 export const Download = () => {
   return (
     <section className="container bg-white dark:bg-background grid lg:grid-cols-2 place-items-center px-2 py-14 md:pt-28 gap-8">
-      <div className="text-center lg:text-start mx-7 max-md:mx-4 space-y-4">
-        <main className="text-4xl md:text-6xl font-bold">
-          <h1 className="inline">
-            <span className="inline text-slate-900 dark:text-text">
-              Cooderfy
-            </span>{' '}
-          </h1>{' '}
-          <h2 className="inline">
-            <span className="inline text-green-600">
-              Start app.
-            </span>{' '}
-          </h2>
-        </main>
+      
 
-        <p className="text-base text-black dark:text-text md:w-10/12 mx-auto lg:mx-0">
-          Com a Cooderfy, você cria seu projetos de forma rápida, fácil e
-          segura. Configure tudo com facilidade em nossa plataforma, vincule com
-          o github e crie seu repositorio automaticamente com apenas alguns
-          cliques, configure tambem suas palletas de cores, fontes e icones,
-          além de configurar toda parte do back-end com supabas de forma
-          automatica com deploy na vercel.
-        </p>
+      {/* Seção dos Projetos estilo Vercel */}
+      <div className="flex flex-col gap-4 w-full max-w-lg">
+        {[{
+          name: 'percentual-app',
+          domain: 'cooderfy.com',
+          repo: 'ojefersoncode/Percentual-app',
+          update: '9m ago',
+          file: 'ProfilePage.tsx'
+        }, {
+          name: 'voin',
+          domain: 'voin-gamma.vercel.app',
+          repo: 'ojefersoncode/Voin',
+          update: 'Jun 18',
+          file: 'tailwind.config.js'
+        }].map((project, i) => (
+          <Card key={i} className="bg-muted dark:bg-subbackground border border-border shadow-md">
+            <CardContent className="p-4 space-y-1">
+              <h3 className="text-lg font-semibold text-foreground">{project.name}</h3>
+              <p className="text-sm text-muted-foreground">{project.domain}</p>
 
-        <div className="flex w-full max-sm:justify-center items-center pt-5 pb-4">
-          <Link
-            href="/create-project"
-            passHref
-            className="bg-gray-600 dark:bg-btn rounded-lg"
-          >
-            <Button className="border bg-btn animate-bounce mb-1">
-              <span className="text-lg font-semibold darK:text-gray-700 px-16">
-                Criar meu app
-              </span>
-            </Button>
-          </Link>
-        </div>
-      </div>
+              <div className="text-xs flex items-center gap-1 mt-2 bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded-full w-fit">
+                <span className="text-gray-800 dark:text-gray-300">{project.repo}</span>
+              </div>
 
-      <div className="z-10 mt-16">
-        <HeroCards />
+              <div className="text-sm text-muted-foreground mt-2 flex items-center gap-2">
+                <Clock size={14} />
+                <span>Update {project.file}</span>
+              </div>
+
+              <div className="text-sm text-muted-foreground flex items-center gap-2">
+                <GitBranch size={14} />
+                <span>{project.update} on <strong>main</strong></span>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );
