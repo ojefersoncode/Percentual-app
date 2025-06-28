@@ -126,7 +126,7 @@ export default function AccountPage({
          </div>
        </div>
         <div>
-        <pricing />
+        <Pricing />
         </div>
       </main>
       <Footer />
