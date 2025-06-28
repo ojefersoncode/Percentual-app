@@ -7,12 +7,12 @@ import { Clock, GitBranch, Search, Plus, EllipsisVertical, ListFilter } from 'lu
 
 const projects = [
   {
-    name: 'percentual-app',
+    name: 'Percentual',
     version: '1.7',
     update: '9 de agosto'
   },
   {
-    name: 'voin',
+    name: 'Voin',
     version: '1.0',
     update: '18 de junho'
   },
