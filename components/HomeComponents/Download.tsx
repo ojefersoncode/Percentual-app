@@ -65,7 +65,7 @@ export const Download = () => {
 
               <p className="text-sm text-muted-foreground">{project.domain}</p>
 
-              <div className="text-xs flex items-center gap-1 mt-2 bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded-full w-fit">
+              <div className="text-xs flex items-center gap-1 mt-2 text-text/80 dark:text-text/80 bg-btb dark:bg-btn px-2 py-1 rounded-full w-fit">
                 <span className="text-gray-800 dark:text-gray-300">{project.repo}</span>
               </div>
 
