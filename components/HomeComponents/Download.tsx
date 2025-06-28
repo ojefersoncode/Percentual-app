@@ -9,15 +9,23 @@ const projects = [
   {
     name: 'percentual-app',
     version: '1.7',
-    repo: 'ojefersoncode/Percentual-app',
     update: '9 de agosto'
   },
   {
     name: 'voin',
     version: '1.0',
-    repo: 'ojefersoncode/Voin',
     update: '18 de junho'
-  }
+  },
+  {
+    name: 'Teste',
+    version: '1.1',
+    update: '28 de junho'
+  },
+  {
+    name: 'Teste2',
+    version: '1.2',
+    update: '29 de junho'
+  },
 ];
 
 export const Download = () => {
@@ -65,9 +73,6 @@ export const Download = () => {
                 <span>Versão: </span>
                 <p>{project.version}</p>
                </div>
-              <div className="text-xs flex items-center gap-1 mt-2 text-text/80 dark:text-text/80 bg-btb dark:bg-btn px-2 py-1 rounded-full w-fit">
-                <span className="text-gray-800 dark:text-gray-300">{project.repo}</span>
-              </div>
 
               <div className="text-sm text-muted-foreground flex items-center gap-2">
                 <Clock size={14} />
