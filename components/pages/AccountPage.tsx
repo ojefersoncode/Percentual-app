@@ -71,9 +71,9 @@ export default function AccountPage({
       </nav>
 
       
-      <main className=" flex flex-1 flex-col p-4 md:gap-8 md:p-10">
-        <div className="flex flex-col gap-4 p-4 border border-gray-500 dark:border-border rounded-lg">
-        <div className="mx-auto grid w-full max-w-6xl gap-2">
+      <main className=" flex flex-1 flex-col bg-white dark:bg-background p-4 md:gap-8 md:p-10">
+        <div className="flex flex-col gap-4 p-4 bg-white dark:bg-background border border-gray-500 dark:border-border rounded-lg">
+         <div className="mx-auto grid w-full max-w-6xl gap-2">
           <div className="flex flex-col gap-1 items-center border-b border-gray-400 dark:border-border pb-2">
              <Image 
                className="rounded-full border-2 border-btn dark:border-btn"
@@ -88,7 +88,7 @@ export default function AccountPage({
             Assinatura e compras
           </h1>
         </div>
-        <div className="mx-auto grid w-full max-w-6xl items-start gap-6 ">
+        <div className="mx-auto grid w-full max-w-6xl items-start gap-6 bg-white dark:bg-background">
           <div className=" grid gap-6">
             <div data-chunk="dashboard-04-chunk-1">
               <div>
