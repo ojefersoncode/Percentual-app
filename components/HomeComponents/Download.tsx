@@ -7,7 +7,7 @@ import { Clock, GitBranch, Search, Plus, Ellipsis } from 'lucide-react';
 
 export const Download = () => {
   return (
-    <section className="flex flex-col h-full bg-white dark:bg-background place-items-center p-4">
+    <section className="flex flex-col h-full bg-white dark:bg-background p-4">
 
       <div className="flex flex-wrap md:flex-nowrap w-full gap-2 items-center justify-between pb-4">
          <Input
@@ -30,7 +30,7 @@ export const Download = () => {
      </div>
 
       <div className="px-4 pb-1">
-         <h1 className="text-xl text-black dark:text-text">Projetos</h1>
+         <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
       </div>
 
       {/* Seção dos Projetos estilo Vercel */}
