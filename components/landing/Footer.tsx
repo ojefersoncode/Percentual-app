@@ -44,7 +44,7 @@ export const Footer = () => {
         ))}
       </section>
 
-      <section className="container pb-1 font-mono opacity-70 text-xs">
+      <section className="px-4 py-1 font-mono opacity-70 text-xs">
         <div className="flex gap-1">
           <span>&copy; 2024,</span>
           <a
