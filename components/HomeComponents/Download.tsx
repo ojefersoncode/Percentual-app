@@ -47,19 +47,18 @@ export const Download = () => {
              <Search className="w-5 h-5" />
            </Button>
         </div>
-          
-        <Link href="/create-project">
+        
           <Button
             size="icon"
             className="rounded-lg border border-zinc-300 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground  text-black dark:text-text"
           >
             <ListFilter className="w-5 h-5" />
           </Button>
-        </Link>
       </div>
 
       <div className="flex w-full items-center justify-between pb-2">
         <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
+          <Link href="/create-project">
              <Button
                 size="icon"
                 className="rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text"
@@ -68,9 +67,10 @@ export const Download = () => {
                    <span className="text-sm">
                      Novo projeto
                     </span> 
-                 </div>
-               <Plus className="w-5 h-5" />
-          </Button>
+                 <Plus className="w-5 h-5" />
+               </div>
+             </Button>
+          </Link>
       </div>
 
       <div className="flex flex-col gap-4 w-full grid md:grid-cols-2">
