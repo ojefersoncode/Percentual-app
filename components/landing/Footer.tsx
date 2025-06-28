@@ -5,10 +5,10 @@ import { ModeToggle } from './mode-toggle';
 export const Footer = () => {
   const sections = [
     {
-      links: ['Suporte', 'Github', 'Documentação'],
+      links: ['Suporte', 'Componentes', 'Documentação'],
     },
     {
-      links: ['React js', 'Next js', 'Supabase'],
+      links: ['Wcode', 'Next js', 'Supabase'],
     },
   ];
 
