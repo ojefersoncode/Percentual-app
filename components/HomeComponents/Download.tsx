@@ -29,7 +29,7 @@ export const Download = () => {
          </Link>
      </div>
 
-      <div className="py-2">
+      <div className="pb-2">
          <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
       </div>
 
