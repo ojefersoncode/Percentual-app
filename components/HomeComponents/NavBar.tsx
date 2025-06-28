@@ -85,7 +85,7 @@ export function Navbar() {
               className="rounded-full border-2 border-btn dark:border-btn"
               alt="User"
              />
-             <span className="text-sm font-ariel">Jeferson</span>
+             <span className="text-sm">Jeferson Vidal</span>
         </DropdownMenuLabel>
         
         <DropdownMenuSeparator />
@@ -111,15 +111,15 @@ export function Navbar() {
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
+                <DropdownMenuItem className="flex w-full justify-center">
+                   <ModeToggle />
+                </DropdownMenuItem>
+                   <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={() => router.push('/profile')}>
                   <User className="w-4 h-4 mr-2" /> Perfil
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => router.push('/planos-e-compras')}>
                   <CreditCard className="w-4 h-4 mr-2" /> Meu plano
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem className="flex w-full justify-center">
-                   <ModeToggle />
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
