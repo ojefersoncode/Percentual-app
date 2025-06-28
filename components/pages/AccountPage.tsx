@@ -73,7 +73,7 @@ export default function AccountPage({
 
       
       <main className=" flex flex-1 flex-col bg-white dark:bg-background p-4 md:gap-8 md:p-10">
-        <div className="flex flex-col gap-4 p-4 bg-white dark:bg-background">
+        <div className="flex flex-col gap-4 bg-white dark:bg-background">
          <div className="mx-auto grid w-full max-w-6xl">
           <h1 className="text-md font-semibold pt-1">
             Assinatura e compras
