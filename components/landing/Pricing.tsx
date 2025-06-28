@@ -129,7 +129,7 @@ export const Pricing = ({ user }: { user: User | null }) => {
     <section id="pricing" className="container py-10 sm:py-20">
       <h2 className="items-center text-2xl md:text-3xl font-bold text-center">
         Planos e
-        <span className="text-green-600 px-1">
+        <span className="text-green-600 ml-2">
           Preços
         </span>
       </h2>
