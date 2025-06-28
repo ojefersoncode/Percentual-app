@@ -42,7 +42,7 @@ export const Download = () => {
           />
            <Button
              size="icon"
-             className="rounded-lg bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground text-black dark:text-text border border-zinc-300 dark:border-border"
+             className="bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground text-black dark:text-text border-r border-zinc-300 dark:border-border"
             >
              <Search className="w-5 h-5" />
            </Button>
