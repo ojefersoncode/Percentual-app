@@ -7,13 +7,13 @@ import { Clock, GitBranch, Search, Plus } from 'lucide-react';
 
 export const Download = () => {
   return (
-    <section className="flex flex-col flex-1 bg-white dark:bg-background grid lg:grid-cols-2 place-items-center p-4 md:pt-28 gap-8">
+    <section className="flex flex-col h-screen bg-white dark:bg-background grid lg:grid-cols-2 place-items-center p-4 md:pt-28 gap-8">
 
       <div className="flex flex-wrap md:flex-nowrap w-full gap-2 items-center justify-between">
          <Input
            type="search"
             placeholder="Pesquisar..."
-            className="flex-1 min-w-[160px] border border-zinc-300 dark:border-border"
+            className="flex-1 min-w-[160px] border border-zinc-300 dark:border-border bg-white dark:bg-subbackground"
           />
 
         <Button size="icon" className="rounded-lg">
