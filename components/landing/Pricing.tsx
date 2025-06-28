@@ -144,8 +144,8 @@ export const Pricing = ({ user }: { user: User | null }) => {
             key={pricing.title}
             className={
               pricing.popular === PopularPlanType.YES
-                ? 'drop-shadow-xl shadow-black/10 dark:shadow-white/10'
-                : ''
+                ? 'drop-shadow-xl shadow-black/10 dark:shadow-white/10 dark:bg-subbackground'
+                : 'bg-white dark:bg-background 
             }
           >
             <CardHeader>
@@ -159,7 +159,7 @@ export const Pricing = ({ user }: { user: User | null }) => {
               </CardTitle>
               <div>
                 <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
+                <span className="text-muted-foreground"> /mês</span>
               </div>
 
               <CardDescription>{pricing.description}</CardDescription>
