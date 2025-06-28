@@ -58,7 +58,7 @@ export default function AccountPage({
   return (
     <div className="flex min-h-screen w-full flex-col">
     
-      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-background border-b border-zinc-400 dark:border-border">
+      <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-background border-b border-zinc-300 dark:border-border">
         <div className="flex gap-1 items-center">
           <img className="size-5" src="/LogoC.png"  alt="logo" />
           <div className="flex">
@@ -104,7 +104,7 @@ export default function AccountPage({
                         : 'Voçe ainda nao assinou nenhum plano.'}
                     </p>
                   </div>
-                  <div className="border-t border-zinc-400 dark:border-border pt-4 flex space-between">
+                  <div className="border-t border-zinc-300 dark:border-border pt-4 flex space-between">
                     <Button onClick={handleBillingPortal} disabled={loading}>
                       Gerenciar meu plano
                     </Button>
