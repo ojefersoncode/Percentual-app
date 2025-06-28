@@ -20,7 +20,7 @@ export const Download = () => {
            <Search className="w-5 h-5" />
         </Button>
 
-        <Button size="icon" className="rounded-lg">
+        <Button size="icon" className="rounded-lg bg-btn dark:bg-btn">
            <Plus className="w-5 h-5" />
         </Button>
      </div>
