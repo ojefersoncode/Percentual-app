@@ -119,7 +119,7 @@ export function Navbar() {
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem className="flex w-full justify-between">
-                   <p className="text-sm text-black dark:text-text">Tema</p>  
+                   <p className="text-xs text-black dark:text-text">Tema</p>  
                    <ModeToggle />
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
