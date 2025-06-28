@@ -127,14 +127,14 @@ export const Pricing = ({ user }: { user: User | null }) => {
   };
   return (
     <section id="pricing" className="container py-10 sm:py-20">
-      <h2 className="text-xl md:text-4xl font-bold text-center">
+      <h2 className="items-center text-2xl md:text-3xl font-bold text-center">
         Planos e
-        <span className="text-green-600">
+        <span className="text-green-600 px-1">
           Preços
         </span>
       </h2>
       <h3 className="text-base text-center text-muted-foreground pt-4 pb-8">
-        Garanta agora sua assinatura e tenha acesso a conteúdos exclusivos que
+        Assine é tenha acesso a conteúdos exclusivos que
         preparamos para voçe!.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -180,7 +180,7 @@ export const Pricing = ({ user }: { user: User | null }) => {
               <div className="space-y-4">
                 {pricing.benefitList.map((benefit: string) => (
                   <span key={benefit} className="flex">
-                    <Check className="text-red-600" />{' '}
+                    <Check className="text-green-600" />
                     <h3 className="ml-2">{benefit}</h3>
                   </span>
                 ))}
