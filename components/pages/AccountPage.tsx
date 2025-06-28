@@ -61,7 +61,7 @@ export default function AccountPage({
         <div className="flex gap-1 items-center">
           <img className="size-5" src="/LogoC.png"  alt="logo" />
           <div className="flex">
-            <h1 className="dark:text-gray-100 font-arial text-base">Cooderfy</h1>
+            <h1 className="dark:text-gray-100 font-sans text-base">Cooderfy</h1>
           </div>
         </div>
         <div className="flex items-center gap-3">
@@ -90,7 +90,7 @@ export default function AccountPage({
         </div>
         <div className="mx-auto grid w-full max-w-6xl items-start gap-6 ">
           <div className=" grid gap-6">
-            <div x-chunk="dashboard-04-chunk-1">
+            <div data-chunk="dashboard-04-chunk-1">
               <div>
                 <h2 className="py-2">Email</h2>
                 <div>Seu usuario esta vinculado a este email</div>
@@ -104,7 +104,7 @@ export default function AccountPage({
                 </form>
               </div>
               <div className="py-2 bg-white dark:bg-background">
-                <div x-chunk="dashboard-04-chunk-2">
+                <div data-chunk="dashboard-04-chunk-2">
                   <div className="py-2 text-black dark:text-text">
                     <h2 className="text-xl font-bold">Plano e compras</h2>
                     <p>
