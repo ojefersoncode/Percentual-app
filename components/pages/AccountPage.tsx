@@ -125,9 +125,9 @@ export default function AccountPage({
           </div>
          </div>
        </div>
-        <div>
-        <Pricing />
-        </div>
+         <div className="w-full">
+           <Pricing user={user} />
+         </div>
       </main>
       <Footer />
     </div>
