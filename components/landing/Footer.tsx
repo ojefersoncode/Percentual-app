@@ -15,16 +15,16 @@ export const Footer = () => {
   return (
     <footer id="footer" className="bg-white dark:bg-background text-black dark:text-gray-100 border-t border-gray-200 dark:border-border">
 
-     <div className="flex w-full justify-between items-center px-6 py-4">
+     <div className="flex w-full justify-between items-center p-4">
        <a
           href="/"
-          className="flex items-center select-none px-2">
+          className="flex items-center select-none">
           <img className="size-7" src="/LogoC.png" alt="logo" />
         </a>
       <ModeToggle />
       </div>
 
-      <section className="flex items-center py-4 grid grid-cols-2 justify-between gap-y-4">
+      <section className="flex items-center p-4 grid grid-cols-2 justify-between gap-y-4">
         {sections.map((section, index) => (
           <div key={`section-${index}`} className="flex flex-col gap-2">
             <ul className="flex flex-col gap-1 font-mono text-sm">
