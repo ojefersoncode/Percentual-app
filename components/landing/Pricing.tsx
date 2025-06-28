@@ -145,7 +145,7 @@ export const Pricing = ({ user }: { user: User | null }) => {
             className={
               pricing.popular === PopularPlanType.YES
                 ? 'drop-shadow-xl shadow-black/10 dark:shadow-white/10 dark:bg-subbackground'
-                : 'bg-white dark:bg-background 
+                : 'bg-white dark:bg-background'
             }
           >
             <CardHeader>
