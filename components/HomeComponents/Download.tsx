@@ -1,13 +1,13 @@
 'use client';
 import Link from 'next/link';
 import { Button } from '../../components/ui/button';
-import { Input } from '../../components/ui/Input';
+import { Input } from '../../components/ui/input';
 import { Card, CardContent } from '../../components/ui/card';
 import { Clock, GitBranch, Search, Plus } from 'lucide-react';
 
 export const Download = () => {
   return (
-    <section className="container bg-white dark:bg-background grid lg:grid-cols-2 place-items-center px-2 py-14 md:pt-28 gap-8">
+    <section className="container bg-white dark:bg-background grid lg:grid-cols-2 place-items-center p-4 md:pt-28 gap-8">
 
       <div className="flex w-full gap-4 items-center">
          <Input
