@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 import { Card, CardContent } from '../../components/ui/card';
-import { Clock, GitBranch, Search, Plus } from 'lucide-react';
+import { Clock, GitBranch, Search, Plus, Ellipsis } from 'lucide-react';
 
 export const Download = () => {
   return (
@@ -46,7 +46,10 @@ export const Download = () => {
         }].map((project, i) => (
           <Card key={i} className="bg-white dark:bg-subbackground border border-zinc-300 dark:border-border shadow-md">
             <CardContent className="p-4 space-y-1">
-              <h3 className="text-lg font-semibold text-foreground">{project.name}</h3>
+              <div className="flex w-full justify-between items-center">
+                 <h3 className="text-lg font-semibold text-foreground">{project.name}</h3>
+                <Ellipsis className="w-4 h-4 text-black dark:text-text" />
+              </div>
               <p className="text-sm text-muted-foreground">{project.domain}</p>
 
               <div className="text-xs flex items-center gap-1 mt-2 bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded-full w-fit">
