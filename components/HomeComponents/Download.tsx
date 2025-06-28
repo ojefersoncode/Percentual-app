@@ -29,11 +29,10 @@ export const Download = () => {
          </Link>
      </div>
 
-      <div className="px-4 pb-1">
+      <div className="py-2">
          <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
       </div>
 
-      {/* Seção dos Projetos estilo Vercel */}
       <div className="flex flex-col gap-4 w-full">
         {[{
           name: 'percentual-app',
@@ -50,10 +49,12 @@ export const Download = () => {
         }].map((project, i) => (
           <Card key={i} className="bg-white dark:bg-subbackground border border-zinc-300 dark:border-border shadow-md">
             <CardContent className="p-4 space-y-1">
+              
               <div className="flex w-full justify-between items-center">
                  <h3 className="text-lg font-semibold text-foreground">{project.name}</h3>
                 <Ellipsis className="w-4 h-4 text-black dark:text-text" />
               </div>
+              
               <p className="text-sm text-muted-foreground">{project.domain}</p>
 
               <div className="text-xs flex items-center gap-1 mt-2 bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded-full w-fit">
@@ -69,6 +70,7 @@ export const Download = () => {
                 <GitBranch size={14} />
                 <span>{project.update} on <strong>main</strong></span>
               </div>
+              
             </CardContent>
           </Card>
         ))}
