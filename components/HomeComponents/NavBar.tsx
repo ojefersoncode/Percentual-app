@@ -78,14 +78,10 @@ export function Navbar() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 mr-4 touch-pan-x touch-pan-y">
         <DropdownMenuLabel className="flex items-center gap-2"> 
-            <Image 
-              height={32}
-              width={32}
-              src="/User.jpeg"
-              className="rounded-full border-2 border-btn dark:border-btn"
-              alt="User"
-             />
-             <span className="text-sm">Jeferson Vidal</span>
+            <div className="flex w-full justify-between items-center">
+              <h1 className="text-sm">Tema</h1>
+               <ModeToggle />
+            </div>
         </DropdownMenuLabel>
         
         <DropdownMenuSeparator />
@@ -111,10 +107,6 @@ export function Navbar() {
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
-                <DropdownMenuItem className="flex w-full justify-center">
-                   <ModeToggle />
-                </DropdownMenuItem>
-                   <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={() => router.push('/profile')}>
                   <User className="w-4 h-4 mr-2" /> Perfil
                 </DropdownMenuItem>
