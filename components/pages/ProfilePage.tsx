@@ -20,7 +20,7 @@ export default function ProfilePage({ user }: { user: User }) {
   return (
     <div className="flex flex-col w-full h-screen bg-white dark:bg-background touch-pan-x touch-pan-y">
       {/* Navbar */}
-      <nav className="flex w-full justify-between py-1 px-4 border-b bg-white dark:bg-background">
+      <nav className="flex w-full justify-between py-1 px-4 border-b border-zinc-300 bg-white dark:bg-background">
         <div className="flex gap-1 text-base items-center select-none">
           <img className="size-5" src="/LogoC.png" alt="logo" />
           <h1 className="text-black dark:text-text font-medium">Cooderfy</h1>
@@ -34,7 +34,7 @@ export default function ProfilePage({ user }: { user: User }) {
       {/* Main */}
       <main className="flex justify-center p-4">
         <div className="w-full max-w-3xl space-y-6">
-          <Card className="border rounded-md shadow-sm bg-white dark:bg-background border border-gray-500 dark:border-border">
+          <Card className="border rounded-md shadow-sm bg-white dark:bg-background border border-zinc-300 dark:border-border">
             <CardHeader className="flex w-full items-center gap-4 mt-4">
               <div className="flex w-full items-center justify-between">
               <Image
@@ -44,7 +44,7 @@ export default function ProfilePage({ user }: { user: User }) {
                 className="rounded-full border-2 border-zinc-600 dark:border-border"
                 alt="User"
               />
-              <label className="cursor-pointer flex flex-col items-center justify-center px-12 py-2 border-2 rounded-lg bg-white dark:bg-subbackground transition">
+              <label className="cursor-pointer flex flex-col items-center justify-center px-12 py-2 border-2 border-zinc-300 dark:border-border rounded-lg bg-white dark:bg-subbackground transition">
                 <input
                   type="file"
                   accept="image/png, image/svg+xml, image/webp, image/jpeg"
@@ -67,7 +67,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:subbg-background"
+                  className="text-black dark:text-text border border-zinc-300 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:subbg-background"
                 />
               </div>
 
@@ -78,7 +78,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
+                  className="text-black dark:text-text border border-zinc-300 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
                 />
               </div>
 
@@ -89,7 +89,7 @@ export default function ProfilePage({ user }: { user: User }) {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="text-black dark:text-text border border-gray-500 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
+                  className="text-black dark:text-text border border-zinc-300 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-background"
                 />
               </div>
 
@@ -100,7 +100,7 @@ export default function ProfilePage({ user }: { user: User }) {
                     id="bio"
                     value={bio}
                     onChange={(e) => setBio(e.target.value)}
-                    className="w-full min-h-[80px] rounded-md resize-none border border-gray-500 dark:border-border px-3 py-2 text-sm text-black dark:text-text bg-white dark:bg-subbackground"
+                    className="w-full min-h-[80px] rounded-md resize-none border border-zinc-300 dark:border-border px-3 py-2 text-sm text-black dark:text-text bg-white dark:bg-subbackground"
                   />
               </div>
             </CardContent>
