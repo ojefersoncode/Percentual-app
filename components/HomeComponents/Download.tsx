@@ -56,13 +56,10 @@ export const Download = () => {
           </Button>
       </div>
 
-      <div className="flex w-full items-center justify-between pb-2">
+      <div className="flex flex-1 w-full items-center justify-between pb-2">
         <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
           <Link href="/create-project">
-             <Button
-                size="icon"
-                className="rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text"
-               >
+             <Button className="rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text">
                <div className="flex w-full items-center gap-2">
                    <span className="text-sm">
                      Novo projeto
