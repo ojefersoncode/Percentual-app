@@ -38,7 +38,7 @@ export const Download = () => {
            <Input
               type="search"
               placeholder="Pesquisar..."
-              className="flex-1 min-w-[160px] border-none bg-white dark:bg-subbackground"
+              className="flex-1 min-w-[160px] text-black dark:text-text border-none bg-white dark:bg-subbackground"
           />
            <Button
              size="icon"
