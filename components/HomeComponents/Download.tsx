@@ -7,27 +7,26 @@ import { Clock, GitBranch, Search, Plus } from 'lucide-react';
 
 export const Download = () => {
   return (
-    <section className="container flex-1 bg-white dark:bg-background grid lg:grid-cols-2 place-items-center p-4 md:pt-28 gap-8">
+    <section className="flex flex-col flex-1 bg-white dark:bg-background grid lg:grid-cols-2 place-items-center p-4 md:pt-28 gap-8">
 
-      <div className="flex w-full space-x-4 items-center">
+      <div className="flex flex-wrap md:flex-nowrap w-full gap-2 items-center justify-between">
          <Input
            type="search"
-           placeholder="Pesquisar..."
-           className="border border-zinc-300 dark:border-border"
-         />
+            placeholder="Pesquisar..."
+            className="flex-1 min-w-[160px] border border-zinc-300 dark:border-border"
+          />
 
-        <Button className="p-4 rounded-lg">
-          <Search />
+        <Button size="icon" className="rounded-lg">
+           <Search className="w-5 h-5" />
         </Button>
 
-        <Button className="p-4 rounded-lg">
-          <Plus />
+        <Button size="icon" className="rounded-lg">
+           <Plus className="w-5 h-5" />
         </Button>
-      
-      </div>
+     </div>
 
       {/* Seção dos Projetos estilo Vercel */}
-      <div className="flex flex-col gap-4 w-full max-w-lg">
+      <div className="flex flex-col gap-4 w-full">
         {[{
           name: 'percentual-app',
           domain: 'cooderfy.com',
@@ -41,7 +40,7 @@ export const Download = () => {
           update: 'Jun 18',
           file: 'tailwind.config.js'
         }].map((project, i) => (
-          <Card key={i} className="bg-muted dark:bg-subbackground border border-border shadow-md">
+          <Card key={i} className="bg-white dark:bg-subbackground border border-zinc-300 dark:border-border shadow-md">
             <CardContent className="p-4 space-y-1">
               <h3 className="text-lg font-semibold text-foreground">{project.name}</h3>
               <p className="text-sm text-muted-foreground">{project.domain}</p>
