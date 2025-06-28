@@ -52,7 +52,7 @@ export const Download = () => {
         <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
       </div>
 
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full grid md:grid-cols-2">
         {projects.map((project, i) => (
           <Card key={i} className="bg-white dark:bg-subbackground border border-zinc-300 dark:border-border shadow-md">
             <CardContent className="p-4 space-y-1">
