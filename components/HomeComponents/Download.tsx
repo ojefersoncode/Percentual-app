@@ -42,7 +42,7 @@ export const Download = () => {
           />
            <Button
              size="icon"
-             className="rounded-l-none rounded-lg-r bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground text-black dark:text-text border-l border-zinc-300 dark:border-border"
+             className="rounded-l-none rounded-lg-r bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground text-black/80 dark:text-text border-l border-zinc-300 dark:border-border"
             >
              <Search className="w-5 h-5" />
            </Button>
@@ -50,7 +50,7 @@ export const Download = () => {
         
           <Button
             size="icon"
-            className="rounded-lg border border-zinc-300 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground  text-black dark:text-text"
+            className="rounded-lg border border-zinc-300 dark:border-border bg-white dark:bg-white hover:bg-white dark:hover:bg-white  text-black/90 dark:text-black/90"
           >
             <ListFilter className="w-5 h-5" />
           </Button>
