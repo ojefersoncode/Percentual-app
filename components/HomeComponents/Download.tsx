@@ -34,7 +34,7 @@ export const Download = () => {
 
       <div className="flex flex-wrap md:flex-nowrap w-full gap-2 items-center justify-between pb-4">
         
-        <div className="flex items-center border border-zinc-300 dark:border-border">
+        <div className="flex flex-1 items-center rounded-lg  border border-zinc-300 dark:border-border">
            <Input
               type="search"
               placeholder="Pesquisar..."
