@@ -74,17 +74,7 @@ export default function AccountPage({
       
       <main className=" flex flex-1 flex-col bg-white dark:bg-background p-4 md:gap-8 md:p-10">
         <div className="flex flex-col gap-4 p-4 bg-white dark:bg-background">
-         <div className="mx-auto grid w-full max-w-6xl gap-2">
-          <div className="flex items-center justify-start gap-2 border-b border-gray-400 dark:border-border pb-2">
-             <Image 
-               className="rounded-full border-2 border-btn dark:border-btn"
-               height={36}
-               width={36}
-               src="/User.jpeg"
-               alt="User"
-             />
-              <h1 className="text-sm font-semibold">Jeferson</h1>
-            </div>
+         <div className="mx-auto grid w-full max-w-6xl">
           <h1 className="text-md font-semibold pt-1">
             Assinatura e compras
           </h1>
