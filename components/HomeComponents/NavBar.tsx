@@ -118,8 +118,7 @@ export function Navbar() {
                   <CreditCard className="w-4 h-4 mr-2" /> Meu plano
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem className="flex w-full justify-between">
-                   <p className="text-xs text-black dark:text-text">Tema</p>  
+                <DropdownMenuItem className="flex w-full justify-center">
                    <ModeToggle />
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
