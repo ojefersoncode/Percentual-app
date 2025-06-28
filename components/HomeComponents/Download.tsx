@@ -29,10 +29,10 @@ export const Download = () => {
          </Link>
      </div>
 
+      <div className="px-4 pb-1">
+         <h1 className="text-xl text-black dark:text-text">Projetos</h1>
+      </div>
 
-      <eiv className="px-4 pb-1">
-      <h1 className="text-xl text-black dark:text-text">Projetos</h1>
-      </eiv>
       {/* Seção dos Projetos estilo Vercel */}
       <div className="flex flex-col gap-4 w-full">
         {[{
