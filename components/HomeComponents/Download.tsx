@@ -7,9 +7,9 @@ import { Clock, GitBranch, Search, Plus, Ellipsis } from 'lucide-react';
 
 export const Download = () => {
   return (
-    <section className="flex flex-col h-auto bg-white dark:bg-background place-items-center p-4 gap-8">
+    <section className="flex flex-col h-full bg-white dark:bg-background place-items-center p-4">
 
-      <div className="flex flex-wrap md:flex-nowrap w-full gap-2 items-center justify-between">
+      <div className="flex flex-wrap md:flex-nowrap w-full gap-2 items-center justify-between pb-4">
          <Input
            type="search"
             placeholder="Pesquisar..."
@@ -29,6 +29,10 @@ export const Download = () => {
          </Link>
      </div>
 
+
+      <eiv className="px-4 pb-1">
+      <h1 className="text-xl text-black dark:text-text">Projetos</h1>
+      </eiv>
       {/* Seção dos Projetos estilo Vercel */}
       <div className="flex flex-col gap-4 w-full">
         {[{
