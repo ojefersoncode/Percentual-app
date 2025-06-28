@@ -20,9 +20,13 @@ export const Download = () => {
            <Search className="w-5 h-5" />
         </Button>
 
-        <Button size="icon" className="rounded-lg bg-btn dark:bg-btn text-text dark:text-text">
-           <Plus className="w-5 h-5" />
-        </Button>
+        <Link href="/create-project">
+          <Button 
+              size="icon" 
+              className="rounded-lg bg-btn dark:bg-btn text-text dark:text-text">
+             <Plus className="w-5 h-5" />
+           </Button>
+         </Link>
      </div>
 
       {/* Seção dos Projetos estilo Vercel */}
