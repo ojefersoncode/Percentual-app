@@ -50,7 +50,7 @@ export const Download = () => {
         
           <Button
             size="icon"
-            className="rounded-lg border border-zinc-300 dark:border-border bg-white dark:bg-white hover:bg-white dark:hover:bg-white  text-black/90 dark:text-black/90"
+            className="rounded-lg border border-zinc-300 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground text-black/90 dark:text-text"
           >
             <ListFilter className="w-5 h-5" />
           </Button>
