@@ -31,7 +31,7 @@ export function Step2({ config, setConfig }: Step2Props) {
               </label>
               <div className="flex w-full">
                 <Input
-                  className="text-sm bg-white dark:bg-subbackground text-black dark:text-text"
+                  className="text-sm bg-white dark:bg-subbackground text-black dark:text-text border border-zinc-300 dark:border-border"
                   placeholder="Cole seu hex aqui"
                   type="text"
                   id=""
@@ -50,7 +50,7 @@ export function Step2({ config, setConfig }: Step2Props) {
               </label>
               <div className="flex w-full">
                 <Input
-                  className="text-sm bg-white dark:bg-subbackground text-black dark:text-text"
+                  className="text-sm bg-white dark:bg-subbackground text-black dark:text-text border border-zinc-300 dark:border-border"
                   placeholder="Cole seu hex aqui"
                   type="text"
                 />
