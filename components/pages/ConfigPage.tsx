@@ -67,8 +67,8 @@ export default function ConfigPage({
       </nav>
 
       <div className="w-full flex-1 justify-center bg-gray-200 dark:bg-background p-4 rounded-lg w-full shadow-lg flex flex-col space-y-6">
-        <h2 className="text-md px-4 font-sans text-black dark:text-text">
-          {`Configurar ${template}`}
+        <h2 className="text-xl px-4 text-black dark:text-text">
+          {`Configurar Projeto ${template}`}
         </h2>
         <div className="space-y-6">
           {step === 1 && (
