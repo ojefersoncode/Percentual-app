@@ -127,14 +127,13 @@ export const Pricing = ({ user }: { user: User | null }) => {
   };
   return (
     <section id="pricing" className="container py-10 sm:py-20">
-      <h2 className="text-3xl md:text-4xl font-bold text-center">
+      <h2 className="text-xl md:text-4xl font-bold text-center">
         Planos e
-        <span className="bg-gradient-to-b text-red-600 bg-clip-text">
-          {' '}
-          Preços{' '}
+        <span className="text-green-600">
+          Preços
         </span>
       </h2>
-      <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
+      <h3 className="text-base text-center text-muted-foreground pt-4 pb-8">
         Garanta agora sua assinatura e tenha acesso a conteúdos exclusivos que
         preparamos para voçe!.
       </h3>
@@ -158,7 +157,7 @@ export const Pricing = ({ user }: { user: User | null }) => {
                 ) : null}
               </CardTitle>
               <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
+                <span className="text-3xl font-bold">R$:{pricing.price}</span>
                 <span className="text-muted-foreground"> /mês</span>
               </div>
 
