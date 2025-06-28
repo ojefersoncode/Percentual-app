@@ -8,17 +8,15 @@ import { Clock, GitBranch, Search, Plus, Ellipsis } from 'lucide-react';
 const projects = [
   {
     name: 'percentual-app',
-    domain: 'cooderfy.com',
+    version: '1.7',
     repo: 'ojefersoncode/Percentual-app',
-    update: '9m ago',
-    file: 'ProfilePage.tsx'
+    update: '9 de agosto'
   },
   {
     name: 'voin',
-    domain: 'voin-gamma.vercel.app',
+    version: '1.0',
     repo: 'ojefersoncode/Voin',
-    update: 'Jun 18',
-    file: 'tailwind.config.js'
+    update: '18 de junho'
   }
 ];
 
@@ -63,19 +61,14 @@ export const Download = () => {
                 <Ellipsis className="w-4 h-4 text-black dark:text-text" />
               </div>
 
-              <p className="text-sm text-muted-foreground">{project.domain}</p>
+              <p className="text-sm text-muted-foreground">{project.version}</p>
 
               <div className="text-xs flex items-center gap-1 mt-2 text-text/80 dark:text-text/80 bg-btb dark:bg-btn px-2 py-1 rounded-full w-fit">
                 <span className="text-gray-800 dark:text-gray-300">{project.repo}</span>
               </div>
 
-              <div className="text-sm text-muted-foreground mt-2 flex items-center gap-2">
-                <Clock size={14} />
-                <span>Update {project.file}</span>
-              </div>
-
               <div className="text-sm text-muted-foreground flex items-center gap-2">
-                <GitBranch size={14} />
+                <Clock size={14} />
                 <span>{project.update} on <strong>main</strong></span>
               </div>
             </CardContent>
