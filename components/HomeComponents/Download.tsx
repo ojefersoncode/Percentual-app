@@ -62,11 +62,13 @@ export const Download = () => {
         <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
              <Button
                 size="icon"
-                className="flex items-center rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text"
+                className="rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text"
                >
-                 <span className="text-sm mr-2">
-                   Novo projeto
-                 </span> 
+               <div className="flex w-full items-center gap-2">
+                   <span className="text-sm">
+                     Novo projeto
+                    </span> 
+                 </div>
                <Plus className="w-5 h-5" />
           </Button>
       </div>
