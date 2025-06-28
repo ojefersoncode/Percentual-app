@@ -61,8 +61,10 @@ export const Download = () => {
                 <Ellipsis className="w-4 h-4 text-black dark:text-text" />
               </div>
 
-              <p className="text-sm text-muted-foreground">{project.version}</p>
-
+              <div className="flex text-sm items-center gap-2 text-muted-foreground">
+                <span>Versão: </span>
+                <p>{project.version}</p>
+               </div>
               <div className="text-xs flex items-center gap-1 mt-2 text-text/80 dark:text-text/80 bg-btb dark:bg-btn px-2 py-1 rounded-full w-fit">
                 <span className="text-gray-800 dark:text-gray-300">{project.repo}</span>
               </div>
