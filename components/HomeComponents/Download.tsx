@@ -51,7 +51,7 @@ export const Download = () => {
         <Link href="/create-project">
           <Button
             size="icon"
-            className="rounded-lg bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground  text-black dark:text-text"
+            className="rounded-lg border border-zinc-300 dark:border-border bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground  text-black dark:text-text"
           >
             <ListFilter className="w-5 h-5" />
           </Button>
@@ -62,9 +62,12 @@ export const Download = () => {
         <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
              <Button
                 size="icon"
-                className="rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text"
+                className="flex items-center rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text"
                >
-            <Plus className="w-5 h-5" />
+                 <span className="text-sm mr-2">
+                   Novo projeto
+                 </span> 
+               <Plus className="w-5 h-5" />
           </Button>
       </div>
 
