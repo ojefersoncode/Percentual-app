@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 import { Card, CardContent } from '../../components/ui/card';
-import { Clock, GitBranch, Search, Plus, EllipsisVertical } from 'lucide-react';
+import { Clock, GitBranch, Search, Plus, EllipsisVertical,  } from 'lucide-react';
 
 const projects = [
   {
@@ -58,8 +58,14 @@ export const Download = () => {
         </Link>
       </div>
 
-      <div className="pb-2">
+      <div className="fkex w-full items-center justify-between pb-2">
         <h1 className="text-xl font-medium text-black dark:text-text">Projetos</h1>
+             <Button
+                size="icon"
+                className="rounded-lg bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn text-text dark:text-text"
+               >
+            <ListFilter className="w-5 h-5" />
+          </Button>
       </div>
 
       <div className="flex flex-col gap-4 w-full grid md:grid-cols-2">
