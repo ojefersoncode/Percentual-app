@@ -13,7 +13,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer id="footer" className="bg-white dark:bg-background text-black dark:text-gray-100 border-t border-gray-200 dark:border-border">
+    <footer id="footer" className="bg-white dark:bg-background text-black dark:text-gray-100 border-t border-zinc-300 dark:border-border">
 
      <div className="flex w-full justify-between items-center p-4">
        <a
