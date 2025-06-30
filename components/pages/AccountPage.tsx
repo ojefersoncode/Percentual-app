@@ -61,9 +61,6 @@ export default function AccountPage({
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-background border-b border-zinc-300 dark:border-border">
         <div className="flex gap-1 items-center">
           <img className="size-5" src="/LogoC.png"  alt="logo" />
-          <div className="flex">
-            <h1 className="dark:text-gray-100 font-sans text-base">Cooderfy</h1>
-          </div>
         </div>
         <div className="flex items-center gap-3">
             <Bell className="size-4" />
