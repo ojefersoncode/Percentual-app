@@ -54,7 +54,7 @@ export default function ConfigPage({
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-background text-white touch-pan-x touch-pan-y">
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b border-gray-200 dark:border-border">
-        <div className="flex">
+        <div className="flex items-center">
           <img className="size-8" src="/LogoC.png" alt="logo" />
         </div>
         <div className="flex items-center gap-2">
