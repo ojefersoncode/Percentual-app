@@ -54,12 +54,10 @@ export default function Componentes({ user }: { user: User }) {
 
   return (
     <div className="flex flex-col bg-white  dark:bg-background touch-pan-x touch-pan-y">
-      {/* Navbar */}
+     
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b">
         <div className="flex items-center">
-          <img className="size-7" src="/LogoC.png" alt="logo" />
-          <div className="flex">
-          </div>
+          <img className="size-8" src="/LogoC.png" alt="logo" />
         </div>
 
         <div className="flex items-center gap-3">
@@ -68,7 +66,7 @@ export default function Componentes({ user }: { user: User }) {
           </div>
       </nav>
 
-      {/* Conteúdo */}
+     
       <main className="flex flex-1 flex-col w-full items-center p-6">
         <div className="flex flex-col gap-2 w-full justify-start pt-4 pb-3">
           <div className="flex w-full items-center justify-between pb-2">
