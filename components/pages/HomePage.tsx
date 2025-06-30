@@ -13,7 +13,7 @@ export default function HomePage({ user }: { user: User }) {
         <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-4 bg-white dark:bg-background border-b border-gray-200 dark:border-border">
           <div className="flex gap-2 items-center px-1">
             <img 
-              className="size-6 rounded-full" 
+              className="size-7 rounded-full" 
               src="/LogoC.png" 
               alt="logo" />
           </div>
