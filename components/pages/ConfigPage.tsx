@@ -54,11 +54,8 @@ export default function ConfigPage({
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-background text-white touch-pan-x touch-pan-y">
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b border-gray-200 dark:border-border">
-        <div className="flex gap-1 text-xl font-bold items-center">
+        <div className="flex">
           <img className="size-8" src="/LogoC.png" alt="logo" />
-          <h1 className="text-gray-900 dark:text-gray-100 text-base">
-            Cooderfy
-          </h1>
         </div>
         <div className="flex items-center gap-2">
           <Bell className="size-4" />
