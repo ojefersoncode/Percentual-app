@@ -56,12 +56,9 @@ export default function Componentes({ user }: { user: User }) {
     <div className="flex flex-col bg-white  dark:bg-background touch-pan-x touch-pan-y">
       {/* Navbar */}
       <nav className="flex w-full justify-between py-2 max-md:px-3 md:px-8 bg-white dark:bg-background border-b">
-        <div className="flex gap-1 text-lg font-sans items-center">
+        <div className="flex items-center">
           <img className="size-7" src="/LogoC.png" alt="logo" />
           <div className="flex">
-            <h1 className="text-black dark:text-text font-sans text-base">
-              Cooderfy
-            </h1>
           </div>
         </div>
 
