@@ -6,21 +6,25 @@ import { Moon, Sun } from 'lucide-react';
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
-  const options: { value: 'light' | 'dark'; icon: React.ReactNode; label: string }[] = [
+  const options: {
+    value: 'light' | 'dark';
+    icon: React.ReactNode;
+    label: string;
+  }[] = [
     {
       value: 'light',
       icon: <Sun className="w-4 h-4" />, // menor ícone
-      label: 'Claro',
+      label: 'Claro'
     },
     {
       value: 'dark',
       icon: <Moon className="w-4 h-4" />,
-      label: 'Escuro',
-    },
+      label: 'Escuro'
+    }
   ];
 
   return (
-    <div className="flex h-6 items-center border border-gray-200 dark:border-border rounded-full overflow-hidden bg-white dark:bg-subbackground">
+    <div className="flex h-6 items-center border border-gray-200 dark:border-border rounded-full  bg-white dark:bg-subbackground">
       {options.map((option) => {
         const isActive = theme === option.value;
 

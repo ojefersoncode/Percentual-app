@@ -25,7 +25,7 @@ export default async function LandingPage() {
         <div className="flex w-full items-center justify-center p-4 max-md:p-2 z-40 fixed">
           <Navbar user={user} />
         </div>
-        <div className="pt-16">
+        <div className="pt-20">
           <HeroLeads />
         </div>
         <FAQ />
