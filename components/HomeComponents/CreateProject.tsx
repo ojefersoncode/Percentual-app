@@ -14,6 +14,7 @@ import {
 import { Plus } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { useToast } from '../ui/use-toast';
 import { createClient } from '../../utils/supabase/client';
 const supabase = createClient();
 
@@ -24,6 +25,7 @@ type CreateProjectProps = {
 export default function CreateProject({
   onProjectCreated
 }: CreateProjectProps) {
+  const { toast } = useToast();
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -32,9 +34,16 @@ export default function CreateProject({
     setName(filtered);
   };
 
-  async function handleSubmit(e: { preventDefault: () => void }) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!name) return alert('Informe um nome válido.');
+    if (!name) {
+      toast({
+        title: 'Nome inválido',
+        description: 'Por favor, informe um nome para o projeto.',
+        variant: 'destructive'
+      });
+      return;
+    }
 
     setLoading(true);
 
@@ -42,12 +51,43 @@ export default function CreateProject({
 
     if (userError || !userData?.user) {
       setLoading(false);
-      alert('Usuário não autenticado.');
+      toast({
+        title: 'Erro de autenticação',
+        description: 'Usuário não autenticado.',
+        variant: 'destructive'
+      });
       return;
     }
 
     const userId = userData.user.id;
 
+    // Verifica projetos existentes
+    const { data: existingProjects, error: countError } = await supabase
+      .from('projects')
+      .select('id', { count: 'exact' })
+      .eq('owner', userId);
+
+    if (countError) {
+      setLoading(false);
+      toast({
+        title: 'Erro ao verificar projetos',
+        description: countError.message,
+        variant: 'destructive'
+      });
+      return;
+    }
+
+    if (existingProjects.length >= 3) {
+      setLoading(false);
+      toast({
+        title: 'Limite atingido',
+        description: 'Você já possui 3 projetos. Delete um para criar outro.',
+        variant: 'destructive'
+      });
+      return;
+    }
+
+    // Criação do novo projeto
     const { data, error } = await supabase
       .from('projects')
       .insert([{ name, owner: userId }])
@@ -57,10 +97,18 @@ export default function CreateProject({
     setLoading(false);
 
     if (error) {
-      alert('Erro ao criar projeto: ' + error.message);
+      toast({
+        title: 'Erro ao criar projeto',
+        description: error.message,
+        variant: 'destructive'
+      });
     } else {
       setName('');
       onProjectCreated(data);
+      toast({
+        title: 'Projeto criado',
+        description: `Projeto "${data.name}" criado com sucesso!`
+      });
     }
   }
 
