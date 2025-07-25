@@ -10,7 +10,7 @@ export default function HomePage({ user }: { user: User }) {
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
         <div className="flex">
           <Sidebar />
-          <ScrollArea className="w-full border-none flex-1">
+          <ScrollArea className="w-full md:h-svh border-none flex-1">
             <Download />
           </ScrollArea>
         </div>
