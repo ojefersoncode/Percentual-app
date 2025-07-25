@@ -51,7 +51,7 @@ export const Download = () => {
   return (
     <section className="flex flex-col bg-white dark:bg-background p-4">
      <div className='flex w-full justify-between items-center pb-2'>
-        <h1 className="text-2xl font-medium text-black dark:text-text">
+        <h1 className="text-xl font-medium text-black dark:text-text">
           Projetos
         </h1>
         <ProfileButton />

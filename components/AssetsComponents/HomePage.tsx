@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col p-4  mx-auto w-full">
       <div className="flex w-full justify-between items-center pb-4">
-        <h1 className="text-2xl font-medium text-black dark:text-text">
+        <h1 className="text-xl font-medium text-black dark:text-text">
           Projetos
         </h1>
         <ProfileButton />
