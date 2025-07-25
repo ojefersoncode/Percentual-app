@@ -49,7 +49,7 @@ export const Download = () => {
 
   return (
     <section className="flex flex-col bg-white dark:bg-background p-4">
-      <div className='pb-4'>
+      <div className='pb-2'>
         <h1 className="text-2xl font-medium text-black dark:text-text">
           Projetos
         </h1>
@@ -86,7 +86,7 @@ export const Download = () => {
       >
         {loading && <span></span>}
         {!loading && projects.length === 0 && (
-          <div className="flex w-full items-center justify-center h-[400px]">
+          <div className="flex w-full items-center justify-center h-[450px]">
             <Empty />
           </div>
         )}
