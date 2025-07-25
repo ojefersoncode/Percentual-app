@@ -40,7 +40,7 @@ export function AuthForm({ state }: { state: AuthState }) {
         try {
           await api.passwordSignup({ email, password });
           await api.passwordSignin({ email, password });
-          router.replace('/dashboard');
+          router.replace('/');
         } catch (e) {
           if (e instanceof Error) {
             toast({
@@ -63,7 +63,7 @@ export function AuthForm({ state }: { state: AuthState }) {
         setLoading(true);
         try {
           await api.passwordSignin({ email, password });
-          router.replace('/dashboard');
+          router.replace('/');
         } catch (e) {
           if (e instanceof Error) {
             toast({
@@ -116,8 +116,8 @@ export function AuthForm({ state }: { state: AuthState }) {
             title: 'Sua senha foi atualizada',
             description: 'Redirecionando para pagina inicial...'
           });
-          setTimeout(() => router.replace('/dashboard'), 3000);
-          router.replace('/dashboard');
+          setTimeout(() => router.replace('/'), 3000);
+          router.replace('/');
         } catch (e) {
           if (e instanceof Error) {
             toast({
