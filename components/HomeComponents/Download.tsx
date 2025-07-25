@@ -9,6 +9,7 @@ import CreateProject from './CreateProject';
 import { Clock, Search } from 'lucide-react';
 import { RemoveProject } from './RemoveProject';
 import { createClient } from '../../utils/supabase/client';
+import { ProfileButton } from './ProfileButton';
 
 const supabase = createClient();
 
@@ -49,10 +50,11 @@ export const Download = () => {
 
   return (
     <section className="flex flex-col bg-white dark:bg-background p-4">
-      <div className='pb-2'>
+     <div className='flex w-full justify-between items-center pb-2'>
         <h1 className="text-2xl font-medium text-black dark:text-text">
           Projetos
         </h1>
+        <ProfileButton />
       </div>
       <div className="flex flex-wrap md:flex-nowrap w-full gap-2 items-center justify-between pb-2">
         <div className="flex flex-1 items-center rounded-lg bg-white dark:bg-subbackground border border-zinc-300 dark:border-border">

@@ -12,7 +12,7 @@ import {
 } from "../ui/input";
 import {
     Navbar
-} from "../HomeComponents/NavBar";
+} from "../HomeComponents/ProfileButton";
 import {
     User
 } from "@supabase/supabase-js";
