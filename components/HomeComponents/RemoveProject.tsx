@@ -8,12 +8,30 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import { DropdownMenuSeparator, Separator } from '@radix-ui/react-dropdown-menu';
 import { EllipsisVertical, Trash, Pen, FolderArchive } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { createClient } from '@/utils/supabase/client';
+const supabase = createClient();
 
-export function RemoveProject() {
-  const router = useRouter();
+type RemoveProjectProps = {
+  projectId: string;
+  onRemoved: () => Promise<void>;
+};
+
+export function RemoveProject({ projectId, onRemoved }: RemoveProjectProps) {
+
+
+  async function handleDelete() {
+    const { error } = await supabase
+      .from('projects')
+      .delete()
+      .eq('id', projectId);
+
+    if (error) {
+      alert('Erro ao excluir projeto: ' + error.message);
+    } else {
+      onRemoved();
+    }
+  }
 
   return (
     <DropdownMenu>
@@ -28,7 +46,7 @@ export function RemoveProject() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mr-2 touch-pan-x touch-pan-y">
         <DropdownMenuGroup className="flex flex-col gap-2">
-          <DropdownMenuItem onClick={() => router.push('/profile')}>
+          <DropdownMenuItem>
             <Pen className="w-4 h-4 mr-3" /> Editar
           </DropdownMenuItem>
 
@@ -36,7 +54,7 @@ export function RemoveProject() {
             <FolderArchive className="w-4 h-4 mr-3" /> Arquivar
           </DropdownMenuItem>
 
-          <DropdownMenuItem>
+          <DropdownMenuItem onClick={handleDelete}>
             <Trash className="w-4 h-4 mr-3" /> Excluir
           </DropdownMenuItem>
         </DropdownMenuGroup>

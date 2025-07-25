@@ -48,7 +48,7 @@ const FAQList: FAQProps[] = [
 
 export const FAQ = () => {
   return (
-    <section id="faq" className="flex flex-col w-full px-4 py-16 max-md:py-14">
+    <section id="faq" className="flex flex-col w-full px-4 py-20 max-md:py-20">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
         Perguntas{' '}
         <span className="bg-gradient-to-b text-btn bg-clip-text">
