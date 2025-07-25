@@ -6,10 +6,9 @@ import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 import { Card, CardContent } from '../../components/ui/card';
 import CreateProject from './CreateProject';
-import { Clock, Filter, Search } from 'lucide-react';
+import { Clock, Search } from 'lucide-react';
 import { RemoveProject } from './RemoveProject';
 import { createClient } from '../../utils/supabase/client';
-import LoadingAnimation from '../Loading/LoadingAnimation';
 
 const supabase = createClient();
 
@@ -70,13 +69,7 @@ export const Download = () => {
           </Button>
         </div>
 
-        <Button
-          size="icon"
-          className="rounded-lg border border-zinc-300 dark:border-border bg-white dark:bg-subbackground
-           hover:bg-white dark:hover:bg-subbackground text-zinc-800 dark:text-text"
-        >
-          <Filter className="w-4 h-4" />
-        </Button>
+       
           <div className="py-3">
         <CreateProject onProjectCreated={handleProjectCreated} />
       </div>
