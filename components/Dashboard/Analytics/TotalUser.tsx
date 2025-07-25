@@ -40,7 +40,7 @@ export function TotalUser() {
   return (
     <Card className="w-full rounded-lg bg-white dark:bg-subbackground border border-zinc-300 dark:border-zinc-700">
       <CardHeader>
-        <CardTitle>Usuarios cadastrados</CardTitle>
+        <CardTitle className='text-lg'>Usuarios cadastrados</CardTitle>
         <CardDescription>Total de contas cadastradas</CardDescription>
       </CardHeader>
       <CardContent>

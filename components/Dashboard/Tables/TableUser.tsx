@@ -166,7 +166,8 @@ export function TableUser() {
         />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto">
+            <Button className="bg-white dark:bg-subbackground dark:hover:bg-subbackground text-background dark:text-text 
+            border border-zinc-300 dark:border-zinc-700 ml-auto">
               Colunas <ChevronDown />
             </Button>
           </DropdownMenuTrigger>
