@@ -36,7 +36,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
 
           <div className="flex items-center gap-4">
             <ModeToggle />
-            <Link className="p-0" href="/Home" passHref>
+            <Link className="p-0" href="/dashboard" passHref>
               <Button
                 className="px-5 py-0 text-text hover:text-text text-sm bg-btn hover:bg-btn dark:hover:bg-btn"
                 variant="ghost"

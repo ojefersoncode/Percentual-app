@@ -8,8 +8,8 @@ module.exports = {
         destination: '/auth/signin'
       },
       {
-        source: '/Home',
-        destination: '/home'
+        source: '/dashboard',
+        destination: '/Dashboard'
       }
     ];
   },
