@@ -21,17 +21,17 @@ import {
 export const description = 'A linear area chart';
 
 const chartData = [
-  { month: 'January', desktop: 186 },
-  { month: 'February', desktop: 305 },
-  { month: 'March', desktop: 237 },
-  { month: 'April', desktop: 73 },
-  { month: 'May', desktop: 209 },
-  { month: 'June', desktop: 214 }
+  { month: 'January', online: 186 },
+  { month: 'February', online: 305 },
+  { month: 'March', online: 237 },
+  { month: 'April', online: 73 },
+  { month: 'May', online: 209 },
+  { month: 'June', online: 214 }
 ];
 
 const chartConfig = {
   desktop: {
-    label: 'Desktop',
+    label: 'Online',
     color: 'var(--chart-1)'
   }
 } satisfies ChartConfig;
@@ -66,7 +66,7 @@ export function OnlineUser() {
               content={<ChartTooltipContent indicator="dot" hideLabel />}
             />
             <Area
-              dataKey="desktop"
+              dataKey="online"
               type="linear"
               fill="var(--color-desktop)"
               fillOpacity={0.4}

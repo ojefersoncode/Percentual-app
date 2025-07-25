@@ -21,17 +21,17 @@ import {
 export const description = 'A linear area chart';
 
 const chartData = [
-  { month: 'January', desktop: 186 },
-  { month: 'February', desktop: 305 },
-  { month: 'March', desktop: 237 },
-  { month: 'April', desktop: 73 },
-  { month: 'May', desktop: 209 },
-  { month: 'June', desktop: 214 }
+  { month: 'January', usuarios: 186 },
+  { month: 'February', usuarios: 305 },
+  { month: 'March', usuarios: 1037 },
+  { month: 'April', usuarios: 1723 },
+  { month: 'May', usuarios: 2209 },
+  { month: 'June', usuarios: 2914 }
 ];
 
 const chartConfig = {
   desktop: {
-    label: 'Desktop',
+    label: 'Usuarios',
     color: 'var(--chart-1)'
   }
 } satisfies ChartConfig;
@@ -66,7 +66,7 @@ export function TotalUser() {
               content={<ChartTooltipContent indicator="dot" hideLabel />}
             />
             <Area
-              dataKey="desktop"
+              dataKey="usuarios"
               type="linear"
               fill="var(--color-desktop)"
               fillOpacity={0.4}
