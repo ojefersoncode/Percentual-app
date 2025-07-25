@@ -10,9 +10,7 @@ import {
 import {
     Input
 } from "../ui/input";
-import {
-    Navbar
-} from "../HomeComponents/ProfileButton";
+
 import {
     User
 } from "@supabase/supabase-js";
