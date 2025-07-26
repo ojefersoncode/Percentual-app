@@ -32,7 +32,7 @@ const chartData = [
 const chartConfig = {
   desktop: {
     label: 'Usuarios',
-    color: 'var(--chart-1)'
+    color: '#FA6101'
   }
 } satisfies ChartConfig;
 

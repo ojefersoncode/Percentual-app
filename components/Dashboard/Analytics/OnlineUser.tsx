@@ -31,8 +31,8 @@ const chartData = [
 
 const chartConfig = {
   desktop: {
-    label: 'Online',
-    color: 'var(--chart-1)'
+    label: 'Usuarios',
+    color: '#FA6101'
   }
 } satisfies ChartConfig;
 

@@ -8,7 +8,7 @@ module.exports = {
         destination: '/auth/signin'
       },
       {
-        source: '/dashboard',
+        source: '/Home',
         destination: '/Dashboard'
       }
     ];
