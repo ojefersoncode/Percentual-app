@@ -2,6 +2,7 @@
 
 import { TableUser } from '../Tables/TableUser';
 import { OnlineUser } from './OnlineUser';
+import { StatsUser } from './StatsUser';
 import { TotalUser } from './TotalUser';
 import { ProfileButton } from '@/components/HomeComponents/ProfileButton';
 
@@ -14,6 +15,10 @@ export const AnalyticsPage = () => {
           Dashboard
         </h1>
         <ProfileButton />
+      </div>
+
+      <div className='pb-4'>
+        <StatsUser />
       </div>
 
       <div className="grid md:grid-cols-2 items-center gap-4">

@@ -54,7 +54,7 @@ export function TableUser() {
           <TableRow>
             <TableHead>Email</TableHead>
             <TableHead className="max-md:hidden">Status</TableHead>
-            <TableHead className="text-right">Request</TableHead>
+            <TableHead className="text-right">Req</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
