@@ -64,7 +64,7 @@ export default function Sidebar() {
           className="w-5 h-5 cursor-pointer"
         />
 
-        <GlobeLock onClick={() => router.push('/componentes')} className="w-5 h-5 cursor-pointer" />
+        <GlobeLock onClick={() => router.push('/security')} className="w-5 h-5 cursor-pointer" />
 
         <Megaphone
           onClick={() => router.push('/componentes')}
