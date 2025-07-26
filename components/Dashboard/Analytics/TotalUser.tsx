@@ -21,12 +21,18 @@ import {
 export const description = 'A linear area chart';
 
 const chartData = [
-  { month: 'January', usuarios: 186 },
-  { month: 'February', usuarios: 305 },
-  { month: 'March', usuarios: 1037 },
-  { month: 'April', usuarios: 1723 },
-  { month: 'May', usuarios: 2209 },
-  { month: 'June', usuarios: 2914 }
+  { month: 'Jan', usuarios: 186 },
+  { month: 'Fev', usuarios: 305 },
+  { month: 'Mar', usuarios: 1037 },
+  { month: 'Abril', usuarios: 1723 },
+  { month: 'Maio', usuarios: 2209 },
+  { month: 'Jun', usuarios: 2914 },
+  { month: 'Jul', usuarios: 2809 },
+  { month: 'Ago', usuarios: 2909 },
+  { month: 'Set', usuarios: 3209 },
+  { month: 'Out', usuarios: 3309 },
+  { month: 'Nov', usuarios: 3609 },
+  { month: 'Dez', usuarios: 4209 }
 ];
 
 const chartConfig = {
@@ -40,7 +46,7 @@ export function TotalUser() {
   return (
     <Card className="w-full rounded-lg bg-white dark:bg-subbackground border border-zinc-300 dark:border-zinc-700">
       <CardHeader>
-        <CardTitle className='text-lg'>Usuarios cadastrados</CardTitle>
+        <CardTitle className="text-lg">Usuarios cadastrados</CardTitle>
         <CardDescription>Total de contas cadastradas</CardDescription>
       </CardHeader>
       <CardContent>

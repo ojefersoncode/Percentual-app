@@ -9,7 +9,7 @@ import { ProfileButton } from '@/components/HomeComponents/ProfileButton';
 export const AnalyticsPage = () => {
   return (
     <section className="flex flex-col bg-white dark:bg-background p-4">
-      <div className="flex w-full justify-between items-center pb-2">
+      <div className="flex w-full justify-between items-center pb-4">
         <h1 className="text-xl font-bold text-black dark:text-text">
           Dashboard
         </h1>

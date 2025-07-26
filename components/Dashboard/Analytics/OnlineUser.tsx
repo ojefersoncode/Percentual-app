@@ -21,12 +21,16 @@ import {
 export const description = 'A linear area chart';
 
 const chartData = [
-  { month: 'January', online: 186 },
-  { month: 'February', online: 305 },
-  { month: 'March', online: 237 },
-  { month: 'April', online: 73 },
-  { month: 'May', online: 209 },
-  { month: 'June', online: 214 }
+  { month: '12h', online: 479 },
+  { month: '13h', online: 381 },
+  { month: '14h', online: 396 },
+  { month: '15h', online: 356 },
+  { month: '16h', online: 384 },
+  { month: '17h', online: 405 },
+  { month: '18h', online: 537 },
+  { month: '19h', online: 573 },
+  { month: '20h', online: 629 },
+  { month: '21h', online: 644 }
 ];
 
 const chartConfig = {

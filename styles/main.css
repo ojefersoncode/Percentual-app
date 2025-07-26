@@ -94,20 +94,20 @@
   }
   /* Barra de rolagem personalizada WebKit (Chrome, Edge, Safari) */
   ::-webkit-scrollbar {
-    width: 4px; /* Largura da barra de rolagem */
+    width: 0px; /* Largura da barra de rolagem */
   }
 
   ::-webkit-scrollbar-track {
-    background: #5c5c5c; /* Cor do fundo */
-    border-radius: 4px;
+    background: #0000; /* Cor do fundo */
+    border-radius: 0px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #fa6101; /* Cor da barra de rolagem */
-    border-radius: 4px;
+    background: #0000; /* Cor da barra de rolagem */
+    border-radius: 0px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #fa6101; /* Cor ao passar o mouse */
+    background: #0000; /* Cor ao passar o mouse */
   }
 }
