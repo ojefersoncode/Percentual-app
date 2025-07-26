@@ -26,11 +26,9 @@ export const AnalyticsPage = () => {
         <TotalUser />
       </div>
 
-      <div className="pt-10 pb-2 px-2">
-        <h2 className="text-lg font-bold">Tabela de usuario</h2>
-      </div>
+   
 
-      <div className="w-full flex-1">
+      <div className="w-full flex-1 pt-4">
         <TableUser />
       </div>
     </section>

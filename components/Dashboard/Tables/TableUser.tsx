@@ -48,7 +48,10 @@ const invoices = [
 
 export function TableUser() {
   return (
-    <ScrollArea>
+    <div className="border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-subbackground p-1 rounded">
+      <div className="py-2 px-2">
+        <h2 className="text-lg font-bold">Tabela de usuario</h2>
+      </div>
       <Table>
         <TableHeader>
           <TableRow>
@@ -61,7 +64,7 @@ export function TableUser() {
           {invoices.map((invoice) => (
             <TableRow key={invoice.email}>
               <TableCell className="font-medium cursor-pointer">
-                <div className='flex items-center gap-2'>     
+                <div className="flex items-center gap-2">
                   <span
                     className={`h-2 w-2 md:hidden rounded-full ${
                       invoice.Status === 'Online'
@@ -70,7 +73,6 @@ export function TableUser() {
                     }`}
                   ></span>
                   <span> {invoice.email} </span>
-             
                 </div>
               </TableCell>
 
@@ -93,7 +95,6 @@ export function TableUser() {
           ))}
         </TableBody>
       </Table>
-      <ScrollBar orientation="horizontal" />
-    </ScrollArea>
+    </div>
   );
 }

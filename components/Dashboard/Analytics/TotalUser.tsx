@@ -42,6 +42,7 @@ const chartConfig = {
 
 export function TotalUser() {
   return (
+    
     <Card className="w-full rounded-lg bg-white dark:bg-subbackground border border-zinc-300 dark:border-zinc-700">
       <CardHeader>
         <CardTitle className="text-lg">Usuarios cadastrados</CardTitle>

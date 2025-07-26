@@ -30,8 +30,8 @@ export function ProfileButton() {
           />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-48 ml-1 touch-pan-x touch-pan-y">
-        <DropdownMenuGroup className="flex flex-col gap-2 pt-2">
+      <DropdownMenuContent className="mr-2 touch-pan-x touch-pan-y">
+        <DropdownMenuGroup className="flex flex-col">
           <DropdownMenuItem onClick={() => router.push('/profile')}>
             <User className="w-5 h-5 mr-2" /> Minha conta
           </DropdownMenuItem>
