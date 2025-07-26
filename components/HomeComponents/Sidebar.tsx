@@ -4,8 +4,8 @@ import {
   ChartNoAxesCombined,
   Megaphone,
   BookOpen,
-  Bug,
-  LogOut
+  LogOut,
+  GlobeLock
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Button } from '../ui/button';
@@ -51,29 +51,35 @@ export default function Sidebar() {
 
         <BookOpen
           onClick={() => router.push('/componentes')}
-          className="w-5 h-5"
+          className="w-5 h-5 cursor-pointer"
         />
 
-        <House onClick={() => router.push('/Home')} className="w-5 h-5" />
+        <House
+          onClick={() => router.push('/Home')}
+          className="w-5 h-5 cursor-pointer"
+        />
 
         <ChartNoAxesCombined
           onClick={() => router.push('/analytics')}
-          className="w-5 h-5"
+          className="w-5 h-5 cursor-pointer"
         />
 
-        <Bug onClick={() => router.push('/componentes')} className="w-5 h-5" />
+        <GlobeLock onClick={() => router.push('/componentes')} className="w-5 h-5 cursor-pointer" />
 
         <Megaphone
           onClick={() => router.push('/componentes')}
-          className="w-5 h-5"
+          className="w-5 h-5 cursor-pointer"
         />
       </div>
 
       <div className="flex flex-col gap-4 justify-center items-center w-full dark:text-text">
         <div className="mt-4"></div>
 
-        <Button onClick={handleSignOut} disabled={loading}
-        className='px-1 pb-5 bg-transparent hover:bg-transparent dark:bg-transparent dark:hover:bg-transparent text-background dark:text-text'>
+        <Button
+          onClick={handleSignOut}
+          disabled={loading}
+          className="px-1 pb-5 bg-transparent hover:bg-transparent dark:bg-transparent dark:hover:bg-transparent text-background dark:text-text"
+        >
           <LogOut className="w-5 h-5" />
         </Button>
       </div>
