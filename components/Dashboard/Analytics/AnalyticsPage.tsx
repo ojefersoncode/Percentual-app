@@ -15,8 +15,11 @@ export const AnalyticsPage = () => {
         <h1 className="text-xl font-medium text-black dark:text-text">
           Projetos
         </h1>
-        <Button>
-          <FilterIcon />
+        <Button
+          className="bg-white dark:bg-subbackground/80 text-subbackground/60 dark:text-text/80 
+        border border-zinc-400 dark:border-zinc-700 px-2 hover:bg-transparent dark:hover:bg-transparent"
+        >
+          <FilterIcon className="w-5 h-5" />
         </Button>
       </div>
 

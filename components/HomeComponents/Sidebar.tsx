@@ -190,7 +190,7 @@ export function Sidebar() {
 
             <SheetContent
               side={'left'}
-              className="sm:max-w-xs max-sm:w-56 flex flex-col px-2"
+              className="sm:max-w-xs max-sm:w-56 flex flex-col px-2 bg-white dark:bg-background/80"
             >
               <DialogTitle>
                 <VisuallyHidden>Menu</VisuallyHidden>
