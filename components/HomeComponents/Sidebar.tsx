@@ -155,7 +155,7 @@ export function Sidebar() {
                 <div
                   onClick={handleSignOut}
                   className="flex h-9 w-9 justify-center items-center 
-                                    rounded-lg text-red-600 transition-colors hover:text-red-700 "
+                                    rounded-lg text-red-500 transition-colors hover:text-red-600 "
                 >
                   <LogOut className="h-5 w-5 transition-all" />
                   <span className="sr-only">Sair</span>
@@ -255,7 +255,7 @@ export function Sidebar() {
 
               <nav className="flex  items-center mt-auto gap-4">
                 <div
-                  className="flex items-center gap-4 px-2.5 text-red-600 hover:text-red-700"
+                  className="flex items-center gap-4 px-2.5 text-red-500 hover:text-red-600"
                   onClick={handleSignOut}
                 >
                   <LogOut className="h-5 w-5 transition-all" />
