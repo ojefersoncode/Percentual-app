@@ -1,17 +1,13 @@
 'use client';
 
 import {
-  Package,
-  PanelBottom,
   Home,
-  ShoppingBag,
-  Users,
-  Settings2,
   LogOut,
   ChartNoAxesCombined,
   GlobeLock,
   Megaphone,
-  BookOpen
+  BookOpen,
+  LayoutGrid
 } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
@@ -62,7 +58,7 @@ export function Sidebar() {
   return (
     <div className="flex w-full flex-col">
       <aside
-        className="fixed inset-y-0 left-0 z-10 hidden w-14 border-r bg-background
+        className="fixed inset-y-0 left-0 z-10 hidden w-14 border-r border-zinc-400 bg-white dark:border-zinc-700 dark:bg-background
             sm:flex flex-col"
       >
         <nav className=" flex flex-col items-center gap-4 px-2 py-5">
@@ -72,7 +68,7 @@ export function Sidebar() {
                  text-primary-foreground rounded-full"
             >
               <div className="flex items-center justify-center py-3 border-b border-zinc-300 dark:border-zinc-700 w-full">
-                <img className="size-7" src="/LogoC.png" alt="logo" />
+                <img className="size-7" src="/LogoC.png" alt="cooderfy logo" />
               </div>
               <span className="sr-only">Dashboard avatar</span>
             </div>
@@ -171,18 +167,22 @@ export function Sidebar() {
       </aside>
 
       <div className="sm:hidden flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+        
         <header
-          className="sticky top-0 z-30 flex justify-between items-center h-14 items-center px-1
-                 border-b border-zinc-300 dark:border-zinc-700 bg-subbackground gap-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent
+          className="sticky top-0 z-30 flex justify-between h-14 items-center px-1
+                 border-b border-zinc-300 dark:border-zinc-700 bg-white dark:bg-subbackground gap-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent
                  sm:px-6"
         >
+              <div className="px-1">
+                <img className="size-7" src="/LogoC.png" alt="cooderfy logo" />
+              </div>
           <Sheet>
             <SheetTrigger asChild>
               <Button
                 size="icon"
-                className="sm:hidden dark:bg-subbackground dark:text-text hover:dark:bg-subbackground"
+                className="sm:hidden dark:border border-none dark:border-zinc-700 text-background bg-white/80 hover:bg-white dark:bg-subbackground dark:text-text hover:dark:bg-subbackground"
               >
-                <PanelBottom className="w-5 h-5" />
+                <LayoutGrid className="w-5 h-5" />
                 <span className="sr-only">Sidebar menu</span>
               </Button>
             </SheetTrigger>
@@ -253,7 +253,7 @@ export function Sidebar() {
               </nav>
             </SheetContent>
           </Sheet>
-          <ProfileButton />
+       
         </header>
       </div>
     </div>

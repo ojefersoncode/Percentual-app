@@ -2,17 +2,13 @@
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
-
 import { User } from '@supabase/supabase-js';
 import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
-import Image from 'next/image';
 import { getURL } from '@/utils/helpers';
 import { useToast } from '../ui/use-toast';
 import { useRouter } from 'next/navigation';
 import { SubscriptionWithPriceAndProduct } from '../../utils/types';
-import { Bell } from 'lucide-react';
-import { Footer } from '../landing/Footer';
 import { Pricing } from '../landing/Pricing';
 import { ProfileButton } from '../HomeComponents/ProfileButton';
 import { Card } from '../ui/card';
@@ -65,7 +61,7 @@ export default function AccountPage({
     >
       
 
-      <ScrollArea className="w-full rounded-md border-none flex-1 h-svh">
+      <ScrollArea className="w-full rounded-none border-none flex-1 h-svh">
         <main className="flex flex-1 flex-col bg-white dark:bg-background p-4 md:gap-4">
           <div className="flex flex-col gap-4  bg-white dark:bg-background">
             <div className="flex w-full justify-between items-center pb-2">

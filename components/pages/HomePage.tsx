@@ -1,17 +1,13 @@
 'use client';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { User } from '@supabase/supabase-js';
 import { Download } from '../HomeComponents/Download';
 
 export default function HomePage({ user }: { user: User }) {
   return (
-    <div className="flex flex-col w-full bg-white dark:bg-background touch-pan-x touch-pan-y">
+    <div className="flex flex-1 h-svh flex-col w-full bg-white dark:bg-background touch-pan-x touch-pan-y">
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
-        <div className="flex">
-      
-          <div className="md:ml-14 flex-1">
-            <Download />
-          </div>
+        <div className="md:ml-14 flex-1">
+          <Download />
         </div>
       </main>
     </div>

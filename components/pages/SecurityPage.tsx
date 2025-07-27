@@ -5,7 +5,7 @@ import SecurityHome from '../Security/SecurityHome';
 
 export default function SecurityPage({ user }: { user: User }) {
   return (
-    <div className="flex flex-col w-full bg-white dark:bg-background touch-pan-x touch-pan-y">
+    <div className="flex flex-col h-svh w-full bg-white dark:bg-background touch-pan-x touch-pan-y">
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
         <div className="flex">
           
