@@ -1,5 +1,4 @@
 'use client';
-import Sidebar from '../HomeComponents/Sidebar';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
@@ -62,9 +61,9 @@ export default function AccountPage({
   return (
     <div
       className="flex w-full
-        touch-pan-x touch-pan-y"
+        touch-pan-x touch-pan-y md:ml-14"
     >
-      <Sidebar />
+      
 
       <ScrollArea className="w-full rounded-md border-none flex-1 h-svh">
         <main className="flex flex-1 flex-col bg-white dark:bg-background p-4 md:gap-4">

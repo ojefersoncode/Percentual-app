@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import {
   Table,
@@ -7,6 +8,7 @@ import {
   TableHeader,
   TableRow
 } from '@/components/ui/table';
+import { AArrowDown, AArrowUp, HardDriveDownload } from 'lucide-react';
 
 const invoices = [
   {
@@ -49,8 +51,24 @@ const invoices = [
 export function TableUser() {
   return (
     <div className="border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-subbackground p-1 rounded">
-      <div className="py-2 px-2">
+      <div className="flex w-full items-center justify-between py-4 px-2">
         <h2 className="text-lg font-bold">Tabela de usuario</h2>
+        <div className='flex items-center gap-2'>
+          <Button className='border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-background 
+          dark:text-text/80 dark:hover:bg-background/70 transition-all px-2'>
+            <AArrowDown className='w-5 h-5' />
+          </Button>
+
+            <Button className='border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-background 
+          dark:text-text/80 dark:hover:bg-background/70 transition-all px-2'>
+            <AArrowUp className='w-5 h-5' />
+          </Button>
+
+            <Button className='border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-background 
+          dark:text-text/80 dark:hover:bg-background/70 transition-all px-2'>
+           <HardDriveDownload className='w-5 h-5' />
+          </Button>
+        </div>
       </div>
       <Table>
         <TableHeader>

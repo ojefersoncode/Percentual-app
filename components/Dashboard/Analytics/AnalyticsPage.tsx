@@ -1,23 +1,26 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
 import { TableUser } from '../Tables/TableUser';
 import { OnlineUser } from './OnlineUser';
 import { StatsUser } from './StatsUser';
 import { TotalUser } from './TotalUser';
 import { ProfileButton } from '@/components/HomeComponents/ProfileButton';
-
+import { FilterIcon } from 'lucide-react';
 
 export const AnalyticsPage = () => {
   return (
     <section className="flex flex-col bg-white dark:bg-background p-4">
-      <div className="flex w-full justify-between items-center pb-4">
-        <h1 className="text-xl font-bold text-black dark:text-text">
-          Dashboard
+      <div className="flex w-full justify-between items-center pb-2">
+        <h1 className="text-xl font-medium text-black dark:text-text">
+          Projetos
         </h1>
-        <ProfileButton />
+        <Button>
+          <FilterIcon />
+        </Button>
       </div>
 
-      <div className='pb-4'>
+      <div className="pt-1 pb-4">
         <StatsUser />
       </div>
 
@@ -25,8 +28,6 @@ export const AnalyticsPage = () => {
         <OnlineUser />
         <TotalUser />
       </div>
-
-   
 
       <div className="w-full flex-1 pt-4">
         <TableUser />
