@@ -57,7 +57,7 @@ export default function AccountPage({
   return (
     <div
       className="flex w-full
-        touch-pan-x touch-pan-y md:ml-14"
+        touch-pan-x touch-pan-y sm:ml-14"
     >
       
 

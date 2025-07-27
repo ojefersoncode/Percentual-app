@@ -31,7 +31,7 @@ export default function SecurityHome() {
         <ProfileButton />
       </div>
 
-      <Card className="border border-zinc-400 dark:border-zinc-700 dark:bg-subbackground p-4 w-full flex-1 space-y-6">
+      <Card className="border border-zinc-400 dark:border-zinc-700 dark:bg-background p-4 w-full flex-1 space-y-6">
         <div className="flex flex-col gap-2">
           <div className="flex flex-wrap items-center justify-between pb-2 gap-2">
             <h1 className="font-bold text-xl text-btn">Configurar</h1>
@@ -54,7 +54,7 @@ export default function SecurityHome() {
         <div className="">
           <h1 className="font-bold text-lg text-btn">Instalação</h1>
 
-          <div className="flex items-center mt-2 border rounded-lg dark:bg-subbackground">
+          <div className="flex items-center mt-2 border rounded-lg dark:bg-background">
             <div className=" text-sm flex-1 p-4">{Installation}</div>
             <Button
               onClick={handleCopy}

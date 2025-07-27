@@ -7,7 +7,8 @@ import {
   GlobeLock,
   Megaphone,
   BookOpen,
-  LayoutGrid
+  LayoutGrid,
+  Menu
 } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
@@ -59,7 +60,7 @@ export function Sidebar() {
     <div className="flex w-full flex-col">
       <aside
         className="fixed inset-y-0 left-0 z-10 hidden w-14 border-r border-zinc-400 bg-white dark:border-zinc-700 dark:bg-background
-            sm:flex flex-col"
+            sm:flex flex-col max-md:h-svh"
       >
         <nav className=" flex flex-col items-center gap-4 px-2 py-5">
           <TooltipProvider>
@@ -134,7 +135,7 @@ export function Sidebar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="/componentes"
                   className="flex h-9 w-9 justify-center items-center 
                                     rounded-lg text-muted-foreground transition-colors hover:text-foreground "
                 >
@@ -169,8 +170,8 @@ export function Sidebar() {
       <div className="sm:hidden flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
         
         <header
-          className="sticky top-0 z-30 flex justify-between h-14 items-center px-1
-                 border-b border-zinc-300 dark:border-zinc-700 bg-white dark:bg-subbackground gap-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent
+          className="sticky top-0 z-30 flex justify-between py-1 items-center px-1
+                 border-b border-zinc-300 dark:border-zinc-700 bg-white dark:bg-background gap-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent
                  sm:px-6"
         >
               <div className="px-1">
@@ -181,9 +182,9 @@ export function Sidebar() {
               <Button
                 size="icon"
                 className="sm:hidden dark:border border-none dark:border-zinc-700 text-background bg-white/80
-                 hover:bg-white dark:bg-subbackground dark:text-text/80 hover:dark:bg-subbackground"
+                 hover:bg-white dark:bg-background dark:text-text/80 hover:dark:bg-background"
               >
-                <LayoutGrid className="w-5 h-5" />
+                <Menu className="w-5 h-5" />
                 <span className="sr-only">Sidebar menu</span>
               </Button>
             </SheetTrigger>
@@ -241,6 +242,15 @@ export function Sidebar() {
                   <Megaphone className="h-5 w-5 transition-all" />
                   Novidades
                 </Link>
+                  <Link
+                  href="componentes"
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  prefetch={false}
+                >
+                  <BookOpen className="h-5 w-5 transition-all" />
+                  Documentação
+                </Link>
+                  
               </nav>
 
               <nav className="flex  items-center mt-auto gap-4">

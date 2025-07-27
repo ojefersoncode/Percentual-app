@@ -9,7 +9,7 @@ export default function ProfilePage({ user }: { user: User }) {
     <div className="flex h-svh flex-col w-full bg-white dark:bg-background touch-pan-x touch-pan-y">
       <main className="flex justify-center">
 
-          <ScrollArea className="md:ml-14 w-full border-none">
+          <ScrollArea className="sm:ml-14 w-full border-none">
             <Profilecard />
           </ScrollArea>
       </main>

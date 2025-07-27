@@ -51,12 +51,12 @@ export function StatsUser() {
       {cards.map((card, index) => {
         const Icon = card.icon
         return (
-          <Card key={index} className="rounded-lg dark:bg-subbackground border border-zinc-300 dark:border-zinc-700">
-            <CardHeader className="flex flex-row items-center justify-between rounded-lg space-y-0 pb-2 dark:bg-subbackground">
+          <Card key={index} className="rounded-lg dark:bg-background border border-zinc-300 dark:border-zinc-700">
+            <CardHeader className="flex flex-row items-center justify-between rounded-lg space-y-0 pb-2 dark:bg-background">
               <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
               <Icon className={`h-4 w-4 ${card.color}`} />
             </CardHeader>
-            <CardContent className="dark:bg-subbackground rounded-lg">
+            <CardContent className="dark:bg-background rounded-lg">
               <div className="text-2xl font-bold">{card.value.toLocaleString()}</div>
               <p className="text-xs text-muted-foreground">{card.description}</p>
             </CardContent>

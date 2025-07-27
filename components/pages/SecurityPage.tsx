@@ -9,7 +9,7 @@ export default function SecurityPage({ user }: { user: User }) {
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
         <div className="flex">
           
-          <ScrollArea className="md:ml-14 w-full h-svh border-none flex-1">
+          <ScrollArea className="sm:ml-14 w-full h-svh border-none flex-1">
             <SecurityHome />
           </ScrollArea>
         </div>

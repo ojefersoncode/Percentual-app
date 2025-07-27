@@ -15,7 +15,7 @@ export default function Profilecard() {
 
   return (
     <div className="flex flex-col bg-white dark:bg-background p-4">
-      <div className="rounded-lg bg-white dark:bg-subbackground border border-zinc-300 dark:border-border">
+      <div className="rounded-lg bg-white dark:bg-background border border-zinc-300 dark:border-border">
         <CardHeader className="flex">
           <h1 className="text-lg font-bold py-2">Edite seu perfil</h1>
         </CardHeader>

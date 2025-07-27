@@ -56,12 +56,12 @@ export const Download = () => {
           <Input
             type="search"
             placeholder="Pesquisar..."
-            className="flex-1 min-w-[160px] text-black dark:text-text border-none bg-white dark:bg-subbackground"
+            className="flex-1 min-w-[160px] text-black dark:text-text border-none bg-white dark:bg-background"
           />
           <Button
             size="icon"
-            className="rounded-l-none rounded-lg-r bg-white dark:bg-subbackground hover:bg-white
-             dark:hover:bg-subbackground text-zinc-700 dark:text-text/80 border-l border-zinc-300 dark:border-border"
+            className="rounded-l-none rounded-lg-r bg-white dark:bg-background hover:bg-white
+             dark:hover:bg-background text-zinc-700 dark:text-text/80 border-l border-zinc-300 dark:border-border"
           >
             <Search className="w-5 h-5" />
           </Button>

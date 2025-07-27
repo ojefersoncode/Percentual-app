@@ -40,7 +40,7 @@ const chartConfig = {
 
 export function OnlineUser() {
   return (
-    <Card className="w-full rounded-lg bg-white dark:bg-subbackground border border-zinc-300 dark:border-zinc-700">
+    <Card className="w-full rounded-lg bg-white dark:bg-background border border-zinc-300 dark:border-zinc-700">
       <CardHeader>
         <CardTitle className="text-lg">Usuarios online</CardTitle>
         <CardDescription>Total de Usuarios online agora</CardDescription>
