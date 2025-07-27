@@ -52,7 +52,7 @@ export const Download = () => {
     <section className="flex flex-col bg-white dark:bg-background p-4">
     
       <div className="flex flex-wrap md:flex-nowrap w-full gap-2 items-center justify-between pb-2">
-        <div className="flex flex-1 items-center rounded-lg bg-white dark:bg-subbackground border border-zinc-300 dark:border-border">
+        <div className="flex flex-1 items-center rounded-lg bg-white dark:bg-subbackground border border-zinc-400 dark:border-border">
           <Input
             type="search"
             placeholder="Pesquisar..."
@@ -60,7 +60,8 @@ export const Download = () => {
           />
           <Button
             size="icon"
-            className="rounded-l-none rounded-lg-r bg-white dark:bg-subbackground hover:bg-white dark:hover:bg-subbackground text-zinc-700 dark:text-text border-l border-zinc-300 dark:border-border"
+            className="rounded-l-none rounded-lg-r bg-white dark:bg-subbackground hover:bg-white
+             dark:hover:bg-subbackground text-zinc-700 dark:text-text/80 border-l border-zinc-300 dark:border-border"
           >
             <Search className="w-5 h-5" />
           </Button>

@@ -180,7 +180,8 @@ export function Sidebar() {
             <SheetTrigger asChild>
               <Button
                 size="icon"
-                className="sm:hidden dark:border border-none dark:border-zinc-700 text-background bg-white/80 hover:bg-white dark:bg-subbackground dark:text-text hover:dark:bg-subbackground"
+                className="sm:hidden dark:border border-none dark:border-zinc-700 text-background bg-white/80
+                 hover:bg-white dark:bg-subbackground dark:text-text/80 hover:dark:bg-subbackground"
               >
                 <LayoutGrid className="w-5 h-5" />
                 <span className="sr-only">Sidebar menu</span>
