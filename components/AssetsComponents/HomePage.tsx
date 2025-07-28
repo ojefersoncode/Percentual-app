@@ -23,18 +23,11 @@ export default function HomePage() {
   };
 
   return (
-    <div className="flex flex-col p-4  mx-auto w-full">
-      <div className="flex w-full justify-between items-center pb-4">
-        <h1 className="text-xl font-medium text-black dark:text-text">
-          configuração de segurança
-        </h1>
-        <ProfileButton />
-      </div>
-
-      <Card className="border border-zinc-400 dark:border-zinc-700 dark:bg-background p-4 w-full flex-1 space-y-6">
+    <div className="flex flex-col mx-auto w-full">
+      <Card className="border-none dark:bg-background p-4 w-full flex-1 space-y-6">
         <div className="flex flex-col gap-2">
           <div className="flex flex-wrap items-center justify-between pb-2 gap-2">
-            <h1 className="font-bold text-xl text-btn">Configurar</h1>
+            <h1 className="font-bold text-xl text-btn">Instalação</h1>
             <div className="flex items-center gap-4">
               <button className="p-2 rounded-md bg-white dark:bg-background text-black dark:text-text hover:bg-transparent border">
                 <MoveLeft className="size-4" />
@@ -51,19 +44,16 @@ export default function HomePage() {
         </div>
 
         {/* Instalação*/}
-        <div className="">
-          <h1 className="font-bold text-lg text-btn">Instalação</h1>
 
-          <div className="flex items-center mt-2 border rounded-lg dark:bg-background">
-            <div className=" text-sm flex-1 p-4">{Installation}</div>
-            <Button
-              onClick={handleCopy}
-              className="dark:bg-transparent text-xs text-black dark:text-text hover:bg-transparent border-none"
-            >
-              <Copy className="w-4 h-4" />
-              {copied ? 'Copiado!' : ''}
-            </Button>
-          </div>
+        <div className="flex items-center mt-2 border rounded-lg dark:bg-background">
+          <div className=" text-sm flex-1 p-4">{Installation}</div>
+          <Button
+            onClick={handleCopy}
+            className="bg-gray-200 dark:bg-background hover:dark:bg-background text-black dark:text-text hover:bg-transparent border-none"
+          >
+            <Copy className="w-4 h-4" />
+            {copied ? 'Copiado!' : ''}
+          </Button>
         </div>
 
         {/* Seção 1 */}
@@ -74,7 +64,7 @@ export default function HomePage() {
             <Button
               onClick={handleCopy}
               variant={'default'}
-              className="bg-gray-200 dark:bg-subbackground text-black dark:text-text hover:bg-transparent border"
+              className="bg-gray-200 dark:bg-background hover:dark:bg-background text-black dark:text-text hover:bg-transparent border"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar'}
@@ -90,7 +80,7 @@ export default function HomePage() {
             <Button
               onClick={handleCopy}
               variant={'default'}
-              className="bg-gray-200 dark:bg-subbackground text-black dark:text-text hover:bg-transparent border"
+              className="bg-gray-200 dark:bg-background hover:dark:bg-background text-black dark:text-text hover:bg-transparent border"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar'}
@@ -98,9 +88,7 @@ export default function HomePage() {
           </div>
         </div>
 
-
-
-           {/* Seção 3 */}
+        {/* Seção 3 */}
         <div className="border bg-gray-100 dark:bg-background rounded-lg p-4">
           <h1 className="font-sans text-base text-btn mb-2">Api defender</h1>
           <div className="rounded-md text-xs">{exampleCode3}</div>
@@ -108,7 +96,7 @@ export default function HomePage() {
             <Button
               onClick={handleCopy}
               variant={'default'}
-              className="bg-gray-200 dark:bg-subbackground text-black dark:text-text hover:bg-transparent border"
+              className="bg-gray-200 dark:bg-background hover:dark:bg-background text-black dark:text-text hover:bg-transparent border"
             >
               <Copy className="w-4 h-4 mr-2" />
               {copied ? 'Copiado!' : 'Copiar'}
