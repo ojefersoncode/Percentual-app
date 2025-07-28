@@ -125,7 +125,7 @@ export default function CreateProject({
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-[425px] bg-white dark:bg-background">
+      <DialogContent className="sm:max-w-[425px] bg-white dark:bg-background touch-pan-x touch-pan-y">
         <form onSubmit={handleSubmit}>
           <DialogHeader>
             <DialogTitle className="flex w-full justify-start mb-4">

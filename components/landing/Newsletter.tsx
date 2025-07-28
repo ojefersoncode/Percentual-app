@@ -27,7 +27,7 @@ export const Newsletter = () => {
             >
               <Input
                 placeholder="ojefersoncode@gmail.com"
-                className="border border-zinc-300 dark:text-text dark:border-zinc-700 rounded-lg bg-white dark:bg-subbackground"
+                className="border border-zinc-300 dark:text-text dark:border-zinc-700 rounded-lg bg-white dark:bg-background"
                 aria-label="email"
               />
               <Button className="w-full rounded-lg">Inscrever</Button>

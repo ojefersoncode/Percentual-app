@@ -60,7 +60,7 @@ export function Sidebar() {
     <div className="flex w-full flex-col">
       <aside
         className="fixed inset-y-0 left-0 z-10 hidden w-14 border-r border-zinc-400 bg-white dark:border-zinc-700 dark:bg-background
-            sm:flex flex-col max-md:h-svh"
+            sm:flex flex-col max-md:h-dvh"
       >
         <nav className=" flex flex-col items-center gap-4 px-2 py-5">
           <TooltipProvider>

@@ -22,7 +22,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
     return router.push('/auth');
   };
   return (
-    <header className="w-full border border-zinc-300 dark:border-zinc-700 rounded-lg bg-white/50  dark:bg-subbackground/50">
+    <header className="w-full border-b border-zinc-300 dark:border-zinc-700 bg-white/50  dark:bg-background/40">
       <div>
         <div className="flex w-full justify-between p-3">
           <div className="flex">

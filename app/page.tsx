@@ -16,7 +16,7 @@ export default async function LandingPage() {
   return (
     <>
       <div className="w-full bg-white dark:bg-background overflow-hidden touch-pan-x touch-pan-y">
-        <div className="flex w-full items-center justify-center p-4 max-md:p-2 z-40 fixed">
+        <div className="flex w-full items-center justify-center z-40 fixed">
           <Navbar user={user} />
         </div>
         <div className="pt-24">

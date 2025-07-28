@@ -50,8 +50,8 @@ const invoices = [
 
 export function TableUser() {
   return (
-    <div className="border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-background hover:bg-white hover:dark:bg-background p-1 rounded">
-      <div className="flex w-full items-center justify-between py-4 px-2">
+    <div className="border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-background hover:bg-white hover:dark:bg-background rounded">
+      <div className="flex w-full items-center justify-between p-4">
         <h2 className="text-lg font-bold">Tabela de usuario</h2>
         <div className='flex items-center gap-2'>
           <Button className='border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-background 
@@ -75,7 +75,7 @@ export function TableUser() {
           <TableRow>
             <TableHead>Email</TableHead>
             <TableHead className="max-md:hidden">Status</TableHead>
-            <TableHead className="text-right">Req</TableHead>
+            <TableHead className="text-right">Requisição</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
