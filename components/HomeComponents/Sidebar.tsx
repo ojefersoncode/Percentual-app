@@ -135,7 +135,7 @@ export function Sidebar() {
 
               <nav className="flex w-full justify-center items-center mt-auto px-2">
                 <Button className="w-full sm:py-6 rounded-lg bg-white/5 dark:bg-white/5 dark:hover:bg-white/10 dark:text-text/80 dark:hover:text-text font-bold border border-zinc-300 dark:border-zinc-700 transition-all">
-                  Gerenciar planos
+                  Gerenciar plano
                 </Button>
               </nav>
             </SheetContent>
