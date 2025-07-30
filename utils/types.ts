@@ -17,7 +17,6 @@ export type StateInfo = {
   hasOAuth: boolean;
 };
 
-
 type Subscription = Tables<'subscriptions'>;
 type Price = Tables<'prices'>;
 type Product = Tables<'products'>;

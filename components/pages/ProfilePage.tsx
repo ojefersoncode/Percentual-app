@@ -8,7 +8,7 @@ export default function ProfilePage({ user }: { user: User }) {
   return (
     <div className="flex h-svh flex-col w-full bg-white dark:bg-background touch-pan-x touch-pan-y">
       <main className="flex justify-center">
-        <ScrollArea className="w-full border-none p-4">
+        <ScrollArea className="w-full border-none p-2">
           <Profilecard />
         </ScrollArea>
       </main>

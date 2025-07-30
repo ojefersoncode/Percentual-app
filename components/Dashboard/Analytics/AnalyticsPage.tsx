@@ -11,24 +11,15 @@ import { Calendar, FilterIcon } from 'lucide-react';
 export const AnalyticsPage = () => {
   return (
     <section className="flex flex-col bg-white dark:bg-background p-4">
-      <div className="flex w-full justify-between items-center pt-2 pb-4">
-        <h1 className="text-xl font-medium text-black dark:text-text">
-          Projeto 1
-        </h1>
-        <div className='flex items-center gap-4'>
-          <Button
-            className="bg-white dark:bg-background text-background/60 dark:text-text/80 
+      <div className="flex w-full justify-between items-center pb-4">
+        <Button
+          className="bg-white dark:bg-background text-background/60 dark:text-text/80 
         border border-zinc-400 dark:border-zinc-700 p-4 hover:bg-transparent dark:hover:bg-transparent"
-          >
-            <Calendar className="size-4" />
-          </Button>
-          <Button
-            className="bg-white dark:bg-background text-background/60 dark:text-text/80 
-        border border-zinc-400 dark:border-zinc-700 p-4 hover:bg-transparent dark:hover:bg-transparent"
-          >
-            <FilterIcon className="size-4" />
-          </Button>
-        </div>
+        >
+          <div className="flex items-center gap-2 p-0">
+            <FilterIcon className="size-4" /> <span>Filtrar</span>
+          </div>
+        </Button>
       </div>
 
       <div className="pt-1 pb-4">

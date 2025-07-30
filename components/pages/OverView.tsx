@@ -8,7 +8,7 @@ export default function OverView({ user }: { user: User }) {
     <div className="flex flex-col w-full bg-white dark:bg-background touch-pan-x touch-pan-y">
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
         <div className="flex">
-          <ScrollArea className="w-full border-none p-4">
+          <ScrollArea className="w-full border-none p-2">
             <AnalyticsPage />
           </ScrollArea>
         </div>
