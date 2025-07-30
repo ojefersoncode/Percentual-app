@@ -59,13 +59,14 @@ export function ProfileButton() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mr-2 touch-pan-x touch-pan-y">
-        <DropdownMenuGroup className="flex flex-col gap-4">
+        <DropdownMenuGroup className="flex flex-col gap-1">
           <DropdownMenuItem
             className="text-background/80 hover:text-background dark:text-text/80 hover:dark:text-text transition-all"
             onClick={() => router.push('/profile')}
           >
             <User className="w-5 h-5 mr-2" /> Minha conta
           </DropdownMenuItem>
+          <DropdownMenuSeparator className="bg-zinc-300 dark:bg-zinc-700" />
           <DropdownMenuItem>
             <div
               className="flex items-center text-red-600 hover:text-red-500 transition-all"

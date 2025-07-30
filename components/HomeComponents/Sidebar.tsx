@@ -54,10 +54,10 @@ export function Sidebar() {
     <div className="flex w-full flex-col">
       <header
         className="sticky top-0 z-30 flex justify-between py-1 items-center px-1
-                 border-b border-zinc-300 dark:border-zinc-700 bg-white dark:bg-background gap-4 sm:static sm:h-auto sm:bg-transparent
-                 sm:px-4"
+                 border-b border-zinc-300 dark:border-zinc-700 bg-white dark:bg-background gap-4 sm:static sm:h-auto 
+                 "
       >
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <Sheet>
             <SheetTrigger asChild>
               <Button

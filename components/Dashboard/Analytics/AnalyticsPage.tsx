@@ -2,11 +2,10 @@
 
 import { Button } from '@/components/ui/button';
 import { TableUser } from '../Tables/TableUser';
-import { OnlineUser } from './OnlineUser';
 import { StatsUser } from './StatsUser';
 import { TotalUser } from './TotalUser';
-import { ProfileButton } from '@/components/HomeComponents/ProfileButton';
-import { Calendar, FilterIcon } from 'lucide-react';
+import { FilterIcon } from 'lucide-react';
+import { ChartUsers } from './ChartUsers';
 
 export const AnalyticsPage = () => {
   return (
@@ -27,8 +26,8 @@ export const AnalyticsPage = () => {
       </div>
 
       <div className="grid md:grid-cols-2 items-center gap-4">
-        <OnlineUser />
         <TotalUser />
+        <ChartUsers />
       </div>
 
       <div className="w-full flex-1 pt-4">
