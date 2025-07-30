@@ -57,10 +57,8 @@ export default function AccountPage({
   return (
     <div
       className="flex w-full
-        touch-pan-x touch-pan-y sm:ml-14"
+        touch-pan-x touch-pan-y"
     >
-      
-
       <ScrollArea className="w-full rounded-none border-none flex-1 h-svh">
         <main className="flex flex-1 flex-col bg-white dark:bg-background p-4 md:gap-4">
           <div className="flex flex-col gap-4  bg-white dark:bg-background">
