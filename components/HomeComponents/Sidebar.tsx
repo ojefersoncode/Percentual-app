@@ -133,14 +133,10 @@ export function Sidebar() {
                 </Link>
               </nav>
 
-              <nav className="flex  items-center mt-auto gap-4">
-                <div
-                  className="flex items-center gap-4 px-2.5 text-red-500 hover:text-red-600"
-                  onClick={handleSignOut}
-                >
-                  <LogOut className="h-5 w-5 transition-all" />
-                  Saitr
-                </div>
+              <nav className="flex w-full justify-center items-center mt-auto px-2">
+                <Button className="w-full sm:py-6 rounded-lg bg-white/5 dark:bg-white/5 dark:hover:bg-white/10 dark:text-text/80 dark:hover:text-text font-bold border border-zinc-300 dark:border-zinc-700 transition-all">
+                  Gerenciar planos
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>

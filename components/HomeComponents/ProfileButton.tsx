@@ -9,13 +9,41 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import { User } from 'lucide-react';
+import { LogOut, User } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { createClient } from '../../utils/supabase/client';
+import { useState } from 'react';
+import { useToast } from '../ui/use-toast';
 
 export function ProfileButton() {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
+  const supabase = createClient();
 
- 
+  const handleSignOut = async () => {
+    setLoading(true);
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) throw error;
+
+      toast({
+        title: 'Desconectado com sucesso!'
+      });
+      router.push('/');
+      setTimeout(() => window.location.reload(), 500);
+    } catch (error: unknown) {
+      toast({
+        title: 'Erro ao sair',
+        description:
+          error instanceof Error ? error.message : 'Erro desconhecido.',
+        variant: 'destructive'
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -31,14 +59,25 @@ export function ProfileButton() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mr-2 touch-pan-x touch-pan-y">
-        <DropdownMenuGroup className="flex flex-col">
-          <DropdownMenuItem onClick={() => router.push('/profile')}>
+        <DropdownMenuGroup className="flex flex-col gap-4">
+          <DropdownMenuItem
+            className="text-background/80 hover:text-background dark:text-text/80 hover:dark:text-text transition-all"
+            onClick={() => router.push('/profile')}
+          >
             <User className="w-5 h-5 mr-2" /> Minha conta
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <div
+              className="flex items-center text-red-600 hover:text-red-500 transition-all"
+              onClick={handleSignOut}
+            >
+              <LogOut className="h-5 w-5 mr-2" />
+              Sair
+            </div>
           </DropdownMenuItem>
         </DropdownMenuGroup>
 
         <DropdownMenuSeparator />
- 
       </DropdownMenuContent>
     </DropdownMenu>
   );
