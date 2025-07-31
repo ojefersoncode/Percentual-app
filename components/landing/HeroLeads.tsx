@@ -16,7 +16,7 @@ export default function HeroLeads() {
           </span>
         </main>
 
-        <p className="text-center max-w-lg md:text-lg max-md:text-xs max-md:max-w-sm font-semibold text-background/80 dark:text-text/80">
+        <p className="text-center max-w-lg md:text-lg max-md:text-sm max-md:max-w-xs font-semibold text-background/80 dark:text-text/80">
           Almente a segurança do seu site e monitore em tempo real todas as
           atividades que ocorrem no seu sites
         </p>
