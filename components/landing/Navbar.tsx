@@ -28,9 +28,6 @@ export const Navbar = ({ user }: { user: User | null }) => {
           <div className="flex">
             <div className="flex gap-2 text-lg items-center">
               <img className="size-7" src="/LogoC.png" alt="logo" />
-              <h1 className="text-gray-900 font-bold dark:text-text">
-                Cooderfy
-              </h1>
             </div>
           </div>
 

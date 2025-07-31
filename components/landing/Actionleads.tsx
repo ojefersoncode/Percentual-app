@@ -6,7 +6,7 @@ export default function Actionleads() {
     <div className="flex gap-4">
       <Button
         variant="ghost"
-        className="rounded-lg p-3 w-44 max-md:w-full max-md:text-sm text-background dark:text-text dark:bg-background 
+        className="rounded-lg p-3 max-md:p-1 w-44 max-md:w-32 max-md:text-xs text-background dark:text-text dark:bg-background 
         border hover:bg-white/80 dark:hover:bg-white/5 transition-all"
         type="submit"
       >
@@ -14,8 +14,8 @@ export default function Actionleads() {
       </Button>
       <Button
         variant="ghost"
-        className="rounded-lg p-3 w-44 max-md:w-full max-md:text-sm text-text dark:text-text
-         bg-btn dark:bg-btn hover:bg-btn dark:hover:bg-btn/80 transition-all"
+        className="rounded-lg p-3 max-md:p-1 w-44 max-md:w-32 max-md:text-xs text-text dark:text-text
+         bg-btn dark:bg-btn/80 hover:bg-btn/90 dark:hover:bg-btn transition-all"
         type="submit"
       >
         Cadastre-se

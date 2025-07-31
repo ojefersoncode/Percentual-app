@@ -4,20 +4,24 @@ import Actionleads from './Actionleads';
 
 export default function HeroLeads() {
   return (
-    <section className="flex items-center justify-around max-lg:items-start max-lg:justify-start px-4 max-lg:flex-col pt-7 lg:pt-20 max-lg:gap-6">
-      <div className="flex flex-col space-y-3">
-        <main className="flex w-full text-4xl md:text-5xl font-bold">
+    <section
+      className="flex flex-col w-full items-center justify-center px-6 pt-7 gap-6 
+    bg-gradient-to-b from-white via-white to-btn dark:from-background dark:via-background dark:to-btn "
+    >
+      <div className="flex flex-col justify-center items-center space-y-4">
+        <main className="flex justify-center w-full text-4xl md:text-6xl font-bold">
           <span className="text-slate-900 dark:text-gray-100">
-            Solução de segurança <h2 className="text-btn">ideal para sites e apps</h2>
+            Solução de segurança{' '}
+            <h2 className="text-btn">ideal para sites e apps</h2>
           </span>
         </main>
 
-        <p className="max-w-lg md:text-lg font-medium">
+        <p className="text-center max-w-lg md:text-lg max-md:text-xs max-md:max-w-sm font-semibold text-background/80 dark:text-text/80">
           Almente a segurança do seu site e monitore em tempo real todas as
           atividades que ocorrem no seu sites
         </p>
 
-        <div className="pt-2 md:pt-3">
+        <div className="flex justify-center items-center">
           <Actionleads />
         </div>
       </div>

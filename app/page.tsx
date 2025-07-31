@@ -22,9 +22,17 @@ export default async function LandingPage() {
         <div className="pt-24">
           <HeroLeads />
         </div>
-        <HowItWorks />
-        <FAQ />
-        <Newsletter />
+        <div className="mx-6">
+          <HowItWorks />
+        </div>
+        <div className="mx-6">
+          <FAQ />
+        </div>
+
+        <div className="mx-6">
+          <Newsletter />
+        </div>
+
         <Footer />
       </div>
     </>

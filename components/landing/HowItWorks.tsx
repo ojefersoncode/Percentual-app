@@ -46,9 +46,7 @@ export const HowItWorks = () => {
     <section id="howItWorks" className="px-4 text-center pt-16 md:pt-20">
       <h2 className="w-full px-4 text-4xl font-bold">
         Por que escolher a{' '}
-        <span className="text-btn rounded-lg">
-          Cooderfy?
-        </span>
+        <span className="text-btn rounded-lg">Cooderfy?</span>
       </h2>
       <p className="font-medium md:w-3/4 mx-auto mt-4 mb-8 text-lg text-muted-foreground">
         Veja abaixo algumas das vantagens de escolher a Cooderfy para seus
