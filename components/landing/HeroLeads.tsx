@@ -9,14 +9,14 @@ export default function HeroLeads() {
     bg-gradient-to-b from-white via-white to-btn dark:from-background dark:via-background dark:to-btn "
     >
       <div className="flex flex-col justify-center items-center space-y-4">
-        <main className="flex justify-center w-full text-4xl md:text-6xl font-bold">
+        <main className="flex justify-center text-center w-full text-3xl md:text-6xl font-bold">
           <span className="text-slate-900 dark:text-gray-100">
             Solução de segurança{' '}
             <h2 className="text-btn">ideal para sites e apps</h2>
           </span>
         </main>
 
-        <p className="text-center max-w-lg md:text-lg max-md:text-xs max-md:max-w-sm font-semibold text-background/80 dark:text-text/80">
+        <p className="text-center max-w-lg md:text-lg max-md:text-xs max-md:max-w-xs font-semibold text-background/80 dark:text-text/80">
           Almente a segurança do seu site e monitore em tempo real todas as
           atividades que ocorrem no seu sites
         </p>
