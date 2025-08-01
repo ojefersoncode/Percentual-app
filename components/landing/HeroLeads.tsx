@@ -5,7 +5,7 @@ import Actionleads from './Actionleads';
 export default function HeroLeads() {
   return (
     <section
-      className="flex flex-col w-full items-center justify-center px-6 pt-7 gap-6 
+      className="flex flex-col w-full  items-center justify-center px-6 pt-7 gap-6 
     bg-gradient-to-b from-white via-white to-btn dark:from-background dark:via-background dark:to-btn "
     >
       <div className="flex flex-col justify-center items-center space-y-4">
