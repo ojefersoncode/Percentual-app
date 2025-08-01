@@ -13,10 +13,10 @@ export const Newsletter = () => {
       <div className="container">
         <div className="pb-20">
           <div className="">
-            <h3 className="text-center text-4xl md:text-5xl font-bold">
+            <h3 className="text-center text-3xl md:text-4xl font-bold">
               Entre para nossa <span className="text-btn">Newsletter</span>
             </h3>
-            <p className="text-xl text-muted-foreground text-center mt-4 mb-8">
+            <p className="text-base text-muted-foreground text-center mt-4 mb-8">
               Cadastre-se para receber atualizações e novidades atraves do seu
               email.
             </p>
