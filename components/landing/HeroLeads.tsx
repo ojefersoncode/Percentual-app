@@ -25,8 +25,8 @@ export default function HeroLeads() {
           </main>
 
           <p className="text-center max-w-lg md:text-xl max-md:text-sm max-md:max-w-xs font-semibold text-background/80 dark:text-text/80">
-            Torne-se sócio de negócios promissores com praticidade e segurança,
-            investindo a partir de R$100.
+            Torne-se sócio de negócios promissores com investimento a partir de
+            R$100.
           </p>
 
           <div className="flex justify-center items-center">
