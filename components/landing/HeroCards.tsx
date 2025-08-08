@@ -1,9 +1,9 @@
 'use client';
 
-import { useTheme } from '../landing/theme-provider'; // Importe o hook 'useTheme' do seu contexto
+import { useTheme } from '../landing/theme-provider';
 
 export const HeroCards = () => {
-  const { theme } = useTheme(); // Pega o tema atual
+  const { theme } = useTheme();
 
   return (
     <div className="w-full pt-4 max-sm:pt-10">
