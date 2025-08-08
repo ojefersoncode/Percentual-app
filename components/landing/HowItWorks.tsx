@@ -43,7 +43,7 @@ const features: FeatureProps[] = [
 
 export const HowItWorks = () => {
   return (
-    <section id="howItWorks" className="px-4 text-center pt-16 md:pt-20">
+    <section id="howItWorks" className="px-4 text-center pt-12">
       <h2 className="w-full px-4 text-3xl font-bold">
         Por que escolher a{' '}
         <span className="text-btn rounded-lg">Cooderfy?</span>
@@ -53,7 +53,7 @@ export const HowItWorks = () => {
         projetos!
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map(({ icon, title, description }: FeatureProps) => (
           <Card
             key={title}
@@ -61,12 +61,12 @@ export const HowItWorks = () => {
              drop-shadow-md shadow-background/40 dark:shadow-none rounded-lg"
           >
             <CardHeader>
-              <CardTitle className="grid gap-4 place-items-center">
+              <CardTitle className="grid gap-4 place-items-center max-sm:text-base">
                 {icon}
                 {title}
               </CardTitle>
             </CardHeader>
-            <CardContent className="font-medium text-background/80 dark:text-text/80">
+            <CardContent className="font-medium text-background/80 dark:text-text/80 max-sm:text-sm">
               {description}
             </CardContent>
           </Card>
