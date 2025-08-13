@@ -9,7 +9,7 @@ import { getURL } from '@/utils/helpers';
 import { useToast } from '../ui/use-toast';
 import { useRouter } from 'next/navigation';
 import { SubscriptionWithPriceAndProduct } from '../../utils/types';
-import { Pricing } from '../landing/Pricing';
+
 import { ProfileButton } from '../HomeComponents/ProfileButton';
 import { Card } from '../ui/card';
 
@@ -110,9 +110,6 @@ export default function AccountPage({
                 </Card>
               </div>
             </div>
-          </div>
-          <div className="w-full">
-            <Pricing user={user} />
           </div>
         </main>
       </ScrollArea>
