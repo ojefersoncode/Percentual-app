@@ -1,5 +1,5 @@
 'use client';
-import { LogoIcon } from './Icons';
+
 import { ModeToggle } from './mode-toggle';
 
 export const Footer = () => {
