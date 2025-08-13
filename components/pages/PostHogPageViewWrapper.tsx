@@ -8,4 +8,4 @@ const PostHogPageView = dynamic(() => import('../../app/PostHogPageView'), {
 
 export default function PostHogPageViewWrapper() {
   return <PostHogPageView />;
-} 
+}

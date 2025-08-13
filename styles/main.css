@@ -10,7 +10,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
-
 /* *=========== Green theme =========== */
 @layer base {
   :root {
@@ -57,6 +56,10 @@
     --input: 240 3.7% 15.9%;
     --ring: 142.4 71.8% 29.2%;
   }
+  .theme {
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  }
 }
 
 @layer base {
@@ -82,7 +85,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background dark:bg-background text-foreground;
   }
   html,
   body {
@@ -91,7 +94,7 @@
   .flex {
     flex-shrink: 0;
   }
-  
+
   ::-webkit-scrollbar {
     width: 1px; /* Largura da barra de rolagem */
   }
@@ -108,5 +111,24 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: #0000; /* Cor ao passar o mouse */
+  }
+}
+
+@theme inline {
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
   }
 }

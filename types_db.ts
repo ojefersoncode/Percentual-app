@@ -9,36 +9,6 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      projects: {
-        Row: {
-          id: string;
-          name: string;
-          created_at: string;
-          owner: string;
-        };
-        Insert: {
-          id?: string;
-          name: string;
-          created_at?: string;
-          owner: string;
-        };
-        Update: {
-          id?: string;
-          name?: string;
-          created_at?: string;
-          owner?: string;
-        };
-        Relationships: [
-          {
-            foreignKeyName: 'projects_owner_fkey';
-            columns: ['owner'];
-            isOneToOne: false;
-            referencedRelation: 'users';
-            referencedColumns: ['id'];
-          }
-        ];
-      };
-
       checkout_sessions: {
         Row: {
           created: string;

@@ -9,7 +9,7 @@ module.exports = {
       },
       {
         source: '/Home',
-        destination: '/Dashboard'
+        destination: '/Home'
       }
     ];
   },
@@ -18,8 +18,8 @@ module.exports = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname),
       '@components': path.resolve(__dirname, 'components'),
-      '@utils': path.resolve(__dirname, 'utils'),
+      '@utils': path.resolve(__dirname, 'utils')
     };
     return config;
-  },
+  }
 };

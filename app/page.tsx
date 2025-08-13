@@ -1,6 +1,5 @@
 import HeroLeads from '@/components/landing/HeroLeads';
 import { FAQ } from '../components/landing/FAQ';
-import { Footer } from '../components/landing/Footer';
 import { HowItWorks } from '../components/landing/HowItWorks';
 import { Navbar } from '../components/landing/Navbar';
 import { Newsletter } from '../components/landing/Newsletter';
@@ -22,6 +21,7 @@ export default async function LandingPage() {
         <div className="">
           <HeroLeads />
         </div>
+
         <div className="mx-6">
           <HowItWorks />
         </div>
@@ -32,8 +32,6 @@ export default async function LandingPage() {
         <div className="mx-6">
           <Newsletter />
         </div>
-
-        <Footer />
       </div>
     </>
   );

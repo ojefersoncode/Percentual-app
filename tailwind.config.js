@@ -17,14 +17,14 @@ module.exports = {
       }
     },
     extend: {
-        shadow: {
-        laranja: '0 4px 6px rgba(249, 115, 22, 0.5)', // orange-500
+      shadow: {
+        laranja: '0 4px 6px rgba(249, 115, 22, 0.5)'
       },
       colors: {
-        btn: '#FA6101',
-        border: '#4c4c4c',
-        background: '#171717',
-        subbackground: '#212121',
+        btn: '#DC2F02',
+        border: '#DC2F02',
+        background: '#6A040F',
+        subbackground: '#C1121F',
         high: '#FFB200',
         text: '#f8f9f8',
         input: 'hsl(var(--input))',
@@ -64,6 +64,20 @@ module.exports = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
+      animation: {
+        marquee: 'marquee var(--duration) linear infinite',
+        'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+        },
+        'marquee-vertical': {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(calc(-100% - var(--gap)))' }
+        }
+      }
     }
   },
   plugins: [require('tailwindcss-animate')]

@@ -1,6 +1,6 @@
 {
-  "name": "codersaas",
-  "version": "0.0.1",
+  "name": "magicbox",
+  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",

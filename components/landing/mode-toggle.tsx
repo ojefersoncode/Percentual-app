@@ -24,7 +24,7 @@ export function ModeToggle() {
   ];
 
   return (
-    <div className="flex h-6 items-center border border-gray-200 dark:border-border rounded-full  bg-white dark:bg-subbackground">
+    <div className="flex h-6 items-center border border-gray-300 dark:border-border rounded-full  bg-white dark:bg-border/60">
       {options.map((option) => {
         const isActive = theme === option.value;
 

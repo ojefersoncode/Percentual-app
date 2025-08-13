@@ -3,7 +3,7 @@ import { ThemeProvider } from '@/components/landing/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 
 export default function ProfileLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
