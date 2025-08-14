@@ -14,7 +14,7 @@ export default function HomeLayout({
         id="skip"
         className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
       >
-        <div className="px-4">
+        <div>
           <Navbar />
         </div>
 

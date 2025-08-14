@@ -5,10 +5,10 @@ import { HomeIcon, Rocket, PiggyBank, History } from 'lucide-react';
 
 const DATA = {
   navbar: [
-    { href: '/', icon: HomeIcon, label: 'Home' },
+    { href: '/Home', icon: HomeIcon, label: 'Home' },
     { href: '/Spin', icon: Rocket, label: 'Atualizador' },
     { href: '/History', icon: History, label: 'Histórico' },
-    { href: '#', icon: PiggyBank, label: 'Saque' }
+    { href: '/Withdraw', icon: PiggyBank, label: 'Saque' }
   ]
 };
 

@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import { CircleUser, LogOut, User } from 'lucide-react';
+import { CircleUser, LogOut, MenuIcon, User } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
@@ -51,7 +51,7 @@ export function ProfileButton() {
           variant="default"
           className="py-0 px-1.5 border-none rounded-full bg-transparent dark:bg-transparent hover:bg-transparent dark:hover:bg-transparent focus:right-0"
         >
-          <CircleUser className="text-text" />
+          <MenuIcon className="text-text" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mr-2 touch-pan-x touch-pan-y">

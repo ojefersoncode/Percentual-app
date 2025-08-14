@@ -48,11 +48,11 @@ export default function Cards() {
   ];
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full bg-background">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full dark:bg-background">
       {products.map((product) => (
         <div
           key={product.id}
-          className="flex flex-col gap-4 justify-between items-center rounded-md text-white border border-border bg-subbackground hover:scale-105 transition-all duration-300 z-10"
+          className="flex flex-col gap-4 justify-between items-center rounded-md text-white border border-border  bg-subbackground dark:bg-subbackground hover:scale-105 transition-all duration-300 z-10"
         >
           <h1 className="font-bold text-base max-md:text-xs text-center pt-4 pb-1">
             {product.title}
