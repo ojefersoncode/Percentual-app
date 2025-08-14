@@ -49,7 +49,7 @@ export function ProfileButton() {
       <DropdownMenuTrigger asChild>
         <Button
           variant="default"
-          className="py-0 px-1.5 border-none rounded-full bg-transparent dark:bg-transparent hover:bg-transparent dark:hover:bg-transparent focus:right-0"
+          className="py-1 px-2 border-none rounded-lg bg-transparent dark:bg-subbackground hover:bg-transparent dark:hover:bg-subbackground/80 focus:right-0"
         >
           <MenuIcon className="text-text" />
         </Button>
@@ -57,15 +57,15 @@ export function ProfileButton() {
       <DropdownMenuContent className="mr-2 touch-pan-x touch-pan-y">
         <DropdownMenuGroup className="flex flex-col gap-1">
           <DropdownMenuItem
-            className="text-background/80 hover:text-background dark:text-text/80 hover:dark:text-text transition-all"
+            className="text-red-50 hover:text-red-100 hover:dark:text-red-100 transition-all"
             onClick={() => router.push('/profile')}
           >
             <User className="w-5 h-5 mr-2" /> Minha conta
           </DropdownMenuItem>
-          <DropdownMenuSeparator className="bg-zinc-300 dark:bg-zinc-700" />
+          <DropdownMenuSeparator className="bg-zinc-300 dark:bg-background" />
           <DropdownMenuItem>
             <div
-              className="flex items-center text-red-600 hover:text-red-500 transition-all"
+              className="flex items-center text-red-50 hover:text-red-100 transition-all"
               onClick={handleSignOut}
             >
               <LogOut className="h-5 w-5 mr-2" />
