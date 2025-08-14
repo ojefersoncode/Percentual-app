@@ -5,9 +5,9 @@ import { HomeIcon, Rocket, PiggyBank, History } from 'lucide-react';
 
 const DATA = {
   navbar: [
-    { href: '#', icon: HomeIcon, label: 'Home' },
-    { href: '#', icon: Rocket, label: 'Atualizador' },
-    { href: '#', icon: History, label: 'Histórico' },
+    { href: '/', icon: HomeIcon, label: 'Home' },
+    { href: '/Spin', icon: Rocket, label: 'Atualizador' },
+    { href: '/History', icon: History, label: 'Histórico' },
     { href: '#', icon: PiggyBank, label: 'Saque' }
   ]
 };
@@ -18,7 +18,7 @@ export function Navbottom() {
       <div className="flex justify-center gap-4 items-center">
         {DATA.navbar.map((item, index) => {
           const isHome = item.label === 'Home';
-          const base = isHome ? 'text-white' : 'text-blue-400/50';
+          const base = isHome ? 'text-white' : 'text-subbackground';
           const hover = isHome
             ? ''
             : 'group-hover:text-white trasition-all duration-300';
