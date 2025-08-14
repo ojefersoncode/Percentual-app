@@ -1,9 +1,10 @@
-import HeroLeads from '@/components/landing/HeroLeads';
+import { CarouselBanner } from '@/components/landing/CarrouselBanner';
 import { FAQ } from '../components/landing/FAQ';
 import { HowItWorks } from '../components/landing/HowItWorks';
 import { Navbar } from '../components/landing/Navbar';
-import { Newsletter } from '../components/landing/Newsletter';
 import { createClient } from '../utils/supabase/server';
+import Cards from '@/components/HomeComponents/Cards';
+import Footer from '@/components/HomeComponents/Footer';
 
 export default async function LandingPage() {
   const supabase = await createClient();
@@ -18,20 +19,19 @@ export default async function LandingPage() {
         <div className="flex w-full items-center justify-center z-40 fixed">
           <Navbar user={user} />
         </div>
-        <div className="">
-          <HeroLeads />
+
+        <div className="mx-6 pt-24">
+          <CarouselBanner />
         </div>
 
-        <div className="mx-6">
-          <HowItWorks />
+        <div className="w-full flex justify-center items-center pt-10 px-6">
+          <Cards />
         </div>
+
         <div className="mx-6">
           <FAQ />
         </div>
-
-        <div className="mx-6">
-          <Newsletter />
-        </div>
+        <Footer />
       </div>
     </>
   );

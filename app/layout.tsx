@@ -6,6 +6,7 @@ import { PHProvider } from './providers';
 import { ThemeProvider } from '../components/landing/theme-provider';
 import { Toaster } from '../components/ui/toaster';
 import PostHogPageViewWrapper from '../components/pages/PostHogPageViewWrapper';
+import { Navbottom } from '@/components/HomeComponents/Navbottom';
 
 const meta = {
   title: 'Cooderfy',
@@ -76,6 +77,10 @@ export default async function RootLayout({ children }: PropsWithChildren) {
               id="skip"
               className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
             >
+              <div className="md:hidden">
+                <Navbottom />
+              </div>
+
               {children}
             </main>
             <Toaster />

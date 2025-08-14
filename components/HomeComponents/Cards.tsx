@@ -52,7 +52,7 @@ export default function Cards() {
       {products.map((product) => (
         <div
           key={product.id}
-          className="flex flex-col gap-4 justify-between items-center rounded-md text-white border border-border bg-transparent hover:scale-105 transition-all duration-300 z-10"
+          className="flex flex-col gap-4 justify-between items-center rounded-md text-white border border-border bg-subbackground hover:scale-105 transition-all duration-300 z-10"
         >
           <h1 className="font-bold text-base max-md:text-xs text-center pt-4 pb-1">
             {product.title}
@@ -62,7 +62,7 @@ export default function Cards() {
             alt={product.title}
             className="h-32 max-md:h-20 object-contain"
           />
-          <div className="bg-subbackground px-4 p-0.5 rounded-t-xl">
+          <div className="bg-background px-4 p-0.5 rounded-t-xl">
             <span className="font-medium text-sm max-md:text-[0.60rem]">
               R$ {product.price.toFixed(2)}
             </span>
