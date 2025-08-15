@@ -5,7 +5,7 @@ import { ProfileButton } from './ProfileButton';
 
 export default function Navbar() {
   return (
-    <div className="w-full flex justify-between items-center px-4 py-1 border-b border-border">
+    <div className="w-full flex justify-between items-center px-4 py-2 border-b border-border">
       <div className="flex items-center gap-0;5">
         <h1 className="text-xl text-white max-md:text-lg font-black">Magic</h1>
         <Box className="size-7 max-md:size-6 text-border" />

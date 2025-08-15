@@ -236,7 +236,7 @@ export function Spin({ user }: { user: User }) {
         >
           {items.map((item, index) => (
             <div key={index} className="min-w-[150px] flex-shrink-0">
-              <div className="bg-background dark:bg-background border-2 border-subbackground rounded-lg shadow-lg">
+              <div className="bg-btn dark:bg-btn border-2 border-subbackground rounded-lg shadow-lg">
                 <div className="flex flex-col items-center justify-center bg-btn dark:bg-btn">
                   <div className="relative w-20 h-20 md:w-30 md:h-30">
                     <Image
@@ -250,6 +250,11 @@ export function Spin({ user }: { user: User }) {
                   <p className="text-white my-4 font-bold text-base max-md:text-sm">
                     {item.name}
                   </p>
+                </div>
+                <div className="w-full flex justify-center items-center bg-green-700 px-4 p-0.5 rounded-t-xl">
+                  <span className="font-medium text-sm max-md:text-[0.60rem]">
+                    R$ {item.price}
+                  </span>
                 </div>
               </div>
             </div>
@@ -268,7 +273,7 @@ export function Spin({ user }: { user: User }) {
       </div>
 
       <div className="flex flex-col w-full items-center justify-center px-6 py-4 mt-5 border-t-2 border-btn ">
-        <span className="py-6 text-white font-bold text-lg max-md:text-base">
+        <span className="py-6 text-white font-bold text-2xl max-md:text-xl">
           Presentes da caixa
         </span>
         <GiftBox />

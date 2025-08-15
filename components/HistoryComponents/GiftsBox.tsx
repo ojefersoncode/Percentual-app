@@ -2,7 +2,8 @@
 
 interface Product {
   id: number;
-  title: string;
+  rtp: string;
+  name: string;
   price: number;
   image: string;
 }
@@ -11,39 +12,59 @@ export default function GiftBox() {
   const products: Product[] = [
     {
       id: 1,
-      title: 'Box vermelha',
-      price: 5.0,
-      image: 'Boxes/Red.png'
+      name: 'Capinha',
+      image: '/Gifts/capinha.webp',
+      rtp: '80.01',
+      price: 10.0
     },
     {
       id: 2,
-      title: 'Box Azul',
-      price: 10.0,
-      image: 'Boxes/Blue.png'
+      name: 'Cabo usb',
+      image: '/Gifts/cabo.webp',
+      rtp: '80.01',
+      price: 10.0
     },
     {
       id: 3,
-      title: 'Box Amarela',
-      price: 19.9,
-      image: 'Boxes/Yellow.png'
+      name: 'Carregador',
+      image: '/Gifts/carregador.webp',
+      rtp: '20.01',
+      price: 15.0
     },
     {
       id: 4,
-      title: 'Box Secreta',
-      price: 49.9,
-      image: 'Boxes/Black.png'
+      name: 'Power bank',
+      image: '/Gifts/powerbank.webp',
+      rtp: '2.00',
+      price: 20.0
     },
     {
       id: 5,
-      title: 'Box Super',
-      price: 99.9,
-      image: 'Boxes/Roxo.png'
+      name: 'Fone bluetooh',
+      image: '/Gifts/fone.webp',
+      rtp: '4.00',
+      price: 5.0
     },
     {
       id: 6,
-      title: 'Box Ultra',
-      price: 199.9,
-      image: 'Boxes/Green.png'
+      name: 'Teclado',
+      image: '/Gifts/teclado.jpg',
+      rtp: '1.01',
+      price: 30.9
+    },
+    {
+      id: 7,
+      name: 'Mouse',
+      image: '/Gifts/mouse.webp',
+      rtp: '1.01',
+      price: 30.9
+    },
+    {
+      id: 8,
+      name: 'Fone bluetooh',
+      image: '/Gifts/fone.webp',
+      rtp: '4.00',
+      price: 5.0
     }
   ];
 
@@ -55,14 +76,17 @@ export default function GiftBox() {
           className="flex flex-col gap-4 justify-between items-center rounded-lg text-white border-2 border-border bg-btn"
         >
           <h1 className="font-bold text-base max-md:text-xs text-center pt-4 pb-1">
-            {product.title}
+            {product.name}
           </h1>
           <img
             src={product.image}
-            alt={product.title}
+            alt={product.name}
             className="h-24 max-md:h-20 object-contain"
           />
-          <div className="bg-background px-4 p-0.5 rounded-t-xl">
+          <span className="font-medium text-sm max-md:text-[0.60rem]">
+            RTP: {product.rtp}%
+          </span>
+          <div className="bg-green-700 px-4 p-0.5 rounded-t-xl">
             <span className="font-medium text-sm max-md:text-[0.60rem]">
               R$ {product.price.toFixed(2)}
             </span>
