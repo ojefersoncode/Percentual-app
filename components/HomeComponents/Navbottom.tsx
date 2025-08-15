@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { HomeIcon, Rocket, PiggyBank, History } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const DATA = {
   navbar: [
@@ -13,15 +14,17 @@ const DATA = {
 };
 
 export function Navbottom() {
+  const pathname = usePathname();
+
   return (
     <nav className="fixed bottom-0 z-20 left-0 w-full bg-background border-t border-border">
       <div className="flex justify-center gap-4 items-center">
         {DATA.navbar.map((item, index) => {
-          const isHome = item.label === 'Home';
-          const base = isHome ? 'text-white' : 'text-subbackground';
-          const hover = isHome
+          const isActive = pathname.startsWith(item.href);
+          const base = isActive ? 'text-white' : 'text-subbackground';
+          const hover = isActive
             ? ''
-            : 'group-hover:text-white trasition-all duration-300';
+            : 'group-hover:text-white transition-all duration-300';
 
           return (
             <Link key={index} href={item.href} className="p-4 group">

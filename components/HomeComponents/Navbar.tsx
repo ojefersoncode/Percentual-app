@@ -1,9 +1,22 @@
 'use client';
 import { Box } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Balance from './Balance';
 import { ProfileButton } from './ProfileButton';
 
+const DATA = {
+  navbar: [
+    { href: '/Home', label: 'Home' },
+    { href: '/Spin', label: 'Atualizador' },
+    { href: '/History', label: 'Histórico' },
+    { href: '/Withdraw', label: 'Saque' }
+  ]
+};
+
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
     <div className="w-full flex justify-between items-center px-4 py-2 border-b border-border">
       <div className="flex items-center gap-0;5">
@@ -13,29 +26,27 @@ export default function Navbar() {
       </div>
 
       <div className="bg-transparent border-none text-white max-md:hidden">
-        <div className="flex gap-6 items-center text-border text-base font-semibold ">
-          <span className="text-white hover:text-white transition-all duration-300">
-            Caixas
-          </span>
-          <span className="hover:text-white transition-all duration-300">
-            Atualizador
-          </span>
-          <span className="hover:text-white transition-all duration-300">
-            Saque
-          </span>
-          <span className="hover:text-white transition-all duration-300">
-            Historico
-          </span>
+        <div className="flex gap-6 items-center text-border text-base font-semibold">
+          {DATA.navbar.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`transition-all duration-300 ${
+                  isActive ? 'text-white' : 'text-border hover:text-white'
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
       </div>
 
       <div className="flex items-center gap-4">
-        <div className="">
-          <Balance />
-        </div>
-        <div>
-          <ProfileButton />
-        </div>
+        <Balance />
+        <ProfileButton />
       </div>
     </div>
   );
