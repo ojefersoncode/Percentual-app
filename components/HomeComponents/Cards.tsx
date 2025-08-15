@@ -13,61 +13,61 @@ export default function Cards() {
       id: 1,
       title: 'Box Playstation',
       price: 5.0,
-      image: 'Box/playstation.webp'
+      image: 'box/playstation.webp'
     },
     {
       id: 2,
       title: 'Box Anime',
       price: 10.0,
-      image: 'Box/anime.webp'
+      image: 'box/anime.webp'
     },
     {
       id: 3,
       title: 'Box Amazon',
       price: 19.9,
-      image: 'Box/Amazon.webp'
+      image: 'box/Amazon.webp'
     },
     {
       id: 4,
       title: 'Box Apple',
       price: 99.9,
-      image: 'Box/apple.webp'
+      image: 'box/apple.webp'
     },
     {
       id: 5,
       title: 'Box Steam',
       price: 99.9,
-      image: 'Box/steam.webp'
+      image: 'box/steam.webp'
     },
     {
       id: 6,
       title: 'Box Ufc',
       price: 199.9,
-      image: 'Box/ufc.webp'
+      image: 'box/ufc.webp'
     },
     {
       id: 7,
       title: 'Box Ufc',
       price: 199.9,
-      image: 'Box/starwars.webp'
+      image: 'box/starwars.webp'
     },
     {
       id: 8,
       title: 'Box Xbox',
       price: 199.9,
-      image: 'Box/xbox.webp'
+      image: 'box/xbox.webp'
     },
     {
       id: 9,
       title: 'Box Magic',
       price: 199.9,
-      image: 'Box/magic.png'
+      image: 'box/magic.png'
     },
     {
       id: 10,
       title: 'Box Lububu',
       price: 199.9,
-      image: 'Box/lububu.png'
+      image: 'box/lububu.png'
     }
   ];
 
