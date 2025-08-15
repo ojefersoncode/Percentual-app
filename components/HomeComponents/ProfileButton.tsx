@@ -73,8 +73,6 @@ export function ProfileButton() {
             </div>
           </DropdownMenuItem>
         </DropdownMenuGroup>
-
-        <DropdownMenuSeparator />
       </DropdownMenuContent>
     </DropdownMenu>
   );
