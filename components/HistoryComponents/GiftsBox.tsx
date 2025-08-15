@@ -83,7 +83,7 @@ export default function GiftBox() {
             alt={product.name}
             className="h-24 max-md:h-20 object-contain"
           />
-          <span className="font-medium text-sm max-md:text-[0.60rem]">
+          <span className="font-medium text-sm hidden max-md:text-[0.60rem]">
             RTP: {product.rtp}%
           </span>
           <div className="bg-green-700 px-4 p-0.5 rounded-t-xl">
