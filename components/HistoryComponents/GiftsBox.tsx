@@ -58,13 +58,6 @@ export default function GiftBox() {
       image: '/Gifts/mouse.webp',
       rtp: '1.01',
       price: 30.9
-    },
-    {
-      id: 8,
-      name: 'Fone bluetooh',
-      image: '/Gifts/fone.webp',
-      rtp: '4.00',
-      price: 5.0
     }
   ];
 

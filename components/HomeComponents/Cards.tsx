@@ -25,7 +25,7 @@ export default function Cards() {
       id: 3,
       title: 'Box Amazon',
       price: 19.9,
-      image: 'box/Amazon.webp'
+      image: 'box/amazon.webp'
     },
     {
       id: 4,

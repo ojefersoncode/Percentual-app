@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Balance from './Balance';
 import { ProfileButton } from './ProfileButton';
+import AnimateBonus from './AnimatedBonus';
 
 const DATA = {
   navbar: [
@@ -18,10 +19,10 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex justify-between items-center px-4 py-2 border-b border-border">
+    <div className="w-full flex justify-between items-center px-4 py-2 border-b border-border bg-subbackground">
       <div className="flex items-center gap-0;5">
         <h1 className="text-xl text-white max-md:text-lg font-black">Magic</h1>
-        <Box className="size-7 max-md:size-6 text-border" />
+        <Box className="size-7 max-md:size-6 text-yellow-400" />
         <h1 className="text-xl text-white font-black">box</h1>
       </div>
 
@@ -34,7 +35,9 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={`transition-all duration-300 ${
-                  isActive ? 'text-white' : 'text-border hover:text-white'
+                  isActive
+                    ? 'text-yellow-400 font-bold'
+                    : 'text-white/80 font-semibold hover:text-white'
                 }`}
               >
                 {item.label}
@@ -44,7 +47,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center justify-center gap-4">
+        <AnimateBonus />
         <Balance />
         <ProfileButton />
       </div>
