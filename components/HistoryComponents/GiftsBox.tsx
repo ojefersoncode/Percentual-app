@@ -123,7 +123,7 @@ export default function GiftBox() {
       {products.map((product) => (
         <div
           key={product.id}
-          className="flex flex-col gap-4 justify-between items-center rounded-lg text-white border-2 border-border bg-btn"
+          className="flex flex-col gap-4 justify-between items-center rounded-lg text-white border-2 border-border bg-subbackground"
         >
           <h1 className="font-bold text-base max-md:text-xs text-center pt-4 pb-1">
             {product.name}
@@ -136,7 +136,7 @@ export default function GiftBox() {
           <span className="font-medium text-sm hidden max-md:text-[0.60rem]">
             RTP: {product.rtp}%
           </span>
-          <div className="bg-green-700 px-4 p-0.5 rounded-t-xl">
+          <div className="bg-background px-4 p-0.5 rounded-t-xl">
             <span className="font-medium text-sm max-md:text-[0.60rem]">
               R$ {product.price.toFixed(2)}
             </span>

@@ -302,7 +302,7 @@ export function Spin({ user }: { user: User }) {
         >
           {items.map((item, index) => (
             <div key={index} className="min-w-[150px] flex-shrink-0">
-              <div className="bg-btn dark:bg-btn border-2 border-subbackground rounded-lg shadow-lg">
+              <div className="bg-subbackground dark:bg-subbackground border border-btn rounded-lg">
                 <div className="flex flex-col items-center justify-center bg-btn dark:bg-btn">
                   <div className="relative w-20 h-20 md:w-30 md:h-30">
                     <Image
@@ -317,8 +317,8 @@ export function Spin({ user }: { user: User }) {
                     {item.name}
                   </p>
                 </div>
-                <div className=" flex justify-center items-center bg-green-700 p-1 rounded-t-xl">
-                  <span className="font-medium text-sm max-md:text-xs">
+                <div className=" flex justify-center items-center">
+                  <span className="font-medium text-sm max-md:text-xs bg-background px-4 py-1 rounded-t-xl">
                     R$ {item.price}
                   </span>
                 </div>
@@ -331,7 +331,7 @@ export function Spin({ user }: { user: User }) {
           <Button
             onClick={startSpin}
             disabled={isSpinning}
-            className="p-6 border-2 text-text dark:text-text bg-btn dark:bg-btn dark:hover:bg-btn hover:bg-subbackground text-base font-medium"
+            className="p-6 border-2 text-text dark:text-text bg-btn dark:bg-btn dark:hover:bg-btn hover:bg-subbackground text-base font-bold"
           >
             {isSpinning ? 'Girando...' : 'Abrir por  R$: 100,00'}
           </Button>
