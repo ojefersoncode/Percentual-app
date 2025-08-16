@@ -12,18 +12,19 @@ export default function GiftBox() {
   const products: Product[] = [
     {
       id: 1,
-      name: 'Capinha',
-      image: '/Gifts/capinha.webp',
+      name: 'Cabo usb',
+      image: '/Gifts/caboc.png',
       rtp: '80.01',
       price: 10.0
     },
     {
       id: 2,
-      name: 'Cabo usb',
-      image: '/Gifts/cabo.webp',
+      name: 'Mouse pad',
+      image: '/Gifts/mousepad.png',
       rtp: '80.01',
       price: 10.0
     },
+
     {
       id: 3,
       name: 'Carregador',
@@ -34,30 +35,86 @@ export default function GiftBox() {
     {
       id: 4,
       name: 'Power bank',
-      image: '/Gifts/powerbank.webp',
+      image: '/Gifts/powerbank.png',
       rtp: '2.00',
       price: 20.0
     },
     {
       id: 5,
-      name: 'Fone bluetooh',
-      image: '/Gifts/fone.webp',
+      name: 'Headset',
+      image: '/Gifts/headset.png',
       rtp: '4.00',
       price: 5.0
     },
     {
       id: 6,
       name: 'Teclado',
-      image: '/Gifts/teclado.jpg',
+      image: '/Gifts/teclado.png',
       rtp: '1.01',
       price: 30.9
     },
     {
       id: 7,
       name: 'Mouse',
-      image: '/Gifts/mouse.webp',
+      image: '/Gifts/mouse.png',
       rtp: '1.01',
       price: 30.9
+    },
+    {
+      id: 8,
+      name: 'Hub usb',
+      image: '/Gifts/hubusb.png',
+      rtp: '1.01',
+      price: 30.9
+    },
+    {
+      id: 9,
+      name: 'microfone',
+      image: '/Gifts/microfone.png',
+      rtp: '1.01',
+      price: 30.9
+    },
+    {
+      id: 10,
+      name: 'Volante',
+      image: '/Gifts/volante.png',
+      rtp: '1.01',
+      price: 30.9
+    },
+    {
+      id: 11,
+      name: 'Ssd 128gb',
+      image: '/Gifts/ssd.png',
+      rtp: '1.01',
+      price: 30.9
+    },
+    {
+      id: 12,
+      name: 'Fonte 500w',
+      image: '/Gifts/fonte.png',
+      rtp: '1.01',
+      price: 30.9
+    },
+    {
+      id: 13,
+      name: 'Watercooler',
+      image: '/Gifts/watercooler.png',
+      rtp: '1.01',
+      price: 30.9
+    },
+    {
+      id: 14,
+      name: 'Placa de video',
+      image: '/Gifts/placadevideo.png',
+      rtp: '1.01',
+      price: 30.9
+    },
+    {
+      id: 15,
+      name: 'Cabo Hdmi',
+      image: '/Gifts/cabohdmi.png',
+      rtp: '80.01',
+      price: 17.0
     }
   ];
 

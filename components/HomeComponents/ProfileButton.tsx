@@ -49,9 +49,9 @@ export function ProfileButton() {
       <DropdownMenuTrigger asChild>
         <Button
           variant="default"
-          className="py-1 px-2 border-none rounded-lg bg-transparent dark:bg-subbackground hover:bg-transparent dark:hover:bg-subbackground/80 focus:right-0"
+          className="py-1 px-0 border-none rounded-lg bg-transparent dark:bg-subbackground hover:bg-transparent dark:hover:bg-subbackground/80 focus:right-0"
         >
-          <MenuIcon className="text-text size-5" />
+          <MenuIcon className="text-text size-6" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mr-2 touch-pan-x touch-pan-y">
@@ -62,7 +62,7 @@ export function ProfileButton() {
           >
             <User className="w-5 h-5 mr-2" /> Minha conta
           </DropdownMenuItem>
-          <DropdownMenuSeparator className="bg-zinc-300 dark:bg-background" />
+          <DropdownMenuSeparator className="bg-zinc-300 dark:bg-btn" />
           <DropdownMenuItem>
             <div
               className="flex items-center text-red-50 hover:text-red-100 transition-all"

@@ -8,80 +8,140 @@ import GiftBox from '../HistoryComponents/GiftsBox';
 import { ChevronLeft } from 'lucide-react';
 import Footer from '../HomeComponents/Footer';
 
+interface Product {
+  rtp: number;
+  name: string;
+  price: number;
+  img: string;
+}
+
 export function Spin({ user }: { user: User }) {
   const baseItems = [
     {
-      name: 'Capinha',
-      img: '/Gifts/capinha.webp',
-      rtp: '80.01',
-      price: '10.00'
+      name: 'Mouse gamer',
+      img: '/Gifts/mouse.png',
+      rtp: 80.01,
+      price: 50.0
     },
     {
-      name: 'Cabo usb',
-      img: '/Gifts/cabo.webp',
-      rtp: '80.01',
-      price: '10.00'
+      name: 'Cabo usb C',
+      img: '/Gifts/caboc.png',
+      rtp: 80.01,
+      price: 18.0
     },
     {
       name: 'Carregador',
       img: '/Gifts/carregador.webp',
-      rtp: '20.01',
-      price: '15.00'
+      rtp: 20.01,
+      price: 25.0
     },
     {
-      name: 'Power bank ',
-      img: '/Gifts/powerbank.webp',
-      rtp: '2.00',
-      price: '20.00'
+      name: 'Power bank',
+      img: '/Gifts/powerbank.png',
+      rtp: 2.0,
+      price: 37.9
     },
     {
-      name: 'Fone bluetooh',
-      img: '/Gifts/fone.webp',
-      rtp: '4.00',
-      price: '5.00'
-    },
-    {
-      name: 'Power bank ',
-      img: '/Gifts/powerbank.webp',
-      rtp: '2.00',
-      price: '20.00'
+      name: 'Headset',
+      img: '/Gifts/headset.png',
+      rtp: 4.0,
+      price: 230.0
     },
     {
       name: 'Teclado',
-      img: '/Gifts/teclado.jpg',
-      rtp: '1.01',
-      price: '30.90'
+      img: '/Gifts/teclado.png',
+      rtp: 1.01,
+      price: 129.9
     },
     {
-      name: 'Capinha',
-      img: '/Gifts/capinha.webp',
-      rtp: '80.01',
-      price: '10.00'
+      name: 'Hub usb',
+      img: '/Gifts/hubusb.png',
+      rtp: 80.01,
+      price: 20.0
     },
     {
-      name: 'Mouse',
-      img: '/Gifts/mouse.webp',
-      rtp: '1.01',
-      price: '30.90'
+      name: 'Mouse pad',
+      img: '/Gifts/mousepad.png',
+      rtp: 4.0,
+      price: 40.0
     },
     {
-      name: 'Fone bluetooh',
-      img: '/Gifts/fone.webp',
-      rtp: '4.00',
-      price: '5.00'
+      name: 'Microfone',
+      img: '/Gifts/microfone.png',
+      rtp: 2.21,
+      price: 160.0
     },
-
+    {
+      name: 'Volante',
+      img: '/Gifts/volante.png',
+      rtp: 1.01,
+      price: 450.0
+    },
     {
       name: 'Carregador',
       img: '/Gifts/carregador.webp',
-      rtp: '20.01',
-      price: '15.00'
+      rtp: 20.01,
+      price: 25.0
     },
     {
-      name: 'Capinha',
-      img: '/Gifts/capinha.webp',
-      rtp: '80.01',
-      price: '10.00'
+      name: 'Carregador',
+      img: '/Gifts/carregador.webp',
+      rtp: 20.01,
+      price: 25.0
+    },
+    {
+      name: 'SSD 128GB',
+      img: '/Gifts/ssd.png',
+      rtp: 3.31,
+      price: 98.9
+    },
+    {
+      name: 'Fonte 500w',
+      img: '/Gifts/fonte.png',
+      rtp: 6.02,
+      price: 150.0
+    },
+    {
+      name: 'Watercooler',
+      img: '/Gifts/watercooler.png',
+      rtp: 19.0,
+      price: 299.9
+    },
+    {
+      name: 'Cabo Hdmi',
+      img: '/Gifts/cabohdmi.png',
+      rtp: 80.01,
+      price: 10.0
+    },
+    {
+      name: 'Placa de vídeo',
+      img: '/Gifts/placadevideo.png',
+      rtp: 0.03,
+      price: 1500.0
+    },
+    {
+      name: 'Monitor',
+      img: '/Gifts/monitor.png',
+      rtp: 0.03,
+      price: 800.0
+    },
+    {
+      name: 'Microfone',
+      img: '/Gifts/microfone.png',
+      rtp: 0.03,
+      price: 150.0
+    },
+    {
+      name: 'Volante',
+      img: '/Gifts/volante.png',
+      rtp: 0.03,
+      price: 400.0
+    },
+    {
+      name: 'Cabo Hdmi',
+      img: '/Gifts/cabohdmi.png',
+      rtp: 80.01,
+      price: 10.0
     }
   ];
 
@@ -97,7 +157,7 @@ export function Spin({ user }: { user: User }) {
 
   // escolhe índice pelo RTP (retorna o índice diretamente, não o item)
   const chooseIndexByRTP = React.useCallback(() => {
-    const weights = baseItems.map((i) => parseFloat(i.rtp));
+    const weights = baseItems.map((i) => i.rtp); // já é number
     const total = weights.reduce((a, b) => a + b, 0);
     let r = Math.random() * total;
     for (let i = 0; i < weights.length; i++) {
@@ -227,7 +287,13 @@ export function Spin({ user }: { user: User }) {
       <div className="flex flex-col w-full justify-center items-center px-6 max-md:px-4">
         <div className="h-8"></div>
         {/* ponteiro central */}
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-1 max-md:w-0.5 h-16 bg-yellow-500 z-20" />
+        <div className="absolute  top-16 left-1/2 transform -translate-x-1/2 z-20">
+          <img
+            src="/pin.png"
+            className="max-md:size-8 size-10 mt-2 max-md:mt-3"
+            alt=""
+          />
+        </div>
 
         <div
           ref={containerRef}
@@ -251,8 +317,8 @@ export function Spin({ user }: { user: User }) {
                     {item.name}
                   </p>
                 </div>
-                <div className="w-full flex justify-center items-center bg-green-700 px-4 p-0.5 rounded-t-xl">
-                  <span className="font-medium text-sm max-md:text-[0.60rem]">
+                <div className=" flex justify-center items-center bg-green-700 p-1 rounded-t-xl">
+                  <span className="font-medium text-sm max-md:text-xs">
                     R$ {item.price}
                   </span>
                 </div>
@@ -267,7 +333,7 @@ export function Spin({ user }: { user: User }) {
             disabled={isSpinning}
             className="p-6 border-2 text-text dark:text-text bg-btn dark:bg-btn dark:hover:bg-btn hover:bg-subbackground text-base font-medium"
           >
-            {isSpinning ? 'Girando...' : 'Abrir por R$: 49,90'}
+            {isSpinning ? 'Girando...' : 'Abrir por  R$: 100,00'}
           </Button>
         </div>
       </div>

@@ -1,5 +1,5 @@
 'use client';
-import { Box } from 'lucide-react';
+import { Box, Gift } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Balance from './Balance';
@@ -48,7 +48,7 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center justify-center gap-4">
-        <AnimateBonus />
+        <Gift className="text-yellow-500 size-6" />
         <Balance />
         <ProfileButton />
       </div>

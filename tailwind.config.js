@@ -21,11 +21,11 @@ module.exports = {
         laranja: '0 4px 6px rgba(249, 115, 22, 0.5)'
       },
       colors: {
-        btn: '#DC2F02',
+        btn: '#FF021D',
         border: '#DC2F02',
-        background: '#6A040F',
-        subbackground: '#C1121F',
-        high: '#FFB200',
+        background: '#900313',
+        subbackground: '#D20319',
+        high: '#058436',
         text: '#f8f9f8',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
