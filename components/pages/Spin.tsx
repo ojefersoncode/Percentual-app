@@ -145,6 +145,11 @@ export function Spin({ user }: { user: User }) {
     }
   ];
 
+  const clickAudio =
+    typeof Audio !== 'undefined' ? new Audio('/sounds/click.mp3') : null;
+  const buttonAudio =
+    typeof Audio !== 'undefined' ? new Audio('/sounds/botao.mp3') : null;
+
   // triplica para simular looping infinito visual
   const items = React.useMemo(
     () => [...baseItems, ...baseItems, ...baseItems],
@@ -206,6 +211,7 @@ export function Spin({ user }: { user: User }) {
   }, [currentScroll]);
 
   const startSpin = () => {
+    if (buttonAudio) buttonAudio.play(); // toca som do botão
     const el = containerRef.current;
     if (!el || isSpinning) return;
     setIsSpinning(true);
@@ -253,16 +259,26 @@ export function Spin({ user }: { user: User }) {
       const eased = easeOutCubic(p);
       let pos = start + distance * eased;
 
-      // wrap no bloco do meio
       while (pos >= max) pos -= single;
       while (pos < min) pos += single;
 
       el.scrollLeft = pos;
 
+      // detectar item central
+      const children = Array.from(el.children) as HTMLElement[];
+      const middle = el.clientWidth / 2;
+      children.forEach((child) => {
+        const childCenter =
+          child.offsetLeft + child.clientWidth / 2 - el.scrollLeft;
+        if (Math.abs(childCenter - middle) < 5) {
+          // tolerância de 5px
+          if (clickAudio && clickAudio.paused) clickAudio.play();
+        }
+      });
+
       if (p < 1) {
         requestAnimationFrame(frame);
       } else {
-        // garante o snap final exatamente no alvo
         const finalPos = normalizeIntoMiddle(el, desired);
         el.scrollLeft = finalPos;
         setCurrentScroll(finalPos);
@@ -288,7 +304,11 @@ export function Spin({ user }: { user: User }) {
         <div className="h-8"></div>
         {/* ponteiro central */}
         <div className="absolute  top-14 left-1/2 transform -translate-x-1/2 z-20">
-          <img src="/pin.png" className="max-md:size-8 size-10" alt="" />
+          <img
+            src="/pin.png" // marcador da roleta
+            className="max-md:size-8 size-10"
+            alt="marcador"
+          />
         </div>
 
         <div
@@ -325,7 +345,7 @@ export function Spin({ user }: { user: User }) {
 
         <div className="pt-12">
           <Button
-            onClick={startSpin}
+            onClick={startSpin} // botão para girar roleta com auidio botao.mp3
             disabled={isSpinning}
             className="p-6 border-2 text-text dark:text-text bg-btn dark:bg-btn dark:hover:bg-btn hover:bg-subbackground text-base font-bold"
           >
