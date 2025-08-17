@@ -21,7 +21,7 @@ export function Navbottom() {
       <div className="flex justify-center gap-4 items-center">
         {DATA.navbar.map((item, index) => {
           const isActive = pathname.startsWith(item.href);
-          const base = isActive ? 'text-brand' : 'text-subbackground';
+          const base = isActive ? 'text-brand' : 'text-text/70';
           const hover = isActive
             ? ''
             : 'group-hover:text-white transition-all duration-300';

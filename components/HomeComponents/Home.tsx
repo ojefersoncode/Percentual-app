@@ -5,7 +5,7 @@ import Cards from './Cards';
 
 export const Home = () => {
   return (
-    <section className="flex flex-col bg-background dark:bg-background p-4">
+    <section className="flex flex-col bg-background dark:bg-background pt-4 px-4">
       <div className="pb-4">
         <CarouselBanner />
       </div>

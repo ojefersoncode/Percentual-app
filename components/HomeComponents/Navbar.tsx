@@ -4,12 +4,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Balance from './Balance';
 import { ProfileButton } from './ProfileButton';
-import AnimateBonus from './AnimatedBonus';
 
 const DATA = {
   navbar: [
     { href: '/Home', label: 'Home' },
-    { href: '/Spin', label: 'Atualizador' },
+    { href: '/Spin', label: 'Roleta' },
     { href: '/History', label: 'Histórico' },
     { href: '/Withdraw', label: 'Saque' }
   ]

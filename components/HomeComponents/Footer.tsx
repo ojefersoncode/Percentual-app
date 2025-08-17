@@ -2,8 +2,8 @@
 
 export default function Footer() {
   return (
-    <div className="flex w-full justify-center items-center bg-transparent pt-8 pb-4 max-md:pb-24">
-      <span className="text-white font-bold text-sm max-md:text-xs">
+    <div className="flex w-full justify-center items-center bg-transparent py-6 max-md:pb-24">
+      <span className="text-white font-bold text-md max-md:text-sm">
         Todos os direitos reservados a Magic Box &copy; 2025
       </span>
     </div>

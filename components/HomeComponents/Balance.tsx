@@ -1,7 +1,6 @@
 'use client';
 
-import { Plus } from 'lucide-react';
-import DepositModal from '../WithdrawComponents/Depositmodal';
+import BalanceModal from '../WithdrawComponents/BalanceModal';
 
 export default function Balance() {
   return (
@@ -9,7 +8,7 @@ export default function Balance() {
       <span className="font-bold text-md max-md:text-sm pr-1 pl-3">
         R$:12,000.00
       </span>
-      <DepositModal />
+      <BalanceModal />
     </div>
   );
 }

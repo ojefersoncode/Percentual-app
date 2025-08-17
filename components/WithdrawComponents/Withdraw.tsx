@@ -1,28 +1,29 @@
 'use client';
 
 import { useState } from 'react';
+import { DialogTitle } from '@/components/ui/dialog';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { Plus } from 'lucide-react';
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue
 } from '../ui/select';
 
-export default function DepositModal() {
+export default function Withdraw() {
   const [amount, setAmount] = useState(20);
   const amounts = [20, 50, 100, 200, 500, 1000, 5000, 10000];
 
   return (
     <Card className="border-none shadow-none">
       <CardContent className="p-6 flex flex-col gap-5 bg-background dark:bg-background border-border">
+        <DialogTitle className="sr-only">Depósito</DialogTitle>
+
         {/* Payment Method */}
         <div className="flex items-center bg-subbackground dark:bg-subbackground justify-between bg-muted px-3 py-2 rounded-md">
           <span className="text-text font-bold">Pix</span>
@@ -36,34 +37,29 @@ export default function DepositModal() {
                   className="focus:bg-background dark:focus:bg-background"
                   value="grapes"
                 >
-                  Pix
+                  CPF
                 </SelectItem>
                 <SelectItem
                   className="focus:bg-background dark:focus:bg-background"
                   value="apple"
                 >
-                  Cartão
+                  Email
                 </SelectItem>
                 <SelectItem
                   className="focus:bg-background dark:focus:bg-background"
                   value="blueberry"
                 >
-                  Crypto
-                </SelectItem>
-                <SelectItem
-                  className="focus:bg-background dark:focus:bg-background"
-                  value="banana"
-                >
-                  Boleto
+                  Telefone
                 </SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
         </div>
+
         {/* Deposit Amount */}
         <div>
           <p className="text-sm text-muted-foreground mb-1">
-            VALOR DO DEPOSITO
+            VALOR DA RETIRADA
           </p>
           <div className="flex items-center gap-2 w-full">
             <div className="flex items-center border rounded-md bg-subbackground dark:bg-subbackground px-2 flex-1">
@@ -120,12 +116,12 @@ export default function DepositModal() {
         </ToggleGroup>
 
         {/* Buttons */}
-        <Button className="bg-btn hover:bg-btn/80 dark:bg-btn dark:hover:bg-btn/80 transition-all text-text dark:text-text  w-full">
-          Depositar R$:{amount.toFixed(2)}
+        <Button className="bg-btn hover:bg-btn/80 dark:bg-btn dark:hover:bg-btn/80 transition-all text-text dark:text-text w-full">
+          Retirar R$:{amount.toFixed(2)}
         </Button>
         <Button
           variant="outline"
-          className="w-ful bg-subbackground dark:bg-subbackground hover:bg-subbackground/60 dark:hover:bg-subbackground/60 transition-all"
+          className="w-ful bg-subbackground dark:bg-subbackground hover:bg-subbackground/60 dark:hover:bg-subbackground/60"
         >
           Cancelar
         </Button>
