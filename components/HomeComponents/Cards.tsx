@@ -76,7 +76,7 @@ export default function Cards() {
       {products.map((product) => (
         <div
           key={product.id}
-          className="flex flex-col gap-4 justify-between items-center rounded-md text-white border border-border  bg-subbackground dark:bg-subbackground hover:scale-105 transition-all duration-300 z-10"
+          className="flex flex-col gap-4 justify-between items-center rounded-md text-white border border-border  bg-gradient-to-b from-subbackground to-btn hover:scale-105 transition-all duration-300 z-10"
         >
           <h1 className="font-bold text-base max-md:text-xs text-center pt-4 pb-1">
             {product.title}

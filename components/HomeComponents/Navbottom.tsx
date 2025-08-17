@@ -1,15 +1,15 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { HomeIcon, Rocket, PiggyBank, History } from 'lucide-react';
+import { HomeIcon, History, Menu, Gift } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 const DATA = {
   navbar: [
     { href: '/Home', icon: HomeIcon, label: 'Home' },
-    { href: '/Spin', icon: Rocket, label: 'Atualizador' },
+    { href: '/Spin', icon: Gift, label: 'Bõnus' },
     { href: '/History', icon: History, label: 'Histórico' },
-    { href: '/Withdraw', icon: PiggyBank, label: 'Saque' }
+    { href: '/Withdraw', icon: Menu, label: 'Menu' }
   ]
 };
 

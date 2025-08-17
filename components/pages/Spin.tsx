@@ -216,83 +216,82 @@ export function Spin({ user }: { user: User }) {
     if (!el || isSpinning) return;
     setIsSpinning(true);
 
-    const single = el.scrollWidth / 3;
-    const min = single;
-    const max = single * 2;
+    // delay de 1.5 segundos antes de começar a roleta
+    setTimeout(() => {
+      const single = el.scrollWidth / 3;
+      const min = single;
+      const max = single * 2;
 
-    // normaliza ponto de partida no bloco do meio
-    const start = normalizeIntoMiddle(el, el.scrollLeft);
-    el.scrollLeft = start;
+      // normaliza ponto de partida no bloco do meio
+      const start = normalizeIntoMiddle(el, el.scrollLeft);
+      el.scrollLeft = start;
 
-    // índice vencedor pelo RTP
-    const winnerIndex = chooseIndexByRTP();
+      // índice vencedor pelo RTP
+      const winnerIndex = chooseIndexByRTP();
 
-    // escolhe o elemento alvo no bloco do meio (baseItems.length é o início do bloco do meio)
-    const middleStartIndex = baseItems.length;
-    const targetIndex = middleStartIndex + winnerIndex;
-    const targetElement = el.children[targetIndex] as HTMLElement | undefined;
+      // escolhe o elemento alvo no bloco do meio
+      const middleStartIndex = baseItems.length;
+      const targetIndex = middleStartIndex + winnerIndex;
+      const targetElement = el.children[targetIndex] as HTMLElement | undefined;
 
-    if (!targetElement) {
-      setIsSpinning(false);
-      return;
-    }
-
-    // posição centralizada do alvo
-    const desired =
-      targetElement.offsetLeft -
-      el.clientWidth / 2 +
-      targetElement.clientWidth / 2;
-
-    // cálculo de distância com algumas voltas extras, mas garantindo final exato em "desired"
-    // se desired < start, somamos +single para manter movimento à frente
-    let laps = 2; // ajuste se quiser mais voltas
-    let distance = desired - start + laps * single;
-    while (distance <= 0) distance += single;
-
-    const duration = 3000; // ms (ajuste a gosto)
-    const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
-
-    const t0 = performance.now();
-
-    const frame = (now: number) => {
-      const p = Math.min(1, (now - t0) / duration);
-      const eased = easeOutCubic(p);
-      let pos = start + distance * eased;
-
-      while (pos >= max) pos -= single;
-      while (pos < min) pos += single;
-
-      el.scrollLeft = pos;
-
-      // detectar item central
-      const children = Array.from(el.children) as HTMLElement[];
-      const middle = el.clientWidth / 2;
-      children.forEach((child) => {
-        const childCenter =
-          child.offsetLeft + child.clientWidth / 2 - el.scrollLeft;
-        if (Math.abs(childCenter - middle) < 5) {
-          // tolerância de 5px
-          if (clickAudio && clickAudio.paused) clickAudio.play();
-        }
-      });
-
-      if (p < 1) {
-        requestAnimationFrame(frame);
-      } else {
-        const finalPos = normalizeIntoMiddle(el, desired);
-        el.scrollLeft = finalPos;
-        setCurrentScroll(finalPos);
+      if (!targetElement) {
         setIsSpinning(false);
+        return;
       }
-    };
 
-    requestAnimationFrame(frame);
+      // posição centralizada do alvo
+      const desired =
+        targetElement.offsetLeft -
+        el.clientWidth / 2 +
+        targetElement.clientWidth / 2;
+
+      let laps = 2; // voltas extras
+      let distance = desired - start + laps * single;
+      while (distance <= 0) distance += single;
+
+      const duration = 3000; // duração do spin
+      const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+      const t0 = performance.now();
+
+      const frame = (now: number) => {
+        const p = Math.min(1, (now - t0) / duration);
+        const eased = easeOutCubic(p);
+        let pos = start + distance * eased;
+
+        while (pos >= max) pos -= single;
+        while (pos < min) pos += single;
+
+        el.scrollLeft = pos;
+
+        // detectar item central
+        const children = Array.from(el.children) as HTMLElement[];
+        const middle = el.clientWidth / 2;
+        children.forEach((child) => {
+          const childCenter =
+            child.offsetLeft + child.clientWidth / 2 - el.scrollLeft;
+          if (Math.abs(childCenter - middle) < 5) {
+            if (clickAudio && clickAudio.paused) clickAudio.play();
+          }
+        });
+
+        if (p < 1) {
+          requestAnimationFrame(frame);
+        } else {
+          const finalPos = normalizeIntoMiddle(el, desired);
+          el.scrollLeft = finalPos;
+          setCurrentScroll(finalPos);
+          setIsSpinning(false);
+        }
+      };
+
+      requestAnimationFrame(frame);
+    }, 1500); // 1500ms = 1.5 segundos
   };
 
   return (
     <div className="relative flex flex-col gap-6 w-full min-h-screen">
       <div className="flex w-full justify-between items-center px-2">
-        <div className="flex items-center text-nowrap text-text dark:text-text hover:text-white/80">
+        <div className="flex items-center text-nowrap pt-6 text-text dark:text-text hover:text-white/80">
           <ChevronLeft className="size-5 max-md:size-4" />
           <span className="font-bold text-sm max-md:text-sm">
             Voltar pagina
@@ -303,7 +302,7 @@ export function Spin({ user }: { user: User }) {
       <div className="flex flex-col w-full justify-center items-center">
         <div className="h-8"></div>
         {/* ponteiro central */}
-        <div className="absolute  top-14 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="absolute  top-20 left-1/2 transform -translate-x-1/2 z-20">
           <img
             src="/pin.png" // marcador da roleta
             className="max-md:size-8 size-10"
@@ -318,7 +317,7 @@ export function Spin({ user }: { user: User }) {
         >
           {items.map((item, index) => (
             <div key={index} className="min-w-[150px] flex-shrink-0">
-              <div className="bg-subbackground border border-border rounded-md">
+              <div className="bg-gradient-to-b from-subbackground to-btn border border-border rounded-md">
                 <div className="flex flex-col items-center justify-center">
                   <div className="relative w-20 h-20 md:w-30 md:h-30">
                     <Image
@@ -334,7 +333,7 @@ export function Spin({ user }: { user: User }) {
                   </p>
                 </div>
                 <div className=" flex justify-center items-center">
-                  <span className="font-medium text-sm max-md:text-xs bg-background px-4 py-1 rounded-t-xl">
+                  <span className="font-medium text-sm max-md:text-xs bg-subbackground px-4 py-1 rounded-t-xl">
                     R$ {item.price}
                   </span>
                 </div>
