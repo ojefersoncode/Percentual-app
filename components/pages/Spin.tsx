@@ -274,7 +274,7 @@ export function Spin({ user }: { user: User }) {
   };
 
   return (
-    <div className="relative flex flex-col gap-6 py-4 w-full min-h-screen">
+    <div className="relative flex flex-col gap-6 w-full min-h-screen">
       <div className="flex w-full justify-between items-center px-2">
         <div className="flex items-center text-nowrap text-text dark:text-text hover:text-white/80">
           <ChevronLeft className="size-5 max-md:size-4" />
@@ -284,20 +284,16 @@ export function Spin({ user }: { user: User }) {
         </div>
       </div>
 
-      <div className="flex flex-col w-full justify-center items-center px-6 max-md:px-4">
+      <div className="flex flex-col w-full justify-center items-center">
         <div className="h-8"></div>
         {/* ponteiro central */}
-        <div className="absolute  top-16 left-1/2 transform -translate-x-1/2 z-20">
-          <img
-            src="/pin.png"
-            className="max-md:size-8 size-10 mt-2 max-md:mt-3"
-            alt=""
-          />
+        <div className="absolute  top-14 left-1/2 transform -translate-x-1/2 z-20">
+          <img src="/pin.png" className="max-md:size-8 size-10" alt="" />
         </div>
 
         <div
           ref={containerRef}
-          className="w-full overflow-hidden flex gap-3 no-scrollbar px-6"
+          className="w-full overflow-hidden flex gap-3 no-scrollbar"
           style={{ scrollBehavior: 'auto' }} // garante que o controle é 100% do JS
         >
           {items.map((item, index) => (

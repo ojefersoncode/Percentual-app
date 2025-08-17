@@ -6,7 +6,7 @@ import Cards from './Cards';
 export const Home = () => {
   return (
     <section className="flex flex-col bg-background dark:bg-background p-4">
-      <div className="pb-8">
+      <div className="pb-4">
         <CarouselBanner />
       </div>
       <Cards />
