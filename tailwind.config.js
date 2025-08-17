@@ -21,12 +21,13 @@ module.exports = {
         laranja: '0 4px 6px rgba(249, 115, 22, 0.5)'
       },
       colors: {
-        btn: '#FF021D',
-        border: '#DC2F02',
-        background: '#900313',
-        subbackground: '#D20319',
-        high: '#058436',
+        btn: '#3d789d',
+        border: '#38405c',
+        background: '#192036',
+        subbackground: '#283156',
+        high: '#3d9d43',
         text: '#f8f9f8',
+        brand: '#ffbf00',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         foreground: 'hsl(var(--foreground))',

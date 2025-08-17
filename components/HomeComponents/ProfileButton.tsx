@@ -49,7 +49,7 @@ export function ProfileButton() {
       <DropdownMenuTrigger asChild>
         <Button
           variant="default"
-          className="py-1 px-0 border-none rounded-lg bg-transparent dark:bg-subbackground hover:bg-transparent dark:hover:bg-subbackground/80 focus:right-0"
+          className="py-1 px-1.5 rounded-md border-2 border-border bg-transparent dark:bg-transparent hover:bg-transparent dark:hover:bg-transparent focus:right-0"
         >
           <MenuIcon className="text-text size-6" />
         </Button>

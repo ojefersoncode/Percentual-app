@@ -302,8 +302,8 @@ export function Spin({ user }: { user: User }) {
         >
           {items.map((item, index) => (
             <div key={index} className="min-w-[150px] flex-shrink-0">
-              <div className="bg-subbackground dark:bg-subbackground border border-btn rounded-lg">
-                <div className="flex flex-col items-center justify-center bg-btn dark:bg-btn">
+              <div className="bg-subbackground border border-border rounded-md">
+                <div className="flex flex-col items-center justify-center">
                   <div className="relative w-20 h-20 md:w-30 md:h-30">
                     <Image
                       src={item.img}

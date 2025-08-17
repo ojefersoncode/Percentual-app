@@ -19,10 +19,10 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex justify-between items-center px-4 py-2 border-b border-border bg-subbackground">
+    <div className="w-full flex justify-between items-center px-4 py-2 border-b-2 border-border bg-background">
       <div className="flex items-center gap-0;5">
         <h1 className="text-xl text-white max-md:text-lg font-black">Magic</h1>
-        <Box className="size-7 max-md:size-6 text-yellow-400" />
+        <Box className="size-7 max-md:size-6 text-brand" />
         <h1 className="text-xl text-white font-black">box</h1>
       </div>
 
@@ -36,7 +36,7 @@ export default function Navbar() {
                 href={item.href}
                 className={`transition-all duration-300 ${
                   isActive
-                    ? 'text-yellow-400 font-bold'
+                    ? 'text-brand font-bold'
                     : 'text-white/80 font-semibold hover:text-white'
                 }`}
               >
@@ -48,7 +48,9 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center justify-center gap-4">
-        <Gift className="text-yellow-500 size-6" />
+        <div className="max-md:hidden">
+          <Gift className="text-brand size-6" />
+        </div>
         <Balance />
         <ProfileButton />
       </div>
