@@ -9,6 +9,7 @@ export enum AuthState {
 
 export type StateInfo = {
   title: string;
+  balance: number;
   description?: string;
   submitText: string;
   onSubmit: () => void;
@@ -25,6 +26,7 @@ export type SubscriptionWithPriceAndProduct = Subscription & {
   prices:
     | (Price & {
         products: Product | null;
+        balance: number | null;
       })
     | null;
 };

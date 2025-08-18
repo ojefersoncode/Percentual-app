@@ -248,6 +248,7 @@ export type Database = {
           full_name: string | null;
           id: string;
           payment_method: Json | null;
+          balance: number | null;
         };
         Insert: {
           avatar_url?: string | null;
@@ -255,6 +256,7 @@ export type Database = {
           full_name?: string | null;
           id: string;
           payment_method?: Json | null;
+          balance?: number | null;
         };
         Update: {
           avatar_url?: string | null;
@@ -262,6 +264,7 @@ export type Database = {
           full_name?: string | null;
           id?: string;
           payment_method?: Json | null;
+          balance?: number | null;
         };
         Relationships: [
           {
