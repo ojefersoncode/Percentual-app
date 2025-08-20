@@ -1,33 +1,19 @@
 'use client';
 
-import { useState } from 'react';
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogTrigger
 } from '@/components/ui/dialog';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { Plus, Wallet } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-import { Label } from '../ui/label';
 import Withdraw from './Withdraw';
 import DepositModal from './Depositmodal';
 
 export default function BalanceModal() {
-  const [amount, setAmount] = useState(10);
-  const amounts = [20, 50, 100, 200, 500, 1000, 5000, 10000];
-
   return (
     <Dialog>
       {/* Botão para abrir o modal */}

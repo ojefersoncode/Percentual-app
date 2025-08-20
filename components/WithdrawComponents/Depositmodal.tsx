@@ -16,7 +16,7 @@ import {
 
 export default function DepositModal() {
   const [amount, setAmount] = useState(20);
-  const amounts = [20, 50, 100, 200, 500, 1000, 5000, 10000];
+  const amounts = [5, 10, 20, 50, 100, 200, 500, 1000];
 
   return (
     <Card className="border-none shadow-none">
@@ -57,10 +57,8 @@ export default function DepositModal() {
               <Input
                 type="number"
                 value={amount}
-                min={20} // trava no input
-                onChange={(e) =>
-                  setAmount(Math.max(20, Number(e.target.value)))
-                }
+                min={5} // trava no input
+                onChange={(e) => setAmount(Math.max(5, Number(e.target.value)))}
                 className="border-none flex-1 font-semibold text-text focus-visible:ring-0 w-full bg-subbackground dark:bg-subbackground "
               />
             </div>
