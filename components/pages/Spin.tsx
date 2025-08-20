@@ -273,7 +273,6 @@ export function Spin({ user }: { user: User }) {
   const startSpin = async () => {
     if (isSpinning) return;
     const success = await spendBalance(100); // 100 é o valor que custa girar a roleta
-    if (setBalance) setBalance(balance - 100);
     if (!success) return; // se não conseguiu gastar, não gira
 
     if (buttonAudio) buttonAudio.play(); // toca som do botão
