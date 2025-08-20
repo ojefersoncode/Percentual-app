@@ -5,13 +5,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { Plus } from 'lucide-react';
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue
 } from '../ui/select';
@@ -36,25 +34,13 @@ export default function DepositModal() {
                   className="focus:bg-background dark:focus:bg-background"
                   value="grapes"
                 >
-                  Pix
+                  Pix 1
                 </SelectItem>
                 <SelectItem
                   className="focus:bg-background dark:focus:bg-background"
                   value="apple"
                 >
-                  Cartão
-                </SelectItem>
-                <SelectItem
-                  className="focus:bg-background dark:focus:bg-background"
-                  value="blueberry"
-                >
-                  Crypto
-                </SelectItem>
-                <SelectItem
-                  className="focus:bg-background dark:focus:bg-background"
-                  value="banana"
-                >
-                  Boleto
+                  Pix 2
                 </SelectItem>
               </SelectGroup>
             </SelectContent>
@@ -77,22 +63,6 @@ export default function DepositModal() {
                 }
                 className="border-none flex-1 font-semibold text-text focus-visible:ring-0 w-full bg-subbackground dark:bg-subbackground "
               />
-            </div>
-            <div className="flex gap-2 shrink-0">
-              <Button
-                className="bg-subbackground dark:bg-subbackground text-text hover:text-tex dark:text-text dark:hover:text-text hover:bg-subbackground/60 dark:hover:bg-subbackground/60"
-                size="icon"
-                onClick={() => setAmount(amount + 1)}
-              >
-                +
-              </Button>
-              <Button
-                className="bg-subbackground dark:bg-subbackground text-text hover:text-tex dark:text-text dark:hover:text-text hover:bg-subbackground/60 dark:hover:bg-subbackground/60"
-                size="icon"
-                onClick={() => setAmount(Math.max(20, amount - 1))}
-              >
-                -
-              </Button>
             </div>
           </div>
         </div>

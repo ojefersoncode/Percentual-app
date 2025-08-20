@@ -74,22 +74,6 @@ export default function Withdraw() {
                 className="border-none flex-1 font-semibold text-text focus-visible:ring-0 w-full bg-subbackground dark:bg-subbackground "
               />
             </div>
-            <div className="flex gap-2 shrink-0">
-              <Button
-                className="bg-subbackground dark:bg-subbackground text-text hover:text-tex dark:text-text dark:hover:text-text hover:bg-subbackground/60 dark:hover:bg-subbackground/60"
-                size="icon"
-                onClick={() => setAmount(amount + 1)}
-              >
-                +
-              </Button>
-              <Button
-                className="bg-subbackground dark:bg-subbackground text-text hover:text-tex dark:text-text dark:hover:text-text hover:bg-subbackground/60 dark:hover:bg-subbackground/60"
-                size="icon"
-                onClick={() => setAmount(Math.max(20, amount - 1))}
-              >
-                -
-              </Button>
-            </div>
           </div>
         </div>
 

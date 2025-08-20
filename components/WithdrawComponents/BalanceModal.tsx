@@ -37,8 +37,8 @@ export default function BalanceModal() {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="p-0  bg-background dark:bg-background rounded-2xl shadow-lg">
-        <Card className="border-none shadow-none">
+      <DialogContent className="p-0  bg-subbackground dark:bg-subbackground rounded-2xl shadow-lg h-screen">
+        <Card className="border-none shadow-none bg-background dark:bg-background">
           <CardContent className="p-6 flex flex-col gap-5 bg-background dark:bg-background border-border">
             <DialogTitle className="sr-only">Depósito</DialogTitle>
             {/* Header */}
