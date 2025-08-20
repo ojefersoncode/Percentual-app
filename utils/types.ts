@@ -9,7 +9,7 @@ export enum AuthState {
 
 export type StateInfo = {
   title: string;
-  balance: number;
+  balance?: number; // torna opcional
   description?: string;
   submitText: string;
   onSubmit: () => void;

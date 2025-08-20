@@ -35,6 +35,7 @@ export function AuthForm({ state }: { state: AuthState }) {
       hasEmailField: true,
       hasPasswordField: true,
       hasOAuth: false,
+
       onSubmit: async () => {
         setLoading(true);
         try {
