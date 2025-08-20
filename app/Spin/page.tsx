@@ -5,7 +5,6 @@ import { createClient } from '../../utils/supabase/client';
 import { getUser } from '../../utils/supabase/queries';
 
 export default function SpinPageClient() {
-  const [balance, setBalance] = useState(0);
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
@@ -15,5 +14,5 @@ export default function SpinPageClient() {
 
   if (!user) return <div>Carregando...</div>;
 
-  return <Spin user={user} setBalance={setBalance} />;
+  return <Spin user={user} />;
 }
