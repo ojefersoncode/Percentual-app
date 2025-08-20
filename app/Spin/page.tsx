@@ -1,15 +1,19 @@
-import { createClient } from '../../utils/supabase/server';
-import { redirect } from 'next/navigation';
-import { getUser } from '../../utils/supabase/queries';
+'use client';
+import { useState, useEffect } from 'react';
 import { Spin } from '@/components/pages/Spin';
+import { createClient } from '../../utils/supabase/client';
+import { getUser } from '../../utils/supabase/queries';
 
-export default async function SpinPage() {
-  const supabase = await createClient();
+export default function SpinPageClient() {
+  const [balance, setBalance] = useState(0);
+  const [user, setUser] = useState<any>(null);
 
-  const user = await getUser(supabase);
-  if (!user) {
-    return redirect('/auth/signin');
-  }
+  useEffect(() => {
+    const supabase = createClient();
+    getUser(supabase).then((u) => setUser(u));
+  }, []);
 
-  return <Spin user={user} />;
+  if (!user) return <div>Carregando...</div>;
+
+  return <Spin user={user} setBalance={setBalance} />;
 }

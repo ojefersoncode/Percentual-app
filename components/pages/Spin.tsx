@@ -7,6 +7,9 @@ import { Button } from '../ui/button';
 import GiftBox from '../HistoryComponents/GiftsBox';
 import { ChevronLeft } from 'lucide-react';
 import Footer from '../HomeComponents/Footer';
+import { createClient } from '../../utils/supabase/client';
+import { useBalance } from '../HomeComponents/BalanceContext';
+const supabase = createClient();
 
 interface Product {
   rtp: number;
@@ -16,6 +19,8 @@ interface Product {
 }
 
 export function Spin({ user }: { user: User }) {
+  const { balance, setBalance } = useBalance();
+
   const baseItems = [
     {
       name: 'Mouse gamer',
@@ -210,10 +215,71 @@ export function Spin({ user }: { user: User }) {
     return () => window.removeEventListener('resize', onResize);
   }, [currentScroll]);
 
-  const startSpin = () => {
+  const spendBalance = async (amount: number) => {
+    if (!user) return false;
+
+    const { data, error } = await supabase
+      .from('users')
+      .select('balance')
+      .eq('id', user.id)
+      .single();
+
+    if (error) {
+      console.error('Erro ao buscar saldo:', error);
+      return false;
+    }
+
+    const currentBalance = Number(data?.balance ?? 0);
+
+    if (currentBalance < amount) {
+      alert('Saldo insuficiente!');
+      return false;
+    }
+
+    const { error: updateError } = await supabase
+      .from('users')
+      .update({ balance: currentBalance - amount })
+      .eq('id', user.id);
+
+    if (updateError) {
+      console.error('Erro ao atualizar saldo:', updateError);
+      return false;
+    }
+
+    // Atualiza o saldo local
+    if (setBalance) setBalance(currentBalance - amount);
+
+    return true;
+  };
+
+  // função para buscar saldo atualizado do Supabase
+  const fetchBalance = async () => {
+    if (!user) return;
+
+    const { data, error } = await supabase
+      .from('users')
+      .select('balance')
+      .eq('id', user.id)
+      .single();
+
+    if (error) {
+      console.error('Erro ao buscar saldo:', error);
+      return;
+    }
+
+    if (setBalance) setBalance(Number(data?.balance ?? 0));
+  };
+
+  const startSpin = async () => {
+    if (isSpinning) return;
+    const success = await spendBalance(100); // 100 é o valor que custa girar a roleta
+    if (setBalance) setBalance(balance - 100);
+    if (!success) return; // se não conseguiu gastar, não gira
+
     if (buttonAudio) buttonAudio.play(); // toca som do botão
+
     const el = containerRef.current;
-    if (!el || isSpinning) return;
+    if (!el) return;
     setIsSpinning(true);
 
     // delay de 1.5 segundos antes de começar a roleta

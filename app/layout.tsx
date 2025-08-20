@@ -7,6 +7,7 @@ import { ThemeProvider } from '../components/landing/theme-provider';
 import { Toaster } from '../components/ui/toaster';
 import PostHogPageViewWrapper from '../components/pages/PostHogPageViewWrapper';
 import { Navbottom } from '@/components/HomeComponents/Navbottom';
+import { BalanceProvider } from '@/components/HomeComponents/BalanceContext';
 
 const meta = {
   title: 'Cooderfy',
@@ -71,20 +72,22 @@ export default async function RootLayout({ children }: PropsWithChildren) {
     <html lang="pt-BR">
       <ThemeProvider>
         <PHProvider>
-          <body>
-            <PostHogPageViewWrapper />
-            <main
-              id="skip"
-              className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
-            >
-              <div className="md:hidden">
-                <Navbottom />
-              </div>
+          <BalanceProvider>
+            <body>
+              <PostHogPageViewWrapper />
+              <main
+                id="skip"
+                className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
+              >
+                <div className="md:hidden">
+                  <Navbottom />
+                </div>
 
-              {children}
-            </main>
-            <Toaster />
-          </body>
+                {children}
+              </main>
+              <Toaster />
+            </body>
+          </BalanceProvider>
         </PHProvider>
       </ThemeProvider>
     </html>

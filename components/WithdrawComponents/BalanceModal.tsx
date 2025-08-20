@@ -18,7 +18,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { Plus } from 'lucide-react';
+import { Plus, Wallet } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import { Label } from '../ui/label';
 import Withdraw from './Withdraw';
@@ -32,8 +32,8 @@ export default function BalanceModal() {
     <Dialog>
       {/* Botão para abrir o modal */}
       <DialogTrigger asChild>
-        <Button className="p-2 bg-high dark:bg-high hover:bg-high hover:dark:bg-high rounded-md">
-          <Plus className="size-5 text-text dark:text-text" />
+        <Button className="py-2 px-3 bg-high dark:bg-high hover:bg-high hover:dark:bg-high rounded-md">
+          <Wallet className="size-5 text-text dark:text-text" />
         </Button>
       </DialogTrigger>
 
