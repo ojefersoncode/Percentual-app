@@ -11,63 +11,64 @@ export default function Cards() {
   const products: Product[] = [
     {
       id: 1,
-      title: 'Box Playstation',
-      price: 5.0,
-      image: 'box/playstation.webp'
+      title: 'Box Amazon',
+      price: 1,
+      image: 'box/amazon.webp'
     },
     {
       id: 2,
       title: 'Box Anime',
-      price: 10.0,
+      price: 2,
       image: 'box/anime.webp'
     },
     {
       id: 3,
-      title: 'Box Amazon',
-      price: 19.9,
-      image: 'box/amazon.webp'
+      title: 'Box Magic',
+      price: 5,
+      image: 'box/magic.png'
     },
+
     {
       id: 4,
-      title: 'Box Apple',
-      price: 99.9,
-      image: 'box/apple.webp'
+      title: 'Box Steam',
+      price: 10,
+      image: 'box/steam.webp'
     },
     {
       id: 5,
-      title: 'Box Steam',
-      price: 99.9,
-      image: 'box/steam.webp'
+      title: 'Box Lububu',
+      price: 20,
+      image: 'box/lububu.png'
     },
     {
       id: 6,
       title: 'Box Ufc',
-      price: 199.9,
+      price: 50,
       image: 'box/ufc.webp'
     },
     {
       id: 7,
-      title: 'Box Ufc',
-      price: 199.9,
+      title: 'Box Starwars',
+      price: 100,
       image: 'box/starwars.webp'
     },
     {
       id: 8,
       title: 'Box Xbox',
-      price: 199.9,
+      price: 200,
       image: 'box/xbox.webp'
     },
     {
       id: 9,
-      title: 'Box Magic',
-      price: 199.9,
-      image: 'box/magic.png'
+      title: 'Box Playstation',
+      price: 500,
+      image: 'box/playstation.webp'
     },
     {
       id: 10,
-      title: 'Box Lububu',
-      price: 199.9,
-      image: 'box/lububu.png'
+      title: 'Box Apple',
+      price: 1000,
+      image: 'box/apple.webp'
     }
   ];
 

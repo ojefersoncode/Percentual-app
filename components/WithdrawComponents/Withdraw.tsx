@@ -28,25 +28,25 @@ export default function Withdraw() {
         <div className="flex items-center bg-subbackground dark:bg-subbackground justify-between bg-muted px-3 py-2 rounded-md">
           <span className="text-text font-bold">Pix</span>
           <Select>
-            <SelectTrigger className="w-[120px]">
+            <SelectTrigger className="w-[120px] bg-subbackground border-border">
               <SelectValue placeholder="Alterar" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-subbackground dark:bg-subbackground border-border text-text">
               <SelectGroup>
                 <SelectItem
-                  className="focus:bg-background dark:focus:bg-background"
+                  className="focus:bg-background dark:focus:bg-background focus:text-text"
                   value="grapes"
                 >
                   CPF
                 </SelectItem>
                 <SelectItem
-                  className="focus:bg-background dark:focus:bg-background"
+                  className="focus:bg-background dark:focus:bg-background focus:text-text"
                   value="apple"
                 >
                   Email
                 </SelectItem>
                 <SelectItem
-                  className="focus:bg-background dark:focus:bg-background"
+                  className="focus:bg-background dark:focus:bg-background focus:text-text"
                   value="blueberry"
                 >
                   Telefone
@@ -80,7 +80,7 @@ export default function Withdraw() {
           type="single"
           value={String(amount)}
           onValueChange={(val) => setAmount(Number(val))}
-          className="grid grid-cols-2 gap-2"
+          className="grid grid-cols-2 gap-2 text-text"
         >
           {amounts.map((a) => (
             <ToggleGroupItem
@@ -88,7 +88,7 @@ export default function Withdraw() {
               value={String(a)}
               className={`rounded-md border py-2 ${
                 amount === a
-                  ? 'data-[state=on]:bg-high dark:data-[state=on]:bg-high text-white'
+                  ? 'data-[state=on]:bg-high dark:data-[state=on]:bg-high data-[state=on]:text-text text-white'
                   : 'dark:bg-subbackground hover:bg-subbackground/60 dark:hover:bg-subbackground/60'
               }`}
             >
@@ -103,7 +103,7 @@ export default function Withdraw() {
         </Button>
         <Button
           variant="outline"
-          className="w-ful bg-subbackground dark:bg-subbackground hover:bg-subbackground/60 dark:hover:bg-subbackground/60"
+          className="w-full text-text bg-subbackground dark:bg-subbackground border-border hover:bg-subbackground/60 dark:hover:bg-subbackground/60"
         >
           Cancelar
         </Button>
