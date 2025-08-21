@@ -1,3 +1,4 @@
+import { Navbottom } from '@/components/HomeComponents/Navbottom';
 import { Sidebar } from '@/components/HomeComponents/Sidebar';
 import { ThemeProvider } from '@/components/landing/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
@@ -13,7 +14,10 @@ export default function ProfileLayout({
         id="skip"
         className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
       >
-        <Sidebar />
+        <div className="flex items-center w-full md:hidden">
+          <Navbottom />
+        </div>
+
         {children}
       </main>
       <Toaster />

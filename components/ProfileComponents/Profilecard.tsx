@@ -14,13 +14,15 @@ export default function Profilecard() {
   const [id] = useState('123456');
 
   return (
-    <div className="flex flex-col bg-white dark:bg-background p-4">
-      <div className="rounded-lg bg-white dark:bg-background border border-zinc-300 dark:border-border">
+    <div className="flex flex-col bg-background dark:bg-background p-4">
+      <div className="rounded-lg bg-background dark:bg-background border border-border dark:border-border">
         <CardHeader className="flex">
-          <h1 className="text-lg font-bold py-2">Edite seu perfil</h1>
+          <h1 className="text-lg font-bold py-2 text-text dark:text-text">
+            Edite seu perfil
+          </h1>
         </CardHeader>
 
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-4 text-text dark:text-text">
           {/* Name */}
           <div className="space-y-1">
             <Label htmlFor="name">Nome</Label>
@@ -28,7 +30,7 @@ export default function Profilecard() {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="text-black dark:text-text border border-zinc-300 dark:border-border bg-white dark:bg-background hover:bg-white dark:hover:subbg-background"
+              className="text-text dark:text-text border border-border dark:border-border bg-subbackground dark:bg-background hover:bg-subbackground dark:hover:subbg-background"
             />
           </div>
 
@@ -39,7 +41,7 @@ export default function Profilecard() {
               id="phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="text-black dark:text-text border border-zinc-300 dark:border-border bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
+              className="text-text dark:text-text border border-border dark:border-border bg-subbackground dark:bg-background hover:bg-subbackground dark:hover:subbg-background"
             />
           </div>
 
@@ -50,7 +52,7 @@ export default function Profilecard() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="text-black dark:text-text border border-zinc-300 dark:border-border bg-white dark:bg-background hover:bg-white dark:hover:bg-background"
+              className="text-text dark:text-text border border-border dark:border-border bg-subbackground dark:bg-background hover:bg-subbackground dark:hover:subbg-background"
             />
           </div>
         </CardContent>
@@ -64,7 +66,7 @@ export default function Profilecard() {
           </Button>
           <Button
             variant="ghost"
-            className="text-text dark:text-text bg-btn dark:bg-btn hover:bg-btn/80 dark:hover:bg-btn/80"
+            className="text-text dark:text-text dark:hover:text-text hover:text-text bg-btn dark:bg-btn hover:bg-btn/80 dark:hover:bg-btn/80"
           >
             Salvar Alterações
           </Button>
