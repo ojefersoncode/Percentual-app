@@ -14,7 +14,7 @@ const meta = {
   description: 'Seus sites até 10x mais seguros.',
   cardImage: '/cooderfy.png',
   robots: 'follow, index',
-  favicon: '/LogoC.png',
+  favicon: '/Favicon.png',
   url: getURL()
 };
 
