@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '../../components/ui/button';
-import { ModeToggle } from './mode-toggle';
 import { User } from '@supabase/supabase-js';
 import { createApiClient } from '@/utils/supabase/api';
 import { createClient } from '@/utils/supabase/client';
@@ -36,7 +35,6 @@ export const Navbar = ({ user }: { user: User | null }) => {
           </div>
 
           <div className="flex items-center gap-4">
-            <ModeToggle />
             <Link className="p-0" href="/Home" passHref>
               <Button
                 className="px-5 py-0 text-text hover:text-text text-sm bg-btn hover:bg-btn dark:hover:bg-btn"
