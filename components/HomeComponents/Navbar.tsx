@@ -1,5 +1,5 @@
 'use client';
-import { Box, Gift } from 'lucide-react';
+import { Gift } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Balance from './Balance';
@@ -19,10 +19,12 @@ export default function Navbar() {
 
   return (
     <div className="w-full flex justify-between items-center px-4 py-2 border-b-2 border-border bg-background">
-      <div className="flex items-center gap-0;5">
-        <h1 className="text-xl text-white max-md:text-lg font-black">Magic</h1>
-        <Box className="size-7 max-md:size-6 text-brand" />
-        <h1 className="text-xl text-white font-black">box</h1>
+      <div className="flex items-center">
+        <img
+          src="/Magicbox.png"
+          alt="logo"
+          className="h-8 max-md:h-6 object-contain"
+        />
       </div>
 
       <div className="bg-transparent border-none text-white max-md:hidden">

@@ -27,7 +27,11 @@ export const Navbar = ({ user }: { user: User | null }) => {
         <div className="flex w-full justify-between p-3">
           <div className="flex">
             <div className="flex gap-2 text-lg items-center">
-              <img className="size-7" src="/LogoC.png" alt="logo" />
+              <img
+                src="/Magicbox.png"
+                alt="logo"
+                className="h-8 max-md:h-6 object-contain"
+              />
             </div>
           </div>
 

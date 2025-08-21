@@ -32,15 +32,23 @@ export default function DepositModal() {
               <SelectGroup>
                 <SelectItem
                   className="focus:bg-background dark:focus:bg-background"
-                  value="grapes"
+                  value="pix1"
                 >
-                  Pix 1
+                  <img
+                    src="/pix.webp"
+                    alt="logo"
+                    className="size-8 object-contain"
+                  />
                 </SelectItem>
                 <SelectItem
                   className="focus:bg-background dark:focus:bg-background"
-                  value="apple"
+                  value="pix2"
                 >
-                  Pix 2
+                  <img
+                    src="/pix.webp"
+                    alt="logo"
+                    className="size-8 object-contain"
+                  />
                 </SelectItem>
               </SelectGroup>
             </SelectContent>
