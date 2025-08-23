@@ -34,30 +34,52 @@ export default function DepositModal({ user }: { user: User }) {
     };
     fetchUser();
   }, [supabase]);
+
   const handlePayment = async () => {
     setLoading(true);
     try {
-      const response = await fetch('/api/checkout/webhook', {
+      // CORREÇÃO: Mudou de /api/checkout/webhook para /api/checkout
+      const response = await fetch('/api/checkout', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({
-          title: 'Depósito',
+          title: 'Depósito na Plataforma',
           price: amount,
           quantity: 1,
-          email
+          email: email || user?.email // Fallback para o email do user prop
         })
       });
 
+      // Verificar se a resposta foi bem-sucedida
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('Erro na resposta:', errorData);
+        throw new Error(
+          `Erro ${response.status}: ${errorData.error || 'Erro desconhecido'}`
+        );
+      }
+
       const data = await response.json();
+      console.log('Resposta recebida:', data);
 
       if (data.init_point) {
-        window.location.href = data.init_point; // Redireciona para checkout
+        // Redireciona para o checkout do Mercado Pago
+        window.location.href = data.init_point;
       } else {
-        throw new Error('Erro ao criar preferência');
+        throw new Error('init_point não encontrado na resposta');
       }
     } catch (err) {
-      console.error('Erro:', err);
-      alert('Erro ao processar pagamento. Tente novamente.');
+      console.error('Erro no pagamento:', err);
+
+      // Mensagem de erro mais específica
+      const errorMessage =
+        err instanceof Error
+          ? err.message
+          : 'Erro desconhecido ao processar pagamento';
+
+      alert(`Erro: ${errorMessage}. Tente novamente.`);
     } finally {
       setLoading(false);
     }
@@ -90,7 +112,7 @@ export default function DepositModal({ user }: { user: User }) {
                   value="pix2"
                 >
                   <img
-                    src="/pix.webp"
+                    src="/Pix.webp"
                     alt="logo"
                     className="size-8 object-contain"
                   />
@@ -141,11 +163,18 @@ export default function DepositModal({ user }: { user: User }) {
           ))}
         </ToggleGroup>
 
+        {/* Debug info - remover em produção */}
+        {process.env.NODE_ENV === 'development' && (
+          <div className="text-xs text-muted-foreground">
+            Debug: Email = {email || user?.email || 'não encontrado'}
+          </div>
+        )}
+
         {/* Buttons */}
         <Button
           onClick={handlePayment}
-          disabled={loading}
-          className="bg-btn hover:bg-btn/80 dark:bg-btn dark:hover:bg-btn/80 transition-all text-text dark:text-text  w-full"
+          disabled={loading || !email}
+          className="bg-btn hover:bg-btn/80 dark:bg-btn dark:hover:bg-btn/80 transition-all text-text dark:text-text w-full"
         >
           {loading ? 'Processando...' : `Depositar R$:${amount.toFixed(2)}`}
         </Button>
@@ -159,7 +188,4 @@ export default function DepositModal({ user }: { user: User }) {
       </CardContent>
     </Card>
   );
-}
-function setEmail(email: string) {
-  throw new Error('Function not implemented.');
 }
