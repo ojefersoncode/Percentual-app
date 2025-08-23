@@ -50,7 +50,7 @@ export default function BalanceModal({ user }: { user: User }) {
                   <DepositModal user={user} />
                 </TabsContent>
                 <TabsContent value="withdraw">
-                  <Withdraw />
+                  <Withdraw user={user} />
                 </TabsContent>
               </Tabs>
             </div>
