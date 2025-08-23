@@ -27,27 +27,27 @@ export default function Withdraw({ user }: { user: User }) {
 
         {/* Payment Method */}
         <div className="flex items-center bg-subbackground dark:bg-subbackground justify-between bg-muted px-3 py-2 rounded-md">
-          <span className="text-text font-bold">Pix</span>
+          <span className="text-text text-sm font-bold">Tipo de chave</span>
           <Select>
-            <SelectTrigger className="w-[120px] bg-subbackground border-border">
+            <SelectTrigger className="w-[120px] text-text bg-subbackground border-border">
               <SelectValue placeholder="Alterar" />
             </SelectTrigger>
-            <SelectContent className="bg-subbackground dark:bg-subbackground border-border text-text">
+            <SelectContent className="bg-subbackground border-border text-text dark:text-white">
               <SelectGroup>
                 <SelectItem
-                  className="focus:bg-background dark:focus:bg-background focus:text-text"
+                  className="text-text dark:text-white focus:bg-background dark:focus:bg-background focus:text-text dark:focus:text-white"
                   value="grapes"
                 >
                   CPF
                 </SelectItem>
                 <SelectItem
-                  className="focus:bg-background dark:focus:bg-background focus:text-text"
+                  className="text-text dark:text-white focus:bg-background dark:focus:bg-background focus:text-text dark:focus:text-white"
                   value="apple"
                 >
                   Email
                 </SelectItem>
                 <SelectItem
-                  className="focus:bg-background dark:focus:bg-background focus:text-text"
+                  className="text-text dark:text-white focus:bg-background dark:focus:bg-background focus:text-text dark:focus:text-white"
                   value="blueberry"
                 >
                   Telefone

@@ -47,7 +47,7 @@ export function ProfileButton() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="px-2 rounded-md border-2 border-border bg-transparent dark:bg-transparent hover:bg-transparent dark:hover:bg-transparent focus:right-0">
+        <Button className="px-2 rounded-md border-2 border-border bg-subbackground dark:bg-subbackground hover:bg-subbackground dark:hover:bg-subbackground focus:right-0">
           <MenuIcon className="text-text size-6 max-md:size-5" />
         </Button>
       </DropdownMenuTrigger>

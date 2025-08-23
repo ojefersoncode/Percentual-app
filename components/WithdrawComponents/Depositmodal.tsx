@@ -82,8 +82,10 @@ export default function DepositModal({ user }: { user: User }) {
       <CardContent className="p-6 flex flex-col gap-5 bg-background dark:bg-background border-border">
         {/* Payment Method */}
         <div className="flex items-center bg-subbackground dark:bg-subbackground justify-between bg-muted px-3 py-2 rounded-md">
-          <span className="text-text font-bold">Pix</span>
-          <img src="/Pix.webp" alt="logo" className="size-8 object-contain" />
+          <span className="text-text text-sm font-bold">Deposito</span>
+          <div className="p-1">
+            <img src="/Pix.webp" alt="logo" className="size-8 object-contain" />
+          </div>
         </div>
 
         {/* Valor do deposito */}
