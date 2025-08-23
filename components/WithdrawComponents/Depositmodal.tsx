@@ -16,7 +16,39 @@ import {
 
 export default function DepositModal() {
   const [amount, setAmount] = useState(20);
+  const [loading, setLoading] = useState(false);
   const amounts = [5, 10, 20, 50, 100, 200, 500, 1000];
+
+  const email = 'usuario@example.com'; // Troque pelo email real do usuário
+
+  const handlePayment = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('/api/checkout/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: 'Depósito',
+          price: amount,
+          quantity: 1,
+          email
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.init_point) {
+        window.location.href = data.init_point; // Redireciona para checkout
+      } else {
+        throw new Error('Erro ao criar preferência');
+      }
+    } catch (err) {
+      console.error('Erro:', err);
+      alert('Erro ao processar pagamento. Tente novamente.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <Card className="border-none shadow-none">
@@ -54,6 +86,7 @@ export default function DepositModal() {
             </SelectContent>
           </Select>
         </div>
+
         {/* Deposit Amount */}
         <div>
           <p className="text-sm text-muted-foreground mb-1">
@@ -65,7 +98,7 @@ export default function DepositModal() {
               <Input
                 type="number"
                 value={amount}
-                min={5} // trava no input
+                min={5}
                 onChange={(e) => setAmount(Math.max(5, Number(e.target.value)))}
                 className="border-none flex-1 font-semibold text-text focus-visible:ring-0 w-full bg-subbackground dark:bg-subbackground "
               />
@@ -96,9 +129,14 @@ export default function DepositModal() {
         </ToggleGroup>
 
         {/* Buttons */}
-        <Button className="bg-btn hover:bg-btn/80 dark:bg-btn dark:hover:bg-btn/80 transition-all text-text dark:text-text  w-full">
-          Depositar R$:{amount.toFixed(2)}
+        <Button
+          onClick={handlePayment}
+          disabled={loading}
+          className="bg-btn hover:bg-btn/80 dark:bg-btn dark:hover:bg-btn/80 transition-all text-text dark:text-text  w-full"
+        >
+          {loading ? 'Processando...' : `Depositar R$:${amount.toFixed(2)}`}
         </Button>
+
         <Button
           variant="outline"
           className="w-full border-border text-text hover:text-text bg-subbackground dark:bg-subbackground hover:bg-subbackground/60 dark:hover:bg-subbackground/60 transition-all"
