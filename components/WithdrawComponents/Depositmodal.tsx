@@ -1,7 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { createClient } from '@utils/supabase/client';
+import { User } from '@supabase/supabase-js';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
@@ -14,13 +16,24 @@ import {
   SelectValue
 } from '../ui/select';
 
-export default function DepositModal() {
+export default function DepositModal({ user }: { user: User }) {
   const [amount, setAmount] = useState(20);
   const [loading, setLoading] = useState(false);
   const amounts = [5, 10, 20, 50, 100, 200, 500, 1000];
+  const [email, setEmail] = useState(''); // <-- declare o estado
 
-  const email = 'usuario@example.com'; // Troque pelo email real do usuário
+  const supabase = createClient();
 
+  // Pega o usuário logado no Supabase
+  useEffect(() => {
+    const fetchUser = async () => {
+      const {
+        data: { user }
+      } = await supabase.auth.getUser();
+      if (user?.email) setEmail(user.email);
+    };
+    fetchUser();
+  }, [supabase]);
   const handlePayment = async () => {
     setLoading(true);
     try {
@@ -146,4 +159,7 @@ export default function DepositModal() {
       </CardContent>
     </Card>
   );
+}
+function setEmail(email: string) {
+  throw new Error('Function not implemented.');
 }
