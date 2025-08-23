@@ -37,7 +37,7 @@ export default function DepositModal({ user }: { user: User }) {
   const handlePayment = async () => {
     setLoading(true);
     try {
-      const response = await fetch('/api/checkout/create', {
+      const response = await fetch('/api/checkout/webhook', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
