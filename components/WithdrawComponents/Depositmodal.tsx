@@ -20,7 +20,7 @@ export default function DepositModal({ user }: { user: User }) {
   const [amount, setAmount] = useState(20);
   const [loading, setLoading] = useState(false);
   const amounts = [5, 10, 20, 50, 100, 200, 500, 1000];
-  const [email, setEmail] = useState(''); // <-- declare o estado
+  const [email, setEmail] = useState('');
 
   const supabase = createClient();
 

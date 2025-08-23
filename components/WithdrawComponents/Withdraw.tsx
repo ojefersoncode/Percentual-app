@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { User } from '@supabase/supabase-js';
 import { DialogTitle } from '@/components/ui/dialog';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -15,7 +16,7 @@ import {
   SelectValue
 } from '../ui/select';
 
-export default function Withdraw() {
+export default function Withdraw({ user }: { user: User }) {
   const [amount, setAmount] = useState(20);
   const amounts = [5, 10, 20, 50, 100, 200, 500, 1000];
 

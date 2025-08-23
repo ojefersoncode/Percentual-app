@@ -10,10 +10,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Plus, Wallet } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
+import { User } from '@supabase/supabase-js';
 import Withdraw from './Withdraw';
 import DepositModal from './Depositmodal';
 
-export default function BalanceModal() {
+export default function BalanceModal({ user }: { user: User }) {
   return (
     <Dialog>
       {/* Botão para abrir o modal */}
@@ -46,7 +47,7 @@ export default function BalanceModal() {
                   </TabsTrigger>
                 </TabsList>
                 <TabsContent value="deposit">
-                  <DepositModal />
+                  <DepositModal user={user} />
                 </TabsContent>
                 <TabsContent value="withdraw">
                   <Withdraw />
