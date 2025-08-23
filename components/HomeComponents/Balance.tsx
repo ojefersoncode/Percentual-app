@@ -1,8 +1,9 @@
 'use client';
 import BalanceModal from '../WithdrawComponents/BalanceModal';
 import { useBalance } from './BalanceContext';
+import { User } from '@supabase/supabase-js';
 
-export default function Balance() {
+export default function Balance({ user }: { user: User }) {
   const { balance } = useBalance();
 
   return (
@@ -10,7 +11,7 @@ export default function Balance() {
       <span className="font-bold text-md max-md:text-sm pr-1 pl-3">
         R$: {balance.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
       </span>
-      <BalanceModal />
+      <BalanceModal user={user} />
     </div>
   );
 }
