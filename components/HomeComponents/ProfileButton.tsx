@@ -54,12 +54,12 @@ export function ProfileButton() {
       <DropdownMenuContent className="mr-2 touch-pan-x touch-pan-y bg-background border-border">
         <DropdownMenuGroup className="flex flex-col gap-1">
           <DropdownMenuItem
-            className="bg-background text-red-50 hover:text-red-100 hover:dark:text-red-100 transition-all"
+            className=" text-red-50 hover:text-red-100 hover:dark:text-red-100 transition-all"
             onClick={() => router.push('/profile')}
           >
             <User className="w-5 h-5 mr-2" /> Minha conta
           </DropdownMenuItem>
-          <DropdownMenuSeparator className="bg-btn dark:bg-btn" />
+          <DropdownMenuSeparator className="bg-btn/70 dark:bg-btn" />
           <DropdownMenuItem>
             <div
               className="flex items-center text-red-50 hover:text-red-100 transition-all"
