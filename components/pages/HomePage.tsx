@@ -10,7 +10,9 @@ export default function HomePage({ user }: { user: User }) {
         <div className="w-full flex-1 p-2">
           <Home />
         </div>
-        <Footer />
+        <div className="py-6 max-md:pb-24">
+          <Footer />
+        </div>
       </main>
     </div>
   );
