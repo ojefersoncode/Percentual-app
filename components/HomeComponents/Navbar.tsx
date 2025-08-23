@@ -1,4 +1,5 @@
 'use client';
+import { User } from '@supabase/supabase-js';
 import { Gift } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -13,7 +14,7 @@ const DATA = {
   ]
 };
 
-export default function Navbar() {
+export default function Navbar({ user }: { user: User }) {
   const pathname = usePathname();
 
   return (
@@ -51,7 +52,7 @@ export default function Navbar() {
         <div className="max-md:hidden">
           <Gift className="text-brand size-6" />
         </div>
-        <Balance />
+        <Balance user={user} />
         <ProfileButton />
       </div>
     </div>
