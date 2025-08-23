@@ -1,4 +1,4 @@
-import Navbar from '@/components/HomeComponents/Navbar';
+import NavbarWrapper from '@/components/HomeComponents/Navbarwrapper';
 import { Navbottom } from '@/components/HomeComponents/Navbottom';
 import { ThemeProvider } from '@/components/landing/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
@@ -15,7 +15,7 @@ export default function SpinLayout({
         className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
       >
         <div>
-          <Navbar />
+          <NavbarWrapper />
         </div>
         <div className="md:hidden z-40">
           <Navbottom />
