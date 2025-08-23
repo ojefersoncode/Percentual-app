@@ -398,7 +398,7 @@ export function Spin({ user }: { user: User }) {
                   </p>
                 </div>
                 <div className=" flex justify-center items-center">
-                  <span className="font-medium text-sm max-md:text-xs bg-subbackground px-4 py-1 rounded-t-xl">
+                  <span className="font-medium text-text text-sm max-md:text-xs bg-subbackground px-4 py-1 rounded-t-xl">
                     R$ {item.price}
                   </span>
                 </div>

@@ -9,8 +9,7 @@ const DATA = {
   navbar: [
     { href: '/Home', label: 'Home' },
     { href: '/Spin', label: 'Roleta' },
-    { href: '/History', label: 'Histórico' },
-    { href: '/Withdraw', label: 'Saque' }
+    { href: '/History', label: 'Histórico' }
   ]
 };
 

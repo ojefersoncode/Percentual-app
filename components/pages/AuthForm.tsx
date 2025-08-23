@@ -1,7 +1,6 @@
 'use client';
 import Link from 'next/link';
 import { Github } from 'lucide-react';
-
 import { Button } from '../ui/button';
 import {
   Card,
@@ -64,7 +63,7 @@ export function AuthForm({ state }: { state: AuthState }) {
         setLoading(true);
         try {
           await api.passwordSignin({ email, password });
-          router.replace('/');
+          router.replace('/home');
         } catch (e) {
           if (e instanceof Error) {
             toast({
@@ -117,8 +116,8 @@ export function AuthForm({ state }: { state: AuthState }) {
             title: 'Sua senha foi atualizada',
             description: 'Redirecionando para pagina inicial...'
           });
-          setTimeout(() => router.replace('/'), 3000);
-          router.replace('/');
+          setTimeout(() => router.replace('/home'), 3000);
+          router.replace('/home');
         } catch (e) {
           if (e instanceof Error) {
             toast({
@@ -154,7 +153,7 @@ export function AuthForm({ state }: { state: AuthState }) {
 
   const currState = stateInfo[authState];
   return (
-    <Card className="mx-auto w-96 px-4 border border-border/70 dark:border-border bg-gray-100 dark:bg-subbackground touch-pan-x touch-pan-y">
+    <Card className="mx-auto w-96 px-4 text-text dark:text-text border border-border/70 dark:border-border bg-background dark:bg-background touch-pan-x touch-pan-y">
       <CardHeader>
         <CardTitle className="text-2xl">{currState.title}</CardTitle>
         {currState.description && (
@@ -169,7 +168,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               <Input
                 id="email"
                 type="email"
-                className="text-black dark:text-text bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
+                className="text-text dark:text-text bg-subbackground dark:bg-subbackground border border-gray-600 dark:border-border"
                 placeholder="email@examplo.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -195,7 +194,7 @@ export function AuthForm({ state }: { state: AuthState }) {
               <Input
                 id="password"
                 placeholder="Digite sua senha"
-                className="text-black dark:text-text bg-gray-100 dark:bg-subbackground border border-gray-600 dark:border-border"
+                className="text-black dark:text-text bg-subbackground dark:bg-subbackground border border-gray-600 dark:border-border"
                 type="password"
                 disabled={loading}
                 value={password}
@@ -255,7 +254,7 @@ export function AuthForm({ state }: { state: AuthState }) {
                   <span className="w-full border-t"></span>
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-gray-100 dark:bg-subbackground px-2 text-muted-foreground">
+                  <span className="bg-background dark:bg-subbackground px-2 text-muted">
                     Ou continue com
                   </span>
                 </div>
