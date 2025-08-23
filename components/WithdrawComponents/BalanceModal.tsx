@@ -24,7 +24,7 @@ export default function BalanceModal({ user }: { user: User }) {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="p-0 border-border bg-subbackground dark:bg-subbackground rounded-2xl shadow-lg h-screen">
+      <DialogContent className="p-0 h-screen items-center  border-border bg-subbackground dark:bg-subbackground rounded-2xl shadow-lg ">
         <Card className="border-none shadow-none bg-background dark:bg-background pt-4">
           <CardContent className="p-6 flex flex-col gap-5 bg-background dark:bg-background border-border">
             <DialogTitle className="sr-only">Depósito</DialogTitle>
