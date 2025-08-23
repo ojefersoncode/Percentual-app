@@ -61,7 +61,6 @@ export async function POST(req: NextRequest) {
 
     const result = await response.json();
     console.log('Resposta do Mercado Pago:', result);
-
     return NextResponse.json({
       init_point: result.init_point,
       id: result.id
