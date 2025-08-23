@@ -23,7 +23,7 @@ export default function Navbar({ user }: { user: User }) {
         <img
           src="/Magicbox.png"
           alt="logo"
-          className="h-8 max-md:h-6 object-contain"
+          className="h-7 max-md:h-4 object-contain"
         />
       </div>
 

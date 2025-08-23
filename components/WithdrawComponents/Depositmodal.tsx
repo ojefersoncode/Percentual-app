@@ -7,14 +7,6 @@ import { User } from '@supabase/supabase-js';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
-} from '../ui/select';
 
 export default function DepositModal({ user }: { user: User }) {
   const [amount, setAmount] = useState(20);
@@ -91,42 +83,12 @@ export default function DepositModal({ user }: { user: User }) {
         {/* Payment Method */}
         <div className="flex items-center bg-subbackground dark:bg-subbackground justify-between bg-muted px-3 py-2 rounded-md">
           <span className="text-text font-bold">Pix</span>
-          <Select>
-            <SelectTrigger className="w-[120px] bg-subbackground border-border">
-              <SelectValue placeholder="Alterar" />
-            </SelectTrigger>
-            <SelectContent className="bg-subbackground dark:bg-subbackground border-border">
-              <SelectGroup>
-                <SelectItem
-                  className="focus:bg-background dark:focus:bg-background"
-                  value="pix1"
-                >
-                  <img
-                    src="/pix.webp"
-                    alt="logo"
-                    className="size-8 object-contain"
-                  />
-                </SelectItem>
-                <SelectItem
-                  className="focus:bg-background dark:focus:bg-background"
-                  value="pix2"
-                >
-                  <img
-                    src="/Pix.webp"
-                    alt="logo"
-                    className="size-8 object-contain"
-                  />
-                </SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
+          <img src="/Pix.webp" alt="logo" className="size-8 object-contain" />
         </div>
 
-        {/* Deposit Amount */}
+        {/* Valor do deposito */}
         <div>
-          <p className="text-sm text-muted-foreground mb-1">
-            VALOR DO DEPOSITO
-          </p>
+          <p className="text-sm text-text/90 mb-1">Valor do deposito</p>
           <div className="flex items-center gap-2 w-full">
             <div className="flex items-center border rounded-md bg-subbackground dark:bg-subbackground px-2 flex-1">
               <span className="font-semibold text-high">R$:</span>
@@ -141,7 +103,7 @@ export default function DepositModal({ user }: { user: User }) {
           </div>
         </div>
 
-        {/* Quick Select Amounts */}
+        {/* Selecionar um valor */}
         <ToggleGroup
           type="single"
           value={String(amount)}
@@ -162,13 +124,6 @@ export default function DepositModal({ user }: { user: User }) {
             </ToggleGroupItem>
           ))}
         </ToggleGroup>
-
-        {/* Debug info - remover em produção */}
-        {process.env.NODE_ENV === 'development' && (
-          <div className="text-xs text-muted-foreground">
-            Debug: Email = {email || user?.email || 'não encontrado'}
-          </div>
-        )}
 
         {/* Buttons */}
         <Button

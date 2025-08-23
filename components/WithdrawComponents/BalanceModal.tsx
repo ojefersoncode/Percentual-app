@@ -19,8 +19,8 @@ export default function BalanceModal({ user }: { user: User }) {
     <Dialog>
       {/* Botão para abrir o modal */}
       <DialogTrigger asChild>
-        <Button className="py-2 px-3 bg-high dark:bg-high hover:bg-high hover:dark:bg-high rounded-md">
-          <Wallet className="size-5 text-text dark:text-text" />
+        <Button className="py-1 px-2 bg-high dark:bg-high hover:bg-high hover:dark:bg-high rounded-md">
+          <Wallet className="size-5 max-md:size-4 text-text dark:text-text" />
         </Button>
       </DialogTrigger>
 

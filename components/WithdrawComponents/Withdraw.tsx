@@ -59,9 +59,7 @@ export default function Withdraw({ user }: { user: User }) {
 
         {/* Deposit Amount */}
         <div>
-          <p className="text-sm text-muted-foreground mb-1">
-            VALOR DA RETIRADA
-          </p>
+          <p className="text-sm text-text/90 mb-1">Valor do saque</p>
           <div className="flex items-center gap-2 w-full">
             <div className="flex items-center border rounded-md bg-subbackground dark:bg-subbackground px-2 flex-1">
               <span className="font-semibold text-high">R$:</span>
