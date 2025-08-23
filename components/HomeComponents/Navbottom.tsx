@@ -18,7 +18,7 @@ export function Navbottom() {
 
   return (
     <nav className="fixed bottom-0 z-20 left-0 w-full bg-background border-t border-border">
-      <div className="flex justify-center gap-4 items-center">
+      <div className="flex w-full justify-around items-center">
         {DATA.navbar.map((item, index) => {
           const isActive = pathname.startsWith(item.href);
           const base = isActive ? 'text-brand' : 'text-text/70';
@@ -28,7 +28,7 @@ export function Navbottom() {
 
           return (
             <Link key={index} href={item.href} className="p-4 group">
-              <div className="flex flex-col justify-center items-center gap-1">
+              <div className="flex flex-col justify-between items-center gap-1">
                 <item.icon className={`h-5 w-5 ${base} ${hover}`} />
                 <span className={`text-sm font-bold ${base} ${hover}`}>
                   {item.label}
