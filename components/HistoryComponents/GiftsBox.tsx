@@ -147,9 +147,9 @@ export default function GiftBox() {
           <img
             src={product.image}
             alt={product.name}
-            className="h-24 max-md:h-20 object-contain"
+            className="h-24 max-md:h-20 object-contain select-none"
           />
-          <h1 className="font-bold text-base max-md:text-xs text-center py-1">
+          <h1 className="font-bold text-base max-md:text-sm text-center py-1">
             {product.name}
           </h1>
 
