@@ -122,9 +122,9 @@ export default function GiftBox() {
 
   const getBadgeClass = (status: string) => {
     if (status === 'resgatado')
-      return 'bg-green-600 text-white hover:bg-bg-green-600';
+      return 'bg-green-600 dark:bg-green-600 text-white hover:bg-bg-green-600 dark:hover:bg-green-600';
     if (status === 'vendido')
-      return 'bg-red-600 text-white hover:bg-bg-red-600';
+      return 'bg-red-600 dark:bg-red-600 text-white hover:bg-red-600 dark:hover:bg-red-600';
     return 'bg-gray-500 text-white';
   };
 
