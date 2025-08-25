@@ -12,43 +12,43 @@ const invoices = [
     invoice: 'INV001',
     paymentStatus: 'Pendente',
     totalAmount: 'R$:250.00',
-    paymentMethod: 'Pix'
+    paymentMethod: 'Saque'
   },
   {
     invoice: 'INV002',
     paymentStatus: 'Pago',
     totalAmount: 'R$:150.00',
-    paymentMethod: 'Pix'
+    paymentMethod: 'Deposito'
   },
   {
     invoice: 'INV003',
     paymentStatus: 'Cancelado',
     totalAmount: 'R$:350.00',
-    paymentMethod: 'Pix'
+    paymentMethod: 'Deposito'
   },
   {
     invoice: 'INV004',
     paymentStatus: 'Pago',
     totalAmount: 'R$:450.00',
-    paymentMethod: 'Pix'
+    paymentMethod: 'Saque'
   },
   {
     invoice: 'INV005',
     paymentStatus: 'Pago',
     totalAmount: 'R$:550.00',
-    paymentMethod: 'Pix'
+    paymentMethod: 'Deposito'
   },
   {
     invoice: 'INV006',
     paymentStatus: 'Pago',
     totalAmount: 'R$:200.00',
-    paymentMethod: 'Pix'
+    paymentMethod: 'Deposito'
   },
   {
     invoice: 'INV007',
     paymentStatus: 'Cancelado',
     totalAmount: 'R$:300.00',
-    paymentMethod: 'Pix'
+    paymentMethod: 'Deposito'
   }
 ];
 

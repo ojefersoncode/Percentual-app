@@ -37,7 +37,7 @@ export default function HistoryPage({ user }: { user: User }) {
         </Tabs>
       </div>
 
-      <div className="py-4">
+      <div className="pt-4">
         <Footer />
       </div>
     </div>
