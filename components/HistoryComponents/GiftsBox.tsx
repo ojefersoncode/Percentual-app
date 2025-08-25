@@ -23,7 +23,7 @@ export default function GiftBox() {
       id: 2,
       name: 'Mouse pad',
       image: '/Gifts/mousepad.png',
-      status: 'resgatado',
+      status: 'Resgatado',
       price: 10.0
     },
 
@@ -122,9 +122,9 @@ export default function GiftBox() {
 
   const getBadgeClass = (status: string) => {
     if (status === 'Resgatado')
-      return 'bg-green-600 dark:bg-green-600 text-white text-xs font-semibold hover:bg-bg-green-600 dark:hover:bg-green-600';
+      return 'bg-green-600 dark:bg-green-600 text-text dark:text-text text-xs font-semibold hover:bg-bg-green-600 dark:hover:bg-green-600';
     if (status === 'Vendido')
-      return 'bg-red-600 dark:bg-red-600 text-white text-xs font-semibold hover:bg-red-600 dark:hover:bg-red-600';
+      return 'bg-red-600 dark:bg-red-600 text-text dark:text-text text-xs font-semibold hover:bg-red-600 dark:hover:bg-red-600';
     return 'bg-gray-500 text-white';
   };
 
@@ -139,7 +139,7 @@ export default function GiftBox() {
             <Badge className={getBadgeClass(product.status)}>
               {product.status}
             </Badge>
-            <Badge className="bg-btn hover:bg-btn text-xs font-semibold">
+            <Badge className="bg-btn hover:bg-btn dark:bg-btn dark:hover:bg-btn text-xs text-text dark:text-text dark:hover:text-text font-semibold">
               R$ {product.price.toFixed(2)}
             </Badge>
           </div>
