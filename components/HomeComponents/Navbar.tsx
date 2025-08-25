@@ -49,9 +49,6 @@ export default function Navbar({ user }: { user: User }) {
       </div>
 
       <div className="flex items-center justify-center gap-4">
-        <div className="max-md:hidden">
-          <Gift className="text-brand size-6" />
-        </div>
         <Balance user={user} />
         <ProfileButton />
       </div>
