@@ -2,9 +2,9 @@
 
 import { User } from '@supabase/supabase-js';
 import Footer from '../HomeComponents/Footer';
-import GiftBox from '../HistoryComponents/GiftsBox';
 import { BalanceHistory } from '../HistoryComponents/BalanceHistory';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
+import MyGifts from '../HistoryComponents/MyGifts';
 
 export default function HistoryPage({ user }: { user: User }) {
   return (
@@ -26,7 +26,7 @@ export default function HistoryPage({ user }: { user: User }) {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="Meuspresentes">
-            <GiftBox />
+            <MyGifts />
           </TabsContent>
           <TabsContent value="Trasacoes">
             <BalanceHistory />
