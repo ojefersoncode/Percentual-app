@@ -16,7 +16,7 @@ export default function GiftBox() {
       id: 1,
       name: 'Cabo usb',
       image: '/Gifts/caboc.png',
-      status: 'resgatado',
+      status: 'Resgatado',
       price: 10.0
     },
     {
@@ -31,99 +31,99 @@ export default function GiftBox() {
       id: 3,
       name: 'Carregador',
       image: '/Gifts/carregador.webp',
-      status: 'vendido',
+      status: 'Vendido',
       price: 15.0
     },
     {
       id: 4,
       name: 'Power bank',
       image: '/Gifts/powerbank.png',
-      status: 'resgatado',
+      status: 'Resgatado',
       price: 20.0
     },
     {
       id: 5,
       name: 'Headset',
       image: '/Gifts/headset.png',
-      status: 'resgatado',
+      status: 'Resgatado',
       price: 5.0
     },
     {
       id: 6,
       name: 'Teclado',
       image: '/Gifts/teclado.png',
-      status: '1.01',
+      status: 'Resgatado',
       price: 30.9
     },
     {
       id: 7,
       name: 'Mouse',
       image: '/Gifts/mouse.png',
-      status: 'resgatado',
+      status: 'Resgatado',
       price: 30.9
     },
     {
       id: 8,
       name: 'Hub usb',
       image: '/Gifts/hubusb.png',
-      status: 'vendido',
+      status: 'Vendido',
       price: 30.9
     },
     {
       id: 9,
       name: 'microfone',
       image: '/Gifts/microfone.png',
-      status: 'vendido',
+      status: 'Vendido',
       price: 30.9
     },
     {
       id: 10,
       name: 'Volante',
       image: '/Gifts/volante.png',
-      status: 'vendido',
+      status: 'Vendido',
       price: 30.9
     },
     {
       id: 11,
       name: 'Ssd 128gb',
       image: '/Gifts/ssd.png',
-      status: 'vendido',
+      status: 'Vendido',
       price: 30.9
     },
     {
       id: 12,
       name: 'Fonte 500w',
       image: '/Gifts/fonte.png',
-      status: 'resgatado',
+      status: 'Resgatado',
       price: 30.9
     },
     {
       id: 13,
       name: 'Watercooler',
       image: '/Gifts/watercooler.png',
-      status: 'vendido',
+      status: 'Vendido',
       price: 30.9
     },
     {
       id: 14,
       name: 'Placa de video',
       image: '/Gifts/placadevideo.png',
-      status: 'vendido',
+      status: 'Vendido',
       price: 30.9
     },
     {
       id: 15,
       name: 'Cabo Hdmi',
       image: '/Gifts/cabohdmi.png',
-      status: 'vendido',
+      status: 'Vendido',
       price: 17.0
     }
   ];
 
   const getBadgeClass = (status: string) => {
-    if (status === 'resgatado')
+    if (status === 'Resgatado')
       return 'bg-green-600 dark:bg-green-600 text-white text-xs font-semibold hover:bg-bg-green-600 dark:hover:bg-green-600';
-    if (status === 'vendido')
+    if (status === 'Vendido')
       return 'bg-red-600 dark:bg-red-600 text-white text-xs font-semibold hover:bg-red-600 dark:hover:bg-red-600';
     return 'bg-gray-500 text-white';
   };
