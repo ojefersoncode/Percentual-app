@@ -3,149 +3,157 @@
 import { Badge } from '../ui/badge';
 
 interface Product {
-  id: number;
-  status: string;
+  rtp: number;
   name: string;
   price: number;
-  image: string;
+  img: string;
 }
 
 export default function GiftBox() {
   const products: Product[] = [
     {
-      id: 1,
-      name: 'Cabo usb',
-      image: '/Gifts/caboc.png',
-      status: 'Resgatado',
-      price: 10.0
+      name: 'Mouse gamer',
+      img: '/Gifts/mouse.png',
+      rtp: 80.01,
+      price: 50.0
     },
     {
-      id: 2,
-      name: 'Mouse pad',
-      image: '/Gifts/mousepad.png',
-      status: 'Resgatado',
-      price: 10.0
+      name: 'Cabo usb C',
+      img: '/Gifts/caboc.png',
+      rtp: 80.01,
+      price: 18.0
     },
-
     {
-      id: 3,
       name: 'Carregador',
-      image: '/Gifts/carregador.webp',
-      status: 'Vendido',
-      price: 15.0
+      img: '/Gifts/carregador.webp',
+      rtp: 20.01,
+      price: 25.0
     },
     {
-      id: 4,
       name: 'Power bank',
-      image: '/Gifts/powerbank.png',
-      status: 'Resgatado',
+      img: '/Gifts/powerbank.png',
+      rtp: 2.0,
+      price: 37.9
+    },
+    {
+      name: 'Headset',
+      img: '/Gifts/headset.png',
+      rtp: 4.0,
+      price: 230.0
+    },
+    {
+      name: 'Teclado',
+      img: '/Gifts/teclado.png',
+      rtp: 1.01,
+      price: 129.9
+    },
+    {
+      name: 'Hub usb',
+      img: '/Gifts/hubusb.png',
+      rtp: 80.01,
       price: 20.0
     },
     {
-      id: 5,
-      name: 'Headset',
-      image: '/Gifts/headset.png',
-      status: 'Resgatado',
-      price: 5.0
+      name: 'Mouse pad',
+      img: '/Gifts/mousepad.png',
+      rtp: 4.0,
+      price: 40.0
     },
     {
-      id: 6,
-      name: 'Teclado',
-      image: '/Gifts/teclado.png',
-      status: 'Resgatado',
-      price: 30.9
+      name: 'Microfone',
+      img: '/Gifts/microfone.png',
+      rtp: 2.21,
+      price: 160.0
     },
     {
-      id: 7,
-      name: 'Mouse',
-      image: '/Gifts/mouse.png',
-      status: 'Resgatado',
-      price: 30.9
-    },
-    {
-      id: 8,
-      name: 'Hub usb',
-      image: '/Gifts/hubusb.png',
-      status: 'Vendido',
-      price: 30.9
-    },
-    {
-      id: 9,
-      name: 'microfone',
-      image: '/Gifts/microfone.png',
-      status: 'Vendido',
-      price: 30.9
-    },
-    {
-      id: 10,
       name: 'Volante',
-      image: '/Gifts/volante.png',
-      status: 'Vendido',
-      price: 30.9
+      img: '/Gifts/volante.png',
+      rtp: 1.01,
+      price: 450.0
     },
     {
-      id: 11,
-      name: 'Ssd 128gb',
-      image: '/Gifts/ssd.png',
-      status: 'Vendido',
-      price: 30.9
+      name: 'Carregador',
+      img: '/Gifts/carregador.webp',
+      rtp: 20.01,
+      price: 25.0
     },
     {
-      id: 12,
+      name: 'Carregador',
+      img: '/Gifts/carregador.webp',
+      rtp: 20.01,
+      price: 25.0
+    },
+    {
+      name: 'SSD 128GB',
+      img: '/Gifts/ssd.png',
+      rtp: 3.31,
+      price: 98.9
+    },
+    {
       name: 'Fonte 500w',
-      image: '/Gifts/fonte.png',
-      status: 'Resgatado',
-      price: 30.9
+      img: '/Gifts/fonte.png',
+      rtp: 6.02,
+      price: 150.0
     },
     {
-      id: 13,
       name: 'Watercooler',
-      image: '/Gifts/watercooler.png',
-      status: 'Vendido',
-      price: 30.9
+      img: '/Gifts/watercooler.png',
+      rtp: 19.0,
+      price: 299.9
     },
     {
-      id: 14,
-      name: 'Placa de video',
-      image: '/Gifts/placadevideo.png',
-      status: 'Vendido',
-      price: 30.9
-    },
-    {
-      id: 15,
       name: 'Cabo Hdmi',
-      image: '/Gifts/cabohdmi.png',
-      status: 'Vendido',
-      price: 17.0
+      img: '/Gifts/cabohdmi.png',
+      rtp: 80.01,
+      price: 10.0
+    },
+    {
+      name: 'Placa de vídeo',
+      img: '/Gifts/placadevideo.png',
+      rtp: 0.03,
+      price: 1500.0
+    },
+    {
+      name: 'Monitor',
+      img: '/Gifts/monitor.png',
+      rtp: 0.03,
+      price: 800.0
+    },
+    {
+      name: 'Microfone',
+      img: '/Gifts/microfone.png',
+      rtp: 0.03,
+      price: 150.0
+    },
+    {
+      name: 'Volante',
+      img: '/Gifts/volante.png',
+      rtp: 0.03,
+      price: 400.0
+    },
+    {
+      name: 'Cabo Hdmi',
+      img: '/Gifts/cabohdmi.png',
+      rtp: 80.01,
+      price: 10.0
     }
   ];
 
-  const getBadgeClass = (status: string) => {
-    if (status === 'Resgatado')
-      return 'bg-green-600 dark:bg-green-600 text-text dark:text-text text-xs font-semibold hover:bg-bg-green-600 dark:hover:bg-green-600';
-    if (status === 'Vendido')
-      return 'bg-red-600 dark:bg-red-600 text-text dark:text-text text-xs font-semibold hover:bg-red-600 dark:hover:bg-red-600';
-    return 'bg-gray-500 text-white';
-  };
-
   return (
     <div className="pt-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full">
-      {products.map((product) => (
+      {products.map((product, index) => (
         <div
-          key={product.id}
+          key={index}
           className="flex flex-col gap-4 justify-between items-center rounded-lg text-white border-2 border-border bg-gradient-to-b from-subbackground to-btn"
         >
           <div className="flex w-full justify-between p-2">
-            <Badge className={getBadgeClass(product.status)}>
-              {product.status}
-            </Badge>
-            <Badge className="bg-btn hover:bg-btn dark:bg-btn dark:hover:bg-btn text-xs text-text dark:text-text dark:hover:text-text font-semibold">
-              R$ {product.price.toFixed(2)}
+            <Badge className="text-text dark:text-text bg-btn dark:bg-btn">
+              Rtp: {product.rtp}
             </Badge>
           </div>
 
           <img
-            src={product.image}
+            src={product.img}
             alt={product.name}
             className="h-24 max-md:h-20 object-contain select-none"
           />
@@ -154,7 +162,10 @@ export default function GiftBox() {
           </h1>
 
           <div className="bg-subbackground px-4 p-0.5 rounded-t-xl">
-            <span className="text-xs font-semibold">Escolher</span>
+            <span className="text-sm font-semibold">
+              {' '}
+              R$ {product.price.toFixed(2)}{' '}
+            </span>
           </div>
         </div>
       ))}

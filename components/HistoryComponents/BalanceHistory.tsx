@@ -56,7 +56,7 @@ export function BalanceHistory() {
   return (
     <Table className="pt-4">
       <TableHeader>
-        <TableRow className="bg-btn hover:bg-btn/90 text-text">
+        <TableRow className="bg-btn hover:bg-btn/90 text-text dark:text-text">
           <TableHead className="w-[100px] text-text">Seu Id</TableHead>
           <TableHead className="text-text">Status</TableHead>
           <TableHead className="text-text">Metodo</TableHead>
