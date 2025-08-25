@@ -122,9 +122,9 @@ export default function GiftBox() {
 
   const getBadgeClass = (status: string) => {
     if (status === 'resgatado')
-      return 'bg-green-600 dark:bg-green-600 text-white hover:bg-bg-green-600 dark:hover:bg-green-600';
+      return 'bg-green-600 dark:bg-green-600 text-white text-xs font-semibold hover:bg-bg-green-600 dark:hover:bg-green-600';
     if (status === 'vendido')
-      return 'bg-red-600 dark:bg-red-600 text-white hover:bg-red-600 dark:hover:bg-red-600';
+      return 'bg-red-600 dark:bg-red-600 text-white text-xs font-semibold hover:bg-red-600 dark:hover:bg-red-600';
     return 'bg-gray-500 text-white';
   };
 
@@ -139,7 +139,7 @@ export default function GiftBox() {
             <Badge className={getBadgeClass(product.status)}>
               {product.status}
             </Badge>
-            <Badge className="bg-btn hover:bg-btn">
+            <Badge className="bg-btn hover:bg-btn text-xs font-semibold">
               R$ {product.price.toFixed(2)}
             </Badge>
           </div>
@@ -154,7 +154,7 @@ export default function GiftBox() {
           </h1>
 
           <div className="bg-subbackground px-4 p-0.5 rounded-t-xl">
-            <span>Escoler</span>
+            <span className="text-xs font-semibold">Escolher</span>
           </div>
         </div>
       ))}
