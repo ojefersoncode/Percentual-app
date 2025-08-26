@@ -136,7 +136,7 @@ export default function MyGifts() {
           <div className="w-full flex flex-col gap-2 px-2 justify-center items-center pb-2">
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button className="w-full bg-high/20 hover:bg-high/30 dark:hover:bg-high/20 border border-high rounded-md">
+                <Button className="w-full bg-high/20 hover:bg-high/30 dark:bg-high/20 dark:hover:bg-high/20 border border-high text-text hover:text-text dark:text-text dark:hover:text-text rounded-md">
                   <span className="text-xs md:text-sm font-semibold">
                     Resgatar
                   </span>
@@ -166,7 +166,7 @@ export default function MyGifts() {
 
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button className="w-full bg-red-600/20 hover:bg-red-600/30 dark:hover:bg-subbackground/20 border border-red-500 rounded-md">
+                <Button className="w-full bg-red-600/20 hover:bg-red-600/30 dark:bg-red-600/20 dark:hover:bg-red-700/20 border border-red-500 text-text dark:text-text hover:text-text dark:hover:text-text rounded-md">
                   <span className="text-xs md:text-sm  font-semibold">
                     Vender por R$:{product.price.toFixed(2)}
                   </span>
