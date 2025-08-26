@@ -6,6 +6,7 @@ import { BalanceHistory } from '../HistoryComponents/BalanceHistory';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import MyGifts from '../HistoryComponents/MyGifts';
 import { Transition } from '../HistoryComponents/Trasation';
+import LoadingAnimation from '../ui/LoadingAnimation';
 
 export default function HistoryPage({ user }: { user: User }) {
   return (
@@ -31,9 +32,18 @@ export default function HistoryPage({ user }: { user: User }) {
             >
               Movimentaçoes
             </TabsTrigger>
+            <TabsTrigger
+              className="rounded-sm bg-subbackground dark:bg-subbackground hover:bg-subbackground dark:hover:bg-subbackground text-text dark:text-text"
+              value="Loading"
+            >
+              Loading
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="Meuspresentes">
             <MyGifts />
+          </TabsContent>
+          <TabsContent value="Loading">
+            <LoadingAnimation />
           </TabsContent>
           <TabsContent value="Trasacoes">
             <Transition />
