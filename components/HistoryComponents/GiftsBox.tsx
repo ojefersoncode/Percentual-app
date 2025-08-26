@@ -164,7 +164,7 @@ export default function GiftBox() {
           <div className="bg-subbackground px-4 p-0.5 rounded-t-xl">
             <span className="text-sm font-semibold">
               {' '}
-              R$ {product.price.toFixed(2)}{' '}
+              R$:{product.price.toFixed(2)}{' '}
             </span>
           </div>
         </div>

@@ -399,7 +399,7 @@ export function Spin({ user }: { user: User }) {
                 </div>
                 <div className=" flex justify-center items-center">
                   <span className="font-medium text-text text-sm max-md:text-xs bg-subbackground px-4 py-1 rounded-t-xl">
-                    R$ {item.price}
+                    R$:{item.price.toFixed(2)}
                   </span>
                 </div>
               </div>

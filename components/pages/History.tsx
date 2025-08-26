@@ -5,6 +5,7 @@ import Footer from '../HomeComponents/Footer';
 import { BalanceHistory } from '../HistoryComponents/BalanceHistory';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import MyGifts from '../HistoryComponents/MyGifts';
+import { Transition } from '../HistoryComponents/Trasation';
 
 export default function HistoryPage({ user }: { user: User }) {
   return (
@@ -13,22 +14,31 @@ export default function HistoryPage({ user }: { user: User }) {
         <Tabs defaultValue="Meuspresentes">
           <TabsList className="bg-subbackground dark:bg-subbackground">
             <TabsTrigger
-              className="rounded-sm bg-background dark:bg-subbackground hover:bg-subbackground dark:hover:bg-subbackground text-text dark:text-text"
+              className="rounded-sm bg-subbackground dark:bg-subbackground hover:bg-subbackground dark:hover:bg-subbackground text-text dark:text-text"
               value="Meuspresentes"
             >
-              Meus Presentes
+              Minha conta
             </TabsTrigger>
             <TabsTrigger
-              className="rounded-sm bg-background dark:bg-subbackground hover:bg-subbackground dark:hover:bg-subbackground text-text dark:text-text"
+              className="rounded-sm bg-subbackground dark:bg-subbackground hover:bg-subbackground dark:hover:bg-subbackground text-text dark:text-text"
               value="Trasacoes"
             >
               Trasações
+            </TabsTrigger>
+            <TabsTrigger
+              className="rounded-sm bg-subbackground dark:bg-subbackground hover:bg-subbackground dark:hover:bg-subbackground text-text dark:text-text"
+              value="Recargas"
+            >
+              Movimentaçoes
             </TabsTrigger>
           </TabsList>
           <TabsContent value="Meuspresentes">
             <MyGifts />
           </TabsContent>
           <TabsContent value="Trasacoes">
+            <Transition />
+          </TabsContent>
+          <TabsContent value="Recargas">
             <BalanceHistory />
           </TabsContent>
         </Tabs>
