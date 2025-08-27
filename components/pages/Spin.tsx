@@ -457,7 +457,7 @@ export function Spin({ user }: { user: User }) {
         </div>
       </div>
 
-      <div className="flex flex-col w-full items-center justify-center px-6 pb-28 mt-5 border-t-2 border-btn ">
+      <div className="flex flex-col w-full items-center justify-center px-6 pb-6 max-md:pb-28 mt-5 border-t-2 border-btn ">
         <span className="py-6 text-white font-bold text-2xl max-md:text-xl">
           Presentes da caixa
         </span>
