@@ -125,10 +125,10 @@ export default function MyGifts() {
         >
           <div className="flex w-full justify-between p-2">
             <Button className="py-0 px-2 m-0 bg-transparent dark:bg-transparent hover:bg-transparent hover:dark:bg-transparent">
-              <Info className="size-4 p-0" />
+              <Info className="size-4 p-0 text-text dark:text-text" />
             </Button>
             <Button className="py-0 px-2 m-0 bg-transparent dark:bg-transparent hover:bg-transparent hover:dark:bg-transparent">
-              <Lock className="size-4 p-0" />
+              <Lock className="size-4 p-0 text-text dark:text-text" />
             </Button>
           </div>
 

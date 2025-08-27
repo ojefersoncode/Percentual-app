@@ -146,9 +146,9 @@ export default function GiftBox() {
           key={index}
           className="flex flex-col gap-4 justify-between items-center rounded-lg text-white border-2 border-border bg-gradient-to-b from-subbackground to-btn"
         >
-          <div className="flex w-full justify-between p-2">
-            <Badge className="text-text dark:text-text bg-btn dark:bg-btn">
-              Rtp: {product.rtp}
+          <div className="flex w-full justify-end p-2">
+            <Badge className="text-text dark:text-text bg-transparent dark:bg-transparent hover:bg-transparent hover:dark:bg-transparent text-[0.7rem]">
+              {product.rtp}%
             </Badge>
           </div>
 
