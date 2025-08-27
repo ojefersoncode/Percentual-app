@@ -450,20 +450,19 @@ export function Spin({ user }: { user: User }) {
           <Button
             onClick={startSpin} // botão para girar roleta com auidio botao.mp3
             disabled={isSpinning}
-            className="p-6 border-2 text-text dark:text-text bg-btn dark:bg-btn dark:hover:bg-btn hover:bg-subbackground text-base font-bold"
+            className="p-6 border-2 text-text dark:text-text bg-btn dark:bg-btn dark:hover:bg-btn hover:bg-btn  text-base font-bold"
           >
             {isSpinning ? 'Girando...' : 'Abrir por  R$: 100,00'}
           </Button>
         </div>
       </div>
 
-      <div className="flex flex-col w-full items-center justify-center px-6 py-4 mt-5 border-t-2 border-btn ">
+      <div className="flex flex-col w-full items-center justify-center px-6 pb-28 mt-5 border-t-2 border-btn ">
         <span className="py-6 text-white font-bold text-2xl max-md:text-xl">
           Presentes da caixa
         </span>
         <GiftBox />
       </div>
-      <Footer />
     </div>
   );
 }
