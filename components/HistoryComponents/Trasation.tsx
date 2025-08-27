@@ -52,7 +52,6 @@ export function Transition() {
         <TableRow className="bg-btn hover:bg-btn/90 text-text dark:text-text">
           <TableHead className=" text-text">Seu Id</TableHead>
           <TableHead className="text-text">Status</TableHead>
-
           <TableHead className="text-text">Valor</TableHead>
         </TableRow>
       </TableHeader>

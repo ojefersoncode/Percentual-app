@@ -1,5 +1,6 @@
 'use client';
 
+import { Info, Lock } from 'lucide-react';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -122,7 +123,14 @@ export default function MyGifts() {
           key={product.id}
           className="flex flex-col gap-4 justify-between items-center rounded-lg text-white border-2 border-border bg-gradient-to-b from-subbackground to-btn"
         >
-          <div className="flex w-full justify-between p-2"></div>
+          <div className="flex w-full justify-between p-2">
+            <Button className="py-0 px-2 m-0 bg-transparent dark:bg-transparent hover:bg-transparent hover:dark:bg-transparent">
+              <Info className="size-4 p-0" />
+            </Button>
+            <Button className="py-0 px-2 m-0 bg-transparent dark:bg-transparent hover:bg-transparent hover:dark:bg-transparent">
+              <Lock className="size-4 p-0" />
+            </Button>
+          </div>
 
           <img
             src={product.image}
@@ -136,7 +144,7 @@ export default function MyGifts() {
           <div className="w-full flex flex-col gap-2 px-2 justify-center items-center pb-2">
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button className="w-full bg-high/20 hover:bg-high/30 dark:bg-high/20 dark:hover:bg-high/20 border border-high text-text hover:text-text dark:text-text dark:hover:text-text rounded-md">
+                <Button className="w-full bg-high/30 hover:bg-high/50 dark:bg-high/30 dark:hover:bg-high/50 border border-high text-text hover:text-text dark:text-text dark:hover:text-text rounded-md">
                   <span className="text-xs md:text-sm font-semibold">
                     Resgatar
                   </span>
@@ -166,7 +174,7 @@ export default function MyGifts() {
 
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button className="w-full bg-red-600/20 hover:bg-red-600/30 dark:bg-red-600/20 dark:hover:bg-red-700/20 border border-red-500 text-text dark:text-text hover:text-text dark:hover:text-text rounded-md">
+                <Button className="w-full bg-red-600/30 hover:bg-red-600/50 dark:bg-red-600/30 dark:hover:bg-red-700/50 border border-red-500 text-text dark:text-text hover:text-text dark:hover:text-text rounded-md">
                   <span className="text-xs md:text-sm  font-semibold">
                     Vender por R$:{product.price.toFixed(2)}
                   </span>

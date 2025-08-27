@@ -32,18 +32,9 @@ export default function HistoryPage({ user }: { user: User }) {
             >
               Movimentaçoes
             </TabsTrigger>
-            <TabsTrigger
-              className="rounded-sm bg-subbackground dark:bg-subbackground hover:bg-subbackground dark:hover:bg-subbackground text-text dark:text-text"
-              value="Loading"
-            >
-              Loading
-            </TabsTrigger>
           </TabsList>
           <TabsContent value="Meuspresentes">
             <MyGifts />
-          </TabsContent>
-          <TabsContent value="Loading">
-            <LoadingAnimation />
           </TabsContent>
           <TabsContent value="Trasacoes">
             <Transition />
@@ -52,10 +43,6 @@ export default function HistoryPage({ user }: { user: User }) {
             <BalanceHistory />
           </TabsContent>
         </Tabs>
-      </div>
-
-      <div className="pt-4">
-        <Footer />
       </div>
     </div>
   );
