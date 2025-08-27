@@ -55,7 +55,10 @@ export function ProfileButton() {
           </div>
         </button>
       </SheetTrigger>
-      <SheetContent side="right" className="bg-background border-border px-2">
+      <SheetContent
+        side="right"
+        className="bg-background dark:bg-background border-border px-2"
+      >
         <SheetHeader>
           <SheetTitle className="text-text px-2 dark:text-text">
             Menu
