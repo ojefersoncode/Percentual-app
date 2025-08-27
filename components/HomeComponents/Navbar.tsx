@@ -23,7 +23,7 @@ export default function Navbar({ user }: { user: User }) {
         <img
           src="/Magicbox.png"
           alt="logo"
-          className="h-7 max-md:h-4 object-contain"
+          className="h-7 max-md:h-5 object-contain"
         />
       </div>
 
@@ -50,7 +50,9 @@ export default function Navbar({ user }: { user: User }) {
 
       <div className="flex items-center justify-center gap-4">
         <Balance user={user} />
-        <ProfileButton />
+        <div className="max-md:hidden">
+          <ProfileButton />
+        </div>
       </div>
     </div>
   );

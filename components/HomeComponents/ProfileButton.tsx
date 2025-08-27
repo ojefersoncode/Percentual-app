@@ -2,14 +2,13 @@
 
 import { Button } from '@/components/ui/button';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu';
-import { CircleUser, LogOut, MenuIcon, User } from 'lucide-react';
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger
+} from '@/components/ui/sheet';
+import { LogOut, MenuIcon, User } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { createClient } from '../../utils/supabase/client';
 import { useState } from 'react';
@@ -45,32 +44,43 @@ export function ProfileButton() {
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button className="px-2 rounded-md border-2 border-border bg-subbackground dark:bg-subbackground hover:bg-subbackground dark:hover:bg-subbackground focus:right-0">
-          <MenuIcon className="text-text size-6 max-md:size-5" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="mr-2 touch-pan-x touch-pan-y bg-background border-border">
-        <DropdownMenuGroup className="flex flex-col gap-1">
-          <DropdownMenuItem
-            className=" text-red-50 hover:text-red-100 hover:dark:text-red-100 transition-all"
+    <Sheet>
+      <SheetTrigger asChild>
+        <button className="p-0 md:py-2 md:px-2 rounded-md max-md:border-none md:border-2 bg-transparent dark:bg-transparent hover:bg-transparent dark:hover:bg-transparent">
+          <div className="flex flex-col justify-center items-center gap-2">
+            <MenuIcon className="text-text dark:text-text w-5 h-5 md:size-6" />
+            <span className="md:hidden text-sm font-bold text-text/70 dark:text-text/70 hover:text-text dark:hover:text-text">
+              Perfil
+            </span>
+          </div>
+        </button>
+      </SheetTrigger>
+      <SheetContent side="right" className="bg-background border-border px-2">
+        <SheetHeader>
+          <SheetTitle className="text-text px-2 dark:text-text">
+            Menu
+          </SheetTitle>
+        </SheetHeader>
+        <div className="flex flex-col gap-4 mt-6">
+          <Button
+            variant="ghost"
+            className="justify-start hover:bg-subbackground dark:hover:bg-subbackground text-text hover:text-text/90"
             onClick={() => router.push('/profile')}
           >
-            <User className="w-5 h-5 mr-2" /> Minha conta
-          </DropdownMenuItem>
-          <DropdownMenuSeparator className="bg-btn/70 dark:bg-btn" />
-          <DropdownMenuItem>
-            <div
-              className="flex items-center text-red-50 hover:text-red-100 transition-all"
-              onClick={handleSignOut}
-            >
-              <LogOut className="h-5 w-5 mr-2" />
-              Sair
-            </div>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-      </DropdownMenuContent>
-    </DropdownMenu>
+            <User className="w-5 h-5 mr-2" />
+            Minha conta
+          </Button>
+          <Button
+            variant="ghost"
+            className="justify-start hover:bg-subbackground dark:hover:bg-subbackground text-red-500 hover:text-red-400"
+            onClick={handleSignOut}
+            disabled={loading}
+          >
+            <LogOut className="w-5 h-5 mr-2" />
+            {loading ? 'Saindo...' : 'Sair'}
+          </Button>
+        </div>
+      </SheetContent>
+    </Sheet>
   );
 }

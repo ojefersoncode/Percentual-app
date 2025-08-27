@@ -1,15 +1,15 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { HomeIcon, History, Menu, Gift } from 'lucide-react';
+import { HomeIcon, History, Gift } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { ProfileButton } from './ProfileButton';
 
 const DATA = {
   navbar: [
     { href: '/Home', icon: HomeIcon, label: 'Home' },
-    { href: '/Spin', icon: Gift, label: 'Bõnus' },
-    { href: '/History', icon: History, label: 'Histórico' },
-    { href: '/Withdraw', icon: Menu, label: 'Menu' }
+    { href: '/Spin', icon: Gift, label: 'Bônus' },
+    { href: '/History', icon: History, label: 'Histórico' }
   ]
 };
 
@@ -28,7 +28,7 @@ export function Navbottom() {
 
           return (
             <Link key={index} href={item.href} className="p-4 group">
-              <div className="flex flex-col justify-between items-center gap-1">
+              <div className="flex flex-col justify-between items-center gap-2">
                 <item.icon className={`h-5 w-5 ${base} ${hover}`} />
                 <span className={`text-sm font-bold ${base} ${hover}`}>
                   {item.label}
@@ -37,6 +37,11 @@ export function Navbottom() {
             </Link>
           );
         })}
+
+        {/* Aqui entra o ProfileButton como último item da navbar */}
+        <div className="p-4 flex flex-col justify-between items-center gap-2">
+          <ProfileButton />
+        </div>
       </div>
     </nav>
   );
