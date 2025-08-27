@@ -20,6 +20,7 @@ interface Product {
 
 export function Spin({ user }: { user: User }) {
   const { balance, setBalance } = useBalance();
+  const [winnerIndex, setWinnerIndex] = React.useState<number | null>(null);
 
   const baseItems = [
     {
@@ -155,7 +156,7 @@ export function Spin({ user }: { user: User }) {
   const buttonAudio =
     typeof Audio !== 'undefined' ? new Audio('/sounds/botao.mp3') : null;
 
-  // triplica para simular looping infinito visual
+  // triplica para looping infinito
   const items = React.useMemo(
     () => [...baseItems, ...baseItems, ...baseItems],
     []
@@ -193,27 +194,65 @@ export function Spin({ user }: { user: User }) {
     if (!el) return;
     const single = el.scrollWidth / 3;
 
-    // primeira vez: comece exatamente no bloco do meio
     if (currentScroll === null) {
       const start = single;
       el.scrollLeft = start;
       setCurrentScroll(start);
     } else {
-      el.scrollLeft = normalizeIntoMiddle(el, currentScroll);
+      if (winnerIndex !== null) {
+        // Recalcular baseado no índice vencedor
+        const middleStartIndex = baseItems.length;
+        const targetIndex = middleStartIndex + winnerIndex;
+        const targetElement = el.children[targetIndex] as HTMLElement;
+
+        if (targetElement) {
+          const desired =
+            targetElement.offsetLeft -
+            el.clientWidth / 2 +
+            targetElement.clientWidth / 2;
+
+          const fixed = normalizeIntoMiddle(el, desired);
+          el.scrollLeft = fixed;
+          setCurrentScroll(fixed);
+        }
+      } else {
+        // Se ainda não tem vencedor, normaliza o scroll atual
+        const fixed = normalizeIntoMiddle(el, currentScroll);
+        el.scrollLeft = fixed;
+        setCurrentScroll(fixed);
+      }
     }
 
     const onResize = () => {
       if (!containerRef.current) return;
       const node = containerRef.current;
-      // após resize, mantenha equivalente no bloco do meio
-      const fixed = normalizeIntoMiddle(node, node.scrollLeft);
-      node.scrollLeft = fixed;
-      setCurrentScroll(fixed);
+
+      if (winnerIndex !== null) {
+        // Reposicionar no item vencedor quando redimensionar
+        const middleStartIndex = baseItems.length;
+        const targetIndex = middleStartIndex + winnerIndex;
+        const targetElement = node.children[targetIndex] as HTMLElement;
+
+        if (targetElement) {
+          const desired =
+            targetElement.offsetLeft -
+            node.clientWidth / 2 +
+            targetElement.clientWidth / 2;
+
+          const fixed = normalizeIntoMiddle(node, desired);
+          node.scrollLeft = fixed;
+          setCurrentScroll(fixed);
+        }
+      } else {
+        const fixed = normalizeIntoMiddle(node, node.scrollLeft);
+        node.scrollLeft = fixed;
+        setCurrentScroll(fixed);
+      }
     };
 
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
-  }, [currentScroll]);
+  }, [currentScroll, winnerIndex]);
 
   const spendBalance = async (amount: number) => {
     if (!user) return false;
@@ -252,7 +291,7 @@ export function Spin({ user }: { user: User }) {
     return true;
   };
 
-  // função para buscar saldo atualizado do Supabase
+  // função para buscar saldo atualizado no Supabase
   const fetchBalance = async () => {
     if (!user) return;
 
@@ -293,7 +332,7 @@ export function Spin({ user }: { user: User }) {
 
       // índice vencedor pelo RTP
       const winnerIndex = chooseIndexByRTP();
-
+      setWinnerIndex(winnerIndex);
       // escolhe o elemento alvo no bloco do meio
       const middleStartIndex = baseItems.length;
       const targetIndex = middleStartIndex + winnerIndex;
