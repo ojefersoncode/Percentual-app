@@ -1,20 +1,18 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
-interface StatusPageProps {
-  searchParams?: Record<string, string | undefined>;
-}
-
-export default function PaymentStatus({ searchParams }: StatusPageProps) {
+export default function PaymentStatus() {
   const router = useRouter();
+  const searchParams = useSearchParams(); // pega os query params
+  const ref = searchParams.get('ref');
+
   const [status, setStatus] = useState<'approved' | 'failed' | 'pending'>(
     'pending'
   );
 
   useEffect(() => {
-    const ref = searchParams?.ref;
     if (!ref) return;
 
     async function checkStatus() {
@@ -27,7 +25,7 @@ export default function PaymentStatus({ searchParams }: StatusPageProps) {
     }
 
     checkStatus();
-  }, [searchParams?.ref, router]);
+  }, [ref, router]);
 
   return <div>Verificando status do pagamento...</div>;
 }
