@@ -1,28 +1,24 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-
-export default function PaymentStatus({
+export default async function PaymentStatus({
   searchParams
 }: {
-  searchParams: { ref: string };
+  searchParams: { ref?: string };
 }) {
-  const router = useRouter();
-  const [status, setStatus] = useState<'approved' | 'failed' | 'pending'>(
-    'pending'
+  if (!searchParams?.ref) {
+    return <div>Referência de pagamento não fornecida</div>;
+  }
+
+  // Verifica status no backend
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/checkout/status?ref=${searchParams.ref}`
   );
+  const data = await res.json();
 
-  useEffect(() => {
-    async function checkStatus() {
-      const res = await fetch(`/api/checkout/status?ref=${searchParams.ref}`);
-      const data = await res.json();
-      setStatus(data.status);
+  if (data.status === 'approved') {
+    return <div>Pagamento aprovado! Redirecionando...</div>;
+  }
+  if (data.status === 'failed') {
+    return <div>Pagamento rejeitado! Redirecionando...</div>;
+  }
 
-      if (data.status === 'failed') router.replace('/failure');
-      if (data.status === 'approved') router.replace('/success');
-    }
-    checkStatus();
-  }, [searchParams.ref, router]);
-
-  return <div>Verificando status do pagamento...</div>;
+  return <div>Pagamento pendente...</div>;
 }
