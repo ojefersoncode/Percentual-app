@@ -1,24 +1,43 @@
-export default async function PaymentStatus({
-  searchParams
-}: {
-  searchParams: { ref?: string };
-}) {
-  if (!searchParams?.ref) {
-    return <div>Referência de pagamento não fornecida</div>;
-  }
+'use client';
 
-  // Verifica status no backend
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/checkout/status?ref=${searchParams.ref}`
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+
+type PaymentStatusType = 'approved' | 'failed' | 'pending';
+
+interface StatusPageProps {
+  searchParams?: { ref?: string };
+}
+
+export default function PaymentStatus({ searchParams }: StatusPageProps) {
+  const router = useRouter();
+  const [status, setStatus] = useState<PaymentStatusType>('pending');
+
+  useEffect(() => {
+    const ref = searchParams?.ref;
+    if (!ref) return; // garante que existe referência
+
+    async function checkStatus() {
+      try {
+        const res = await fetch(`/api/checkout/status?ref=${ref}`);
+        const data = await res.json();
+
+        const paymentStatus = data.status as PaymentStatusType;
+        setStatus(paymentStatus);
+
+        if (paymentStatus === 'failed') router.replace('/failure');
+        else if (paymentStatus === 'approved') router.replace('/success');
+      } catch (err) {
+        console.error('Erro ao verificar status do pagamento:', err);
+      }
+    }
+
+    checkStatus();
+  }, [searchParams, router]);
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-background text-white">
+      <p className="text-xl">Verificando status do pagamento...</p>
+    </div>
   );
-  const data = await res.json();
-
-  if (data.status === 'approved') {
-    return <div>Pagamento aprovado! Redirecionando...</div>;
-  }
-  if (data.status === 'failed') {
-    return <div>Pagamento rejeitado! Redirecionando...</div>;
-  }
-
-  return <div>Pagamento pendente...</div>;
 }
