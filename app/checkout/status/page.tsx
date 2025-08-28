@@ -3,41 +3,31 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-type PaymentStatusType = 'approved' | 'failed' | 'pending';
-
 interface StatusPageProps {
-  searchParams?: { ref?: string };
+  searchParams?: Record<string, string | undefined>;
 }
 
 export default function PaymentStatus({ searchParams }: StatusPageProps) {
   const router = useRouter();
-  const [status, setStatus] = useState<PaymentStatusType>('pending');
+  const [status, setStatus] = useState<'approved' | 'failed' | 'pending'>(
+    'pending'
+  );
 
   useEffect(() => {
     const ref = searchParams?.ref;
-    if (!ref) return; // garante que existe referência
+    if (!ref) return;
 
     async function checkStatus() {
-      try {
-        const res = await fetch(`/api/checkout/status?ref=${ref}`);
-        const data = await res.json();
+      const res = await fetch(`/api/checkout/status?ref=${ref}`);
+      const data = await res.json();
+      setStatus(data.status);
 
-        const paymentStatus = data.status as PaymentStatusType;
-        setStatus(paymentStatus);
-
-        if (paymentStatus === 'failed') router.replace('/failure');
-        else if (paymentStatus === 'approved') router.replace('/success');
-      } catch (err) {
-        console.error('Erro ao verificar status do pagamento:', err);
-      }
+      if (data.status === 'failed') router.replace('/failure');
+      if (data.status === 'approved') router.replace('/success');
     }
 
     checkStatus();
-  }, [searchParams, router]);
+  }, [searchParams?.ref, router]);
 
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background text-white">
-      <p className="text-xl">Verificando status do pagamento...</p>
-    </div>
-  );
+  return <div>Verificando status do pagamento...</div>;
 }
